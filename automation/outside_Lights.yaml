@@ -1,0 +1,40 @@
+#########################################################
+#                                                       #
+#          TURN OFF OUTSIDE LIGHTS AT SUNRISE           #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn Off Outside Lights'
+    trigger:
+      platform: sun
+      event: sunrise
+    action:
+      - service: homeassistant.turn_off
+        entity_id: group.outside_lights
+      - delay: 0:01
+      - service: homeassistant.turn_off
+        entity_id: group.outside_lights
+
+#########################################################
+#                                                       #
+#           TURN ON OUTSIDE LIGHTS AT SUNSET            #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn On Outside Lights'
+    trigger:
+      platform: sun
+      event: sunset
+      offset: '-00:15:00'
+    action:
+      - service: homeassistant.turn_on
+        entity_id: group.outside_lights
+      - delay: 0:01
+      - service: homeassistant.turn_on
+        entity_id: group.outside_lights
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

@@ -1,0 +1,58 @@
+#########################################################
+#                                                       #
+#         TURN ON LIVING ROOM LAMPS AT SUNSET           #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn On Living Room Lamps'
+    trigger:
+      platform: sun
+      event: sunset
+    action:
+      service: switch.turn_on
+      entity_id: switch.edimax1
+
+
+#########################################################
+#                                                       #
+#         TURN ON LIVING ROOM LAMPS WHEN HOME           #
+#                                                       #
+#########################################################
+
+  - alias: "Lamps on when home"
+    trigger:
+      platform: state
+      entity_id: sensor.gehingepinsensor1
+      to: 'Open'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sensor.garagedoorstatus
+          state: 'open'
+        - condition: template
+          value_template: "{{ states.sun.sun.attributes.elevation  | int < 10 }}"
+    action:
+      service: swtich.turn_on
+      entity_id: switch.edimax1
+
+#########################################################
+#                                                       #
+#         TURN ON LIVING ROOM LAMPS AT SUNSET           #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn Off Living Room Lamps at Midnight'
+    trigger:
+      platform: time
+      at: '00:01:00'
+    action:
+      service: swtich.turn_off
+      entity_id: switch.edimax1
+
+
+########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

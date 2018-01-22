@@ -1,0 +1,64 @@
+#########################################################
+#                                                       #
+#  AUTOMATION #8 - NOTIFY DESKTOP PC TURNED ON AND AWAY #
+#                                                       #
+#########################################################
+
+  - alias: "DESKTOP PC ON WHEN AWAY"
+    trigger:
+      platform: state
+      entity_id: device_tracker.b8ca3a8e9261
+      from: 'not_home'
+      to: 'home'
+    condition:
+        condition: state
+        entity_id: 'device_tracker.adamsiphone'
+        state: 'not_home'
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Desktop PC turned on"
+        message: "Desktop PC was turned on and Adam is not home"
+
+#########################################################
+#                                                       #
+#                 FAILED LOGIN ATTEMPTS                 #
+#                                                       #
+#########################################################
+
+  - alias: "Send notification upon failed login attempt"
+    trigger:
+      - platform: state
+        entity_id: persistent_notification.httplogin
+    condition:
+      - condition: template
+        value_template: "{{ trigger.to_state.state != 'None' }}"
+    action:
+      - service: notify.home_assistant
+        data_template:
+          title: "{{ states.persistent_notification.httplogin.attributes.message }}"
+          message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
+
+#########################################################
+#                                                       #
+#           NOTIFY OF NEW DEVICE ON NETWORK             #
+#                                                       #
+#########################################################
+
+  - alias: Notify If New Devices
+    trigger:
+      - platform: event
+        event_type: device_tracker_new_device
+    action:
+      - service: notify.home_assistant
+        data_template:
+          message: >
+            New device:
+            {{trigger.event.data.entity_id}}
+          title: New device
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

@@ -1,0 +1,130 @@
+#########################################################
+#                                                       #
+#          AUTOMATION - SET NEST AWAY MODE - ON         #
+#                                                       #
+#########################################################
+
+  - alias: "Set Nest Away Mode When Leaving"
+    trigger:
+      - platform: state
+        entity_id: device_tracker.adamsiphone
+        from: 'home'
+        to: 'not_home'
+        for:
+          minutes: 10
+      - platform: state
+        entity_id: device_tracker.amysiphone
+        from: 'home'
+        to: 'not_home'
+        for:
+          minutes: 10
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: state
+          entity_id: sensor.downstairs_away_mode
+          state: 'False'
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+    action:
+      - service: climate.set_away_mode
+        data:
+          entity_id: climate.downstairs
+          away_mode: 'true'
+      - service: climate.set_operation_mode
+        data:
+          entity_id: climate.downstairs
+          operation_mode: 'eco'
+
+#########################################################
+#                                                       #
+#      AUTOMATION - SET NEST AWAY MODE - OFF  1600      #
+#                                                       #
+#########################################################
+
+  - alias: "Set Nest Away Mode at 1600"
+    trigger:
+      platform: time
+      at: '16:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      - service: climate.set_away_mode
+        data:
+          entity_id: climate.downstairs
+          away_mode: 'false'
+      - service: climate.set_operation_mode
+        data:
+          entity_id: climate.downstairs
+          operation_mode: 'heat'
+
+#########################################################
+#                                                       #
+#   AUTOMATION - SET NEST AWAY MODE - OFF WHEN HOME     #
+#                                                       #
+#########################################################
+
+  - alias: "Turn Off Away When Home"
+    trigger:
+      - platform: state
+        entity_id: device_tracker.adamsiphone
+        from: 'not_home'
+        to: 'home'
+      - platform: state
+        entity_id: device_tracker.amysiphone
+        from: 'not_home'
+        to: 'home'
+    action:
+      - service: climate.set_away_mode
+        data:
+          entity_id: climate.downstairs
+          away_mode: 'false'
+      - service: climate.set_operation_mode
+        data:
+          entity_id: climate.downstairs
+          operation_mode: 'heat'
+
+#########################################################
+#                                                       #
+#   AUTOMATION - SET NEST FAN ON FOR 10 MINUTES         #
+#                                                       #
+#########################################################
+
+  - alias: Nest Fan
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.downstairs_thermostat_fan
+        to: 'off'
+        for:
+          minutes: 60
+    action:
+      - entity_id: climate.downstairs
+        service: climate.set_fan_mode
+        data:
+          fan_mode: 'on'
+      - delay: 0:10
+      - entity_id: climate.downstairs
+        service: climate.set_fan_mode
+        data:
+          fan_mode: 'auto'
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

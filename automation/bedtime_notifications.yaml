@@ -1,0 +1,147 @@
+####################################################
+#                                                  #
+#          GARAGE DOOR OPEN AT BEDTIME             #
+#                                                  #
+####################################################
+
+  - alias: Garage Door Open at Bedtime
+    trigger:
+      platform: state
+      entity_id: sensor.charging_adamsiphone
+      to: 'Charging'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sensor.garagedoorstatus
+          state: 'open'
+        - condition: time
+          after: '20:00:00'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Garage Door Open"
+          message: "The Garage Door is open and you are in bed"
+
+####################################################
+#                                                  #
+#               HTPC ON AT BEDTIME                 #
+#                                                  #
+####################################################
+
+  - alias: HTPC on at Bedtime
+    trigger:
+      platform: state
+      entity_id: sensor.charging_adamsiphone
+      to: 'Charging'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: switch.htpc_switch
+          state: 'on'
+        - condition: time
+          after: '20:00:00'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          message: "The HTPC is on and you are in bed"
+          data:
+            push:
+              badge: 0
+              category: 'htpc'
+
+  - alias: HTPC on bedtime notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: HTPC_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.htpc_switch
+
+
+####################################################
+#                                                  #
+#            DESKTOP ON AT BEDTIME                 #
+#                                                  #
+####################################################
+
+  - alias: Desktop on at Bedtime
+    trigger:
+      platform: state
+      entity_id: sensor.charging_adamsiphone
+      to: 'Charging'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: switch.desktop_switch
+          state: 'on'
+        - condition: time
+          after: '20:00:00'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          message: "The Desktop is on and you are in bed"
+          data:
+            push:
+              badge: 0
+              category: 'desktop'
+
+  - alias: Desktop on bedtime notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: DESKTOP_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.desktop_switch
+
+####################################################
+#                                                  #
+#         LIVING ROOM LAMPS ON AT BEDTIME          #
+#                                                  #
+####################################################
+
+  - alias: Living Room Lamps on at Bedtime
+    trigger:
+      platform: state
+      entity_id: sensor.charging_adamsiphone
+      to: 'Charging'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: switch.edimax1
+          state: 'on'
+        - condition: time
+          after: '20:00:00'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          message: "The Living Room Lamps are on and you are in bed"
+          data:
+            push:
+              badge: 0
+              category: 'lamps'
+
+  - alias: Lamps on bedtime notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: LAMPS_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.edimax1
+      - service: light.turn_off
+        entity_id: light.yeelightrgb2
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

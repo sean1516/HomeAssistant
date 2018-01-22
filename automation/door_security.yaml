@@ -1,0 +1,119 @@
+
+#########################################################
+#                                                       #
+#        INTERIOR GARAGE DOOR OPENED AND AWAY           #
+#                                                       #
+#########################################################
+
+  - alias: "Interior Garage Door Opened When Away"
+    trigger:
+      platform: state
+      entity_id: sensor.gehingepinsensor1
+      from: 'Closed'
+      to: 'Open'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Interior Garage Door Opened"
+          message: "The Interior Garage Door was opened and Amy and Adam are not home"
+      - service: homeassistant.turn_off
+        entity_id: automation.interior_garage_door_opened_when_away
+      - delay: '00:10:00'
+      - service: homeassistant.turn_on
+        entity_id: automation.interior_garage_door_opened_when_away
+
+
+#########################################################
+#                                                       #
+#        Exterior GARAGE DOOR OPENED AND AWAY           #
+#                                                       #
+#########################################################
+
+  - alias: "Exterior Garage Door Opened When Away"
+    trigger:
+      platform: state
+      entity_id: sensor.garagedoorstatus
+      from: 'Closed'
+      to: 'Open'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    action:
+      service: notify.ios_adams_iphone
+      data:
+        title: "Exterior Garage Door Opened"
+        message: "The Exterior Garage Door was opened and Amy and Adam are not home"
+
+#########################################################
+#                                                       #
+#              FRONT DOOR OPENED AND AWAY               #
+#                                                       #
+#########################################################
+
+  - alias: "Front Door Opened When Away"
+    trigger:
+      platform: state
+      entity_id: sensor.gehingepinsensor2
+      from: 'Closed'
+      to: 'Open'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    action:
+      service: notify.ios_adams_iphone
+      data:
+        title: "Front Door Opened"
+        message: "The Front door was opened and Amy and Adam are not home"
+
+#########################################################
+#                                                       #
+#        Exterior GARAGE DOOR OPENED AND AWAY           #
+#                                                       #
+#########################################################
+
+  - alias: "Exterior Garage Door Left Open When Away"
+    trigger:
+      - platform: zone
+        entity_id: device_tracker.adamsiphone
+        zone: zone.home
+        event: 'leave'
+      - platform: zone
+        entity_id: device_tracker.amysiphone
+        zone: zone.home
+        event: 'leave'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: state
+          entity_id: sensor.garagedoorstatus
+          state: 'Open'
+    action:
+      service: notify.ios_adams_iphone
+      data:
+        title: "Exterior Garage Door Left Open"
+        message: "The Exterior Garage Door was left open and Amy and Adam are not home"
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

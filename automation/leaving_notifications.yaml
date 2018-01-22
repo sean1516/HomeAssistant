@@ -1,0 +1,148 @@
+####################################################
+#                                                  #
+#                 HTPC ON WHEN AWAY                #
+#                                                  #
+####################################################
+
+  - alias: "HTPC On When leaving"
+    trigger:
+      - platform: zone
+        entity_id: device_tracker.adamsiphone
+        zone: zone.home
+        event: 'leave'
+      - platform: zone
+        entity_id: device_tracker.amysiphone
+        zone: zone.home
+        event: 'leave'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: state
+          entity_id: switch.htpc_switch
+          state: 'on'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          message: "The HTPC is on and you are away"
+          data:
+            push:
+              badge: 0
+              category: 'htpc'
+
+  - alias: HTPC on when away notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: HTPC_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.htpc_switch
+
+
+####################################################
+#                                                  #
+#             DESKTOP ON WHEN AWAY                 #
+#                                                  #
+####################################################
+
+  - alias: "Desktop On When leaving"
+    trigger:
+      - platform: zone
+        entity_id: device_tracker.adamsiphone
+        zone: zone.home
+        event: 'leave'
+      - platform: zone
+        entity_id: device_tracker.amysiphone
+        zone: zone.home
+        event: 'leave'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: state
+          entity_id: switch.desktop_switch
+          state: 'on'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          message: "The Desktop is on and you are away"
+          data:
+            push:
+              badge: 0
+              category: 'desktop'
+
+  - alias: Desktop on when away notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: DESKTOP_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.desktop_switch
+
+####################################################
+#                                                  #
+#         LIVING ROOM LAMPS ON WHEN AWAY           #
+#                                                  #
+####################################################
+
+  - alias: "Living Room Lamps On When leaving"
+    trigger:
+      - platform: zone
+        entity_id: device_tracker.adamsiphone
+        zone: zone.home
+        event: 'leave'
+      - platform: zone
+        entity_id: device_tracker.amysiphone
+        zone: zone.home
+        event: 'leave'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: or
+          conditions:
+            - condition: state
+              entity_id: switch.edimax1
+              state: 'on'
+            - condition: state
+              entity_id: light.yeelightrgb2
+              state: 'on'
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          message: "The Living Room Lamps are on and you are away"
+          data:
+            push:
+              badge: 0
+              category: 'lamps'
+
+  - alias: Lamps on when away notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: LAMPS_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.edimax1
+      - service: light.turn_off
+        entity_id: light.yeelightrgb2
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

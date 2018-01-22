@@ -1,0 +1,42 @@
+#########################################################
+#                                                       #
+# NOTIFICATION BULB COLOR BASED ON INPUT SELECT - COLOR #
+#                                                       #
+#########################################################
+
+  - alias: Set Notification Bulb2 Color
+    trigger:
+      platform: state
+      entity_id: input_select.notification_bulb2_color
+    condition: 
+      condition: template
+      value_template: "{{ states('input_select.notification_bulb2_color') != 'Normal' }}"
+    action:
+      service: light.turn_on
+      data_template:
+        entity_id: light.yeelightrgb2
+        color_name: '{{ states.input_select.notification_bulb2_color.state }}'
+        brightness: 254
+
+#########################################################
+#                                                       #
+# NOTIFICATION BULB COLOR BASED ON INPUT SELECT-NORMAL  #
+#                                                       #
+#########################################################
+
+  - alias: Set Notification Bulb2 Normal
+    trigger:
+      platform: state
+      entity_id: input_select.notification_bulb2_color
+    condition: 
+      condition: state
+      entity_id: input_select.notification_bulb2_color
+      state: 'Normal'
+    action:
+      service: script.normallight
+     
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

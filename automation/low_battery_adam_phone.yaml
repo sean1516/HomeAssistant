@@ -1,0 +1,35 @@
+#########################################################
+#                                                       #
+# AUTOMATION #3 - NOTIFY ADAM WHEN BATTERY LOW AT WORK  #
+#                                                       #
+#########################################################
+
+  - alias: "Low Battery Adams Phone"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.battery_adamsiphone
+        below: 50
+      - platform: numeric_state
+        entity_id: sensor.battery_adamsiphone
+        below: 30
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      after: '06:00:00'
+      before: '18:00:00'
+    action:
+      service: notify.ios_adams_iphone
+      data:
+        title: "Your Battery is low, charge your phone!"
+        message: "Adam's iPhone battery is getting low and should be charged"
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

@@ -1,0 +1,53 @@
+#########################################################
+#                                                       #
+#                     POWER OUTAGE                      #
+#                                                       #
+#########################################################
+
+  - alias: "Power Outage"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.ups_input_voltage
+        below: 50
+      - platform: template
+        value_template: "{{is_state_attr('sensor.ups_load', 'state', 'unknown')}}"
+    condition:
+      condition: and
+      conditions:
+        - condition: numeric_state
+          entity_id: sensor.ups_input_voltage
+          below: 50
+        - condition: template
+          value_template: "{{is_state_attr('sensor.ups_load', 'state', 'unknown')}}"
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Power Outage"
+          message: "The power is out and network devices are running off the UPS"
+      - service: homeassistant.turn_on
+        entity_id: automation.power_restored
+
+#########################################################
+#                                                       #
+#                     POWER RESTORED                    #
+#                                                       #
+#########################################################
+
+  - alias: "Power Restored"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.ups_input_voltage
+        above: 50
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Power Restored"
+          message: "The power is Restored"
+      - service: homeassistant.turn_off
+        entity_id: automation.power_restored
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

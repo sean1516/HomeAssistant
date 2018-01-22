@@ -1,0 +1,89 @@
+#########################################################
+#                                                       #
+#               TURN ON VACATION MODE                   #
+#                                                       #
+#########################################################
+
+  - alias: Turn on Vacation Mode
+    trigger:
+      platform: state
+      entity_id: input_boolean.vacation
+      from: 'off'
+      to: 'on'
+    action:
+      - service: automation.trigger
+        entity_id: automation.set_nest_away_mode_when_leaving
+      - service: automation.turn_off
+        entity_id: automation.dog_has_been_fed__evening
+      - service: automation.turn_off
+        entity_id: automation.dog_has_been_fed__morning
+      - service: automation.turn_off
+        entity_id: automation.feed_the_dog_evening
+      - service: automation.turn_off
+        entity_id: automation.feed_the_dog_morning
+      - service: automation.turn_off
+        entity_id: automation.reset_feed_the_dog_notifications
+      - service: automation.turn_off
+        entity_id: automation.nest_fan
+      - service: automation.turn_off
+        entity_id: automation.set_nest_away_mode_at_1600
+      - service: automation.turn_off
+        entity_id: automation.set_nest_away_mode_when_leaving
+      - service: automation.turn_off
+        entity_id: automation.turn_off_away_when_home
+      - service: automation.turn_off
+        entity_id: automation.desktop_on_at_bedtime 
+      - service: automation.turn_off
+        entity_id: automation.garage_door_open_at_bedtime
+      - service: automation.turn_off
+        entity_id: automation.htpc_on_at_bedtime
+      - service: automation.turn_off
+        entity_id: automation.living_room_lamps_on_at_bedtime
+
+#########################################################
+#                                                       #
+#                TURN OFF VACATION MODE                 #
+#                                                       #
+#########################################################  
+
+  - alias: Turn off Vacation Mode
+    trigger:
+      platform: state
+      entity_id: input_boolean.vacation
+      from: 'on'
+      to: 'off'
+    action:
+      - service: automation.trigger
+        entity_id: automation.turn_off_away_when_home
+      - service: automation.turn_on
+        entity_id: automation.dog_has_been_fed__evening
+      - service: automation.turn_on
+        entity_id: automation.dog_has_been_fed__morning
+      - service: automation.turn_on
+        entity_id: automation.feed_the_dog_evening
+      - service: automation.turn_on
+        entity_id: automation.feed_the_dog_morning
+      - service: automation.turn_on
+        entity_id: automation.reset_feed_the_dog_notifications
+      - service: automation.turn_on
+        entity_id: automation.nest_fan
+      - service: automation.turn_on
+        entity_id: automation.set_nest_away_mode_at_1600
+      - service: automation.turn_on
+        entity_id: automation.set_nest_away_mode_when_leaving
+      - service: automation.turn_on
+        entity_id: automation.turn_off_away_when_home
+      - service: automation.turn_on
+        entity_id: automation.desktop_on_at_bedtime 
+      - service: automation.turn_on
+        entity_id: automation.garage_door_open_at_bedtime
+      - service: automation.turn_on
+        entity_id: automation.htpc_on_at_bedtime
+      - service: automation.turn_on
+        entity_id: automation.living_room_lamps_on_at_bedtime
+     
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

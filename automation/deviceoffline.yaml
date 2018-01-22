@@ -1,0 +1,39 @@
+#########################################################
+#                                                       #
+#             NOTIFY IF HA DEVICE OFFLINE               #
+#                                                       #
+#########################################################
+
+  - alias: "Notify if HA Device Offline"
+    trigger:
+      platform: state
+      entity_id:
+        - device_tracker.6c0b84ce3b3e
+        - device_tracker.74da384a9d63
+        - device_tracker.74da384aa769
+        - device_tracker.9c8ecd06a5a0
+        - device_tracker.f0b4299fe446
+        - device_tracker.f0b429a8e3f3
+        - device_tracker.f0b429a900ec
+        - device_tracker.286c071064f1
+        - device_tracker.286c07ac908d
+        - device_tracker.6854fd8aee8c
+        - device_tracker.286c07b1776d
+        - device_tracker.286c07b19f98
+        - device_tracker.b072bf276553
+        - device_tracker.b827eb19017f
+        - device_tracker.34ea34e3da0d
+        - device_tracker.hostone
+      from: 'home'
+      to: 'not_home'
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Home Assistant Device is Offline"
+        message: "{{ trigger.to_state.attributes.friendly_name }} is offline"
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
