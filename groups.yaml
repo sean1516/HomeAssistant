@@ -1,0 +1,458 @@
+
+#https://home-assistant.io/components/group
+
+####################################################
+#                                                  #
+#                     VIEWS                        #
+#                                                  #
+####################################################
+
+  Default_view:
+    name: Rooms
+    view: yes
+    entities:
+      - group.location
+      - group.living_room
+      - group.dining_room
+      - group.bedroom
+      - group.basement
+      - group.exterior
+      - group.garage
+      - group.climate
+
+  Device Status:
+   view: yes
+   entities:
+     - group.devices
+     - group.computer_shutdown__restart
+     - group.network_performance
+     - group.phone_status
+     - group.Synology_nas
+     - group.entertainment_center
+     - group.ups
+
+  HA:
+    view: yes
+    entities:
+      - group.ha_server_monitor
+      - group.ha_version_info
+      - group.Home_Automation_Device_Status
+      - group.zwave
+
+  Automations:
+    view: yes
+    entities:
+     - group.bedtime_notifications
+     - group.automations_for_lights
+     - group.security_automations
+     - group.network_security_automations
+     - group.home_assistant_automations
+     - group.other_automations
+     - group.climate_automations
+     - group.feed_the_dog_automations
+     - group.leaving_automations
+     - group.ups_automations
+     - group.vacation_mode_automations
+
+  Switches:
+   view: yes
+   entities:
+     - group.edimax_switches
+     - group.bedroom_lights
+     - group.yeelights
+     - group.etekcity_rf_switches
+     - group.broadlink_ir_switches
+
+  Weather:
+    view: yes
+    entities:
+     - camera.radar
+     - group.local_weather
+     - group.forecast4
+     - weather.bartlett
+
+  Other:
+    view: yes
+    entities:
+     - camera.adam_location
+     - group.weblinks
+
+####################################################
+#                                                  #
+#                    GROUPS                        #
+#                                                  #
+####################################################
+
+####################################################
+#                  AUTOMATIONS                     #
+####################################################
+
+  Bedtime Notifications:
+    entities:
+      - automation.desktop_on_at_bedtime
+      - automation.garage_door_open_at_bedtime
+      - automation.htpc_on_at_bedtime
+      - automation.living_room_lamps_on_at_bedtime
+
+  Climate Automations:
+    control: hidden
+    entities:
+      - automation.set_nest_away_mode_when_leaving
+      - automation.set_nest_away_mode_at_1600
+      - automation.turn_off_away_when_home
+      - automation.nest_fan
+
+  Automations For Lights:
+    control: hidden
+    entities:
+      - automation.turn_off_outside_lights
+      - automation.turn_on_outside_lights
+      - automation.turn_on_living_room_lamps
+      - automation.set_notification_bulb2_color
+      - automation.set_notification_bulb2_normal
+      - automation.lamps_on_when_home
+      - automation.turn_off_living_room_lamps_at_midnight
+
+  Network Security Automations:
+    control: hidden
+    entities:
+      - automation.desktop_pc_on_when_away
+      - automation.send_notification_upon_failed_login_attempt
+      - automation.notify_if_new_devices
+
+  Security Automations:
+    control: hidden
+    entities:
+      - automation.front_door_opened_when_away
+      - automation.interior_garage_door_opened_when_away
+      - automation.exterior_garage_door_opened_when_away
+      - automation.exterior_garage_door_left_open_when_away
+
+  Home Assistant Automations:
+    control: hidden
+    entities:
+      - automation.notify_if_ha_device_offline
+      - automation.notify_if_ip_changes
+
+  Other Automations:
+    control: hidden
+    entities:
+      - automation.low_battery_adams_phone
+
+  Feed The Dog Automations:
+    control: hidden
+    entities:
+      - automation.dog_has_been_fed__evening
+      - automation.dog_has_been_fed__morning
+      - automation.feed_the_dog_evening
+      - automation.feed_the_dog_morning
+      - automation.reset_feed_the_dog_notifications
+
+  Leaving Automations:
+    control: hidden
+    entities:
+      - automation.htpc_on_when_leaving
+      - automation.desktop_on_when_leaving
+      - automation.living_room_lamps_on_when_leaving
+
+  UPS Automations:
+    control: hidden
+    entities:
+      - automation.power_outage
+      - automation.power_restored
+
+  Vacation Mode Automations:
+    control: hidden
+    entities:
+      - automation.turn_off_vacation_mode
+      - automation.turn_on_vacation_mode
+
+####################################################
+#                  DEVICE INFO                     #
+####################################################
+
+  Home Automation Device Status:
+    control: hidden
+    entities:
+      - device_tracker.74da384a9d63
+      - device_tracker.74da384aa769
+      - device_tracker.9c8ecd06a5a0
+      - device_tracker.f0b4299fe446
+      - device_tracker.f0b429a8e3f3
+      - device_tracker.f0b429a900ec
+      - device_tracker.286c07b1776d
+      - device_tracker.286c07b19f98
+      - device_tracker.286c07ac908d
+      - device_tracker.b072bf276553
+      - device_tracker.34ea34e3da0d
+      - device_tracker.a020a63452ee
+      - device_tracker.78e1039637ca
+
+####################################################
+#                     LIGHTS                       #
+####################################################
+
+  Outside Lights:
+    - light.yeelight1
+    - light.yeelight3
+    - light.yeelight2
+    - light.yeelight4
+
+  Garage Lights:
+    - light.yeelight3
+    - light.yeelight2
+
+  Bedroom Lights:
+    - light.tradfri_bulb_e26_ws_opal_980lm
+    - light.tradfri_bulb_e26_ws_opal_980lm_2
+
+  Yeelights:
+    - light.yeelight1
+    - light.yeelight2
+    - light.yeelight3
+    - light.yeelight4
+    - light.yeelight5
+    - light.yeelightrgb2
+    - input_select.notification_bulb2_color
+
+####################################################
+#                      OTHER                       #
+####################################################
+
+  Weblinks:
+    - weblink.home_assistant_chat
+    - weblink.home_assistant_forum
+    - weblink.home_assistant_webpage
+
+  Location:
+    - device_tracker.adamsiphone
+    - device_tracker.amysiphone
+    - input_boolean.vacation
+
+####################################################
+#                     ROOMS                        #
+####################################################
+
+  Living Room:
+    control: hidden
+    entities:
+      - switch.htpc_switch
+      - switch.edimax1
+      - light.yeelightrgb2
+      - input_select.notification_bulb2_color
+      - sensor.gehingepinsensor1
+
+  Dining Room:
+    control: hidden
+    entities:
+      - sensor.downstairs_thermostat_temperature
+      - sensor.downstairs_thermostat_humidity
+      - switch.rfswitch2
+      - switch.edimax2
+      - sensor.gehingepinsensor2
+
+  Basement:
+    control: hidden
+    entities:
+      - switch.desktop_switch
+
+  Bedroom:
+    control: hidden
+    entities:
+      - switch.laptop_switch
+      - sensor.temperature
+      - sensor.Humidity
+      - sensor.motion
+      - group.bedroom_lights
+
+  Exterior:
+    control: hidden
+    entities:
+      - group.outside_lights
+      - sensor.pws_temp_f
+      - sensor.pws_relative_humidity
+
+  Garage:
+    control: hidden
+    entities:
+      - sensor.garagedoorstatus
+      - cover.garage
+
+####################################################
+#                   SENSORS                        #
+####################################################
+
+  Entertainment Center:
+    - sensor.dht_sensor_humidity
+    - sensor.dht_sensor_temperature
+
+  Devices:
+    - binary_sensor.device_tracker_a088b4bb64ec
+    - binary_sensor.device_tracker_hostone
+    - binary_sensor.device_tracker_20e52a098cd0
+    - binary_sensor.device_tracker_0011326ef7c5
+    - binary_sensor.device_tracker_dcef09df09f4
+    - binary_sensor.device_tracker_60128b3a2cf5
+    - binary_sensor.device_tracker_b827eb19017f
+    - binary_sensor.device_tracker_b827eb9a6be6
+    - binary_sensor.device_tracker_b827eb4c542a
+    - binary_sensor.device_tracker_b827eb0ec9a4
+    - binary_sensor.device_tracker_74da3826337d
+
+  HA Server Monitor:
+    - sensor.cpu_load_total
+    - sensor.disk_use_home
+    - sensor.ram_used
+    - sensor.since_last_boot_templated
+    - sensor.ha_uptime
+    - sensor.sent_ens32
+    - sensor.received_ens32
+    - sensor.cpu
+    - sensor.connected_clients
+    - sensor.battery
+
+  HA Version Info:
+    - sensor.installed_version
+    - sensor.current_ha_version
+
+  Network Performance:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+    - sensor.garage_door_wifi_signal_strength
+
+  Phone Status:
+    - sensor.battery_adamsiphone
+    - sensor.adamwifi
+    - sensor.charging_adamsiphone
+    - sensor.gps_adamsiphone
+    - sensor.interval_adamsiphone
+    - sensor.battery_iphone
+
+  Nest Temperature & Humidity:
+    - sensor.downstairs_thermostat_temperature
+    - sensor.downstairs_thermostat_humidity
+
+  Climate:
+    - climate.downstairs
+    - binary_sensor.downstairs_thermostat_fan
+    - sensor.downstairs_thermostat_hvac_state
+    - sensor.downstairs_thermostat_operation_mode
+    - sensor.downstairs_thermostat_target
+    - sensor.downstairs_away_mode
+
+  Local Weather:
+    - sensor.pws_weather
+    - sensor.pws_precip_today_in
+    - sensor.pws_precip_1hr_in
+    - sensor.pws_temp_f
+    - sensor.pws_feelslike_f
+    - sensor.pws_wind_string
+    - sensor.pws_relative_humidity
+    - sensor.pws_visibility_mi
+    - sun.sun
+
+  forecast4:
+    name: Four Day Forecast
+    entities:
+     - sensor.pws_weather_1d
+     - sensor.pws_weather_1n
+     - sensor.pws_weather_2d
+     - sensor.pws_weather_2n
+     - sensor.pws_weather_3d
+     - sensor.pws_weather_3n
+     - sensor.pws_weather_4d
+     - sensor.pws_weather_4n
+     - sensor.pws_weather_5d
+     - sensor.pws_weather_5n
+
+  Synology NAS:
+    control: hidden
+    entities:
+      - sensor.cpu_load_total
+      - sensor.memory_usage_real
+      - sensor.network_down
+      - sensor.network_up
+      - sensor.status_smart_sda
+      - sensor.status_smart_sdb
+      - sensor.temperature_sda
+      - sensor.temperature_sdb
+      - sensor.volume_used_volume_1
+      - sensor.volume_used_volume_2
+
+  UPS:
+    control: hidden
+    entities:
+      - sensor.upsstate
+      - sensor.approxwattage
+      - sensor.ups_input_voltage
+      - sensor.ups_battery_runtime
+      - sensor.ups_battery_charge
+      - sensor.ups_load
+
+####################################################
+#                   SWITCHES                       #
+####################################################
+
+  Edimax Switches:
+    control: hidden
+    entities:
+      - switch.edimax1
+      - sensor.edimax1_watts
+      - sensor.edimax1_kwh
+      - sensor.edimax1_cost
+      - switch.edimax2
+      - sensor.edimax2_watts
+      - sensor.edimax2_kwh
+      - sensor.edimax2_cost
+
+  Computer Shutdown & Restart:
+    control: hidden
+    entities:
+      - switch.desktop_switch
+      - switch.htpc_switch
+      - switch.laptop_switch
+
+  Broadlink IR Switches:
+    control: hidden
+    entities:
+      - switch.receiver
+      - switch.input__video1
+      - switch.input__video2
+      - switch.mute_receiver
+      - switch.receiver_volume_up
+      - switch.receiver_volume_down
+      - switch.tv
+      - switch.input_hdmi
+      - switch.input_tv
+      - script.volumeup
+      - script.volumedown
+
+  # Etekcity RF Switches:
+  #   control: hidden
+  #   entities:
+  #     - switch.rfswitch1
+  #     - switch.rfswitch2
+  #     - switch.rfswitch3
+  #     - switch.rfswitch4
+  #     - switch.rfswitch5
+
+####################################################
+#                    ZWAVE                         #
+####################################################
+
+  Zwave:
+    - zwave.aeotec_zw090_zstick_gen5_us
+    - zwave.aeotec_zw117_range_extender_6
+    - sensor.gehingepinsensor1batt
+    - zwave.ge_32563_hinge_pin_smart_door_sensor
+    - sensor.gehingepinsensor2batt
+    - zwave.ge_32563_hinge_pin_smart_door_sensor_2
+    - sensor.garagedoorstatusbatt
+    - zwave.vision_zg8101_garage_door_detector
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

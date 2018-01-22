@@ -1,0 +1,41 @@
+
+#https://home-assistant.io/components/zone/
+
+####################################################
+#                                                  #
+#                     HOME                         #
+#                                                  #
+####################################################
+
+  - name: Home
+    latitude: !secret latitude
+    longitude: !secret longitude
+    radius: 750
+
+####################################################
+#                                                  #
+#                 ADAM WORK                        #
+#                                                  #
+####################################################
+
+  - name: Adam Work
+    latitude: !secret adam_work_latitude
+    longitude: !secret adam_work_longitude
+    radius: 350
+
+####################################################
+#                                                  #
+#                  AMY WORK                        #
+#                                                  #
+####################################################
+
+  - name: Amy Work
+    latitude: !secret amy_work_latitude
+    longitude: !secret amy_work_longitude
+    radius: 350
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

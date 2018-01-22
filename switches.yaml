@@ -1,0 +1,145 @@
+
+#https://home-assistant.io/components/switch/
+
+####################################################
+#                                                  #
+#             BROADLINK IR SWITCHES                #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/switch.broadlink/
+  - platform: broadlink
+    host: 192.168.1.32
+    mac: 34:ea:34:e3:da:0d
+    type: rm_mini
+    switches:
+      receiverpower:
+        friendly_name: Receiver
+        command_on: JgCqAFASKBIVEigSFREpEhQSFRQVEhURFRIVESkRKRIUEhUAAsdQEigSFREpEhQSKBIVEhUUFRIUEhUSFBIoEigSFRIVAALWUBIoExQSKBIVEigSFREVFRQSFREVEhURKRIoEhURFQAC1FASKBIVEigSFREpEhQSFRQVEhQSFRIUEigSKRIUEhUAAs1QEigSFREpEhQSKBIVEhUUFRIUEhUSFBIoEigSFRIVAA0FAAAAAAAAAAAAAAAAAAA=
+        command_off: JgCqAFASKBIVEigSFREpEhQSFRQVEhURFRIVESkRKRIUEhUAAsdQEigSFREpEhQSKBIVEhUUFRIUEhUSFBIoEigSFRIVAALWUBIoExQSKBIVEigSFREVFRQSFREVEhURKRIoEhURFQAC1FASKBIVEigSFREpEhQSFRQVEhQSFRIUEigSKRIUEhUAAs1QEigSFREpEhQSKBIVEhUUFRIUEhUSFBIoEigSFRIVAA0FAAAAAAAAAAAAAAAAAAA=
+      receivervideo1:
+        friendly_name: Input - Video1
+        command_on: JgCqAFASFREpEhQSFRIUEigSFRQVEhURFRIVESgSKRIUEhUAAtBQEhUSKBIVEhQSFREpEhQVFREVEhURFRIoEigSFRIUAALpTxIVEigSFRIUEhURKRIUFRURFRIVERUSKBIoEhUSFAAC8E8SFRIoEhUSFBIVESkSFBUVERUSFREVEigSKBIVEhQAAuJQExQSKBIVEhQSFRIoEhUUFRIUEhUSFBIoEigSFRIVAA0FAAAAAAAAAAAAAAAAAAA=
+        command_off: JgCqAFASFREpEhQSFRIUEigSFRQVEhURFRIVESgSKRIUEhUAAtBQEhUSKBIVEhQSFREpEhQVFREVEhURFRIoEigSFRIUAALpTxIVEigSFRIUEhURKRIUFRURFRIVERUSKBIoEhUSFAAC8E8SFRIoEhUSFBIVESkSFBUVERUSFREVEigSKBIVEhQAAuJQExQSKBIVEhQSFRIoEhUUFRIUEhUSFBIoEigSFRIVAA0FAAAAAAAAAAAAAAAAAAA=
+      receivervideo2:
+        friendly_name: Input - Video2
+        command_on: JgCqAE8TFBIoEikRKRIoEhURFRUUEhUSFBIVESkSKBIVERUAArFQEhURKRIoEigSKBIVEhUUFREVEhURFRIoEigSFRIVAALHUBIVESkSKBIoEigSFRIUFRURFRIVERUSKBIoEhUSFAACvlASFRIoEigSKBIoExQSFRQVEhQSFRIUEigSKBMUEhUAArtQEhURKBIpEigSKBIVEhQVFBIVEhQSFRIoEigSFRIUAA0FAAAAAAAAAAAAAAAAAAA=
+        command_off: JgCqAE8TFBIoEikRKRIoEhURFRUUEhUSFBIVESkSKBIVERUAArFQEhURKRIoEigSKBIVEhUUFREVEhURFRIoEigSFRIVAALHUBIVESkSKBIoEigSFRIUFRURFRIVERUSKBIoEhUSFAACvlASFRIoEigSKBIoExQSFRQVEhQSFRIUEigSKBMUEhUAArtQEhURKBIpEigSKBIVEhQVFBIVEhQSFRIoEigSFRIUAA0FAAAAAAAAAAAAAAAAAAA=
+      receivermute:
+        friendly_name: Mute Receiver
+        command_on: JgCqAE8TFBIVESkSFBIoEhUSFRQVEhQSFREVEigSKBIVEhUAAtBQEhUSFBIoEhUSKBIVEhQVFBIVEhQSFRIoEigSFRIUAALfUBIVERUSKBIVESkSFBIVFBUSFREVEhURKBIpEhQSFQAC5lASFRIUEigSFRIoEhUSFBUUEhUSFBIVEigSKBIVEhQAAuVQEhURFRIoEhURKRIUEhUUFRIVERUSFBIoEikSFBIVAA0FAAAAAAAAAAAAAAAAAAA=
+        command_off: JgCqAE8TFBIVESkSFBIoEhUSFRQVEhQSFREVEigSKBIVEhUAAtBQEhUSFBIoEhUSKBIVEhQVFBIVEhQSFRIoEigSFRIUAALfUBIVERUSKBIVESkSFBIVFBUSFREVEhURKBIpEhQSFQAC5lASFRIUEigSFRIoEhUSFBUUEhUSFBIVEigSKBIVEhQAAuVQEhURFRIoEhURKRIUEhUUFRIVERUSFBIoEikSFBIVAA0FAAAAAAAAAAAAAAAAAAA=
+      receivervolup:
+        friendly_name: Receiver Volume Up
+        command_on: JgCIAE8SFRIoEhUSFBIoEhUSFBUVERUSFREVEigSKBIVEhQAAtFQEhURKRIUEhUSKBIVERUVFBIVEhQSFREpEigSFREVAALfTxMUEigSFRIUEigTFBIVFBUSFBIVEhQSKBIoEhUSFQAC5E8TFBIoEhUSFREoExQSFRQVEhQSFRIUEigSKBIVEhUADQU=
+        command_off: JgCIAE8SFRIoEhUSFBIoEhUSFBUVERUSFREVEigSKBIVEhQAAtFQEhURKRIUEhUSKBIVERUVFBIVEhQSFREpEigSFREVAALfTxMUEigSFRIUEigTFBIVFBUSFBIVEhQSKBIoEhUSFQAC5E8TFBIoEhUSFREoExQSFRQVEhQSFRIUEigSKBIVEhUADQU=
+      receivervoldwn:
+        friendly_name: Receiver Volume Down
+        command_on: JgCqAFASKBIpEhQSFREpEhQSFRQVEhURFRIUEigSKRIUEhUAArpQEigSKBMUEhURKRIUEhUUFRIVERUSFBIoEikSFBIVAALQTxIpEigSFREVEigSFRIUFRQSFRIUEhUSKBIoEhUSFAAC1U8SKRIoEhURFRIoEhUSFBUUEhUSFBIVEigSKBIVEhQAAs9PEikSKBIVERUSKBIVERUVFBIVEhQSFREpEigSFREVAA0FAAAAAAAAAAAAAAAAAAA=
+        command_off: JgCqAFASKBIpEhQSFREpEhQSFRQVEhURFRIUEigSKRIUEhUAArpQEigSKBMUEhURKRIUEhUUFRIVERUSFBIoEikSFBIVAALQTxIpEigSFREVEigSFRIUFRQSFRIUEhUSKBIoEhUSFAAC1U8SKRIoEhURFRIoEhUSFBUUEhUSFBIVEigSKBIVEhQAAs9PEikSKBIVERUSKBIVERUVFBIVEhQSFREpEigSFREVAA0FAAAAAAAAAAAAAAAAAAA=
+      tvpower:
+        friendly_name: TV
+        command_on: JgBgAAABKJAVEBQ1FDUUEhUQFQ8VEBU2FTQVEBQ0FRIVEBQQFRAUEhU0FTQVNBU2FRAVEBQQFRIUEBUQFBAVEhQ1FDUUNRQ3FQAFbgABKEcUAAv5AAEoRxUAC/kAASdIFAANBQAAAAAAAAAA
+        command_off: JgBgAAABKJAVEBQ1FDUUEhUQFQ8VEBU2FTQVEBQ0FRIVEBQQFRAUEhU0FTQVNBU2FRAVEBQQFRIUEBUQFBAVEhQ1FDUUNRQ3FQAFbgABKEcUAAv5AAEoRxUAC/kAASdIFAANBQAAAAAAAAAA
+      tvhdmi:
+        friendly_name: Input HDMI
+        command_on: AAAvANAGEaAI0AEaARoBGgNOARpUQhGgBGgBGrvOIgEiEREiEhERERESEhIiISEjgkU=
+        command_off: AAAvANAGEaAI0AEaARoBGgNOARpUQhGgBGgBGrvOIgEiEREiEhERERESEhIiISEjgkU=
+      tvtv:
+        friendly_name: Input TV
+        command_on: AAAvANAGEaAI0AEaARoBGgNOARpUQhGgBGgBGrvOIgEiEREiEhEREiIhEhEREiEjgkU=
+        command_off: AAAvANAGEaAI0AEaARoBGgNOARpUQhGgBGgBGrvOIgEiEREiEhEREiIhEhEREiEjgkU=
+
+####################################################
+#                                                  #
+#                EDIMAX SWITCHES                   #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/switch.edimax/
+  - platform: edimax
+    host: 192.168.1.21
+    username: !secret edimax_username
+    password: !secret edimax_password
+    name: Edimax1
+
+  - platform: edimax
+    host: 192.168.1.4
+    username: !secret edimax_username
+    password: !secret edimax_password
+    name: Edimax2
+
+####################################################
+#                                                  #
+#             WAKE ON LAN SWITCHES                 #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/switch.wake_on_lan/
+  - platform: wake_on_lan
+    name: HTPC Switch
+    mac_address: "78:2b:cb:9f:60:cd"
+    host: 192.168.1.5
+    turn_off:
+      service: shell_command.htpc
+
+  - platform: wake_on_lan
+    name: Desktop Switch
+    mac_address: "b8:ca:3a:8e:92:61"
+    host: 192.168.1.6
+    turn_off:
+      service: shell_command.desktop
+
+  - platform: wake_on_lan
+    name: Laptop Switch
+    mac_address: "10:08:B1:E2:17:79"
+    host: 192.168.1.8
+    turn_off:
+      service: shell_command.laptop
+
+####################################################
+#                                                  #
+#                   RF SWITCHES                    #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/switch.rpi_rf/
+#  - platform: rpi_rf
+#    gpio: 17
+#    switches:
+#     rfswitch1:
+#       code_on: 267571
+#       code_off: 267580
+#       protocol: 1
+#       pulselength: 194
+#       signal_repetitions: 20
+#     rfswitch2:
+#       code_on: 267715
+#       code_off: 267724
+#       protocol: 1
+#       pulselength: 194
+#       signal_repetitions: 20
+#     rfswitch3:
+#       code_on: 268035
+#       code_off: 268044
+#       protocol: 1
+#       pulselength: 194
+#       signal_repetitions: 20
+#     rfswitch4:
+#       code_on: 269571
+#       code_off: 269580
+#       protocol: 1
+#       pulselength: 194
+#       signal_repetitions: 20
+#     rfswitch5:
+#       code_on: 275715
+#       code_off: 275724
+#       protocol: 1
+#       pulselength: 194
+#       signal_repetitions: 20
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

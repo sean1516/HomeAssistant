@@ -1,0 +1,97 @@
+
+#https://home-assistant.io/components/script/
+
+####################################################
+#                                                  #
+#             Turn Off Media Center                #
+#                                                  #
+####################################################
+
+  mediacenteroff:
+    alias: Media Center
+    sequence:
+      - service: homeassistant.turn_off
+        entity_id: switch.htpc_switch
+      - service: homeassistant.turn_off
+        entity_id: switch.tv
+      - service: homeassistant.turn_off
+        entity_id: switch.receiver
+
+####################################################
+#                                                  #
+#             Turn Off Media Center                #
+#                                                  #
+####################################################
+
+  music:
+    alias: Music
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver
+      - delay: 00:00:05
+      - service: homeassistant.turn_on
+        entity_id: switch.input__video1
+
+####################################################
+#                                                  #
+#             RECEIVER VOLUME UP                   #
+#                                                  #
+####################################################
+
+  volumeup:
+    alias: Volume Up
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_up
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_up
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_up
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_up
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_up
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_up
+
+####################################################
+#                                                  #
+#             RECEIVER VOLUME DOWN                 #
+#                                                  #
+####################################################
+
+  volumedown:
+    alias: Volume Down
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_down
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_down
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_down
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_down
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_down
+      - service: homeassistant.turn_on
+        entity_id: switch.receiver_volume_down
+
+####################################################
+#                                                  #
+#                 NORMAL LIGHT                     #
+#                                                  #
+####################################################
+
+  normallight:
+    sequence:
+      - service: light.turn_on
+        entity_id: light.yeelightrgb2
+        data:
+          brightness: 254
+          color_temp: 336.02150537634407
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

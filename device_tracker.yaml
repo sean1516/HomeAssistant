@@ -1,0 +1,57 @@
+#https://home-assistant.io/components/device_tracker/
+
+####################################################
+#                                                  #
+#       DEVICE TRACKER - ADAM'S iPHONE             #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/device_tracker.icloud/
+
+  - platform: icloud
+    username: !secret adam_icloud_username
+    password: !secret adam_icloud_password
+
+####################################################
+#                                                  #
+#        DEVICE TRACKER - AMY'S iPHONE             #
+#                                                  #
+####################################################
+
+#  - platform: icloud
+#    username: amy_icloud_username
+#    password: amy_icloud_password
+
+####################################################
+#                                                  #
+#              DEVICE TRACKER - NMAP               #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/device_tracker.nmap_tracker/
+
+  - platform: nmap_tracker
+    hosts:
+      - 192.168.1.2-60
+    home_interval: 1
+    exclude:
+      - 192.168.1.17
+
+####################################################
+#                                                  #
+#             DEVICE TRACKER - PING                #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/device_tracker.ping/
+
+  - platform: ping
+    hosts:
+      hostone: 192.168.100.1
+      0011326ef7c5: 192.168.2.2
+
+####################################################
+#                                                  #
+#            END OF CONFIGUATION FILE              #
+#                                                  #
+####################################################

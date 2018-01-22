@@ -1,0 +1,465 @@
+####################################################
+#                                                  #
+#             HOME AUTOMATION DEVICES              #
+#                                                  #
+####################################################
+
+18b430868bb9:
+  hide_if_away: false
+  mac: 18:B4:30:86:8B:B9
+  name: 18b430868bb9
+  picture:
+  track: true
+  #IP: 192.168.1.9
+  # Nest Thermostat
+
+74da384aa769:
+  hide_if_away: false
+  mac: 74:DA:38:4A:A7:69
+  name: 74da384aa769
+  picture:
+  track: true
+  vendor: Edimax Technology Co. Ltd.
+  #IP: 192.168.1.21
+  # Edimax Switch 1
+
+74da384a9d63:
+  hide_if_away: false
+  mac: 74:DA:38:4A:9D:63
+  name: 74da384a9d63
+  picture:
+  track: true
+  vendor: Edimax Technology Co. Ltd.
+  #IP: 192.168.1.4
+  # Edimax Swtich 2
+
+6854fd8aee8c:
+  hide_if_away: false
+  mac: 68:54:FD:8A:EE:8C
+  name: 6854fd8aee8c
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.
+  #IP: 192.168.1.17
+  # Amazon Echo Dot
+
+b072bf276553:
+  hide_if_away: false
+  mac: B0:72:BF:27:65:53
+  name: Ikea Tradfri Gateway
+  picture:
+  track: true
+  vendor: Murata Manufacturing Co., Ltd.
+  #IP: 192.168.1.20
+  # Ikea Tradfri Gateway
+
+34ea34e3da0d:
+  hide_if_away: false
+  icon:
+  mac: 34:EA:34:E3:DA:0D
+  name: 34ea34e3da0d
+  picture:
+  track: true
+  vendor: HangZhou Gubei Electronics Technology Co.,Ltd
+  #IP: 192.168.1.32
+  # Broadlink RM Mini3
+
+78e1039637ca:
+  hide_if_away: false
+  icon:
+  mac: 78:E1:03:96:37:CA
+  name: 78e1039637ca
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.
+  #IP: 192.168.1.33
+  # Dash Button
+
+a020a63452ee:
+  hide_if_away: false
+  icon:
+  mac: A0:20:A6:34:52:EE
+  name: a020a63452ee
+  picture:
+  track: true
+  vendor: unknown
+  #IP: 192.168.1.18
+  # Open Garage
+
+####################################################
+#                                                  #
+#              LAPTOPS / COMPUTERS                 #
+#                                                  #
+####################################################
+
+1008B1E21779:
+  hide_if_away: false
+  mac: 10:08:B1:E2:17:79
+  name: 1008B1E21779
+  picture:
+  track: true
+  #IP: 192.168.1.8
+  # Lenovo Laptop
+
+782bcb9f60cd:
+  hide_if_away: false
+  mac: 78:2B:CB:9F:60:CD
+  name: 782bcb9f60cd
+  picture:
+  track: true
+  vendor: unknown
+  #IP: 192.168.1.5
+  # HTPC
+
+a088b4bb64ec:
+  hide_if_away: false
+  mac: A0:88:B4:BB:64:EC
+  name: a088b4bb64ec
+  picture:
+  track: true
+  vendor: Intel Corporate
+  #IP: 192.168.1.23
+  # Linux Laptop Wireless
+
+5c260a68d317:
+  hide_if_away: false
+  icon:
+  mac: 5C:26:0A:68:D3:17
+  name: 5c260a68d317
+  picture:
+  track: true
+  vendor: Dell Inc.
+  #IP: Not on a reserved IP
+  # Linux Laptop Wired
+
+e4a471841fac:
+  hide_if_away: false
+  mac: E4:A4:71:84:1F:AC
+  name: e4a471841fac
+  picture:
+  track: true
+  vendor: unknown
+  #IP: Not on a reserved IP
+  # Amy's Work Laptop
+
+
+28b2bdcd3818:
+  hide_if_away: false
+  icon:
+  mac: 28:B2:BD:CD:38:18
+  name: 28b2bdcd3818
+  picture:
+  track: true
+  vendor: Intel Corporate
+  #IP: Not on a reserved IP
+  # Adam's Work Laptop Wireless
+
+28d244dbfb7d:
+  hide_if_away: false
+  icon:
+  mac: 28:D2:44:DB:FB:7D
+  name: 28d244dbfb7d
+  picture:
+  track: true
+  vendor: unknown
+  #IP: Not on a reserved IP
+  # Adam's Work Laptop Wired
+
+
+b8ca3a8e9261:
+  hide_if_away: false
+  mac: b8:ca:3a:8e:92:61
+  name: b8ca3a8e9261
+  picture:
+  track: true
+  vendor: unknown
+  #IP: 192.168.1.6
+  # Desktop
+
+####################################################
+#                                                  #
+#             NETWORK INFRASTRUCTURE               #
+#                                                  #
+####################################################
+
+hostone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: hostone
+  picture:
+  track: true
+  vendor:
+  #IP: 192.168.100.1
+  # Modem
+
+20e52a098cd0:
+  hide_if_away: false
+  mac: 20:E5:2A:09:8C:D0
+  name: 20e52a098cd0
+  picture:
+  track: true
+  #IP: 192.168.1.50
+  # Netgear Router
+
+0011326ef7c5:
+  hide_if_away: false
+  icon:
+  mac: 00:11:32:6E:F7:C5
+  name: 0011326ef7c5
+  picture:
+  track: true
+  vendor: Synology Incorporated
+    #IP: 192.168.2.2
+    # Synology NAS
+
+dcef09df09f4:
+  hide_if_away: false
+  mac: DC:EF:09:DF:09:F4
+  name: dcef09df09f4
+  picture:
+  track: true
+  vendor: NETGEAR
+  #IP: 192.168.1.19
+  # Netgear Switch
+
+####################################################
+#                                                  #
+#                   OTHER                          #
+#                                                  #
+####################################################
+
+60128b3a2cf5:
+  hide_if_away: false
+  mac: 60:12:8B:3A:2C:F5
+  name: 60128b3a2cf5
+  picture:
+  track: true
+  vendor: Canon
+  #IP: 192.168.1.13
+  # Canon Printer
+
+0026b4900480:
+  hide_if_away: false
+  mac: 00:26:B4:90:04:80
+  name: 0026b4900480
+  picture:
+  track: true
+  vendor: Ford Motor Company
+  #IP: Not on a reserved IP
+  # Ford Edge
+
+b827eb19017f:
+  hide_if_away: false
+  mac: B8:27:EB:19:01:7F
+  name: b827eb19017f
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
+  #IP: 192.168.1.30
+  # Raspberry Pi 3 (Wifi)
+
+b827eb9a6be6:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:9A:6B:E6
+  name: b827eb9a6be6
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
+  #IP: 192.168.1.22
+  # Raspberry Pi Zero
+
+b827eb4c542a:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:4C:54:2A
+  name: b827eb4c542a
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
+  #IP: 192.168.1.24
+  # Raspberry Pi 3 (Wired)
+
+b827eb0ec9a4:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:0E:C9:A4
+  name: b827eb0ec9a4
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
+  #IP: 192.168.1.14
+  # Raspberry Pi 2 (Wired)
+
+74da3826337d:
+  hide_if_away: false
+  icon:
+  mac: 74:DA:38:26:33:7D
+  name: 74da3826337d
+  picture:
+  track: true
+  vendor: Edimax Technology Co. Ltd.
+  #IP 192.168.1.25
+  # Edimax Wifi USB
+
+####################################################
+#                                                  #
+#                    PHONES                        #
+#                                                  #
+####################################################
+
+c0a53e6bfa77:
+  hide_if_away: false
+  icon:
+  mac: C0:A5:3E:6B:FA:77
+  name: c0a53e6bfa77
+  picture:
+  track: true
+  vendor: Apple, Inc.
+  #IP: 192.168.1.7
+  # Adam's iPhone Wifi
+
+70ef002dc94f:
+  hide_if_away: false
+  icon:
+  mac: 70:EF:00:2D:C9:4F
+  name: 70ef002dc94f
+  picture:
+  track: true
+  vendor: Apple, Inc.
+  #IP: 192.168.1.2
+  # Amy's iPhone Wifi
+
+adamsiphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Adam's iPhone
+  picture:
+  track: true
+  vendor:
+  #iCloud Tracking
+
+amysiphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Amy's iPhone
+  picture:
+  track: true
+  vendor:
+  #iCloud Tracking
+
+amysapple_watch:
+  hide_if_away: false
+  icon:
+  mac:
+  name: "Amy's Apple Watch"
+  picture:
+  track: true
+  vendor:
+  #iCloud Tracking
+
+347c25a0db80:
+  hide_if_away: false
+  icon:
+  mac: 34:7C:25:A0:DB:80
+  name: 347c25a0db80
+  picture:
+  track: true
+  vendor: Apple, Inc.
+  #IP: 192.168.1.16
+  # Amy's Apple Watch Wifi
+
+####################################################
+#                                                  #
+#                 YEELIGHT BULBS                   #
+#                                                  #
+####################################################
+
+f0b429a8e3f3:
+  hide_if_away: false
+  mac: F0:B4:29:A8:E3:F3
+  name: f0b429a8e3f3
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.11
+  # Yeelight Bulb
+
+f0b4299fe446:
+  hide_if_away: false
+  mac: F0:B4:29:9F:E4:46
+  name: f0b4299fe446
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.10
+  # Yeelight Bulb
+
+286c071064f1:
+  hide_if_away: false
+  mac: 28:6C:07:10:64:F1
+  name: 286c071064f1
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.18
+  # Yeelight Bulb
+
+286c07b1776d:
+  hide_if_away: false
+  mac: 28:6C:07:B1:77:6D
+  name: 286c07b1776d
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.26
+  # Yeelight Bulb
+
+286c07b19f98:
+  hide_if_away: false
+  mac: 28:6C:07:B1:9F:98
+  name: 286c07b19f98
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.28
+  # Yeelight Bulb
+
+f0b429a900ec:
+  hide_if_away: false
+  mac: F0:B4:29:A9:00:EC
+  name: f0b429a900ec
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.12
+  # Yeelight Bulb
+
+286c07ac908d:
+  hide_if_away: false
+  icon:
+  mac: 28:6C:07:AC:90:8D
+  name: 286c07ac908d
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+  #IP: 192.168.1.25
+  # Yeelight Bulb
+
+####################################################
+#                                                  #
+#      NEW UNSORTED DEVICES BELOW THIS LINE        #
+#                                                  #
+####################################################
+
+90b11c752eae:
+  hide_if_away: false
+  icon:
+  mac: 90:B1:1C:75:2E:AE
+  name: 90b11c752eae
+  picture:
+  track: true
+  vendor: Dell Inc.

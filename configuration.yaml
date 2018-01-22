@@ -1,0 +1,184 @@
+####################################################
+#                                                  #
+#                 HOME ASSISTANT                   #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/docs/configuration/basic/
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 244
+  unit_system: imperial
+  time_zone: !secret time_zone
+  customize: !include customize.yaml
+
+####################################################
+#                                                  #
+#                     GENERAL                      #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/history/
+history:
+
+#https://home-assistant.io/components/sun/
+sun:
+
+#https://home-assistant.io/components/config/
+config:
+
+#https://home-assistant.io/components/http/
+http:
+  api_password: !secret api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  ip_ban_enabled: true
+  login_attempts_threshold: 2
+
+#https://home-assistant.io/components/recorder/
+recorder:
+  purge_interval: 3
+  purge_keep_days: 3
+
+#https://home-assistant.io/components/logger/
+logger:
+  default: error
+  logs:
+    homeassistant.components.sensor.template: critical
+    homeassistant.components.cover: critical
+
+####################################################
+#                                                  #
+#      LINKS TO INDIVUAL CONFIGURATION FILES       #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/docs/configuration/splitting_configuration/
+group: !include groups.yaml
+device_tracker: !include device_tracker.yaml
+notify: !include notification.yaml
+switch: !include switches.yaml
+sensor: !include sensors.yaml
+automation: !include_dir_merge_list automation/
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
+logbook: !include logbook.yaml
+binary_sensor: !include binary_sensor.yaml
+light: !include lights.yaml
+camera: !include camera.yaml
+zone: !include zones.yaml
+input_select: !include input_select.yaml
+frontend: !include frontend.yaml
+cover: !include cover.yaml
+ios: !include ios.yaml
+input_boolean: !include input_boolean.yaml
+
+####################################################
+#                                                  #
+#                     DUCKDNS                      #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/duckdns/
+duckdns:
+  domain: !secret domain
+  access_token: !secret access_token
+
+####################################################
+#                                                  #
+#                OPEN WEATHER MAP                  #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/weather.openweathermap/
+weather:
+  platform: openweathermap
+  api_key: !secret api_key
+  name: Bartlett
+
+####################################################
+#                                                  #
+#                      NEST                        #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/nest/
+nest:
+  client_id: !secret client_id
+  client_secret: secret client_secret
+
+####################################################
+#                                                  #
+#               EMULATED HUE                       #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/emulated_hue/
+emulated_hue:
+  host_ip: 192.168.1.24
+  exposed_domains:
+    - light
+    - switch
+
+####################################################
+#                                                  #
+#                TRADFRI HUB                       #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/tradfri/
+tradfri:
+  host: 192.168.1.20
+  allow_tradfri_groups: false
+
+####################################################
+#                                                  #
+#                   WEBLINKS                       #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/weblink/
+weblink:
+  entities:
+    - name: Home Assistant Webpage
+      url: https://home-assistant.io/
+    - name: Home Assistant Forum
+      url: https://community.home-assistant.io/
+    - name: Home Assistant Chat
+      url: https://discordapp.com/channels/330944238910963714/330944238910963714
+
+####################################################
+#                                                  #
+#                     ZWAVE                        #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/docs/z-wave/
+zwave:
+ usb_path: /dev/ttyACM0
+ autoheal: false
+ new_entity_ids: true
+ polling_interval: 30000
+
+####################################################
+#                                                  #
+#                     MQTT                         #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/docs/mqtt/broker/#run-your-own
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqttusername
+  password: !secret mqttpassword
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

@@ -1,0 +1,41 @@
+
+#https://home-assistant.io/components/logbook/
+
+####################################################
+#                                                  #
+#                   LOGBOOK                        #
+#                                                  #
+####################################################
+
+  include:
+    entities:
+      - device_tracker.adamsiphone7
+      - device_tracker.amysiphone
+      - device_tracker.609ac126a970
+      - device_tracker.bc9fef2f1fe3
+      - device_tracker.bc9fef3f3205
+      - device_tracker.44650d8fc4e2
+      - sensor.htpc_3
+      - sensor.desktop
+      - sensor.laptop
+      - sensor.linux
+      - sensor.printer
+      - sensor.router
+      - sun.sun
+      - sensor.downstairs_away_mode
+      - sensor.downstairs_thermostat_operation_mode
+      - switch.edimax1
+      - switch.edimax2
+      - sensor.gehingepinsensor1
+      - sensor.gehingepinsensor2
+      - sensor.garagedoorstatus
+
+    domains:
+      - automation
+      - light
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

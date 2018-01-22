@@ -1,0 +1,46 @@
+
+#https://home-assistant.io/components/binary_sensor/
+
+####################################################
+#                                                  #
+#                 NEST SENSORS                     #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/binary_sensor.nest/
+
+  - platform: nest
+    monitored_conditions:
+      - online
+      - fan
+      - is_using_emergency_heat
+      - is_locked
+      - has_leaf
+
+####################################################
+#                                                  #
+#             CUSTOM DEVICE TRACKER                #
+#                                                  #
+####################################################
+
+#https://community.home-assistant.io/t/better-looking-device-tracker/27281
+
+  - platform: device_tracker_sensor
+    entities:
+      - device_tracker.a088b4bb64ec
+      - device_tracker.hostone
+      - device_tracker.20e52a098cd0
+      - device_tracker.0011326ef7c5
+      - device_tracker.dcef09df09f4
+      - device_tracker.60128b3a2cf5
+      - device_tracker.b827eb19017f
+      - device_tracker.b827eb9a6be6
+      - device_tracker.b827eb4c542a
+      - device_tracker.b827eb0ec9a4
+      - device_tracker.74da3826337d
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################
