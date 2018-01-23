@@ -7,7 +7,7 @@
   - alias: "Lets Encrypt Cert Did Not Update "
     trigger:
       platform: numeric state
-      entity_id:sensor.lets_encrypt_expiration
+      entity_id: sensor.lets_encrypt_expiration
       below: 58
     action:
       service: notify.home_assistant
