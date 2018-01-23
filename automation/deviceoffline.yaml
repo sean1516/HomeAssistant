@@ -8,22 +8,22 @@
     trigger:
       platform: state
       entity_id:
-        - device_tracker.6c0b84ce3b3e
-        - device_tracker.74da384a9d63
-        - device_tracker.74da384aa769
-        - device_tracker.9c8ecd06a5a0
-        - device_tracker.f0b4299fe446
-        - device_tracker.f0b429a8e3f3
-        - device_tracker.f0b429a900ec
-        - device_tracker.286c071064f1
-        - device_tracker.286c07ac908d
-        - device_tracker.6854fd8aee8c
-        - device_tracker.286c07b1776d
-        - device_tracker.286c07b19f98
-        - device_tracker.b072bf276553
-        - device_tracker.b827eb19017f
-        - device_tracker.34ea34e3da0d
-        - device_tracker.hostone
+        - device_tracker.74da384a9d63 # Edimax Switch 2
+        - device_tracker.74da384aa769 #Edimax Switch 1
+        - device_tracker.f0b4299fe446 # Yeelight 1
+        - device_tracker.f0b429a8e3f3 # Yeelight 2
+        - device_tracker.f0b429a900ec # Yeelight 3
+        - device_tracker.286c071064f1 # Yeelight Bulb RGB 1
+        - device_tracker.286c07b1776d # Yeelight 4
+        - device_tracker.286c07b19f98 # Yeelight 5
+        - device_tracker.b827eb9a6be6 # Raspberry Pi Zero W
+        - device_tracker.34ea34e3da0d # Broadlink RM Mini 3
+        - device_tracker.hostone # Modem
+        - device_tracker.0011326ef7c5 # NAS
+        - device_tracker.b072bf276553 # Ikea Tradfri Gateway
+        #- device_tracker.a020a63452ee # Open Garage
+        #- device_tracker.6854fd8aee8c # Amazon Echo Dot
+        #- device_tracker.18b430868bb9 # Nest Thermostat
       from: 'home'
       to: 'not_home'
     action:
