@@ -247,8 +247,6 @@
     entities:
       - sensor.downstairs_thermostat_temperature
       - sensor.downstairs_thermostat_humidity
-      - switch.rfswitch2
-      - switch.edimax2
       - sensor.gehingepinsensor2
 
   Basement:
@@ -300,7 +298,7 @@
     - binary_sensor.device_tracker_74da3826337d
 
   HA Server Monitor:
-    - sensor.cpu_load_total
+    - sensor.cpu_used
     - sensor.disk_use_home
     - sensor.ram_used
     - sensor.since_last_boot_templated
@@ -310,6 +308,7 @@
     - sensor.cpu
     - sensor.connected_clients
     - sensor.battery
+    - sensor.lets_encrypt_expiration
 
   HA Version Info:
     - sensor.installed_version

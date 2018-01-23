@@ -708,6 +708,12 @@
       emulated_hue_hidden: true
       hidden: false
 
+    group.bedroom_lights:
+      friendly_name: Bedroom Lights
+      emulated_hue_hidden: true
+      hidden: false
+      icon: mdi:lamp
+
     group.bedtime_notifications:
       friendly_name: Bedtime Notifications
       emulated_hue_hidden: true
@@ -862,6 +868,7 @@
       friendly_name: Outside Lights
       emulated_hue_hidden: true
       hidden: false
+      icon: mdi:lightbulb-outline
 
     group.phone_status:
       friendly_name: Phone Status
@@ -1314,6 +1321,12 @@
       emulated_hue_hidden: true
       hidden: false
 
+    sensor.lets_encrypt_expiration:
+      friendly_name: Lets Encrypt Expiration
+      emulated_hue_hidden: true
+      hidden: false
+      icon: mdi:timelapse
+
     sensor.memory_usage_real:
       friendly_name: Memory Usage
       icon: mdi:chip
@@ -1574,11 +1587,12 @@
       friendly_name: Livng Room Lamps
       icon: mdi:lamp
       emulated_hue_hidden: false
+      emulated_hue_name: Lamps
       hidden: false
 
     switch.edimax2:
-      friendly_name: Christmas Tree
-      icon: mdi:pine-tree
+      friendly_name: Spare Switch
+      icon: mdi:power
       emulated_hue_hidden: false
       emulated_hue_name: Christmas Tree
       hidden: false
