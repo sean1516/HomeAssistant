@@ -1,0 +1,44 @@
+
+#https://home-assistant.io/components/cover/
+
+####################################################
+#                                                  #
+#                   OPEN GARAGE                    #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/cover.opengarage/
+
+
+  - platform: opengarage
+    covers:
+      garage:
+        host:  192.168.1.18
+        device_key: !secret device_key
+        name:  Garage Door
+
+####################################################
+#                                                  #
+#                 TEMPLATE COVER                   #
+#                                                  #
+####################################################
+
+  - platform: template
+    covers:
+      garage:
+        friendly_name: "Garage Door"
+        value_template: "{{states.sensor.garagedoorstatus.state}}"
+        open_cover:
+          service: cover.open_cover
+          data:
+            entity_id: cover.garage_door
+        close_cover:
+          service: cover.close_cover
+          data:
+            entity_id: cover.garage_door
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################
