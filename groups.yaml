@@ -133,6 +133,7 @@
     entities:
       - automation.notify_if_ha_device_offline
       - automation.notify_if_ip_changes
+      - automation.lets_encrypt_cert_did_not_update
 
   Other Automations:
     control: hidden

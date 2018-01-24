@@ -65,7 +65,7 @@ sensor: !include sensors.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 shell_command: !include shell_commands.yaml
-logbook: !include logbook.yaml
+#logbook: !include logbook.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include lights.yaml
 camera: !include camera.yaml

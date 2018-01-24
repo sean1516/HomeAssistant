@@ -154,6 +154,13 @@
       hidden: false
       initial_state: true
 
+    automation.lets_encrypt_cert_did_not_update:
+      friendly_name: Lets Encrypt Certificate Did Not Update
+      icon: mdi:certificate
+      emulated_hue_hidden: true
+      hidden: false
+      initial_state: true
+
     automation.living_room_lamps_on_at_bedtime:
       friendly_name: Living Room Lamps on at Bedtime
       icon: mdi:lightbulb-outline

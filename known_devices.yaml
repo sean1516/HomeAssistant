@@ -142,7 +142,6 @@ e4a471841fac:
   #IP: Not on a reserved IP
   # Amy's Work Laptop
 
-
 28b2bdcd3818:
   hide_if_away: false
   icon:
@@ -164,7 +163,6 @@ e4a471841fac:
   vendor: unknown
   #IP: Not on a reserved IP
   # Adam's Work Laptop Wired
-
 
 b8ca3a8e9261:
   hide_if_away: false
@@ -278,7 +276,7 @@ b827eb4c542a:
   picture:
   track: true
   vendor: Raspberry Pi Foundation
-  #IP: 192.168.1.24
+  #IP: 192.168.1.31
   # Raspberry Pi 3 (Wired)
 
 b827eb0ec9a4:
