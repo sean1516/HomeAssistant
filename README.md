@@ -76,6 +76,10 @@ These notifications are triggered after 10:00 PM and I plug my phone in (general
 
 <p align="center"> <img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/iosnotification.jpg"><img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/ios%20action.jpg">
 </p> 
+### Cert Update.yaml Automation:
+This notification is used to notify me if my Lets Encrypt certificate does not auto renew at the begininng of the month.  
+* __[Notify Me if Lets Encrypt Cert Did Not Update ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/certupdate.yaml)__
+
 
 ### Device Offline.yaml Automations:
 This notification is used to notify me if on of my home automation devices goes offline.  Generally this is someone flipping a switch which cuts the power or a network connectivy issue.
