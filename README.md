@@ -68,14 +68,15 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Automations:
 
 ### Bedtime_Notifications.yaml Automations:
-These notifications are triggered after 10:00 PM and I plug my phone in (generally I am in bed when this happens).  These send a iOS app notification with an action option to turn the device off.  These are primarily a power saving item.
+These notifications are triggered after 10:00 PM and I plug my phone in (generally I am in bed when this happens).  These send a iOS app notification with an action option to turn the device off.  These are primarily a power saving items.
 * __[Notify Me if the garage door is open and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L1)__
 * __[Notify Me if the Home Theater PC is left on and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L26)__
 * __[Notify Me if the Desktop PC is left on and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L65)__
 * __[Notify Me if the Living Room Lamps are left on and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L103)__
 
 <p align="center"> <img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/iosnotification.jpg"><img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/ios%20action.jpg">
-</p> 
+</p>
+
 ### Cert Update.yaml Automation:
 This notification is used to notify me if my Lets Encrypt certificate does not auto renew at the begininng of the month.  
 * __[Notify Me if Lets Encrypt Cert Did Not Update ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/certupdate.yaml)__
