@@ -1,0 +1,173 @@
+#https://home-assistant.io/docs/configuration/customizing-devices/
+
+####################################################
+#                                                  #
+#                    CAMERAS                       #
+#                                                  #
+####################################################
+
+# camera.adam_location:
+
+# camera.radar:
+
+####################################################
+#                                                  #
+#                    CLIMATE                       #
+#                                                  #
+####################################################
+
+#climate.downstairs:
+
+####################################################
+#                                                  #
+#                    COVER                         #
+#                                                  #
+####################################################
+
+#cover.garage:
+#cover.garage_door:
+
+####################################################
+#                                                  #
+#                 INPUT BOOLEANS                   #
+#                                                  #
+####################################################
+
+input_boolean.vacation:
+  friendly_name: Vacation Mode
+  icon: mdi:beach
+  emulated_hue_hidden: true
+  hidden: false
+
+####################################################
+#                                                  #
+#                 INPUT SELECTS                    #
+#                                                  #
+####################################################
+
+input_select.notification_bulb2_color:
+  friendly_name: Notification Bulb 2 Color
+  emulated_hue_hidden: true
+  hidden: false
+
+####################################################
+#                                                  #
+#                   SCRIPTS                        #
+#                                                  #
+####################################################
+
+script.mediacenteroff:
+  friendly_name: Media Center
+  icon: mdi:television-classic-off
+  emulated_hue_hidden: true
+  hidden: false
+
+script.music:
+  friendly_name: Music
+  icon: mdi:music
+  emulated_hue_hidden: false
+  emulated_hue_name: Music
+  hidden: false
+
+script.normallight:
+  friendly_name: Normal Light
+  emulated_hue_hidden: false
+  emulated_hue_name: normal light
+  hidden: false
+
+script.volumedown:
+  friendly_name: Volume Down
+  icon: mdi:volume-minus
+  emulated_hue_hidden: false
+  emulated_hue_name: Volume Down
+  hidden: false
+
+script.volumeup:
+  friendly_name: Volume Up
+  icon: mdi:volume-plus
+  emulated_hue_hidden: false
+  emulated_hue_name: Volume Up
+  hidden: false
+
+####################################################
+#                                                  #
+#                      SUN                         #
+#                                                  #
+####################################################
+
+#sun.sun:
+
+####################################################
+#                                                  #
+#                     WEATHER                      #
+#                                                  #
+####################################################
+
+#weather.bartlett:
+
+####################################################
+#                                                  #
+#                   WEBLINKS                       #
+#                                                  #
+####################################################
+
+weblink.home_assistant_chat:
+  friendly_name: Home Assistant Chat
+
+weblink.home_assistant_forum:
+  friendly_name: Home Assistant Forum
+
+weblink.home_assistant_webpage:
+  friendly_name: Home Assistant Webpage
+
+####################################################
+#                                                  #
+#                     ZONES                        #
+#                                                  #
+####################################################
+
+zone.adam_work:
+  track_ios: true
+
+zone.amy_work:
+  track_ios: true
+
+zone.home:
+  track_ios: true
+
+####################################################
+#                                                  #
+#                     ZWAVE                        #
+#                                                  #
+####################################################
+
+zwave.aeotec_zw090_zstick_gen5_us:
+  friendly_name: Zwave USB Hub
+  emulated_hue_hidden: true
+  hidden: false
+
+zwave.aeotec_zw117_range_extender_6:
+  friendly_name: Zwave Extender
+  emulated_hue_hidden: true
+  hidden: false
+
+zwave.ge_32563_hinge_pin_smart_door_sensor:
+  friendly_name: GE Zwave Garage Door Sensor
+  emulated_hue_hidden: true
+  hidden: false
+
+zwave.ge_32563_hinge_pin_smart_door_sensor_2:
+  friendly_name: GE Zwave Front Door Sensor
+  emulated_hue_hidden: true
+  hidden: false
+
+zwave.vision_zg8101_garage_door_detector:
+  friendly_name: Monoprice Zwave Garage Door Sensor
+  emulated_hue_hidden: true
+  hidden: false
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

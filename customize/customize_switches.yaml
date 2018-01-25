@@ -1,0 +1,137 @@
+#https://home-assistant.io/docs/configuration/customizing-devices/
+
+####################################################
+#                                                  #
+#                   SWITCHES                       #
+#                                                  #
+####################################################
+
+switch.aeotec_disco_light:
+  friendly_name: Z-Stick Light
+  icon: mdi:alarm-light
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.desktop_switch:
+  friendly_name: Desktop Switch
+  icon: mdi:desktop-tower
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.edimax1:
+  friendly_name: Livng Room Lamps
+  icon: mdi:lamp
+  emulated_hue_hidden: false
+  emulated_hue_name: Lamps
+  hidden: false
+
+switch.edimax2:
+  friendly_name: Spare Switch
+  icon: mdi:power
+  emulated_hue_hidden: false
+  emulated_hue_name: Christmas Tree
+  hidden: false
+
+switch.htpc_switch:
+  friendly_name: HTPC Switch
+  icon: mdi:youtube-tv
+  emulated_hue_hidden: false
+  emulated_hue_name: computer
+  hidden: false
+
+switch.input__video1:
+  friendly_name: Input - Video1
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.input__video2:
+  friendly_name: Input - Video 2
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.input_hdmi:
+  friendly_name: Input HDMI
+  icon: mdi:video-input-hdmi
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.input_tv:
+  friendly_name: Tv Input
+  icon: mdi:television
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.laptop_switch:
+  friendly_name: Laptop Switch
+  icon: mdi:laptop
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.mute_receiver:
+  friendly_name: Mute Receiver
+  icon: mdi:volume-mute
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.receiver:
+  friendly_name: Receiver
+  icon: mdi:speaker
+  emulated_hue_hidden: false
+  emulated_hue_name: Amplifier
+  hidden: false
+
+switch.receiver_volume_down:
+  friendly_name: Volume Down
+  icon: mdi:volume-minus
+  emulated_hue_hidden: true
+  hidden: false
+
+switch.receiver_volume_up:
+  friendly_name: Volume Up
+  icon: mdi:volume-plus
+  emulated_hue_hidden: true
+  hidden: false
+
+# switch.rfswitch1:
+#   friendly_name: rfswitch1
+#   icon: mdi:pine-tree
+#   emulated_hue_hidden: true
+#   hidden: false
+#
+# switch.rfswitch2:
+#   friendly_name: China Cabinet
+#   icon: mdi:lightbulb-outline
+#   emulated_hue_hidden: true
+#   emulated_hue_name: China Cabinet
+#   hidden: false
+#
+# switch.rfswitch3:
+#   friendly_name: rfswitch3
+#   #icon:
+#   emulated_hue_hidden: true
+#   hidden: false
+#
+# switch.rfswitch4:
+#   friendly_name: rfswitch4
+#   #icon:
+#   emulated_hue_hidden: true
+#   hidden: false
+#
+# switch.rfswitch5:
+#   friendly_name: rfswitch5
+#   icon: mdi:lightbulb-outline
+#   emulated_hue_hidden: true
+#   hidden: false
+
+switch.tv:
+  friendly_name: TV
+  icon: mdi:television
+  emulated_hue_hidden: false
+  emulated_hue_name: TV
+  hidden: false
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################
