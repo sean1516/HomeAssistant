@@ -29,11 +29,11 @@
       conditions:
         - condition: state
           entity_id: sensor.garagedoorstatus
-          state: 'open'
+          state: 'Open'
         - condition: template
           value_template: "{{ states.sun.sun.attributes.elevation  | int < 10 }}"
     action:
-      service: swtich.turn_on
+      service: switch.turn_on
       entity_id: switch.edimax1
 
 #########################################################
@@ -47,9 +47,8 @@
       platform: time
       at: '00:01:00'
     action:
-      service: swtich.turn_off
+      service: switch.turn_off
       entity_id: switch.edimax1
-
 
 ########################################################
 #                                                       #
