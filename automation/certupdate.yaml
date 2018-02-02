@@ -8,7 +8,7 @@
     trigger:
       - platform: numeric_state
         entity_id: sensor.lets_encrypt_expiration
-        below: 58
+        below: 28
     action:
       service: notify.home_assistant
       data:
