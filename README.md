@@ -9,15 +9,15 @@ If you are just gettting started with Home Assistant I highly reccomend checking
 
 # Hardware Running HA:
 * __[Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__
-This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  __[VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html)__ which allows me to run mutiple virtual machines on the same physical hardware.  I run my router/firewall off the same machine.  
+This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  _[VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html)__ which allows me to run mutiple virtual machines on the same physical hardware.  I run my router/firewall off the same machine.  
 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 * __[Raspberry Pi Zero W ](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)__ 
-This is a remote Home Assistant instance using the __[Hassbian Install Method ](https://home-assistant.io/docs/installation/hassbian/installation/)__ and running version __0.54.0__.  This is used for remote temperature and motion detection.  This Pi also serves as the control for my 433 MHz switches.  This instance is connected to my main instance using MQTT statestream.
+This is a remote Home Assistant instance using the _[Hassbian Install Method ](https://home-assistant.io/docs/installation/hassbian/installation/)__ and running version _0.54.0__.  This is used for remote temperature and motion detection.  This Pi also serves as the control for my 433 MHz switches.  This instance is connected to my main instance using MQTT statestream.
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.60.0__. My preferred installation method is an [Ubuntu Server](https://www.ubuntu.com/server) instance and following the [Python Virtual Enviroment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly reccomend using the __[Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)__
+I'm currently running [Home Assistant](https://home-assistant.io) version _0.60.0__. My preferred installation method is an [Ubuntu Server](https://www.ubuntu.com/server) instance and following the [Python Virtual Enviroment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly reccomend using the _[Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)__
 
 I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
 
@@ -40,7 +40,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Connected Devices:
 
 ### Cloud Controlled Devices:
-* __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the __[Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)__
+* __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the _[Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)__
 * __[Nest Thermostat](https://nest.com/thermostat/meet-nest-thermostat/)__
 * __[iCloud Presence Detection / iPhone 8 Plus](https://www.apple.com/shop/buy-iphone/iphone-8)__
 
