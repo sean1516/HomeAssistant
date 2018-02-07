@@ -1,6 +1,5 @@
 """
 Platform that supports scanning iCloud.
-
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.icloud/
 """
@@ -321,6 +320,7 @@ class Icloud(DeviceScanner):
                          currentminutes % interval in [2, 4])):
                     if (self.filter_devices in devicename): 
                         _LOGGER.debug("Updating device " + devicename)
+                        self.api.authenticate()
                         self.update_device(devicename)
         except ValueError:
             _LOGGER.debug("iCloud API returned an error")
@@ -462,3 +462,4 @@ class Icloud(DeviceScanner):
             else:
                 self._overridestates[device] = None
             self.update_device(device)
+            
