@@ -13,7 +13,7 @@ If you are just gettting started with Home Assistant I highly reccomend checking
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 * __[Raspberry Pi Zero W ](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)__ 
-This is a remote Home Assistant instance using the _[Hassbian Install Method ](https://home-assistant.io/docs/installation/hassbian/installation/) and running version __0.54.0__.  This is used for remote temperature and motion detection. This Pi also serves as the control for my 433 MHz switches.  This instance is connected to my main instance using MQTT statestream.
+This is a remote Home Assistant instance using the [Hassbian Install Method ](https://home-assistant.io/docs/installation/hassbian/installation/) and running version __0.54.0__.  This is used for remote temperature and motion detection. This Pi also serves as the control for my 433 MHz switches.  This instance is connected to my main instance using MQTT statestream.
 
 # Installation Process:
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.60.0__. My preferred installation method is an [Ubuntu Server](https://www.ubuntu.com/server) instance and following the [Python Virtual Enviroment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly reccomend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
