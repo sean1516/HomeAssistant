@@ -6,261 +6,133 @@
 #                                                  #
 ####################################################
 
-group.all_automations:
-  emulated_hue_hidden: true
-  hidden: false
-
-group.all_covers:
-  emulated_hue_hidden: true
-  hidden: false
-
-group.all_devices:
-  emulated_hue_hidden: true
-  hidden: false
-
-group.all_lights:
-  emulated_hue_hidden: true
-  hidden: false
-
-group.all_scripts:
-  emulated_hue_hidden: true
-  hidden: false
-
-group.all_switches:
-  emulated_hue_hidden: true
-  hidden: false
-
 group.automations:
   friendly_name: Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.automations_for_lights:
   friendly_name: Automations For Lights
-  emulated_hue_hidden: true
-  hidden: false
 
 group.basement:
   friendly_name: Basement
-  emulated_hue_hidden: true
-  hidden: false
 
 group.bedroom:
   friendly_name: Bedroom
-  emulated_hue_hidden: true
-  hidden: false
 
 group.bedroom_lights:
   friendly_name: Bedroom Lights
-  emulated_hue_hidden: true
-  hidden: false
   icon: mdi:lamp
 
 group.bedtime_notifications:
   friendly_name: Bedtime Notifications
-  emulated_hue_hidden: true
-  hidden: false
 
 group.broadlink_ir_switches:
   friendly_name: Broadlink IR Switches
-  emulated_hue_hidden: true
-  hidden: false
 
 group.climate:
   friendly_name: Climate
-  emulated_hue_hidden: true
-  hidden: false
 
 group.climate_automations:
   friendly_name: Climate Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.computer_shutdown__restart:
   friendly_name: Computer Shutdown & Restart
-  emulated_hue_hidden: true
-  hidden: false
-
-group.default_view:
-  emulated_hue_hidden: true
-  hidden: false
 
 group.device_status:
   friendly_name: Device Status
-  emulated_hue_hidden: true
-  hidden: false
 
 group.devices:
   friendly_name: Devices
-  emulated_hue_hidden: true
-  hidden: false
 
 group.dining_room:
   friendly_name: Dining Room
-  emulated_hue_hidden: true
-  hidden: false
 
 group.edimax_switches:
   friendly_name: Edimax Switches
-  emulated_hue_hidden: true
-  hidden: false
-
-group.entertainment_center:
-  emulated_hue_hidden: true
-  hidden: false
 
 group.etekcity_rf_switches:
   friendly_name: Etekcity RF Switches
-  emulated_hue_hidden: true
-  hidden: false
 
 group.exterior:
   friendly_name: Exterior
-  emulated_hue_hidden: true
-  hidden: false
 
 group.feed_the_dog_automations:
   friendly_name: Feed the dog Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.forecast4:
   friendly_name: Forecast
-  emulated_hue_hidden: true
-  hidden: false
 
 group.garage:
   friendly_name: Garage
-  emulated_hue_hidden: true
-  hidden: false
 
 group.garage_lights:
   friendly_name: Garage Lights
-  emulated_hue_hidden: true
-  hidden: false
-
-group.ha:
-  emulated_hue_hidden: true
-  hidden: false
 
 group.ha_server_monitor:
   friendly_name: HA Server Monitor
-  emulated_hue_hidden: true
-  hidden: false
 
 group.ha_version_info:
   friendly_name: HA Version Info
-  emulated_hue_hidden: true
-  hidden: false
-
-group.home_assistant_automations:
-  emulated_hue_hidden: true
-  hidden: false
 
 group.home_automation_device_status:
   friendly_name: Home Automation Device Status
-  emulated_hue_hidden: true
-  hidden: false
 
 group.leaving_automations:
   friendly_name: Leaving Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.living_room:
   friendly_name: Living Room
-  emulated_hue_hidden: true
-  hidden: false
 
 group.local_weather:
   friendly_name: Local Weather
-  emulated_hue_hidden: true
-  hidden: false
-
-group.location:
-  emulated_hue_hidden: true
-  hidden: false
 
 group.nest_temperature__humidity:
   friendly_name: Nest Temperature & Humidity
-  emulated_hue_hidden: true
-  hidden: false
 
 group.network_performance:
   friendly_name: Network Performance
-  emulated_hue_hidden: true
-  hidden: false
 
 group.network_security_automations:
   friendly_name: Network Security Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.other:
   friendly_name: Other
-  emulated_hue_hidden: true
-  hidden: false
 
 group.other_automations:
   friendly_name: Other Automations
-  emulated_hue_hidden: true
-  hidden: false
-
+ 
 group.outside_lights:
   friendly_name: Outside Lights
-  emulated_hue_hidden: true
-  hidden: false
   icon: mdi:lightbulb-outline
 
 group.phone_status:
   friendly_name: Phone Status
-  emulated_hue_hidden: true
-  hidden: false
 
 group.security_automations:
   friendly_name: Security Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.switches:
   friendly_name: Switches
-  emulated_hue_hidden: true
-  hidden: false
 
 group.synology_nas:
   friendly_name: Synology NAS
-  emulated_hue_hidden: true
-  hidden: false
 
 group.ups:
   friendly_name: UPS
-  emulated_hue_hidden: true
-  hidden: false
 
 group.ups_automations:
   friendly_name: UPS Automations
-  emulated_hue_hidden: true
-  hidden: false
 
 group.weather:
   friendly_name: Weather
-  emulated_hue_hidden: true
-  hidden: false
 
 group.weblinks:
   friendly_name: Weblinks
-  emulated_hue_hidden: true
-  hidden: false
 
 group.yeelights:
   friendly_name: Yeelights
-  emulated_hue_hidden: true
-  hidden: false
 
 group.zwave:
   friendly_name: Zwave
-  emulated_hue_hidden: true
-  hidden: false
 
 ####################################################
 #                                                  #
