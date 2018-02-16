@@ -452,12 +452,3 @@ f0b429a900ec:
 #      NEW UNSORTED DEVICES BELOW THIS LINE        #
 #                                                  #
 ####################################################
-
-90b11c752eae:
-  hide_if_away: false
-  icon:
-  mac: 90:B1:1C:75:2E:AE
-  name: 90b11c752eae
-  picture:
-  track: true
-  vendor: Dell Inc.

@@ -36,6 +36,11 @@
      name: Installed version
      command: "head -5 /home/ha/.homeassistant/.HA_VERSION"
 
+  - platform: filesize
+    file_paths:
+      - /home/ha/.homeassistant/home-assistant_v2.db
+      - /home/ha/.homeassistant/home-assistant.log
+
 ####################################################
 #                                                  #
 #                    UPS DATA                      #
@@ -153,11 +158,9 @@
   - platform: template
     sensors:
       adamwifi:
-        entity_id: device_tracker.bc9fef3f3205
         value_template: '{% if is_state("device_tracker.bc9fef3f3205", "home") %}Online{% else %}Offline{% endif %}'
 
       amywifi:
-        entity_id: device_tracker.609ac126a970
         value_template: '{% if is_state("device_tracker.bc9fef2f1fe3", "home") %}Online{% else %}Offline{% endif %}'
 
       since_last_boot_templated:
@@ -199,7 +202,6 @@
   - platform: template
     sensors:
      downstairs_away_mode:
-       entity_id: climate.downstairs
        value_template: "{{ is_state_attr('climate.downstairs', 'away_mode', 'on') }}"
 
 ####################################################
@@ -212,7 +214,6 @@
   - platform: template
     sensors:
       ipchange:
-        entity_id: sensor.myipopendnscom
         value_template: !secret external_ip
 
 # https://home-assistant.io/components/sensor.rest/
@@ -292,7 +293,6 @@
     sensors:
       gehingepinsensor1:
         value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '22' %}Open{% endif %}"
-        entity_id: sensor.ge_32563_hinge_pin_smart_door_sensor_access_control
 
       gehingepinsensor1batt:
         value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor.attributes.battery_level }} {% else %} Unknown {% endif %}'
@@ -300,7 +300,6 @@
 
       gehingepinsensor2:
         value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '22' %}Open{% endif %}"
-        entity_id: sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2
 
       gehingepinsensor2batt:
         value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
@@ -317,7 +316,6 @@
     sensors:
       garagedoorstatus:
         value_template: "{%if states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '0' %}Closed{% elif states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '255' %}Open{% endif %}"
-        entity_id: sensor.vision_zg8101_garage_door_detector_alarm_level
 
       garagedoorstatusbatt:
         value_template: '{% if states.zwave.vision_zg8101_garage_door_detector %} {{ states.zwave.vision_zg8101_garage_door_detector.attributes.battery_level }} {% else %} Unknown {% endif %}'
@@ -386,6 +384,7 @@
 #                                                  #
 ####################################################
 
+#https://home-assistant.io/components/sensor.cert_expiry/
   - platform: cert_expiry
     host: !secret host
     port: 8123
