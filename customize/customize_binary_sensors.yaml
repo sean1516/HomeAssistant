@@ -6,83 +6,9 @@
 #                                                  #
 ####################################################
 
-binary_sensor.device_tracker_0011326ef7c5:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_20e52a098cd0:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_60128b3a2cf5:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_74da3826337d:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_a088b4bb64ec:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_b827eb0ec9a4:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_b827eb19017f:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_b827eb4c542a:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_b827eb9a6be6:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_dcef09df09f4:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.device_tracker_hostone:
-  emulated_hue_hidden: true
-  hidden: false
-
 binary_sensor.downstairs_thermostat_fan:
   friendly_name: HVAC Fan
   icon: mdi:fan
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.downstairs_thermostat_has_leaf:
-  emulated_hue_hidden: true
-  hidden: true
-
-binary_sensor.downstairs_thermostat_is_locked:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.downstairs_thermostat_is_using_emergency_heat:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.downstairs_thermostat_online:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor_2:
-  emulated_hue_hidden: true
-  hidden: false
-
-binary_sensor.vision_zg8101_garage_door_detector_sensor:
-  emulated_hue_hidden: true
-  hidden: false
 
 ####################################################
 #                                                  #
