@@ -9,310 +9,180 @@
 automation.desktop_on_at_bedtime:
   friendly_name: Desktop on at Bedtime
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.desktop_on_bedtime_notification:
   friendly_name: Desktop On at Bedtime Notification
   icon: mdi:windows
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.desktop_on_when_away_notification:
   friendly_name: Desktop On When Away
   icon: mdi:windows
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.desktop_on_when_leaving:
   friendly_name: Desktop On When Leaving
   icon: mdi:windows
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.desktop_pc_on_when_away:
   friendly_name: Desktop PC on When Away
   icon: mdi:windows
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.dog_has_been_fed__evening:
   friendly_name: Dog has been fed - Evening
   icon: mdi:paw
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.dog_has_been_fed__morning:
   friendly_name: Dog has been fed - Morning
   icon: mdi:paw
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.exterior_garage_door_left_open_when_away:
   friendly_name: Outside Garage Door Left Open When Away
   icon: mdi:security-home
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.exterior_garage_door_opened_when_away:
   friendly_name: Outside Garage Door Opened When Away
   icon: mdi:security-home
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.feed_the_dog_evening:
   friendly_name: Feed the dog evening
   icon: mdi:paw
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.feed_the_dog_morning:
   friendly_name: Feed the dog morning
   icon: mdi:paw
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.front_door_opened_when_away:
   friendly_name: Front Door Opened When Away
   icon: mdi:security-home
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.garage_door_open_at_bedtime:
   friendly_name: Garage Door Open at Bedtime
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.htpc_on_at_bedtime:
   friendly_name: HTPC on at Bedtime
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.htpc_on_bedtime_notification:
   friendly_name: HTPC On At Bedtime Notification
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.htpc_on_when_away_notification:
   friendly_name: HTPC On When Away Notification
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.htpc_on_when_leaving:
   friendly_name: HTPC On When Leaving
   icon: mdi:windows
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.interior_garage_door_opened_when_away:
   friendly_name: Inside Garage Door Opened When Away
   icon: mdi:security-home
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.lamps_on_bedtime_notification:
   friendly_name: Laps On At Bedtime Notification
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.lamps_on_when_away_notification:
   friendly_name: Living Room Lamps On When Away Notification
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.lamps_on_when_home:
   friendly_name: Lamps on When Home
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.lets_encrypt_cert_did_not_update:
   friendly_name: Lets Encrypt Certificate Did Not Update
   icon: mdi:certificate
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.living_room_lamps_on_at_bedtime:
   friendly_name: Living Room Lamps on at Bedtime
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.living_room_lamps_on_when_leaving:
   friendly_name: Living Room Lamps on When Leaving
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.low_battery_adams_phone:
   friendly_name: Low iPhone Battery
   icon: mdi:battery-charging-30
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.nest_fan:
   friendly_name: Nest Fan
   icon: mdi:fan
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: false
+  intitial_state: false
 
 automation.notify_if_ha_device_offline:
   friendly_name: Notify if HA device Offline
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.notify_if_ip_changes:
   friendly_name: Notify if IP Changes
   icon: mdi:exclamation
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.notify_if_new_devices:
   friendly_name: Notify if New Devices
   icon: mdi:new-box
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.power_outage:
   friendly_name: Power Outage
   icon: mdi:power-plug-off
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.power_restored:
   friendly_name: Power Restored
   icon: mdi:power-plug
-  emulated_hue_hidden: true
-  hidden: false
   intitial_state: false
 
 automation.reset_feed_the_dog_notifications:
   friendly_name: Reset Feed the Dog Notifications
   icon: mdi:paw
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.send_notification_upon_failed_login_attempt:
   friendly_name: Failed HA Login Attempt Notification
   icon: mdi:lock-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.set_nest_away_mode_at_1600:
   friendly_name: Turn Off Nest Away Mode at 1600
   icon: mdi:home-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.set_nest_away_mode_when_leaving:
   friendly_name: Set Nest Away Mode When Leaving
   icon: mdi:home-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.set_notification_bulb2_color:
   friendly_name: Set Notification Bulb 2 Color
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.set_notification_bulb2_normal:
   friendly_name: Set Notification Bulb 2 Normal
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.turn_off_away_when_home:
   friendly_name: Turn Off Nest Away Mode When Home
   icon: mdi:home-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.turn_off_living_room_lamps_at_midnight:
   friendly_name: Turn off Living Room Lamps - Midnight
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  intitial_state: true
 
 automation.turn_off_outside_lights:
   friendly_name: Turn Off Outside Lights - Sunrise
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.turn_off_vacation_mode:
   friendly_name: Turn Off Vacation Mode
   icon: mdi:beach
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.turn_on_living_room_lamps:
   friendly_name: Turn on Living Room Lamps - Sunset
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.turn_on_outside_lights:
   friendly_name: Turn on Outside Lights - Sunset
   icon: mdi:lightbulb-outline
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 automation.turn_on_vacation_mode:
   friendly_name: Turn On Vacation Mode
   icon: mdi:beach
-  emulated_hue_hidden: true
-  hidden: false
-  initial_state: true
 
 ####################################################
 #                                                  #
