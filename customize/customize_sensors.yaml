@@ -214,6 +214,10 @@ sensor.temperature_sda:
 sensor.temperature_sdb:
   icon: mdi:thermometer-lines
 
+sensor.tradfri_remote_control:
+  icon: mdi:battery-50
+  friendly_name: Tradfri Remote Battery
+
 sensor.ups_battery_charge:
   icon: mdi:battery-charging
 
