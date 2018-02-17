@@ -38,6 +38,8 @@
       - group.ha_version_info
       - group.Home_Automation_Device_Status
       - group.zwave
+      - group.file_size
+      - group.batteries
 
   Automations:
     view: yes
@@ -390,6 +392,19 @@
       - sensor.ups_battery_charge
       - sensor.ups_load
 
+  File Size:
+    control: hidden
+    entities:
+      - sensor.homeassistant_v2db
+      - sensor.homeassistantlog
+
+  Batteries:
+    entities:
+      - sensor.tradfri_remote_control
+      - sensor.gehingepinsensor1batt
+      - sensor.gehingepinsensor2batt
+      - sensor.garagedoorstatusbatt
+
 ####################################################
 #                   SWITCHES                       #
 ####################################################
@@ -444,11 +459,8 @@
   Zwave:
     - zwave.aeotec_zw090_zstick_gen5_us
     - zwave.aeotec_zw117_range_extender_6
-    - sensor.gehingepinsensor1batt
     - zwave.ge_32563_hinge_pin_smart_door_sensor
-    - sensor.gehingepinsensor2batt
     - zwave.ge_32563_hinge_pin_smart_door_sensor_2
-    - sensor.garagedoorstatusbatt
     - zwave.vision_zg8101_garage_door_detector
 
 ####################################################
