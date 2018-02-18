@@ -12,9 +12,6 @@ If you are just gettting started with Home Assistant I highly reccomend checking
 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
-* __[Raspberry Pi Zero W ](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)__ 
-This is a remote Home Assistant instance using the [Hassbian Install Method ](https://home-assistant.io/docs/installation/hassbian/installation/) and running version __0.54.0__.  This is used for remote temperature and motion detection. This Pi also serves as the control for my 433 MHz switches.  This instance is connected to my main instance using MQTT statestream.
-
 # Installation Process:
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.62.1__. My preferred installation method is an [Ubuntu Server](https://www.ubuntu.com/server) instance and following the [Python Virtual Enviroment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly reccomend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
@@ -61,6 +58,9 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Synology DiskStation DS216J ](https://www.amazon.com/Synology-DiskStation-3-5-Inches-1xGigabit-DS216J/dp/B01BNPT1EG)__* used as a NAS (ovbiously) and as the NUT server. 
 * __[OpenGarage Door Controller ](https://www.amazon.com/OpenGarage-WiFi-enabled-Garage-Door-Opener/dp/B01M4RL0CL)__*
 * __[Aeotec Z-wave Range Extender ](https://www.amazon.com/Aeotec-Range-Extender-Z-Wave-repeater/dp/B01M6CKJXC)__
+* __[Sonoff POW (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Wireless-Consumption-Measurement-Appliances/dp/B06XSD6PD6)__*
+* __[Sonoff TH16 (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Temperature-Humidity-Monitoring-Appliances/dp/B075FSHKQ5/ref=sr_1_1_sspa?s=hi&ie=UTF8&qid=1518981039&sr=1-1-spons&keywords=sonoff+th16&psc=1&smid=A1K7D4R1FF2BKK)__*
+
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 
