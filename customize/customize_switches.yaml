@@ -99,6 +99,10 @@ switch.receiver_volume_up:
 #   icon: mdi:lightbulb-outline
 #   emulated_hue_hidden: true
 
+switch.th161:
+  icon: mdi:power
+  friendly_name: TH16-1 Switch
+
 switch.tv:
   friendly_name: TV
   icon: mdi:television

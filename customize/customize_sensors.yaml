@@ -42,14 +42,6 @@ sensor.current_ha_version:
   friendly_name: Latest Release
   icon: mdi:github-circle
 
-sensor.dht_sensor_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-
-sensor.dht_sensor_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer-lines
-
 sensor.disk_use_home:
   friendly_name: Disk Use - SD Card
   icon: mdi:harddisk
@@ -134,10 +126,6 @@ sensor.ha_uptime:
   friendly_name: HA Uptime
   icon: mdi:clock-start
 
-sensor.humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-
 sensor.installed_version:
   friendly_name: Installed
   icon: mdi:folder-download
@@ -175,7 +163,6 @@ sensor.pws_temp_f:
   friendly_name: Outside Temperature
   icon: mdi:thermometer-lines
 
-
 sensor.pws_weather:
   friendly_name: Current Conditions
 
@@ -205,14 +192,19 @@ sensor.status_smart_sda:
 sensor.status_smart_sdb:
   icon: mdi:medical-bag
 
-sensor.temperature:
-  icon: mdi:thermometer-lines
-
 sensor.temperature_sda:
   icon: mdi:thermometer-lines
 
 sensor.temperature_sdb:
   icon: mdi:thermometer-lines
+
+sensor.th161_humidity:
+  icon: mdi:water-percent
+  friendly_name: Humidity
+
+sensor.th161_temperature:
+  icon: mdi:thermometer-lines
+  friendly_name: Temperature
 
 sensor.tradfri_remote_control:
   icon: mdi:battery-50
