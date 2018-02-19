@@ -36,7 +36,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Connected Devices:
 
 ### Cloud Controlled Devices:
-* __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the _[Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)__
+* __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)_
 * __[Nest Thermostat](https://nest.com/thermostat/meet-nest-thermostat/)__
 * __[iCloud Presence Detection / iPhone 8 Plus](https://www.apple.com/shop/buy-iphone/iphone-8)__
 
