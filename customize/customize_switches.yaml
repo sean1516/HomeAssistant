@@ -12,16 +12,14 @@ switch.desktop_switch:
   emulated_hue_hidden: true
 
 switch.edimax1:
-  friendly_name: Livng Room Lamps
-  icon: mdi:lamp
-  emulated_hue_hidden: false
-  emulated_hue_name: Lamps
+  friendly_name: Spare Switch
+  icon: mdi:power
+  emulated_hue_hidden: true
 
 switch.edimax2:
   friendly_name: Spare Switch
   icon: mdi:power
-  emulated_hue_hidden: false
-  emulated_hue_name: Christmas Tree
+  emulated_hue_hidden: true
 
 switch.htpc_switch:
   friendly_name: HTPC Switch
@@ -56,6 +54,18 @@ switch.mute_receiver:
   friendly_name: Mute Receiver
   icon: mdi:volume-mute
   emulated_hue_hidden: true
+
+switch.pow1:
+  friendly_name: Livng Room Lamps
+  icon: mdi:lamp
+  emulated_hue_hidden: false
+  emulated_hue_name: Lamps
+
+switch.pow2:
+  friendly_name: Iron
+  icon: mdi:tshirt-crew
+  emulated_hue_hidden: false
+  emulated_hue_name: Iron
 
 switch.receiver:
   friendly_name: Receiver
