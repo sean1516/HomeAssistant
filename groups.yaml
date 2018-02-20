@@ -14,11 +14,12 @@
       - group.location
       - group.living_room
       - group.dining_room
-      - group.bedroom
+      - group.master_bedroom
       - group.basement
       - group.exterior
       - group.garage
       - group.climate
+      - group.blue_room
 
   Device Status:
    view: yes
@@ -244,7 +245,7 @@
     control: hidden
     entities:
       - switch.htpc_switch
-      - switch.edimax1
+      - switch.pow1
       - light.yeelightrgb2
       - input_select.notification_bulb2_color
       - sensor.gehingepinsensor1
@@ -261,7 +262,7 @@
     entities:
       - switch.desktop_switch
 
-  Bedroom:
+  Master Bedroom:
     control: hidden
     entities:
       - switch.laptop_switch
@@ -282,6 +283,11 @@
     entities:
       - sensor.garagedoorstatus
       - cover.garage
+
+  Blue Room:
+    control: hidden
+    entities:
+      - switch.pow2
 
 ####################################################
 #                   SENSORS                        #
