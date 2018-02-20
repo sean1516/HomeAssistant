@@ -10,7 +10,7 @@
       event: sunset
     action:
       service: switch.turn_on
-      entity_id: switch.edimax1
+      entity_id: switch.pow1
 
 
 #########################################################
@@ -34,7 +34,7 @@
           value_template: "{{ states.sun.sun.attributes.elevation  | int < 10 }}"
     action:
       service: switch.turn_on
-      entity_id: switch.edimax1
+      entity_id: switch.pow1
 
 #########################################################
 #                                                       #
@@ -48,7 +48,7 @@
       at: '00:01:00'
     action:
       service: switch.turn_off
-      entity_id: switch.edimax1
+      entity_id: switch.pow1
 
 ########################################################
 #                                                       #

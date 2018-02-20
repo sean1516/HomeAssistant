@@ -115,7 +115,7 @@
       condition: and
       conditions:
         - condition: state
-          entity_id: switch.edimax1
+          entity_id: switch.pow1
           state: 'on'
         - condition: time
           after: '20:00:00'
@@ -136,7 +136,7 @@
         actionName: LAMPS_OFF
     action:
       - service: switch.turn_off
-        entity_id: switch.edimax1
+        entity_id: switch.pow1
       - service: light.turn_off
         entity_id: light.yeelightrgb2
 
