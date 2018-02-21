@@ -17,7 +17,7 @@ I'm currently running [Home Assistant](https://home-assistant.io) version __0.62
 
 I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
 
-# Security:
+# Network Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance. 
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level.
 - I seperate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
@@ -36,7 +36,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Connected Devices:
 
 ### Cloud Controlled Devices:
-* __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)_
+* __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)
 * __[Nest Thermostat](https://nest.com/thermostat/meet-nest-thermostat/)__
 * __[iCloud Presence Detection / iPhone 8 Plus](https://www.apple.com/shop/buy-iphone/iphone-8)__
 
@@ -144,6 +144,7 @@ I found it easier to automate my nest myself rather than using the nest features
 * __[Notify me when power is restored ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/ups.yaml#L30)__
 
 ### Vacation Mode.yaml Automations:
+This is a single switch to turn on/off a number of automations and devices when we will be away from the house for an extented period of time. 
 * __[Turn On Vacation Mode with Vacation Mode Switch ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/vacation_mode.yaml#L1)__
 * __[Turn Off Vacation Mode with Vacation Mode Switch  ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/vacation_mode.yaml#L43)__
 
