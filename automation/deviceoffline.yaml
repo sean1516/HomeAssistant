@@ -24,6 +24,10 @@
         #- device_tracker.a020a63452ee # Open Garage
         #- device_tracker.6854fd8aee8c # Amazon Echo Dot
         #- device_tracker.18b430868bb9 # Nest Thermostat
+        - device_tracker.68c63a957c6f #Sonoff POW1
+        - device_tracker.68c63a8ad197 #Sonoff POW2
+        - device_tracker.5ccf7f673729 #Sonoff TH10-1
+        - device_tracker.000c29b08c39 # MQTT Server
       from: 'home'
       to: 'not_home'
     action:
