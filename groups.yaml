@@ -35,9 +35,9 @@
   HA:
     view: yes
     entities:
+      - group.Home_Automation_Device_Status
       - group.ha_server_monitor
       - group.ha_version_info
-      - group.Home_Automation_Device_Status
       - group.zwave
       - group.file_size
       - group.batteries
@@ -179,6 +179,7 @@
   Home Automation Device Status:
     control: hidden
     entities:
+      - device_tracker.000c29b08c39
       - device_tracker.74da384a9d63
       - device_tracker.74da384aa769
       - device_tracker.9c8ecd06a5a0
