@@ -123,6 +123,10 @@ automation.notify_if_new_devices:
   friendly_name: Notify if New Devices
   icon: mdi:new-box
 
+automation.open_front_doors_increase_brightness:
+  friendly_name: Open Front Doors Increase Brightness
+  icon: mdi:lightbulb-outline
+
 automation.power_outage:
   friendly_name: Power Outage
   icon: mdi:power-plug-off
