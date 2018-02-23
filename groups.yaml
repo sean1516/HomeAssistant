@@ -111,6 +111,7 @@
     entities:
       - automation.turn_off_outside_lights
       - automation.turn_on_outside_lights
+      - automation.open_front_doors_increase_brightness
       - automation.turn_on_living_room_lamps
       - automation.set_notification_bulb2_color
       - automation.set_notification_bulb2_normal
