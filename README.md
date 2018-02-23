@@ -131,8 +131,10 @@ I found it easier to automate my nest myself rather than using the nest features
 * __[Set the notfication bulb to a white color that matches the other lamps in the room ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L21)__
 
 ### Outside Lights.yaml
+Some simple automations to turn my outside house lights on at sunset and off at sunrise.  They are intially set to 20% brightness but are set to full brightness if a door is opened, until it is closed.
 * __[Turn on the outside lights at sunset ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L1)__
 * __[Turn off the outside lights at sunrise ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L18)__
+* __[Open front doors Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L36)__
 
 ### PC_Security.yaml Automations:
 * __[Notify me if the Desktop PC is turned on while away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L1)__
