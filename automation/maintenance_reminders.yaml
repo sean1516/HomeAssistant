@@ -1,0 +1,72 @@
+#########################################################
+#                                                       #
+#                 TRASH DAY REMINDER                    #
+#                                                       #
+#########################################################
+
+  - alias: Trash Day Reminder
+    trigger:
+      platform: time
+      at: '18:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Today Is Trash Day"
+        message: "Take the trash and recycling to the curb"
+
+#########################################################
+#                                                       #
+#             FURNACE FILETER REMINDER                  #
+#                                                       #
+#########################################################
+
+  - alias: "Furnace Filter Reminder"
+    trigger:
+      - platform: template
+        value_template: '{{ now().strftime("%d") == "1" }}'
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Check Furnace Filter and Replace if Needed"
+        message: "Furnace filter is 16x25x1 if you need to buy one"
+
+#########################################################
+#                                                       #
+#        BELLE FLEA TICK AND HEARTWORM REMINDER         #
+#                                                       #
+#########################################################
+
+  - alias: "Belle Flea Tick and Heartworm Reminder"
+    trigger:
+      - platform: template
+        value_template: '{{ now().strftime("%d") == "15" }}'
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Belle Reminder"
+        message: "Give Belle heartworm pill and apply flea and tick treatment"
+
+#########################################################
+#                                                       #
+#              WATER SOFTENER REMINDER                  #
+#                                                       #
+#########################################################
+
+  - alias: "Water Softener Reminder"
+    trigger:
+      - platform: template
+        value_template: '{{ now().strftime("%d") == "25" }}'
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Check Water Softener Salt Level"
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
