@@ -18,7 +18,8 @@ I'm currently running [Home Assistant](https://home-assistant.io) version __0.62
 I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
 
 # Network & Home Assistant Instance Security:
-I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance. 
+I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
+- Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L34) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L39).
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level.
 - I seperate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
 - Using the tools in [PFSense](https://www.pfsense.org/) I block a large amount of traffic from ever reaching my network using PFblockerNG and a combonation of published lists, and custom rules.
