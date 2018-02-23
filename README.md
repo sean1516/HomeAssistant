@@ -5,15 +5,15 @@
 
 These are the [Home Assistant](https://home-assistant.io/) configuration files used in my Home Assistant (HA) setup. I relied on repositories of other HA users quite a bit when I was getting started for ideas and example code.  Hopefully this repository will help someone else who is getting started. 
 
-If you are just gettting started with Home Assistant I highly reccomend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly reccomend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
+If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
 
 # Hardware Running HA:
-* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which allows me to run mutiple virtual machines on the same physical hardware.  I also run my router/firewall off this same hardware.  The HA virtual machine is given 2 cores, 1GB of RAM and a 16GB disk.  
+* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which allows me to run multiple virtual machines on the same physical hardware.  I also run my router/firewall off this same hardware.  The HA virtual machine is given 2 cores, 1GB of RAM and a 16GB disk.  
 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.62.1__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Enviroment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly reccomend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.62.1__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Environment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly recommend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
 I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
 
@@ -21,8 +21,8 @@ I setup my Mosquitto MQTT Broker using the instructions in [this video](https://
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L34) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L39).
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level.
-- I seperate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
-- Using the tools in [PFSense](https://www.pfsense.org/) I block a large amount of traffic from ever reaching my network using PFblockerNG and a combonation of published lists, and custom rules.
+- I separate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
+- Using the tools in [PFSense](https://www.pfsense.org/) I block a large amount of traffic from ever reaching my network using PFblockerNG and a combination of published lists, and custom rules.
 - All the traffic connecting to my Home Assistant instance is logged and e-mailed to me regularly.  I only access my instance from a few devices to it is pretty easy to spot traffic that is not 'normal'.
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.  
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://www.splitbrain.org/blog/2017-08/10-homeassistant_duckdns_letsencrypt) to get it setup.
@@ -56,7 +56,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[DHT22 Temperature And Humidity Sensor](https://www.amazon.com/Gikfun-Temperature-Humidity-Arduino-EK1196/dp/B00Z5Y5UEM/ref=sr_1_6?s=electronics&ie=UTF8&qid=1498790057&sr=1-6&keywords=DHT22)__
 * __[Mono Price Z-wave Door Tilt Sensor ](https://www.monoprice.com/product?p_id=11987)__
 * __[Cyberpower CP1500PFCLCD UPS ](https://www.amazon.com/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W)__ used to detect power outages and keep network and HA running in a power outage.
-* __[Synology DiskStation DS216J ](https://www.amazon.com/Synology-DiskStation-3-5-Inches-1xGigabit-DS216J/dp/B01BNPT1EG)__* used as a NAS (ovbiously) and as the NUT server. 
+* __[Synology DiskStation DS216J ](https://www.amazon.com/Synology-DiskStation-3-5-Inches-1xGigabit-DS216J/dp/B01BNPT1EG)__* used as a NAS (obviously) and as the NUT server. 
 * __[OpenGarage Door Controller ](https://www.amazon.com/OpenGarage-WiFi-enabled-Garage-Door-Opener/dp/B01M4RL0CL)__*
 * __[Aeotec Z-wave Range Extender ](https://www.amazon.com/Aeotec-Range-Extender-Z-Wave-repeater/dp/B01M6CKJXC)__
 * __[Sonoff POW (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Wireless-Consumption-Measurement-Appliances/dp/B06XSD6PD6)__*
@@ -68,7 +68,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Automations:
 
 ### Bedtime_Notifications.yaml Automations:
-These notifications are triggered after 10:00 PM and I plug my phone in (generally I am in bed when this happens).  These send a iOS app notification with an action option to turn the device off.  These are primarily a power saving items.
+These notifications are triggered after 10:00 PM and I plug my phone in (generally I am in bed when this happens).  These send an iOS app notification with an action option to turn the device off.  These are primarily a power saving items.
 * __[Notify Me if the garage door is open and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L1)__
 * __[Notify Me if the Home Theater PC is left on and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L26)__
 * __[Notify Me if the Desktop PC is left on and I am in bed ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml#L65)__
@@ -78,12 +78,12 @@ These notifications are triggered after 10:00 PM and I plug my phone in (general
 </p>
 
 ### Cert Update.yaml Automation:
-This notification is used to notify me if my Lets Encrypt certificate does not auto renew at the begininng of the month.  
+This notification is used to notify me if my Lets Encrypt certificate does not auto renew at the beginning of the month.  
 * __[Notify Me if Lets Encrypt Cert Did Not Update ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/certupdate.yaml)__
 
 
 ### Device Offline.yaml Automations:
-This notification is used to notify me if on of my home automation devices goes offline.  Generally this is someone flipping a switch which cuts the power or a network connectivy issue.
+This notification is used to notify me if on of my home automation devices goes offline.  Generally this is someone flipping a switch which cuts the power or a network connectivity issue.
 * __[Notify Me if a Home Automation Device is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml)__
 
 ### Door Security.yaml Automations:
@@ -135,11 +135,11 @@ I found it easier to automate my nest myself rather than using the nest features
 * __[If HVAC fan hasn't run for an hour, run it for 10 minutes ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/nest.yaml#L102)__
 
 ### Notification bulb.yaml Automations
-* __[Set the nofication bulb to the color selected ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L1)__
-* __[Set the notfication bulb to a white color that matches the other lamps in the room ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L21)__
+* __[Set the notification bulb to the color selected ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L1)__
+* __[Set the notification bulb to a white color that matches the other lamps in the room ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L21)__
 
 ### Outside Lights.yaml Automations
-Some simple automations to turn my outside house lights on at sunset and off at sunrise.  They are intially set to 20% brightness but are set to full brightness if a door is opened, until it is closed.
+Some simple automations to turn my outside house lights on at sunset and off at sunrise.  They are initially set to 20% brightness but are set to full brightness if a door is opened, until it is closed.
 * __[Turn on the outside lights at sunset ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L1)__
 * __[Turn off the outside lights at sunrise ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L18)__
 * __[Open front doors Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L36)__
@@ -154,7 +154,7 @@ Some simple automations to turn my outside house lights on at sunset and off at 
 * __[Notify me when power is restored ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/ups.yaml#L30)__
 
 ### Vacation Mode.yaml Automations:
-This is a single switch to turn on/off a number of automations and devices when we will be away from the house for an extented period of time. 
+This is a single switch to turn on/off a number of automations and devices when we will be away from the house for an extended period of time. 
 * __[Turn On Vacation Mode with Vacation Mode Switch ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/vacation_mode.yaml#L1)__
 * __[Turn Off Vacation Mode with Vacation Mode Switch  ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/vacation_mode.yaml#L43)__
 
