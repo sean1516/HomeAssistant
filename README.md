@@ -119,6 +119,13 @@ These lamps are the main light source when you walk in through the garage (our p
 This is to notify me to charge my phone when I am at work.  Generally I forget to charge my phone and it is either low or dead for the train ride home.    
 * __[Charge my phone notification at 50 and 30% battery ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/low_battery_adam_phone.yaml)__
 
+### Maintenance Reminders:
+A series of automations that trigger monthly or weekly to help me remember to perform maintenance tasks around the house.  Reminders are sent via e-mail so they stick in my inbox until complete.  
+* __[Trash Day Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L1)__
+* __[Furnace Filter Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L21)__
+* __[Dog Flea/Tick/Heartworm Reminder](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L37)__
+* __[Water Softener Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L53)__
+
 ### Nest.yaml Automations:
 I found it easier to automate my nest myself rather than using the nest features.  
 * __[Set Thermostat to Away when everyone leaves for work ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/nest.yaml#L1)__
