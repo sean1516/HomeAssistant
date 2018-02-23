@@ -6,6 +6,10 @@
 #                                                  #
 ####################################################
 
+automation.belle_flea_tick_and_heartworm_reminder:
+  friendly_name: Belle Flea Tick and Heartworm
+  icon: mdi:paw
+
 automation.desktop_on_at_bedtime:
   friendly_name: Desktop on at Bedtime
   icon: mdi:exclamation
@@ -53,6 +57,10 @@ automation.feed_the_dog_morning:
 automation.front_door_opened_when_away:
   friendly_name: Front Door Opened When Away
   icon: mdi:security-home
+
+automation.furnace_filter_reminder:
+  friendly_name: Furnace Filter
+  icon: mdi:fire
 
 automation.garage_door_open_at_bedtime:
   friendly_name: Garage Door Open at Bedtime
@@ -160,6 +168,10 @@ automation.set_notification_bulb2_normal:
   friendly_name: Set Notification Bulb 2 Normal
   icon: mdi:lightbulb-outline
 
+automation.trash_day_reminder:
+  friendly_name: Trash Day
+  icon: mdi:delete-empty
+
 automation.turn_off_away_when_home:
   friendly_name: Turn Off Nest Away Mode When Home
   icon: mdi:home-outline
@@ -187,6 +199,10 @@ automation.turn_on_outside_lights:
 automation.turn_on_vacation_mode:
   friendly_name: Turn On Vacation Mode
   icon: mdi:beach
+
+automation.water_softener_reminder:
+  friendly_name: Water Softener
+  icon: mdi:water-pump
 
 ####################################################
 #                                                  #
