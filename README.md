@@ -115,11 +115,11 @@ These lamps are the main light source when you walk in through the garage (our p
 * __[Turn on the living room lamps when somone comes home and its dark out ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/living_room_lamps.yaml#L16)__
 * __[Turn off the living room lamps at midnight ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/living_room_lamps.yaml#L39)__
 
-### Low_Battery_Adams_iPhone Automations:
+### Low_Battery_Adams_iPhone.yaml Automations:
 This is to notify me to charge my phone when I am at work.  Generally I forget to charge my phone and it is either low or dead for the train ride home.    
 * __[Charge my phone notification at 50 and 30% battery ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/low_battery_adam_phone.yaml)__
 
-### Maintenance Reminders:
+### Maintenance Reminders.yaml Automations:
 A series of automations that trigger monthly or weekly to help me remember to perform maintenance tasks around the house.  Reminders are sent via e-mail so they stick in my inbox until complete.  
 * __[Trash Day Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L1)__
 * __[Furnace Filter Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L21)__
@@ -133,11 +133,11 @@ I found it easier to automate my nest myself rather than using the nest features
 * __[Turn off Away mode if someone arrives home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/nest.yaml#L76)__
 * __[If HVAC fan hasn't run for an hour, run it for 10 minutes ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/nest.yaml#L102)__
 
-### Notification bulb.yaml
+### Notification bulb.yaml Automations
 * __[Set the nofication bulb to the color selected ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L1)__
 * __[Set the notfication bulb to a white color that matches the other lamps in the room ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/notification_bulb.yaml#L21)__
 
-### Outside Lights.yaml
+### Outside Lights.yaml Automations
 Some simple automations to turn my outside house lights on at sunset and off at sunrise.  They are intially set to 20% brightness but are set to full brightness if a door is opened, until it is closed.
 * __[Turn on the outside lights at sunset ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L1)__
 * __[Turn off the outside lights at sunrise ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L18)__
