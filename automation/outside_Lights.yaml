@@ -11,9 +11,6 @@
     action:
       - service: homeassistant.turn_off
         entity_id: group.outside_lights
-      - delay: 0:01
-      - service: homeassistant.turn_off
-        entity_id: group.outside_lights
 
 #########################################################
 #                                                       #
@@ -27,11 +24,76 @@
       event: sunset
       offset: '-00:15:00'
     action:
-      - service: homeassistant.turn_on
-        entity_id: group.outside_lights
-      - delay: 0:01
-      - service: homeassistant.turn_on
-        entity_id: group.outside_lights
+      - service: light.turn_on
+        data:
+          entity_id:
+            - light.yeelight1
+            - light.yeelight2
+            - light.yeelight3
+            - light.yeelight4
+          brightness_pct: 20
+
+#########################################################
+#                                                       #
+#          OPEN FRONT DOORS INCREASE BRIGHTNESS         #
+#                                                       #
+#########################################################
+
+  - alias: "Open Front Doors Increase Brightness"
+    trigger:
+      - platform: state
+        entity_id:
+          - sensor.gehingepinsensor2
+          - sensor.garagedoorstatus
+        from: 'Closed'
+        to: 'Open'
+    condition:
+      condition: state
+      entity_id: group.outside_lights
+      state: 'on'
+    action:
+      - service: light.turn_on
+        data:
+          entity_id:
+            - light.yeelight1
+            - light.yeelight2
+            - light.yeelight3
+          brightness: 254
+      - wait_template: "{{ is_state(trigger.entity_id, 'Closed') }}"
+      - service: light.turn_on
+        data:
+          entity_id:
+            - light.yeelight1
+            - light.yeelight2
+            - light.yeelight3
+          brightness_pct: 20
+
+#########################################################
+#                                                       #
+#            OPEN BACK DOOR INCREASE BRIGHTNESS         #
+#                                                       #
+#########################################################
+
+  # - alias: "Open Front Doors Increase Brightness"
+  #   trigger:
+  #     - platform: state
+  #       entity_id: sensor.futuredoorsenor
+  #       from: 'Closed'
+  #       to: 'Open'
+  #   condition:
+  #     condition: state
+  #     entity_id: group.outside_lights
+  #     state: 'On'
+  #   action:
+  #     - service: light.turn_on
+  #       data:
+  #         entity_id: light.yeelight4
+  #         brightness: 254
+  #     - wait_template: "{{ is_state(trigger.entity_id, 'Closed') }}"
+  #     - service: light.turn_on
+  #       data:
+  #         entity_id: yeelight4
+  #         brightness_pct: 20
 
 #########################################################
 #                                                       #
