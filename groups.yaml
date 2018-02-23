@@ -56,6 +56,7 @@
      - group.leaving_automations
      - group.ups_automations
      - group.vacation_mode_automations
+     - group.maintenance_reminder_automations
 
   Switches:
    view: yes
@@ -172,6 +173,14 @@
     entities:
       - automation.turn_off_vacation_mode
       - automation.turn_on_vacation_mode
+
+  Maintenance Reminder Automations:
+    control: hidden
+    entities:
+      - automation.trash_day_reminder
+      - automation.furnace_filter_reminder
+      - automation.belle_flea_tick_and_heartworm_reminder
+      - automation.water_softener_reminder
 
 ####################################################
 #                  DEVICE INFO                     #
