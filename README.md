@@ -61,7 +61,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Aeotec Z-wave Range Extender ](https://www.amazon.com/Aeotec-Range-Extender-Z-Wave-repeater/dp/B01M6CKJXC)__
 * __[Sonoff POW (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Wireless-Consumption-Measurement-Appliances/dp/B06XSD6PD6)__*
 * __[Sonoff TH16 (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Temperature-Humidity-Monitoring-Appliances/dp/B075FSHKQ5/ref=sr_1_1_sspa?s=hi&ie=UTF8&qid=1518981039&sr=1-1-spons&keywords=sonoff+th16&psc=1&smid=A1K7D4R1FF2BKK)__*
-
+* __[Dome Miniature, Z-Wave Plus Door/Window Sensor](https://www.amazon.com/Dome-Home-Automation-Miniature-DMWD1/dp/B01JGMZNNG)__
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 
@@ -91,6 +91,7 @@ These automations are used to notify me when a door is opened when no one is hom
 * __[Notify Me if the interior garage door is opened and I am away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L2)__
 * __[Notify Me if the exterior garage door is opened and I am away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L33)__
 * __[Notify Me if the front door is opened and I am away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L58)__
+* __[Notify Me if the back door is opened and I am away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L115)__
 * __[Notify Me if the garage door is left open when I leave ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L83)__
 
 ### Feed the dog.yaml Automations:
@@ -147,6 +148,7 @@ Some simple automations to turn my outside house lights on at sunset and off at 
 * __[Turn on the outside lights at sunset ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L1)__
 * __[Turn off the outside lights at sunrise ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L18)__
 * __[Open front doors Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L36)__
+* __[Open back door Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L71)_
 
 ### PC_Security.yaml Automations:
 * __[Notify me if the Desktop PC is turned on while away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L1)__
