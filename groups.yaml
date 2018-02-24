@@ -145,6 +145,7 @@
     control: hidden
     entities:
       - automation.low_battery_adams_phone
+      - automation.morning_briefing
 
   Feed The Dog Automations:
     control: hidden
