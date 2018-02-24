@@ -114,6 +114,9 @@ automation.low_battery_adams_phone:
   friendly_name: Low iPhone Battery
   icon: mdi:battery-charging-30
 
+automation.morning_briefing:
+  icon: mdi:weather-sunset
+
 automation.nest_fan:
   friendly_name: Nest Fan
   icon: mdi:fan
