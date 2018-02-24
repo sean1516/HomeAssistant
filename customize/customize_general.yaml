@@ -105,6 +105,9 @@ zwave.ge_32563_hinge_pin_smart_door_sensor_2:
 zwave.vision_zg8101_garage_door_detector:
   friendly_name: Monoprice Zwave Garage Door Sensor
 
+zwave.unknown_id021f_unknown_type0003_id0101:
+  friendly_name: Dome Door Sensor
+
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #

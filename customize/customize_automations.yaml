@@ -6,6 +6,10 @@
 #                                                  #
 ####################################################
 
+automation.back_door_opened_when_away:
+  friendly_name: Back Door Opened When Away
+  icon: mdi:security-home
+
 automation.belle_flea_tick_and_heartworm_reminder:
   friendly_name: Belle Flea Tick and Heartworm
   icon: mdi:paw
@@ -133,6 +137,10 @@ automation.notify_if_ip_changes:
 automation.notify_if_new_devices:
   friendly_name: Notify if New Devices
   icon: mdi:new-box
+
+automation.open_back_door_increase_brightness:
+  friendly_name: Open Back Door Increase Brightness
+  icon: mdi:lightbulb-outline
 
 automation.open_front_doors_increase_brightness:
   friendly_name: Open Front Doors Increase Brightness

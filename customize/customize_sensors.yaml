@@ -18,6 +18,14 @@ sensor.approxwattage:
   friendly_name: Approximate Watts
   icon: mdi:gauge
 
+sensor.backdoorstatus:
+  friendly_name: Back Door
+  icon: mdi:home
+
+sensor.backdoorstatusbatt:
+  friendly_name: Back Door Sensor
+  icon: mdi:battery-50
+
 sensor.battery_adamsiphone:
   friendly_name: Adam's iPhone
   icon: mdi:battery-charging
@@ -148,6 +156,38 @@ sensor.memory_usage_real:
 sensor.motion:
   friendly_name: Motion
   icon: mdi:run-fast
+
+sensor.pow1_energy:
+  friendly_name: kWh
+  icon: mdi:chart-line
+
+sensor.pow1_power:
+  friendly_name: Watts
+  icon: mdi:power-plug
+
+sensor.pow1_voltage:
+  friendly_name: Volts
+  icon: mdi:power-socket-us
+
+sensor.pow1_current:
+  friendly_name: Amps
+  icon: mdi:flash-circle
+
+sensor.pow2_energy:
+  friendly_name: kWh
+  icon: mdi:chart-line
+
+sensor.pow2_power:
+  friendly_name: Watts
+  icon: mdi:power-plug
+
+sensor.pow2_voltage:
+  friendly_name: Volts
+  icon: mdi:power-socket-us
+
+sensor.pow2_current:
+  friendly_name: Amps
+  icon: mdi:flash-circle
 
 sensor.pws_precip_1hr_in:
   icon: mdi:water
