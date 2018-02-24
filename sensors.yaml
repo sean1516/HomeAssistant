@@ -284,7 +284,7 @@
 
 ####################################################
 #                                                  #
-#                 GE ZWAVE DOOR SENSOR             #
+#               ZWAVE DOOR SENSORS             #
 #                                                  #
 ####################################################
 
@@ -305,20 +305,18 @@
         value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
 
-####################################################
-#                                                  #
-#            MONOPRICE ZWAVE DOOR SENSOR           #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
       garagedoorstatus:
         value_template: "{%if states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '0' %}Closed{% elif states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '255' %}Open{% endif %}"
 
       garagedoorstatusbatt:
         value_template: '{% if states.zwave.vision_zg8101_garage_door_detector %} {{ states.zwave.vision_zg8101_garage_door_detector.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+
+      backdoorstatus:
+        value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
+
+      backdoorstatusbatt:
+        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
 
 ####################################################

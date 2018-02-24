@@ -112,6 +112,7 @@
     entities:
       - automation.turn_off_outside_lights
       - automation.turn_on_outside_lights
+      - automation.open_back_door_increase_brightness
       - automation.open_front_doors_increase_brightness
       - automation.turn_on_living_room_lamps
       - automation.set_notification_bulb2_color
@@ -130,6 +131,7 @@
     control: hidden
     entities:
       - automation.front_door_opened_when_away
+      - automation.back_door_opened_when_away
       - automation.interior_garage_door_opened_when_away
       - automation.exterior_garage_door_opened_when_away
       - automation.exterior_garage_door_left_open_when_away
@@ -289,6 +291,7 @@
       - group.outside_lights
       - sensor.pws_temp_f
       - sensor.pws_relative_humidity
+      - sensor.backdoorstatus
 
   Garage:
     control: hidden
@@ -422,6 +425,7 @@
       - sensor.gehingepinsensor1batt
       - sensor.gehingepinsensor2batt
       - sensor.garagedoorstatusbatt
+      - sensor.backdoorstatusbatt
 
 ####################################################
 #                   SWITCHES                       #
@@ -497,6 +501,7 @@
     - zwave.ge_32563_hinge_pin_smart_door_sensor
     - zwave.ge_32563_hinge_pin_smart_door_sensor_2
     - zwave.vision_zg8101_garage_door_detector
+    - zwave.unknown_id021f_unknown_type0003_id0101
 
 ####################################################
 #                                                  #
