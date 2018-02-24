@@ -83,7 +83,7 @@
     condition:
       condition: state
       entity_id: group.outside_lights
-      state: 'On'
+      state: 'on'
     action:
       - service: light.turn_on
         data:
