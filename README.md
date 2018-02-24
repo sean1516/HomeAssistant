@@ -127,6 +127,10 @@ A series of automations that trigger monthly or weekly to help me remember to pe
 * __[Dog Flea/Tick/Heartworm Reminder](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L37)__
 * __[Water Softener Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L53)__
 
+### Moring Briefing.yaml Automation:
+This is a notification automation to send me info about the day when I wake up.  Currenlty it just contains the date and a weather report.  I hope to integrate my calendar in the future and have it include the meetings I have that day.  
+* __[Morning Briefing](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/morning_briefing.yaml#L1)__
+
 ### Nest.yaml Automations:
 I found it easier to automate my nest myself rather than using the nest features.  
 * __[Set Thermostat to Away when everyone leaves for work ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/nest.yaml#L1)__
