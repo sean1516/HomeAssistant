@@ -114,6 +114,31 @@
 
 #########################################################
 #                                                       #
+#              BACK DOOR OPENED AND AWAY                #
+#                                                       #
+#########################################################
+
+  - alias: "Back Door Opened When Away"
+    trigger:
+      platform: state
+      entity_id: sensor.backdoorstatus
+      from: 'Closed'
+      to: 'Open'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    action:
+      service: notify.ios_adams_iphone
+      data:
+        title: "Back Door Opened"
+        message: "The Back Door was opened and Amy and Adam are not home"
+
+#########################################################
+#                                                       #
 #            END OF CONFIGURATION FILE                  #
 #                                                       #
 #########################################################
