@@ -148,7 +148,7 @@ Some simple automations to turn my outside house lights on at sunset and off at 
 * __[Turn on the outside lights at sunset ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L1)__
 * __[Turn off the outside lights at sunrise ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L18)__
 * __[Open front doors Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L36)__
-* __[Open back door Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L71)_
+* __[Open back door Increase Brightness ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/outside_Lights.yaml#L71)__
 
 ### PC_Security.yaml Automations:
 * __[Notify me if the Desktop PC is turned on while away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L1)__
