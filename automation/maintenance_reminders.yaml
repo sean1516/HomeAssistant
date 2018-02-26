@@ -26,8 +26,11 @@
 
   - alias: "Furnace Filter Reminder"
     trigger:
-      - platform: template
-        value_template: '{{ now().strftime("%d") == "1" }}'
+      platform: sun
+      event: sunrise    
+    condition:
+      condition: template
+      value_template: '{{ now().strftime("%d") == "1" }}'	
     action:
       service: notify.home_assistant
       data:
@@ -42,8 +45,11 @@
 
   - alias: "Belle Flea Tick and Heartworm Reminder"
     trigger:
-      - platform: template
-        value_template: '{{ now().strftime("%d") == "15" }}'
+      platform: sun
+      event: sunrise    
+    condition:
+      condition: template
+      value_template: '{{ now().strftime("%d") == "15" }}'	
     action:
       service: notify.home_assistant
       data:
@@ -58,8 +64,11 @@
 
   - alias: "Water Softener Reminder"
     trigger:
-      - platform: template
-        value_template: '{{ now().strftime("%d") == "25" }}'
+      platform: sun
+      event: sunrise    
+    condition:
+      condition: template
+      value_template: '{{ now().strftime("%d") == "25" }}'	
     action:
       service: notify.home_assistant
       data:
