@@ -28,6 +28,7 @@
         - device_tracker.68c63a8ad197 #Sonoff POW2
         - device_tracker.5ccf7f673729 #Sonoff TH10-1
         - device_tracker.000c29b08c39 # MQTT Server
+        - device_tracker.2c3ae844b860 # Sonoff Basic-1
       from: 'home'
       to: 'not_home'
     action:

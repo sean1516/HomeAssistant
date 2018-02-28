@@ -115,7 +115,7 @@
         - condition: or
           conditions:
             - condition: state
-              entity_id: switch.pow1
+              entity_id: switch.basic1
               state: 'on'
             - condition: state
               entity_id: light.yeelightrgb2

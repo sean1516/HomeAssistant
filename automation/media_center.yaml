@@ -1,0 +1,23 @@
+####################################################
+#                                                  #
+#               COMPUTER ON TV ON                  #
+#                                                  #
+####################################################
+
+  - alias: Computer On TV On
+    trigger:
+      platform: state
+      entity_id: switch.htpc_switch
+      to: 'on'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.tv
+      - delay: 00:00:03
+      - service: switch.turn_on
+        entity_id: switch.input__video2
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

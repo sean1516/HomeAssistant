@@ -1,6 +1,6 @@
 #########################################################
 #                                                       #
-#                 MORNING BRIEFING                      #
+#                 MORNING BRIEFING - Adam                      #
 #                                                       #
 #########################################################
 
@@ -13,17 +13,29 @@
       entity_id: device_tracker.adamsiphone
       state: 'home'
     action:
-      service: notify.home_assistant
-      data_template:
-        title: "Moring Briefing"
-        message: >
-                  Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
-                  {{ "\n" }}
-                  The current temperature is {{states('sensor.pws_temp_f')}} degrees Fahrenheit with {{states('sensor.pws_weather')}} skies.{{ "\n" }}
-                  {{ "\n" }}
-                  Today's forecast is {{states('sensor.pws_weather_1d')}}{{ "\n" }}
-                  {{ "\n" }}
-                  Tonight's forecast is {{states('sensor.pws_weather_1n')}}
+      - service: notify.home_assistant
+        data_template:
+          title: "Moring Briefing"
+          message: >
+                    Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
+                    {{ "\n" }}
+                    The current temperature is {{states('sensor.pws_temp_f')}} degrees Fahrenheit with {{states('sensor.pws_weather')}} skies.{{ "\n" }}
+                    {{ "\n" }}
+                    Today's forecast is {{states('sensor.pws_weather_1d')}}{{ "\n" }}
+                    {{ "\n" }}
+                    Tonight's forecast is {{states('sensor.pws_weather_1n')}}
+
+      - service: notify.home_assistant_amy
+        data_template:
+          title: "Moring Briefing"
+          message: >
+                    Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
+                    {{ "\n" }}
+                    The current temperature is {{states('sensor.pws_temp_f')}} degrees Fahrenheit with {{states('sensor.pws_weather')}} skies.{{ "\n" }}
+                    {{ "\n" }}
+                    Today's forecast is {{states('sensor.pws_weather_1d')}}{{ "\n" }}
+                    {{ "\n" }}
+                    Tonight's forecast is {{states('sensor.pws_weather_1n')}}
 
 #########################################################
 #                                                       #
