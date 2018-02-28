@@ -10,12 +10,13 @@
   Default_view:
     name: Rooms
     view: yes
+    icon: mdi:home
     entities:
       - group.location
       - group.living_room
       - group.dining_room
       - group.master_bedroom
-      - group.basement
+      - group.pink_room
       - group.exterior
       - group.garage
       - group.climate
@@ -148,6 +149,7 @@
     entities:
       - automation.low_battery_adams_phone
       - automation.morning_briefing
+      - automation.computer_on_tv_on
 
   Feed The Dog Automations:
     control: hidden
@@ -209,6 +211,7 @@
       - device_tracker.68c63a957c6f
       - device_tracker.68c63a8ad197
       - device_tracker.5ccf7f673729
+      - device_tracker.2c3ae844b860
 
 ####################################################
 #                     LIGHTS                       #
@@ -259,10 +262,11 @@
     control: hidden
     entities:
       - switch.htpc_switch
-      - switch.pow1
+      - switch.basic1
       - light.yeelightrgb2
       - input_select.notification_bulb2_color
-      - sensor.gehingepinsensor1
+      - script.tv
+      - script.music
 
   Dining Room:
     control: hidden
@@ -271,7 +275,7 @@
       - sensor.downstairs_thermostat_humidity
       - sensor.gehingepinsensor2
 
-  Basement:
+  Pink Room:
     control: hidden
     entities:
       - switch.desktop_switch
@@ -281,7 +285,6 @@
     entities:
       - switch.laptop_switch
       - group.bedroom_lights
-      - switch.th161
       - sensor.th161_temperature
       - sensor.th161_humidity
 
@@ -298,6 +301,7 @@
     entities:
       - sensor.garagedoorstatus
       - cover.garage
+      - sensor.gehingepinsensor1
 
   Blue Room:
     control: hidden
@@ -322,16 +326,15 @@
     - binary_sensor.device_tracker_74da3826337d
 
   HA Server Monitor:
-    - sensor.cpu_used
-    - sensor.disk_use_home
-    - sensor.ram_used
+    - sensor.processor_use
+    - sensor.disk_use_percent_home
+    - sensor.memory_use_percent
     - sensor.since_last_boot_templated
     - sensor.ha_uptime
-    - sensor.sent_ens32
-    - sensor.received_ens32
+    - sensor.network_in_ens32
+    - sensor.network_out_ens32
     - sensor.cpu
     - sensor.connected_clients
-    - sensor.battery
     - sensor.lets_encrypt_expiration
 
   HA Version Info:
@@ -477,6 +480,7 @@
   Sonoff Switches:
     control: hidden
     entities:
+      - switch.basic1
       - switch.th161
       - sensor.th161_temperature
       - sensor.th161_humidity
@@ -490,6 +494,7 @@
       - sensor.pow2_power
       - sensor.pow2_voltage
       - sensor.pow2_current
+
 
 ####################################################
 #                    ZWAVE                         #

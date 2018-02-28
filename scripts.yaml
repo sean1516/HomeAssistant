@@ -3,23 +3,7 @@
 
 ####################################################
 #                                                  #
-#             Turn Off Media Center                #
-#                                                  #
-####################################################
-
-  mediacenteroff:
-    alias: Media Center
-    sequence:
-      - service: homeassistant.turn_off
-        entity_id: switch.htpc_switch
-      - service: homeassistant.turn_off
-        entity_id: switch.tv
-      - service: homeassistant.turn_off
-        entity_id: switch.receiver
-
-####################################################
-#                                                  #
-#             Turn Off Media Center                #
+#                Turn On Music                     #
 #                                                  #
 ####################################################
 
@@ -27,10 +11,21 @@
     alias: Music
     sequence:
       - service: homeassistant.turn_on
-        entity_id: switch.receiver
-      - delay: 00:00:05
-      - service: homeassistant.turn_on
         entity_id: switch.input__video1
+
+####################################################
+#                                                  #
+#                   Turn On TV                     #
+#                                                  #
+####################################################
+
+  tv:
+    alias: TV
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: switch.input__video2
+      - service: switch.turn_on
+        entity_id: switch.htpc_switch
 
 ####################################################
 #                                                  #

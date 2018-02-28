@@ -180,6 +180,18 @@
     payload_not_available: "Offline"
     retain: true
 
+  - platform: mqtt
+    name: "Basic1"
+    state_topic: "stat/basic1/POWER"
+    command_topic: "cmnd/basic1/POWER"
+    availability_topic: "tele/basic1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #
