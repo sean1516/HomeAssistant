@@ -13,7 +13,7 @@ If you are just getting started with Home Assistant I highly recommend checking 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.62.1__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Environment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly recommend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.63.3__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Environment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly recommend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
 I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
 
@@ -62,6 +62,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Sonoff POW (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Wireless-Consumption-Measurement-Appliances/dp/B06XSD6PD6)__*
 * __[Sonoff TH16 (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Temperature-Humidity-Monitoring-Appliances/dp/B075FSHKQ5/ref=sr_1_1_sspa?s=hi&ie=UTF8&qid=1518981039&sr=1-1-spons&keywords=sonoff+th16&psc=1&smid=A1K7D4R1FF2BKK)__*
 * __[Dome Miniature, Z-Wave Plus Door/Window Sensor](https://www.amazon.com/Dome-Home-Automation-Miniature-DMWD1/dp/B01JGMZNNG)__
+* __[Sonoff Basic w/ Tasmota Firmware](https://www.amazon.com/Sonoff-Electrical-Household-Appliances-Compatible/dp/B074N22WFT/ref=sr_1_1?ie=UTF8&qid=1519777945&sr=8-1&keywords=sonoff+basic)__
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 
@@ -127,6 +128,9 @@ A series of automations that trigger monthly or weekly to help me remember to pe
 * __[Furnace Filter Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L21)__
 * __[Dog Flea/Tick/Heartworm Reminder](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L37)__
 * __[Water Softener Reminder ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/maintenance_reminders.yaml#L53)__
+
+### Media Center.yaml Automation:
+* __[Turn on TV and Amplifier when HTPC turns on](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/media_center.yaml#L1)__
 
 ### Moring Briefing.yaml Automation:
 This is a notification automation to send me info about the day when I wake up.  Currenlty it just contains the date and a weather report.  I hope to integrate my calendar in the future and have it include the meetings I have that day.  
