@@ -8,10 +8,9 @@
 
 #https://home-assistant.io/components/device_tracker.icloud/
 
-  - platform: icloud2
+  - platform: icloud
     username: !secret adam_icloud_username
     password: !secret adam_icloud_password
-    filter_devices: 'phone'
 
 ####################################################
 #                                                  #
