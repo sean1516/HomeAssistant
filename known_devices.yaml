@@ -152,7 +152,7 @@ a020a63452ee:
   mac: 10:08:B1:E2:17:79
   name: 1008B1E21779
   picture:
-  track: true
+  track: false
   #IP: 192.168.1.8
   # Lenovo Laptop
 
@@ -161,7 +161,7 @@ a020a63452ee:
   mac: 78:2B:CB:9F:60:CD
   name: 782bcb9f60cd
   picture:
-  track: true
+  track: false
   vendor: unknown
   #IP: 192.168.1.5
   # HTPC
@@ -171,7 +171,7 @@ a088b4bb64ec:
   mac: A0:88:B4:BB:64:EC
   name: a088b4bb64ec
   picture:
-  track: true
+  track: false
   vendor: Intel Corporate
   #IP: 192.168.1.23
   # Linux Laptop Wireless
@@ -182,7 +182,7 @@ a088b4bb64ec:
   mac: 5C:26:0A:68:D3:17
   name: 5c260a68d317
   picture:
-  track: true
+  track: false
   vendor: Dell Inc.
   #IP: Not on a reserved IP
   # Linux Laptop Wired
@@ -192,7 +192,7 @@ e4a471841fac:
   mac: E4:A4:71:84:1F:AC
   name: e4a471841fac
   picture:
-  track: true
+  track: false
   vendor: unknown
   #IP: Not on a reserved IP
   # Amy's Work Laptop
@@ -203,7 +203,7 @@ e4a471841fac:
   mac: 28:B2:BD:CD:38:18
   name: 28b2bdcd3818
   picture:
-  track: true
+  track: false
   vendor: Intel Corporate
   #IP: Not on a reserved IP
   # Adam's Work Laptop Wireless
@@ -214,7 +214,7 @@ e4a471841fac:
   mac: 28:D2:44:DB:FB:7D
   name: 28d244dbfb7d
   picture:
-  track: true
+  track: false
   vendor: unknown
   #IP: Not on a reserved IP
   # Adam's Work Laptop Wired
@@ -224,7 +224,7 @@ b8ca3a8e9261:
   mac: b8:ca:3a:8e:92:61
   name: b8ca3a8e9261
   picture:
-  track: true
+  track: false
   vendor: unknown
   #IP: 192.168.1.6
   # Desktop
@@ -235,23 +235,12 @@ b8ca3a8e9261:
 #                                                  #
 ####################################################
 
-hostone:
-  hide_if_away: false
-  icon:
-  mac:
-  name: hostone
-  picture:
-  track: true
-  vendor:
-  #IP: 192.168.100.1
-  # Modem
-
 20e52a098cd0:
   hide_if_away: false
   mac: 20:E5:2A:09:8C:D0
   name: 20e52a098cd0
   picture:
-  track: true
+  track: false
   #IP: 192.168.1.50
   # Netgear Router
 
@@ -261,7 +250,7 @@ hostone:
   mac: 00:11:32:6E:F7:C5
   name: 0011326ef7c5
   picture:
-  track: true
+  track: false
   vendor: Synology Incorporated
     #IP: 192.168.2.2
     # Synology NAS
@@ -271,7 +260,7 @@ dcef09df09f4:
   mac: DC:EF:09:DF:09:F4
   name: dcef09df09f4
   picture:
-  track: true
+  track: false
   vendor: NETGEAR
   #IP: 192.168.1.19
   # Netgear Switch
@@ -287,7 +276,7 @@ dcef09df09f4:
   mac: 60:12:8B:3A:2C:F5
   name: 60128b3a2cf5
   picture:
-  track: true
+  track: false
   vendor: Canon
   #IP: 192.168.1.13
   # Canon Printer
@@ -297,7 +286,7 @@ dcef09df09f4:
   mac: 00:26:B4:90:04:80
   name: 0026b4900480
   picture:
-  track: true
+  track: false
   vendor: Ford Motor Company
   #IP: Not on a reserved IP
   # Ford Edge
@@ -307,7 +296,7 @@ b827eb19017f:
   mac: B8:27:EB:19:01:7F
   name: b827eb19017f
   picture:
-  track: true
+  track: false
   vendor: Raspberry Pi Foundation
   #IP: 192.168.1.30
   # Raspberry Pi 3 (Wifi)
@@ -318,10 +307,10 @@ b827eb9a6be6:
   mac: B8:27:EB:9A:6B:E6
   name: b827eb9a6be6
   picture:
-  track: true
+  track: flase
   vendor: Raspberry Pi Foundation
   #IP: 192.168.1.22
-  # Raspberry Pi Zero
+  # Raspberry Pi Zero W
 
 b827eb4c542a:
   hide_if_away: false
@@ -329,7 +318,7 @@ b827eb4c542a:
   mac: B8:27:EB:4C:54:2A
   name: b827eb4c542a
   picture:
-  track: true
+  track: false
   vendor: Raspberry Pi Foundation
   #IP: 192.168.1.31
   # Raspberry Pi 3 (Wired)
@@ -340,7 +329,7 @@ b827eb0ec9a4:
   mac: B8:27:EB:0E:C9:A4
   name: b827eb0ec9a4
   picture:
-  track: true
+  track: false
   vendor: Raspberry Pi Foundation
   #IP: 192.168.1.14
   # Raspberry Pi 2 (Wired)
@@ -351,7 +340,7 @@ b827eb0ec9a4:
   mac: 74:DA:38:26:33:7D
   name: 74da3826337d
   picture:
-  track: true
+  track: false
   vendor: Edimax Technology Co. Ltd.
   #IP 192.168.1.25
   # Edimax Wifi USB
