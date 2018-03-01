@@ -36,11 +36,6 @@
      name: Installed version
      command: "head -5 /home/ha/.homeassistant/.HA_VERSION"
 
-  - platform: filesize
-    file_paths:
-      - /home/ha/.homeassistant/home-assistant_v2.db
-      - /home/ha/.homeassistant/home-assistant.log
-
 ####################################################
 #                                                  #
 #                    UPS DATA                      #

@@ -40,7 +40,6 @@
       - group.ha_server_monitor
       - group.ha_version_info
       - group.zwave
-      - group.file_size
       - group.batteries
 
   Automations:
@@ -82,6 +81,7 @@
     entities:
      - camera.adam_location
      - group.weblinks
+     - input_text.amybriefinput
 
 ####################################################
 #                                                  #
@@ -415,12 +415,6 @@
       - sensor.ups_battery_runtime
       - sensor.ups_battery_charge
       - sensor.ups_load
-
-  File Size:
-    control: hidden
-    entities:
-      - sensor.homeassistant_v2db
-      - sensor.homeassistantlog
 
   Batteries:
     entities:
