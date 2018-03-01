@@ -13,7 +13,7 @@ If you are just getting started with Home Assistant I highly recommend checking 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.63.3__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Environment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly recommend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.64.1__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Environment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly recommend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
 I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
 
