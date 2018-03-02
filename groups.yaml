@@ -313,17 +313,17 @@
 ####################################################
 
   Devices:
-    - binary_sensor.device_tracker_a088b4bb64ec
-    - binary_sensor.device_tracker_hostone
-    - binary_sensor.device_tracker_20e52a098cd0
-    - binary_sensor.device_tracker_0011326ef7c5
-    - binary_sensor.device_tracker_dcef09df09f4
-    - binary_sensor.device_tracker_60128b3a2cf5
-    - binary_sensor.device_tracker_b827eb19017f
-    - binary_sensor.device_tracker_b827eb9a6be6
-    - binary_sensor.device_tracker_b827eb4c542a
-    - binary_sensor.device_tracker_b827eb0ec9a4
-    - binary_sensor.device_tracker_74da3826337d
+    - binary_sensor.linux_laptop
+    - binary_sensor.modem
+    - binary_sensor.netgear_router
+    - binary_sensor.NAS
+    - binary_sensor.netgear_switch
+    - binary_sensor.canon_printer
+    - binary_sensor.raspberry_pi_3_wifi
+    - binary_sensor.raspberry_pi_zero_w
+    - binary_sensor.raspberry_pi_3_wired
+    - binary_sensor.raspberry_pi_2_wired
+    - binary_sensor.edimax_wifi_usb
 
   HA Server Monitor:
     - sensor.processor_use

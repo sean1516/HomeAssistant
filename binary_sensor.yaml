@@ -19,25 +19,44 @@
 
 ####################################################
 #                                                  #
-#             CUSTOM DEVICE TRACKER                #
+#                       PING                       #
 #                                                  #
 ####################################################
 
-#https://community.home-assistant.io/t/better-looking-device-tracker/27281
-
-  - platform: device_tracker_sensor
-    entities:
-      - device_tracker.a088b4bb64ec
-      - device_tracker.hostone
-      - device_tracker.20e52a098cd0
-      - device_tracker.0011326ef7c5
-      - device_tracker.dcef09df09f4
-      - device_tracker.60128b3a2cf5
-      - device_tracker.b827eb19017f
-      - device_tracker.b827eb9a6be6
-      - device_tracker.b827eb4c542a
-      - device_tracker.b827eb0ec9a4
-      - device_tracker.74da3826337d
+#https://home-assistant.io/components/binary_sensor.ping/
+  - platform: ping
+    host: 192.168.1.23
+    name: Linux Laptop
+  - platform: ping
+    host: 192.168.100.1
+    name: Modem
+  - platform: ping
+    host: 192.168.1.50
+    name: Netgear Router
+  - platform: ping
+    host: 192.168.2.2
+    name: NAS
+  - platform: ping
+    host: 192.168.1.19
+    name: Netgear Switch
+  - platform: ping
+    host: 192.168.1.13
+    name: Canon Printer
+  - platform: ping
+    host: 192.168.1.30
+    name: Raspberry Pi 3 Wifi
+  - platform: ping
+    host: 192.168.1.22
+    name: Raspberry Pi Zero W
+  - platform: ping
+    host: 192.168.1.31
+    name: Raspberry Pi 3 Wired
+  - platform: ping
+    host: 192.168.1.14
+    name: Raspberry Pi 2 Wired
+  - platform: ping
+    host: 192.168.1.15
+    name: Edimax Wifi USB
 
 ####################################################
 #                                                  #
