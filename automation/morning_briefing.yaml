@@ -29,6 +29,8 @@
         data_template:
           title: "Moring Briefing"
           message: >
+                    {{states('input_text.amybriefinput')}}{{ "\n" }}
+                    {{ "\n" }}
                     Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
                     {{ "\n" }}
                     The current temperature is {{states('sensor.pws_temp_f')}} degrees Fahrenheit with {{states('sensor.pws_weather')}} skies.{{ "\n" }}

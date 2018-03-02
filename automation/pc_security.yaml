@@ -7,9 +7,9 @@
   - alias: "DESKTOP PC ON WHEN AWAY"
     trigger:
       platform: state
-      entity_id: device_tracker.b8ca3a8e9261
-      from: 'not_home'
-      to: 'home'
+      entity_id: switch.desktop_switch
+      from: 'off'
+      to: 'on'
     condition:
         condition: state
         entity_id: 'device_tracker.adamsiphone'

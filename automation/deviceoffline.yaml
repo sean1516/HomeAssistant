@@ -6,31 +6,37 @@
 
   - alias: "Notify if HA Device Offline"
     trigger:
-      platform: state
-      entity_id:
-        - device_tracker.74da384a9d63 # Edimax Switch 2
-        - device_tracker.74da384aa769 #Edimax Switch 1
-        - device_tracker.f0b4299fe446 # Yeelight 1
-        - device_tracker.f0b429a8e3f3 # Yeelight 2
-        - device_tracker.f0b429a900ec # Yeelight 3
-        - device_tracker.286c071064f1 # Yeelight Bulb RGB 1
-        - device_tracker.286c07b1776d # Yeelight 4
-        - device_tracker.286c07b19f98 # Yeelight 5
-        - device_tracker.b827eb9a6be6 # Raspberry Pi Zero W
-        - device_tracker.34ea34e3da0d # Broadlink RM Mini 3
-        - device_tracker.hostone # Modem
-        - device_tracker.0011326ef7c5 # NAS
-        - device_tracker.b072bf276553 # Ikea Tradfri Gateway
-        #- device_tracker.a020a63452ee # Open Garage
-        #- device_tracker.6854fd8aee8c # Amazon Echo Dot
-        #- device_tracker.18b430868bb9 # Nest Thermostat
-        - device_tracker.68c63a957c6f #Sonoff POW1
-        - device_tracker.68c63a8ad197 #Sonoff POW2
-        - device_tracker.5ccf7f673729 #Sonoff TH10-1
-        - device_tracker.000c29b08c39 # MQTT Server
-        - device_tracker.2c3ae844b860 # Sonoff Basic-1
-      from: 'home'
-      to: 'not_home'
+      - platform: state
+        entity_id:
+          - device_tracker.74da384a9d63 # Edimax Switch 2
+          - device_tracker.74da384aa769 #Edimax Switch 1
+          - device_tracker.f0b4299fe446 # Yeelight 1
+          - device_tracker.f0b429a8e3f3 # Yeelight 2
+          - device_tracker.f0b429a900ec # Yeelight 3
+          - device_tracker.286c071064f1 # Yeelight Bulb RGB 1
+          - device_tracker.286c07b1776d # Yeelight 4
+          - device_tracker.286c07b19f98 # Yeelight 5
+          - device_tracker.34ea34e3da0d # Broadlink RM Mini 3
+          - device_tracker.b072bf276553 # Ikea Tradfri Gateway
+          #- device_tracker.a020a63452ee # Open Garage
+          #- device_tracker.6854fd8aee8c # Amazon Echo Dot
+          #- device_tracker.18b430868bb9 # Nest Thermostat
+          - device_tracker.68c63a957c6f #Sonoff POW1
+          - device_tracker.68c63a8ad197 #Sonoff POW2
+          - device_tracker.5ccf7f673729 #Sonoff TH10-1
+          - device_tracker.000c29b08c39 # MQTT Server
+          - device_tracker.2c3ae844b860 # Sonoff Basic-1
+        from: 'home'
+        to: 'not_home'
+      - platform: state
+        entity_id:
+          - binary_sensor.linux_laptop
+          - binary_sensor.modem
+          - binary_sensor.netgear_router
+          - binary_sensor.NAS
+          - binary_sensor.netgear_switch
+        from: 'on'
+        to: 'off'
     action:
       service: notify.home_assistant
       data_template:
