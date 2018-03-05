@@ -62,7 +62,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Sonoff POW (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Wireless-Consumption-Measurement-Appliances/dp/B06XSD6PD6)__*
 * __[Sonoff TH16 (w/ Tasmota Firmware) ](https://www.amazon.com/Sonoff-Temperature-Humidity-Monitoring-Appliances/dp/B075FSHKQ5/ref=sr_1_1_sspa?s=hi&ie=UTF8&qid=1518981039&sr=1-1-spons&keywords=sonoff+th16&psc=1&smid=A1K7D4R1FF2BKK)__*
 * __[Dome Miniature, Z-Wave Plus Door/Window Sensor](https://www.amazon.com/Dome-Home-Automation-Miniature-DMWD1/dp/B01JGMZNNG)__
-* __[Sonoff Basic w/ Tasmota Firmware](https://www.amazon.com/Sonoff-Electrical-Household-Appliances-Compatible/dp/B074N22WFT/ref=sr_1_1?ie=UTF8&qid=1519777945&sr=8-1&keywords=sonoff+basic)__
+* __[Sonoff Basic w/ Tasmota Firmware](https://www.amazon.com/Sonoff-Electrical-Household-Appliances-Compatible/dp/B074N22WFT/ref=sr_1_1?ie=UTF8&qid=1519777945&sr=8-1&keywords=sonoff+basic)__*
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 

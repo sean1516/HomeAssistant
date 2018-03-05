@@ -30,7 +30,6 @@
         to: 'not_home'
       - platform: state
         entity_id:
-          - binary_sensor.linux_laptop
           - binary_sensor.modem
           - binary_sensor.netgear_router
           - binary_sensor.NAS
