@@ -57,6 +57,54 @@
   - platform: ping
     host: 192.168.1.15
     name: Edimax Wifi USB
+  - platform: ping
+    host: 192.168.1.21
+    name: Edimax Switch 1
+  - platform: ping
+    host: 192.168.1.4
+    name: Edimax Switch 2
+  - platform: ping
+    host: 192.168.1.10
+    name: Yeelight 1
+  - platform: ping
+    host: 192.168.1.11
+    name: Yeelight 2
+  - platform: ping
+    host: 192.168.1.12
+    name: Yeelight 3
+  - platform: ping
+    host: 192.168.1.26
+    name: Yeelight 4
+  - platform: ping
+    host: 192.168.5.28
+    name: Yeelight 5
+  - platform: ping
+    host: 192.168.1.25
+    name: Yeelight RGB 2
+  - platform: ping
+    host: 192.168.1.20
+    name: Ikea Tradfri Gateway
+  - platform: ping
+    host: 192.168.1.32
+    name: Broadlink RM Mini 3
+  - platform: ping
+    host: 192.168.1.18
+    name: Open Garage
+  - platform: ping
+    host: 192.168.1.29
+    name: Sonoff POW1
+  - platform: ping
+    host: 192.168.1.34
+    name: Sonoff POW2
+  - platform: ping
+    host: 192.168.1.3
+    name: Sonoff TH161
+  - platform: ping
+    host: 192.168.1.36
+    name: Sonoff Basic1
+  - platform: ping
+    host: 192.168.3.38
+    name: Ubiquiti AP 
 
 ####################################################
 #                                                  #
