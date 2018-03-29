@@ -8,32 +8,25 @@
     trigger:
       - platform: state
         entity_id:
-          - device_tracker.74da384a9d63 # Edimax Switch 2
-          - device_tracker.74da384aa769 #Edimax Switch 1
-          - device_tracker.f0b4299fe446 # Yeelight 1
-          - device_tracker.f0b429a8e3f3 # Yeelight 2
-          - device_tracker.f0b429a900ec # Yeelight 3
-          - device_tracker.286c071064f1 # Yeelight Bulb RGB 1
-          - device_tracker.286c07b1776d # Yeelight 4
-          - device_tracker.286c07b19f98 # Yeelight 5
-          - device_tracker.34ea34e3da0d # Broadlink RM Mini 3
-          - device_tracker.b072bf276553 # Ikea Tradfri Gateway
-          #- device_tracker.a020a63452ee # Open Garage
-          #- device_tracker.6854fd8aee8c # Amazon Echo Dot
-          #- device_tracker.18b430868bb9 # Nest Thermostat
-          - device_tracker.68c63a957c6f #Sonoff POW1
-          - device_tracker.68c63a8ad197 #Sonoff POW2
-          - device_tracker.5ccf7f673729 #Sonoff TH10-1
-          - device_tracker.000c29b08c39 # MQTT Server
-          - device_tracker.2c3ae844b860 # Sonoff Basic-1
-        from: 'home'
-        to: 'not_home'
-      - platform: state
-        entity_id:
           - binary_sensor.modem
           - binary_sensor.netgear_router
           - binary_sensor.NAS
           - binary_sensor.netgear_switch
+          - binary_sensor.edimax_switch_1
+          - binary_sensor.edimax_switch_2
+          - binary_sensor.yeelight_1
+          - binary_sensor.yeelight_2
+          - binary_sensor.yeelight_3
+          - binary_sensor.yeelight_4
+          - binary_sensor.yeelight_5
+          - binary_sensor.yeelight_rgb_2
+          - binary_sensor.ikea_tradfri_gateway
+          - binary_sensor.broadlink_rm_mini_3     
+          - binary_sensor.open_garage
+          - binary_sensor.sonoff_pow1      
+          - binary_sensor.sonoff_pow2
+          - binary_sensor.sonoff_th16
+          - binary_sensor.sonoff_basic1
         from: 'on'
         to: 'off'
     action:
