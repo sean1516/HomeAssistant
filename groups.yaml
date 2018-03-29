@@ -194,24 +194,6 @@
   Home Automation Device Status:
     control: hidden
     entities:
-      - device_tracker.000c29b08c39
-      - device_tracker.74da384a9d63
-      - device_tracker.74da384aa769
-      - device_tracker.9c8ecd06a5a0
-      - device_tracker.f0b4299fe446
-      - device_tracker.f0b429a8e3f3
-      - device_tracker.f0b429a900ec
-      - device_tracker.286c07b1776d
-      - device_tracker.286c07b19f98
-      - device_tracker.286c07ac908d
-      - device_tracker.b072bf276553
-      - device_tracker.34ea34e3da0d
-      - device_tracker.a020a63452ee
-      - device_tracker.78e1039637ca
-      - device_tracker.68c63a957c6f
-      - device_tracker.68c63a8ad197
-      - device_tracker.5ccf7f673729
-      - device_tracker.2c3ae844b860
       - binary_sensor.edimax_switch_1
       - binary_sensor.edimax_switch_2
       - binary_sensor.yeelight_1
