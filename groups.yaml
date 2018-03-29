@@ -321,6 +321,7 @@
     - binary_sensor.raspberry_pi_3_wired
     - binary_sensor.raspberry_pi_2_wired
     - binary_sensor.edimax_wifi_usb
+    - binary_sensor.ubiquiti_ap
 
   HA Server Monitor:
     - sensor.processor_use
