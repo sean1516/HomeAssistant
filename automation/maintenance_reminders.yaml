@@ -73,6 +73,7 @@
       service: notify.home_assistant
       data:
         title: "Check Water Softener Salt Level"
+        message: "Check water Softener Salt Level"
 
 #########################################################
 #                                                       #
