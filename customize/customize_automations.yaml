@@ -14,6 +14,10 @@ automation.belle_flea_tick_and_heartworm_reminder:
   friendly_name: Belle Flea Tick and Heartworm
   icon: mdi:paw
 
+automation.computer_on_tv_on:
+  friendly_name: Computer On TV On
+  icon: mdi:television
+
 automation.desktop_on_at_bedtime:
   friendly_name: Desktop on at Bedtime
   icon: mdi:exclamation

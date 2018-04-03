@@ -50,8 +50,8 @@ sensor.current_ha_version:
   friendly_name: Latest Release
   icon: mdi:github-circle
 
-sensor.disk_use_home:
-  friendly_name: Disk Use - SD Card
+sensor.disk_use_percent_home:
+  friendly_name: Disk Use
   icon: mdi:harddisk
 
 sensor.downstairs_away_mode:
@@ -148,6 +148,10 @@ sensor.ipchange:
 sensor.lets_encrypt_expiration:
   friendly_name: Lets Encrypt Expiration
   icon: mdi:timelapse
+
+sensor.memory_use_percent:
+  friendly_name: Memory Usage
+  icon: mdi:chip
 
 sensor.memory_usage_real:
   friendly_name: Memory Usage

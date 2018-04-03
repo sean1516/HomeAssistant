@@ -30,9 +30,49 @@ device_tracker.20e52a098cd0:
   friendly_name: Netgear Router
   icon: mdi:router-wireless
 
+device_tracker.286c071064f1:
+  friendly_name: Yeelight RGB 1
+  icon: mdi:lightbulb
+
+device_tracker.286c07ac908d:
+  friendly_name: Yeelight RGB 2
+  icon: mdi:lightbulb
+
+device_tracker.286c07b1776d:
+  friendly_name: Yeelight 4
+  icon: mdi:lightbulb
+
+device_tracker.286c07b19f98:
+  friendly_name: Yeelight 5
+  icon: mdi:lightbulb
+
+device_tracker.2c3ae844b860:
+  friendly_name: Sonoff Basic-1
+  icon: mdi:power
+
 device_tracker.347c25a0db80:
   friendly_name: Amy's Apple Watch Wifi
   icon: mdi:watch
+
+device_tracker.34ea34e3da0d:
+  friendly_name: Broadlink RM Mini 3
+  icon: mdi:remote
+
+device_tracker.68c63a957c6f:
+  friendly_name: Sonoff POW-1
+  icon: mdi:power
+
+device_tracker.68c63a8ad197:
+  friendly_name: Sonoff POW-2
+  icon: mdi:power
+
+device_tracker.5ccf7f673729:
+  friendly_name: Sonoff TH16-1
+  icon: mdi:power
+
+device_tracker.78e1039637ca:
+  friendly_name: Dash Button
+  icon: mdi:amazon
 
 device_tracker.60128b3a2cf5:
   friendly_name: Canon Printer
@@ -50,9 +90,21 @@ device_tracker.74da3826337d:
   friendly_name: Edimax Wifi USB
   icon: mdi:usb
 
+device_tracker.74da384a9d63:
+  friendly_name: Edimax Switch 2
+  icon: mdi:power
+
+device_tracker.74da384aa769:
+  friendly_name: Edimax Switch 1
+  icon: mdi:power
+
 device_tracker.782bcb9f60cd:
   friendly_name: HTPC
   icon: mdi:windows
+
+device_tracker.a020a63452ee:
+  friendly_name: Open Garage
+  icon: mdi:garage
 
 device_tracker.a088b4bb64ec:
   friendly_name: Linux Laptop
@@ -69,6 +121,10 @@ device_tracker.amysapple_watch:
 device_tracker.amysiphone:
   friendly_name: Amy
   entity_picture: !secret amy_entity_picture
+
+device_tracker.b072bf276553:
+  friendly_name: Ikea Tradfri Gateway
+  icon: mdi:switch
 
 device_tracker.b827eb0ec9a4:
   friendly_name: Raspberry Pi 2 (Wired)
@@ -101,6 +157,18 @@ device_tracker.dcef09df09f4:
 device_tracker.e4a471841fac:
   friendly_name: Amy's Work Laptop
   icon: mdi:laptop-chromebook
+
+device_tracker.f0b4299fe446:
+  friendly_name: Yeelight 1
+  icon: mdi:lightbulb
+
+device_tracker.f0b429a8e3f3:
+  friendly_name: Yeelight 2
+  icon: mdi:lightbulb
+
+device_tracker.f0b429a900ec:
+  friendly_name: Yeelight 3
+  icon: mdi:lightbulb
 
 ####################################################
 #                                                  #

@@ -6,6 +6,12 @@
 #                                                  #
 ####################################################
 
+switch.basic1:
+  friendly_name: Livng Room Lamps
+  icon: mdi:lamp
+  emulated_hue_hidden: false
+  emulated_hue_name: Lamps
+
 switch.desktop_switch:
   friendly_name: Desktop Switch
   icon: mdi:desktop-tower
@@ -56,10 +62,9 @@ switch.mute_receiver:
   emulated_hue_hidden: true
 
 switch.pow1:
-  friendly_name: Livng Room Lamps
-  icon: mdi:lamp
-  emulated_hue_hidden: false
-  emulated_hue_name: Lamps
+  friendly_name: spare
+  icon: mdi:power
+  emulated_hue_hidden: true
 
 switch.pow2:
   friendly_name: Iron
@@ -112,6 +117,7 @@ switch.receiver_volume_up:
 switch.th161:
   icon: mdi:power
   friendly_name: TH16-1 Switch
+  emulated_hue_hidden: true
 
 switch.tv:
   friendly_name: TV

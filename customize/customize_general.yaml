@@ -25,11 +25,6 @@ input_select.notification_bulb2_color:
 #                                                  #
 ####################################################
 
-script.mediacenteroff:
-  friendly_name: Media Center
-  icon: mdi:television-classic-off
-  emulated_hue_hidden: true
-
 script.music:
   friendly_name: Music
   icon: mdi:music
@@ -52,7 +47,6 @@ script.volumeup:
   icon: mdi:volume-plus
   emulated_hue_hidden: false
   emulated_hue_name: Volume Up
-
 
 ####################################################
 #                                                  #
