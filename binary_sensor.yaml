@@ -25,7 +25,7 @@
 
 #https://home-assistant.io/components/binary_sensor.ping/
   - platform: ping
-    host: 192.168.1.23
+    host: 192.168.3.23
     name: Linux Laptop
   - platform: ping
     host: 192.168.100.1
@@ -104,7 +104,7 @@
     name: Sonoff Basic1
   - platform: ping
     host: 192.168.3.38
-    name: Ubiquiti AP 
+    name: Ubiquiti AP
 
 ####################################################
 #                                                  #

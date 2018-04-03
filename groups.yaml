@@ -203,11 +203,11 @@
       - binary_sensor.yeelight_5
       - binary_sensor.yeelight_rgb_2
       - binary_sensor.ikea_tradfri_gateway
-      - binary_sensor.broadlink_rm_mini_3     
+      - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage
-      - binary_sensor.sonoff_pow1      
+      - binary_sensor.sonoff_pow1
       - binary_sensor.sonoff_pow2
-      - binary_sensor.sonoff_th16
+      - binary_sensor.sonoff_th161
       - binary_sensor.sonoff_basic1
 
 ####################################################

@@ -505,3 +505,12 @@ f0b429a900ec:
   picture:
   track: true
   vendor: unknown
+
+50dce799a59d:
+  hide_if_away: false
+  icon:
+  mac: 50:DC:E7:99:A5:9D
+  name: 50dce799a59d
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.

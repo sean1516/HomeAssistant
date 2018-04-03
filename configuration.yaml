@@ -38,10 +38,6 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 2
 
-#https://home-assistant.io/components/frontend/
-frontend:
-  javascript_version: latest
-
 #https://home-assistant.io/components/recorder/
 recorder:
   purge_interval: 1
@@ -74,6 +70,7 @@ light: !include lights.yaml
 camera: !include camera.yaml
 zone: !include zones.yaml
 input_select: !include input_select.yaml
+frontend: !include frontend.yaml
 cover: !include cover.yaml
 ios: !include ios.yaml
 input_boolean: !include input_boolean.yaml
