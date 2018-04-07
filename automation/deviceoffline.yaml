@@ -9,7 +9,6 @@
       - platform: state
         entity_id:
           - binary_sensor.modem
-          - binary_sensor.netgear_router
           - binary_sensor.NAS
           - binary_sensor.netgear_switch
           - binary_sensor.edimax_switch_1
@@ -22,11 +21,8 @@
           - binary_sensor.yeelight_rgb_2
           - binary_sensor.ikea_tradfri_gateway
           - binary_sensor.broadlink_rm_mini_3
-          - binary_sensor.open_garage
-          - binary_sensor.sonoff_pow1
-          - binary_sensor.sonoff_pow2
-          - binary_sensor.sonoff_th161
-          - binary_sensor.sonoff_basic1
+          - binary_sensor.mqtt_server
+          - binary_sensor.esxi_host
         from: 'on'
         to: 'off'
     action:

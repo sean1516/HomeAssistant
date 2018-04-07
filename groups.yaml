@@ -35,6 +35,7 @@
 
   HA:
     view: yes
+    icon: mdi:home-assistant
     entities:
       - group.Home_Automation_Device_Status
       - group.ha_server_monitor
@@ -64,9 +65,7 @@
      - group.edimax_switches
      - group.bedroom_lights
      - group.yeelights
-     - group.etekcity_rf_switches
      - group.broadlink_ir_switches
-     - group.sonoff_switches
 
   Weather:
     view: yes
@@ -205,10 +204,7 @@
       - binary_sensor.ikea_tradfri_gateway
       - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage
-      - binary_sensor.sonoff_pow1
-      - binary_sensor.sonoff_pow2
-      - binary_sensor.sonoff_th161
-      - binary_sensor.sonoff_basic1
+      - binary_sensor.mqtt_server
 
 ####################################################
 #                     LIGHTS                       #
@@ -259,7 +255,7 @@
     control: hidden
     entities:
       - switch.htpc_switch
-      - switch.basic1
+      - switch.edimax1
       - light.yeelightrgb2
       - input_select.notification_bulb2_color
       - script.tv
@@ -282,8 +278,6 @@
     entities:
       - switch.laptop_switch
       - group.bedroom_lights
-      - sensor.th161_temperature
-      - sensor.th161_humidity
 
   Exterior:
     control: hidden
@@ -299,11 +293,6 @@
       - sensor.garagedoorstatus
       - cover.garage
       - sensor.gehingepinsensor1
-
-  Blue Room:
-    control: hidden
-    entities:
-      - switch.pow2
 
 ####################################################
 #                   SENSORS                        #
@@ -322,6 +311,7 @@
     - binary_sensor.raspberry_pi_2_wired
     - binary_sensor.edimax_wifi_usb
     - binary_sensor.ubiquiti_ap
+    - binary_sensor.esxi_host
 
   HA Server Monitor:
     - sensor.processor_use
@@ -459,34 +449,6 @@
       - switch.input_tv
       - script.volumeup
       - script.volumedown
-
-  # Etekcity RF Switches:
-  #   control: hidden
-  #   entities:
-  #     - switch.rfswitch1
-  #     - switch.rfswitch2
-  #     - switch.rfswitch3
-  #     - switch.rfswitch4
-  #     - switch.rfswitch5
-
-  Sonoff Switches:
-    control: hidden
-    entities:
-      - switch.basic1
-      - switch.th161
-      - sensor.th161_temperature
-      - sensor.th161_humidity
-      - switch.pow1
-      - sensor.pow1_energy
-      - sensor.pow1_power
-      - sensor.pow1_voltage
-      - sensor.pow1_current
-      - switch.pow2
-      - sensor.pow2_energy
-      - sensor.pow2_power
-      - sensor.pow2_voltage
-      - sensor.pow2_current
-
 
 ####################################################
 #                    ZWAVE                         #

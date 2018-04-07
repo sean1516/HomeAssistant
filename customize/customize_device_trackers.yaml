@@ -46,10 +46,6 @@ device_tracker.286c07b19f98:
   friendly_name: Yeelight 5
   icon: mdi:lightbulb
 
-device_tracker.2c3ae844b860:
-  friendly_name: Sonoff Basic-1
-  icon: mdi:power
-
 device_tracker.347c25a0db80:
   friendly_name: Amy's Apple Watch Wifi
   icon: mdi:watch
@@ -57,18 +53,6 @@ device_tracker.347c25a0db80:
 device_tracker.34ea34e3da0d:
   friendly_name: Broadlink RM Mini 3
   icon: mdi:remote
-
-device_tracker.68c63a957c6f:
-  friendly_name: Sonoff POW-1
-  icon: mdi:power
-
-device_tracker.68c63a8ad197:
-  friendly_name: Sonoff POW-2
-  icon: mdi:power
-
-device_tracker.5ccf7f673729:
-  friendly_name: Sonoff TH16-1
-  icon: mdi:power
 
 device_tracker.78e1039637ca:
   friendly_name: Dash Button

@@ -235,15 +235,6 @@ b8ca3a8e9261:
 #                                                  #
 ####################################################
 
-20e52a098cd0:
-  hide_if_away: false
-  mac: 20:E5:2A:09:8C:D0
-  name: 20e52a098cd0
-  picture:
-  track: false
-  #IP: 192.168.1.50
-  # Netgear Router
-
 0011326ef7c5:
   hide_if_away: false
   icon:
@@ -496,21 +487,3 @@ f0b429a900ec:
 #      NEW UNSORTED DEVICES BELOW THIS LINE        #
 #                                                  #
 ####################################################
-
-90b11c752eae:
-  hide_if_away: false
-  icon:
-  mac: 90:B1:1C:75:2E:AE
-  name: 90b11c752eae
-  picture:
-  track: true
-  vendor: unknown
-
-50dce799a59d:
-  hide_if_away: false
-  icon:
-  mac: 50:DC:E7:99:A5:9D
-  name: 50dce799a59d
-  picture:
-  track: true
-  vendor: Amazon Technologies Inc.

@@ -6,24 +6,19 @@
 #                                                  #
 ####################################################
 
-switch.basic1:
-  friendly_name: Livng Room Lamps
-  icon: mdi:lamp
-  emulated_hue_hidden: false
-  emulated_hue_name: Lamps
-
 switch.desktop_switch:
   friendly_name: Desktop Switch
   icon: mdi:desktop-tower
   emulated_hue_hidden: true
 
 switch.edimax1:
-  friendly_name: Spare Switch
-  icon: mdi:power
-  emulated_hue_hidden: true
+  friendly_name: Living Room Lamps
+  icon: mdi:lightbulb-outline
+  emulated_hue_hidden: false
+  emulated_hue_name: Lamps
 
 switch.edimax2:
-  friendly_name: Spare Switch
+  friendly_name: Entertainment Center
   icon: mdi:power
   emulated_hue_hidden: true
 

@@ -9,7 +9,7 @@
 
 #https://home-assistant.io/components/switch.broadlink/
   - platform: broadlink
-    host: 192.168.1.32
+    host: 192.168.3.32
     mac: 34:ea:34:e3:da:0d
     type: rm_mini
     switches:
@@ -58,13 +58,13 @@
 
 #https://home-assistant.io/components/switch.edimax/
   - platform: edimax
-    host: 192.168.1.21
+    host: 192.168.3.21
     username: !secret edimax_username
     password: !secret edimax_password
     name: Edimax1
 
   - platform: edimax
-    host: 192.168.1.4
+    host: 192.168.3.4
     username: !secret edimax_username
     password: !secret edimax_password
     name: Edimax2
@@ -96,101 +96,6 @@
     host: 192.168.1.8
     turn_off:
       service: shell_command.laptop
-
-####################################################
-#                                                  #
-#                   RF SWITCHES                    #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/switch.rpi_rf/
-#  - platform: rpi_rf
-#    gpio: 17
-#    switches:
-#     rfswitch1:
-#       code_on: 267571
-#       code_off: 267580
-#       protocol: 1
-#       pulselength: 194
-#       signal_repetitions: 20
-#     rfswitch2:
-#       code_on: 267715
-#       code_off: 267724
-#       protocol: 1
-#       pulselength: 194
-#       signal_repetitions: 20
-#     rfswitch3:
-#       code_on: 268035
-#       code_off: 268044
-#       protocol: 1
-#       pulselength: 194
-#       signal_repetitions: 20
-#     rfswitch4:
-#       code_on: 269571
-#       code_off: 269580
-#       protocol: 1
-#       pulselength: 194
-#       signal_repetitions: 20
-#     rfswitch5:
-#       code_on: 275715
-#       code_off: 275724
-#       protocol: 1
-#       pulselength: 194
-#       signal_repetitions: 20
-
-####################################################
-#                                                  #
-#                     SONOFFS                      #
-#                                                  #
-####################################################
-
-  - platform: mqtt
-    name: "TH161"
-    state_topic: "stat/th161/POWER"
-    command_topic: "cmnd/th161/POWER"
-    availability_topic: "tele/th161/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: true
-
-  - platform: mqtt
-    name: "POW1"
-    state_topic: "stat/pow1/POWER"
-    command_topic: "cmnd/pow1/POWER"
-    availability_topic: "tele/pow1/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: true
-
-  - platform: mqtt
-    name: "POW2"
-    state_topic: "stat/pow2/POWER"
-    command_topic: "cmnd/pow2/POWER"
-    availability_topic: "tele/pow2/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: true
-
-  - platform: mqtt
-    name: "Basic1"
-    state_topic: "stat/basic1/POWER"
-    command_topic: "cmnd/basic1/POWER"
-    availability_topic: "tele/basic1/LWT"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    retain: true
 
 ####################################################
 #                                                  #
