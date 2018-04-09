@@ -14,10 +14,6 @@ device_tracker.0011326ef7c5:
   friendly_name: NAS
   icon: mdi:harddisk
 
-device_tracker.0026b4900480:
-  friendly_name: Ford Edge
-  icon: mdi:car-connected
-
 device_tracker.1008b1e21779:
   friendly_name: Lenovo Laptop
   icon: mdi:laptop
@@ -25,10 +21,6 @@ device_tracker.1008b1e21779:
 device_tracker.18b430868bb9:
   friendly_name: Nest Thermostat
   icon: mdi:nest-thermostat
-
-device_tracker.20e52a098cd0:
-  friendly_name: Netgear Router
-  icon: mdi:router-wireless
 
 device_tracker.286c071064f1:
   friendly_name: Yeelight RGB 1
@@ -58,10 +50,6 @@ device_tracker.78e1039637ca:
   friendly_name: Dash Button
   icon: mdi:amazon
 
-device_tracker.60128b3a2cf5:
-  friendly_name: Canon Printer
-  icon: mdi:printer
-
 device_tracker.6854fd8aee8c:
   friendly_name: Amazon Echo Dot
   icon: mdi:amazon
@@ -69,10 +57,6 @@ device_tracker.6854fd8aee8c:
 device_tracker.70ef002dc94f:
   friendly_name: Amy's Iphone Wifi
   icon: mdi:cellphone-iphone
-
-device_tracker.74da3826337d:
-  friendly_name: Edimax Wifi USB
-  icon: mdi:usb
 
 device_tracker.74da384a9d63:
   friendly_name: Edimax Switch 2
@@ -114,16 +98,8 @@ device_tracker.b827eb0ec9a4:
   friendly_name: Raspberry Pi 2 (Wired)
   icon: mdi:raspberrypi
 
-device_tracker.b827eb19017f:
-  friendly_name: Raspberry Pi 3 (Wifi)
-  icon: mdi:raspberrypi
-
 device_tracker.b827eb4c542a:
   friendly_name: Raspberry Pi 3 (Wired)
-  icon: mdi:raspberrypi
-
-device_tracker.b827eb9a6be6:
-  friendly_name: Raspberry Pi Zero
   icon: mdi:raspberrypi
 
 device_tracker.b8ca3a8e9261:
