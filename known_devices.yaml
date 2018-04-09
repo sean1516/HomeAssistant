@@ -31,7 +31,7 @@
   picture:
   track: true
   vendor: Edimax Technology Co. Ltd.
-  #IP: 192.168.1.21
+  #IP: 192.168.3.21
   # Edimax Switch 1
 
 74da384a9d63:
@@ -41,7 +41,7 @@
   picture:
   track: true
   vendor: Edimax Technology Co. Ltd.
-  #IP: 192.168.1.4
+  #IP: 192.168.3.4
   # Edimax Swtich 2
 
 6854fd8aee8c:
@@ -51,7 +51,7 @@
   picture:
   track: true
   vendor: Amazon Technologies Inc.
-  #IP: 192.168.1.17
+  #IP: 192.168.3.17
   # Amazon Echo Dot
 
 b072bf276553:
@@ -72,7 +72,7 @@ b072bf276553:
   picture:
   track: true
   vendor: HangZhou Gubei Electronics Technology Co.,Ltd
-  #IP: 192.168.1.32
+  #IP: 192.168.3.32
   # Broadlink RM Mini3
 
 78e1039637ca:
@@ -83,7 +83,7 @@ b072bf276553:
   picture:
   track: true
   vendor: Amazon Technologies Inc.
-  #IP: 192.168.1.33
+  #IP: 192.168.3.33
   # Dash Button
 
 a020a63452ee:
@@ -94,52 +94,8 @@ a020a63452ee:
   picture:
   track: true
   vendor: unknown
-  #IP: 192.168.1.18
+  #IP: 192.168.3.18
   # Open Garage
-
-68c63a957c6f:
-  hide_if_away: false
-  icon:
-  mac: 68:C6:3A:95:7C:6F
-  name: 68c63a957c6f
-  picture:
-  track: true
-  vendor: Espressif Inc.
-  #IP: 192.168.1.29
-  # Sonoff POW1
-
-68c63a8ad197:
-  hide_if_away: false
-  icon:
-  mac: 68:C6:3A:8A:D1:97
-  name: 68c63a8ad197
-  picture:
-  track: true
-  vendor: Espressif Inc.
-  # IP: 192.168.1.34
-  # Sonoff POW2
-
-5ccf7f673729:
-  hide_if_away: false
-  icon:
-  mac: 5C:CF:7F:67:37:29
-  name: 5ccf7f673729
-  picture:
-  track: true
-  vendor: Espressif Inc.
-  #IP: 192.168.1.3
-  # Sonoff TH16-1
-
-2c3ae844b860:
-  hide_if_away: false
-  icon:
-  mac: 2C:3A:E8:44:B8:60
-  name: 2c3ae844b860
-  picture:
-  track: true
-  vendor: Espressif Inc.
-  #IP: 192.168.1.36
-  # Sonoff Basic-1
 
 ####################################################
 #                                                  #
@@ -153,7 +109,7 @@ a020a63452ee:
   name: 1008B1E21779
   picture:
   track: false
-  #IP: 192.168.1.8
+  #IP: 192.168.3.8
   # Lenovo Laptop
 
 782bcb9f60cd:
@@ -173,7 +129,7 @@ a088b4bb64ec:
   picture:
   track: false
   vendor: Intel Corporate
-  #IP: 192.168.1.23
+  #IP: 192.168.3.23
   # Linux Laptop Wireless
 
 5c260a68d317:
@@ -262,47 +218,6 @@ dcef09df09f4:
 #                                                  #
 ####################################################
 
-60128b3a2cf5:
-  hide_if_away: false
-  mac: 60:12:8B:3A:2C:F5
-  name: 60128b3a2cf5
-  picture:
-  track: false
-  vendor: Canon
-  #IP: 192.168.1.13
-  # Canon Printer
-
-0026b4900480:
-  hide_if_away: false
-  mac: 00:26:B4:90:04:80
-  name: 0026b4900480
-  picture:
-  track: false
-  vendor: Ford Motor Company
-  #IP: Not on a reserved IP
-  # Ford Edge
-
-b827eb19017f:
-  hide_if_away: false
-  mac: B8:27:EB:19:01:7F
-  name: b827eb19017f
-  picture:
-  track: false
-  vendor: Raspberry Pi Foundation
-  #IP: 192.168.1.30
-  # Raspberry Pi 3 (Wifi)
-
-b827eb9a6be6:
-  hide_if_away: false
-  icon:
-  mac: B8:27:EB:9A:6B:E6
-  name: b827eb9a6be6
-  picture:
-  track: false
-  vendor: Raspberry Pi Foundation
-  #IP: 192.168.1.22
-  # Raspberry Pi Zero W
-
 b827eb4c542a:
   hide_if_away: false
   icon:
@@ -325,17 +240,6 @@ b827eb0ec9a4:
   #IP: 192.168.1.14
   # Raspberry Pi 2 (Wired)
 
-74da3826337d:
-  hide_if_away: false
-  icon:
-  mac: 74:DA:38:26:33:7D
-  name: 74da3826337d
-  picture:
-  track: false
-  vendor: Edimax Technology Co. Ltd.
-  #IP 192.168.1.25
-  # Edimax Wifi USB
-
 ####################################################
 #                                                  #
 #                    PHONES                        #
@@ -350,7 +254,7 @@ c0a53e6bfa77:
   picture:
   track: true
   vendor: Apple, Inc.
-  #IP: 192.168.1.7
+  #IP: 192.168.3.7
   # Adam's iPhone Wifi
 
 70ef002dc94f:
@@ -361,7 +265,7 @@ c0a53e6bfa77:
   picture:
   track: true
   vendor: Apple, Inc.
-  #IP: 192.168.1.2
+  #IP: 192.168.3.2
   # Amy's iPhone Wifi
 
 adamsiphone:
@@ -384,26 +288,15 @@ amysiphone:
   vendor:
   #iCloud Tracking
 
-amysapple_watch:
-  hide_if_away: false
-  icon:
-  mac:
-  name: "Amy's Apple Watch"
-  picture:
-  track: true
-  vendor:
-  #iCloud Tracking
-
-347c25a0db80:
+amysapplewatch:
   hide_if_away: false
   icon:
   mac: 34:7C:25:A0:DB:80
-  name: 347c25a0db80
+  name: Amys-AppleWatch
   picture:
   track: true
   vendor: Apple, Inc.
-  #IP: 192.168.1.16
-  # Amy's Apple Watch Wifi
+  #iCloud Tracking & WiFi
 
 ####################################################
 #                                                  #
@@ -418,7 +311,7 @@ f0b429a8e3f3:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.11
+  #IP: 192.168.3.11
   # Yeelight Bulb
 
 f0b4299fe446:
@@ -428,7 +321,7 @@ f0b4299fe446:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.10
+  #IP: 192.168.3.10
   # Yeelight Bulb
 
 286c071064f1:
@@ -438,7 +331,7 @@ f0b4299fe446:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.18
+  #IP: 192.168.3.18
   # Yeelight Bulb
 
 286c07b1776d:
@@ -448,7 +341,7 @@ f0b4299fe446:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.26
+  #IP: 192.168.3.26
   # Yeelight Bulb
 
 286c07b19f98:
@@ -458,7 +351,7 @@ f0b4299fe446:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.28
+  #IP: 192.168.3.28
   # Yeelight Bulb
 
 f0b429a900ec:
@@ -468,7 +361,7 @@ f0b429a900ec:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.12
+  #IP: 192.168.3.12
   # Yeelight Bulb
 
 286c07ac908d:
@@ -479,7 +372,7 @@ f0b429a900ec:
   picture:
   track: true
   vendor: XIAOMI Electronics,CO.,LTD
-  #IP: 192.168.1.25
+  #IP: 192.168.3.25
   # Yeelight Bulb
 
 ####################################################

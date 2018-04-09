@@ -37,23 +37,11 @@
     host: 192.168.1.19
     name: Netgear Switch
   - platform: ping
-    host: 192.168.1.13
-    name: Canon Printer
-  - platform: ping
-    host: 192.168.1.30
-    name: Raspberry Pi 3 Wifi
-  - platform: ping
-    host: 192.168.1.22
-    name: Raspberry Pi Zero W
-  - platform: ping
     host: 192.168.1.31
     name: Raspberry Pi 3 Wired
   - platform: ping
     host: 192.168.1.14
     name: Raspberry Pi 2 Wired
-  - platform: ping
-    host: 192.168.1.15
-    name: Edimax Wifi USB
   - platform: ping
     host: 192.168.3.21
     name: Edimax Switch 1

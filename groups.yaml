@@ -304,12 +304,8 @@
     - binary_sensor.netgear_router
     - binary_sensor.NAS
     - binary_sensor.netgear_switch
-    - binary_sensor.canon_printer
-    - binary_sensor.raspberry_pi_3_wifi
-    - binary_sensor.raspberry_pi_zero_w
     - binary_sensor.raspberry_pi_3_wired
     - binary_sensor.raspberry_pi_2_wired
-    - binary_sensor.edimax_wifi_usb
     - binary_sensor.ubiquiti_ap
     - binary_sensor.esxi_host
 
@@ -337,11 +333,12 @@
 
   Phone Status:
     - sensor.battery_adamsiphone
-    - sensor.adamwifi
+    - device_tracker.c0a53e6bfa77
     - sensor.charging_adamsiphone
     - sensor.gps_adamsiphone
     - sensor.interval_adamsiphone
     - sensor.battery_iphone
+    - device_tracker.70ef002dc94f
 
   Nest Temperature & Humidity:
     - sensor.downstairs_thermostat_temperature
