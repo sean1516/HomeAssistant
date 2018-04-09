@@ -39,6 +39,11 @@
                     {{ "\n" }}
                     Tonight's forecast is {{states('sensor.pws_weather_1n')}}
 
+      - service: input_text.set_value
+        data:
+          entity_id: input_text.amybriefinput
+          value: ""
+
 #########################################################
 #                                                       #
 #            END OF CONFIGURATION FILE                  #
