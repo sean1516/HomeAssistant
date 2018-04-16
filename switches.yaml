@@ -93,7 +93,7 @@
   - platform: wake_on_lan
     name: Laptop Switch
     mac_address: "10:08:B1:E2:17:79"
-    host: 192.168.1.8
+    host: 192.168.3.8
     turn_off:
       service: shell_command.laptop
 
