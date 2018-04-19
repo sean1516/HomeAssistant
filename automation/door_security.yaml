@@ -9,7 +9,6 @@
     trigger:
       platform: state
       entity_id: sensor.gehingepinsensor1
-      from: 'Closed'
       to: 'Open'
     condition:
       condition: and
@@ -44,7 +43,6 @@
     trigger:
       platform: state
       entity_id: sensor.garagedoorstatus
-      from: 'Closed'
       to: 'Open'
     condition:
       condition: and
@@ -73,7 +71,6 @@
     trigger:
       platform: state
       entity_id: sensor.gehingepinsensor2
-      from: 'Closed'
       to: 'Open'
     condition:
       condition: and
@@ -134,7 +131,6 @@
     trigger:
       platform: state
       entity_id: sensor.backdoorstatus
-      from: 'Closed'
       to: 'Open'
     condition:
       condition: and
