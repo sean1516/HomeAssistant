@@ -164,20 +164,6 @@ zwave:
 
 ####################################################
 #                                                  #
-#                     MQTT                         #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/docs/mqtt/broker/#run-your-own
-mqtt:
-  broker: 192.168.1.35
-  port: 1883
-  client_id: home-assistant-1
-  username: !secret mqttusername
-  password: !secret mqttpassword
-
-####################################################
-#                                                  #
 #               INPUT TEXT                         #
 #                                                  #
 ####################################################

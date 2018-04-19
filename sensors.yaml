@@ -50,7 +50,7 @@
       - battery.runtime
       - battery.voltage
       - battery.charge
-    host: 192.168.1.2
+    host: 192.168.2.2
     name: UPS
 
 #https://home-assistant.io/components/sensor.template/
@@ -322,7 +322,7 @@
 
 #https://home-assistant.io/components/sensor.synologydsm/
   - platform: synologydsm
-    host: 192.168.1.2
+    host: 192.168.2.2
     port: 5000
     username: !secret nas_username
     password: !secret nas_password

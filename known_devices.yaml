@@ -296,15 +296,6 @@ amysapplewatch:
   picture:
   track: true
   vendor: Apple, Inc.
-
-amysapple_watch:
-  hide_if_away: false
-  icon:
-  mac:
-  name: Amy’s Apple Watch
-  picture:
-  track: true
-  vendor:
   #iCloud Tracking & WiFi
 
 ####################################################
@@ -389,3 +380,12 @@ f0b429a900ec:
 #      NEW UNSORTED DEVICES BELOW THIS LINE        #
 #                                                  #
 ####################################################
+
+amysapple_watch:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Amy’s Apple Watch
+  picture:
+  track: true
+  vendor:
