@@ -9,7 +9,7 @@
 
 #https://home-assistant.io/components/switch.broadlink/
   - platform: broadlink
-    host: 192.168.3.32
+    host: 192.168.1.32
     mac: 34:ea:34:e3:da:0d
     type: rm_mini
     switches:
@@ -58,13 +58,13 @@
 
 #https://home-assistant.io/components/switch.edimax/
   - platform: edimax
-    host: 192.168.3.21
+    host: 192.168.1.21
     username: !secret edimax_username
     password: !secret edimax_password
     name: Edimax1
 
   - platform: edimax
-    host: 192.168.3.4
+    host: 192.168.1.4
     username: !secret edimax_username
     password: !secret edimax_password
     name: Edimax2

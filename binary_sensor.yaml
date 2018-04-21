@@ -25,7 +25,7 @@
 
 #https://home-assistant.io/components/binary_sensor.ping/
   - platform: ping
-    host: 192.168.3.23
+    host: 192.168.1.23
     name: Linux Laptop
   - platform: ping
     host: 192.168.100.1
@@ -43,40 +43,40 @@
     host: 192.168.1.14
     name: Raspberry Pi 2 Wired
   - platform: ping
-    host: 192.168.3.21
+    host: 192.168.1.21
     name: Edimax Switch 1
   - platform: ping
-    host: 192.168.3.4
+    host: 192.168.1.4
     name: Edimax Switch 2
   - platform: ping
-    host: 192.168.3.10
+    host: 192.168.1.10
     name: Yeelight 1
   - platform: ping
-    host: 192.168.3.11
+    host: 192.168.1.11
     name: Yeelight 2
   - platform: ping
-    host: 192.168.3.12
+    host: 192.168.1.12
     name: Yeelight 3
   - platform: ping
-    host: 192.168.3.26
+    host: 192.168.1.26
     name: Yeelight 4
   - platform: ping
-    host: 192.168.3.28
+    host: 192.168.1.28
     name: Yeelight 5
   - platform: ping
-    host: 192.168.3.25
+    host: 192.168.1.25
     name: Yeelight RGB 2
   - platform: ping
     host: 192.168.1.20
     name: Ikea Tradfri Gateway
   - platform: ping
-    host: 192.168.3.32
+    host: 192.168.1.32
     name: Broadlink RM Mini 3
   - platform: ping
-    host: 192.168.3.18
+    host: 192.168.1.18
     name: Open Garage
   - platform: ping
-    host: 192.168.3.38
+    host: 192.168.1.38
     name: Ubiquiti AP
   - platform: ping
     host: 192.168.1.35
