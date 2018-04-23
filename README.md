@@ -8,7 +8,7 @@ These are the [Home Assistant](https://home-assistant.io/) configuration files u
 If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
 
 # Hardware Running HA:
-* __[Raspberry Pi3) ](https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_4?ie=UTF8&qid=1524450372&sr=8-4&keywords=raspberry+pi3&dpID=51Vt9f26ryL&preST=_SX300_QL70_&dpSrc=srch)__ 
+* __[Raspberry Pi3 ](https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_4?ie=UTF8&qid=1524450372&sr=8-4&keywords=raspberry+pi3&dpID=51Vt9f26ryL&preST=_SX300_QL70_&dpSrc=srch)__ 
 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
