@@ -8,14 +8,12 @@ These are the [Home Assistant](https://home-assistant.io/) configuration files u
 If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
 
 # Hardware Running HA:
-* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which allows me to run multiple virtual machines on the same physical hardware.  I also run my router/firewall off this same hardware.  The HA virtual machine is given 2 cores, 1GB of RAM and a 16GB disk.  
+* __[Raspberry Pi3) ](https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92/ref=sr_1_4?ie=UTF8&qid=1524450372&sr=8-4&keywords=raspberry+pi3&dpID=51Vt9f26ryL&preST=_SX300_QL70_&dpSrc=srch)__ 
 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.64.1__. My preferred installation method is an [Ubuntu Server 16.04](https://www.ubuntu.com/server) instance and following the [Python Virtual Environment](https://home-assistant.io/docs/installation/virtualenv/) installation instructions for Home Assistant.  For anyone running a Raspberry Pi, I highly recommend using the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
-
-I setup my Mosquitto MQTT Broker using the instructions in [this video](https://www.youtube.com/watch?v=AsDHEDbyLfg&t)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.67.1__. My preferred installation method is an [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -76,11 +74,6 @@ These notifications are triggered after 10:00 PM and I plug my phone in (general
 <p align="center"> <img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/iosnotification.jpg"><img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/ios%20action.jpg">
 </p>
 
-### Cert Update.yaml Automation:
-This notification is used to notify me if my Lets Encrypt certificate does not auto renew at the beginning of the month.  
-* __[Notify Me if Lets Encrypt Cert Did Not Update ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/certupdate.yaml)__
-
-
 ### Device Offline.yaml Automations:
 This notification is used to notify me if on of my home automation devices goes offline.  Generally this is someone flipping a switch which cuts the power or a network connectivity issue.
 * __[Notify Me if a Home Automation Device is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml)__
@@ -100,9 +93,6 @@ These automations are used to turn a light on to signify the dog needs to be fed
 * __[Turn off The AM Automation and Notification Light AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L35)__
 * __[Turn off The PM Automation and Notification Light PM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L56)__
 * __[Reset all the Automations at 1:00 AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L77)__
-
-### IP Change.yaml
-* __[Notify me with the new IP if my home IP address Changes ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/ip_change.yaml)__
 
 ### Leaving_Notifications.yaml Automations:
 These notifications are triggered when I leave my home zone and no one is home.  These send a iOS app notification with an action option to turn the device off. These are primarily a power saving item and are the same framework as the bedtime notification as above. 
