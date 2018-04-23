@@ -140,8 +140,6 @@
     control: hidden
     entities:
       - automation.notify_if_ha_device_offline
-      - automation.notify_if_ip_changes
-      - automation.lets_encrypt_cert_did_not_update
 
   Other Automations:
     control: hidden
@@ -204,7 +202,6 @@
       - binary_sensor.ikea_tradfri_gateway
       - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage
-      - binary_sensor.mqtt_server
 
 ####################################################
 #                     LIGHTS                       #
@@ -304,8 +301,6 @@
     - binary_sensor.netgear_router
     - binary_sensor.NAS
     - binary_sensor.netgear_switch
-    - binary_sensor.raspberry_pi_3_wired
-    - binary_sensor.raspberry_pi_2_wired
     - binary_sensor.ubiquiti_ap
     - binary_sensor.esxi_host
 
@@ -315,11 +310,10 @@
     - sensor.memory_use_percent
     - sensor.since_last_boot_templated
     - sensor.ha_uptime
-    - sensor.network_in_ens32
-    - sensor.network_out_ens32
+    - sensor.network_in_eth0
+    - sensor.network_out_eth0
     - sensor.cpu
     - sensor.connected_clients
-    - sensor.lets_encrypt_expiration
 
   HA Version Info:
     - sensor.installed_version
@@ -435,17 +429,16 @@
   Broadlink IR Switches:
     control: hidden
     entities:
-      - switch.receiver
-      - switch.input__video1
-      - switch.input__video2
-      - switch.mute_receiver
-      - switch.receiver_volume_up
-      - switch.receiver_volume_down
-      - switch.tv
-      - switch.input_hdmi
-      - switch.input_tv
-      - script.volumeup
-      - script.volumedown
+      - switch.laptop_switch
+      - switch.receivermute
+      - switch.receiverpower
+      - switch.receivervideo1
+      - switch.receivervideo2
+      - switch.receivervoldwn
+      - switch.receivervolup
+      - switch.tvhdmi
+      - switch.tvpower
+      - switch.tvtv
 
 ####################################################
 #                    ZWAVE                         #

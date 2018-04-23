@@ -4,17 +4,6 @@
 #                                                  #
 ####################################################
 
-000c29b08c39:
-  hide_if_away: false
-  icon:
-  mac: 00:0C:29:B0:8C:39
-  name: 000c29b08c39
-  picture:
-  track: true
-  vendor: VMware, Inc.
-  #IP: 192.168.1.35
-  # MQTT Server
-
 18b430868bb9:
   hide_if_away: false
   mac: 18:B4:30:86:8B:B9
@@ -226,7 +215,7 @@ b827eb4c542a:
   picture:
   track: false
   vendor: Raspberry Pi Foundation
-  #IP: 192.168.1.31
+  #IP: 192.168.1.24
   # Raspberry Pi 3 (Wired)
 
 b827eb0ec9a4:

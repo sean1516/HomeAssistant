@@ -16,9 +16,9 @@
       - type: processor_use
       - type: since_last_boot
       - type: network_in
-        arg: ens32
+        arg: eth0
       - type: network_out
-        arg: ens32
+        arg: eth0
 
 #https://home-assistant.io/components/sensor.cpuspeed/
   - platform: cpuspeed
@@ -28,13 +28,13 @@
   - platform: api_streams
 
 #https://home-assistant.io/components/sensor.command_line/
-  -  platform: command_line
-     command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
-     name: Current HA Version
-
-  -  platform: command_line
-     name: Installed version
-     command: "head -5 /home/ha/.homeassistant/.HA_VERSION"
+  # -  platform: command_line
+  #    command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+  #    name: Current HA Version
+  #
+  # -  platform: command_line
+  #    name: Installed version
+  #    command: "head -5 /home/ha/.homeassistant/.HA_VERSION"
 
 ####################################################
 #                                                  #
@@ -201,23 +201,6 @@
 
 ####################################################
 #                                                  #
-#           EXTERNAL IP ADDRESS CHANGE             #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-      ipchange:
-        value_template: !secret external_ip
-
-# https://home-assistant.io/components/sensor.rest/
-  - platform: dnsip
-    hostname: myip.opendns.com
-    resolver: 208.67.222.222
-
-####################################################
-#                                                  #
 #           EDIMAX SWTICH POWER CONSUMPTION        #
 #                                                  #
 ####################################################
@@ -342,10 +325,10 @@
 ####################################################
 
 #https://home-assistant.io/components/sensor.cert_expiry/
-  - platform: cert_expiry
-    host: !secret host
-    port: 8123
-    name: Lets Encrypt Expiration
+  # - platform: cert_expiry
+  #   host: !secret host
+  #   port: 8123
+  #   name: Lets Encrypt Expiration
 
 ####################################################
 #                                                  #

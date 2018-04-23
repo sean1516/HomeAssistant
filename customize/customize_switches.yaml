@@ -28,20 +28,20 @@ switch.htpc_switch:
   emulated_hue_hidden: false
   emulated_hue_name: computer
 
-switch.input__video1:
+switch.recievervideo1:
   friendly_name: Input - Video1
   emulated_hue_hidden: true
 
-switch.input__video2:
+switch.receivervideo2:
   friendly_name: Input - Video 2
   emulated_hue_hidden: true
 
-switch.input_hdmi:
+switch.tvhdmi:
   friendly_name: Input HDMI
   icon: mdi:video-input-hdmi
   emulated_hue_hidden: true
 
-switch.input_tv:
+switch.tvtv:
   friendly_name: Tv Input
   icon: mdi:television
   emulated_hue_hidden: true
@@ -51,28 +51,28 @@ switch.laptop_switch:
   icon: mdi:laptop
   emulated_hue_hidden: true
 
-switch.mute_receiver:
+switch.receivermute:
   friendly_name: Mute Receiver
   icon: mdi:volume-mute
   emulated_hue_hidden: true
 
-switch.receiver:
+switch.receiverpower:
   friendly_name: Receiver
   icon: mdi:speaker
   emulated_hue_hidden: false
   emulated_hue_name: Amplifier
 
-switch.receiver_volume_down:
+switch.receivervoldwn:
   friendly_name: Volume Down
   icon: mdi:volume-minus
   emulated_hue_hidden: true
 
-switch.receiver_volume_up:
+switch.receivervolup:
   friendly_name: Volume Up
   icon: mdi:volume-plus
   emulated_hue_hidden: true
 
-switch.tv:
+switch.tvpower:
   friendly_name: TV
   icon: mdi:television
   emulated_hue_hidden: false

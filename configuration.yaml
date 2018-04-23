@@ -36,11 +36,11 @@ frontend:
 #https://home-assistant.io/components/http/
 http:
   api_password: !secret api_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  base_url: !secret base_url
-  ip_ban_enabled: true
-  login_attempts_threshold: 2
+  # ssl_certificate: !secret ssl_certificate
+  # ssl_key: !secret ssl_key
+  # base_url: !secret base_url
+  # ip_ban_enabled: true
+  # login_attempts_threshold: 2
 
 #https://home-assistant.io/components/recorder/
 recorder:
@@ -162,8 +162,6 @@ weblink:
 zwave:
  usb_path: /dev/ttyACM0
  autoheal: false
- new_entity_ids: true
- polling_interval: 30000
 
 ####################################################
 #                                                  #

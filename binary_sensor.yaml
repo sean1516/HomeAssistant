@@ -37,12 +37,6 @@
     host: 192.168.1.19
     name: Netgear Switch
   - platform: ping
-    host: 192.168.1.31
-    name: Raspberry Pi 3 Wired
-  - platform: ping
-    host: 192.168.1.14
-    name: Raspberry Pi 2 Wired
-  - platform: ping
     host: 192.168.1.21
     name: Edimax Switch 1
   - platform: ping
@@ -78,12 +72,6 @@
   - platform: ping
     host: 192.168.1.38
     name: Ubiquiti AP
-  - platform: ping
-    host: 192.168.1.35
-    name: MQTT Server
-  - platform: ping
-    host: 192.168.1.27
-    name: ESXi Host
 
 ####################################################
 #                                                  #
