@@ -53,9 +53,6 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Broadlink RM Mini 3](https://www.amazon.com/BroadLink-Control-Universal-Remote-RMMINI3-EN/dp/B01FK2SDOC/ref=sr_1_2?ie=UTF8&qid=1499475366&sr=8-2&keywords=broadlink+mini3)__*
 * __[GE Z-Wave Plus Hinge Pin Door Sensors ](https://www.amazon.com/GE-Wireless-Attaches-Existing-32563/dp/B01KQDIUAW/)__
 * __[Amazon Dash Button ](https://www.amazon.com/Dash-Buttons/b?ie=UTF8&node=10667898011)__* Used as button to turn on/off feed the dog automations
-* __[433Mhz Rf Transmitter and Receiver](https://www.amazon.com/SMAKN%C2%AE-433Mhz-Transmitter-Receiver-Arduino/dp/B00M2CUALS/ref=as_li_ss_tl?s=electronics&ie=UTF8&qid=1464322826&sr=1-1&keywords=433+rf&linkCode=sl1&tag=brau01-20&linkId=5c11978c5ddf767c9b4b2228ab61fed4)__
-* __[Etekcity Wireless Remote Control Electrical Outlet Switches](https://www.amazon.com/Etekcity-Wireless-Electrical-Household-Appliances/dp/B00DQELHBS)__
-* __[DHT22 Temperature And Humidity Sensor](https://www.amazon.com/Gikfun-Temperature-Humidity-Arduino-EK1196/dp/B00Z5Y5UEM/ref=sr_1_6?s=electronics&ie=UTF8&qid=1498790057&sr=1-6&keywords=DHT22)__
 * __[Mono Price Z-wave Door Tilt Sensor ](https://www.monoprice.com/product?p_id=11987)__
 * __[Cyberpower CP1500PFCLCD UPS ](https://www.amazon.com/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W)__ used to detect power outages and keep network and HA running in a power outage.
 * __[Synology DiskStation DS216J ](https://www.amazon.com/Synology-DiskStation-3-5-Inches-1xGigabit-DS216J/dp/B01BNPT1EG)__* used as a NAS (obviously) and as the NUT server. 
