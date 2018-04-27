@@ -1,0 +1,22 @@
+#########################################################
+#                                                       #
+#      NOTIFY IF LETS ENCRYPT CERT DID NOT UPDATE       #
+#                                                       #
+#########################################################
+
+  - alias: "Lets Encrypt Cert Did Not Update"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.lets_encrypt_expiration
+        below: 28
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Lets Encrypt Cert Did Not Update"
+        message: "Review Lets Encrypt SSL cert to determine why it did not update"
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
