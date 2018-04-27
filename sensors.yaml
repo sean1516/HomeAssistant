@@ -24,18 +24,6 @@
   - platform: cpuspeed
     name: CPU
 
-#https://home-assistant.io/components/sensor.api_stream/
-  - platform: api_streams
-
-#https://home-assistant.io/components/sensor.command_line/
-  # -  platform: command_line
-  #    command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
-  #    name: Current HA Version
-  #
-  # -  platform: command_line
-  #    name: Installed version
-  #    command: "head -5 /home/ha/.homeassistant/.HA_VERSION"
-
 ####################################################
 #                                                  #
 #                    UPS DATA                      #
@@ -325,10 +313,10 @@
 ####################################################
 
 #https://home-assistant.io/components/sensor.cert_expiry/
-  # - platform: cert_expiry
-  #   host: !secret host
-  #   port: 8123
-  #   name: Lets Encrypt Expiration
+  - platform: cert_expiry
+    host: !secret host
+    port: 8123
+    name: Lets Encrypt Expiration
 
 ####################################################
 #                                                  #

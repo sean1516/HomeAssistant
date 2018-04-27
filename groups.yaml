@@ -140,6 +140,7 @@
     control: hidden
     entities:
       - automation.notify_if_ha_device_offline
+      - automation.lets_encrypt_cert_did_not_update
 
   Other Automations:
     control: hidden
@@ -313,11 +314,7 @@
     - sensor.network_in_eth0
     - sensor.network_out_eth0
     - sensor.cpu
-    - sensor.connected_clients
-
-  HA Version Info:
-    - sensor.installed_version
-    - sensor.current_ha_version
+    - sensor.lets_encrypt_expiration
 
   Network Performance:
     - sensor.speedtest_download
@@ -429,7 +426,6 @@
   Broadlink IR Switches:
     control: hidden
     entities:
-      - switch.laptop_switch
       - switch.receivermute
       - switch.receiverpower
       - switch.receivervideo1

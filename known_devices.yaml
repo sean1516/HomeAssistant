@@ -369,3 +369,11 @@ f0b429a900ec:
 #      NEW UNSORTED DEVICES BELOW THIS LINE        #
 #                                                  #
 ####################################################
+
+amysapplewatch:
+  hide_if_away: false
+  icon:
+  mac: 34:7C:25:A0:DB:80
+  name: Amys-AppleWatch
+  picture:
+  track: true
