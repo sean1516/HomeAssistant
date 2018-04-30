@@ -130,9 +130,17 @@ sensor.ha_uptime:
   friendly_name: HA Uptime
   icon: mdi:clock-start
 
+sensor.installed_version:
+  friendly_name: Installed
+  icon: mdi:folder-download
+
 sensor.interval_adamsiphone:
   friendly_name: Update Interval
   icon: mdi:av-timer
+
+sensor.latest_version:
+  friendly_name: Latest Release
+  icon: mdi:github-circle
 
 sensor.lets_encrypt_expiration:
   friendly_name: Lets Encrypt Expiration
