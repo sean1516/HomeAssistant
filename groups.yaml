@@ -314,7 +314,12 @@
     - sensor.network_in_eth0
     - sensor.network_out_eth0
     - sensor.cpu
+    - sensor.cpu_temperature
     - sensor.lets_encrypt_expiration
+
+  HA Version Info:
+    - sensor.installed_version
+    - sensor.latest_version
 
   Network Performance:
     - sensor.speedtest_download
