@@ -27,7 +27,7 @@
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: state
           entity_id: sensor.downstairs_away_mode
-          state: 'False'
+          state: 'off'
         - condition: time
           weekday:
             - mon
