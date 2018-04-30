@@ -198,11 +198,11 @@
     sensors:
 
       edimax1_watts:
-        value_template: '{% if states.switch.edimax1.attributes %}{{ states.switch.edimax1.attributes["current_power_w"] | float * 1000000 | round(2) }}{% endif %}'
+        value_template: '{% if states.switch.edimax1.attributes %}{{ states.switch.edimax1.attributes["current_power_w"] | round(2) }}{% endif %}'
         unit_of_measurement: 'W'
 
       edimax1_kwh:
-        value_template: '{% if states.switch.edimax1.attributes %}{{ states.switch.edimax1.attributes["today_energy_kwh"] | float * 1000 | round(2) }}{% endif %}'
+        value_template: '{% if states.switch.edimax1.attributes %}{{ states.switch.edimax1.attributes["today_energy_kwh"] | round(2) }}{% endif %}'
         unit_of_measurement: 'kWh'
 
       edimax1_cost:
@@ -210,11 +210,11 @@
         unit_of_measurement: '¢'
 
       edimax2_watts:
-        value_template: '{% if states.switch.edimax2.attributes %}{{ states.switch.edimax2.attributes["current_power_w"] | float * 1000000 | round(2) }}{% endif %}'
+        value_template: '{% if states.switch.edimax2.attributes %}{{ states.switch.edimax2.attributes["current_power_w"] | round(2) }}{% endif %}'
         unit_of_measurement: 'W'
 
       edimax2_kwh:
-        value_template: '{% if states.switch.edimax2.attributes %}{{ states.switch.edimax2.attributes["today_energy_kwh"] | float * 1000 | round(2) }}{% endif %}'
+        value_template: '{% if states.switch.edimax2.attributes %}{{ states.switch.edimax2.attributes["today_energy_kwh"] | round(2) }}{% endif %}'
         unit_of_measurement: 'kWh'
 
       edimax2_cost:
