@@ -165,6 +165,7 @@
       - automation.htpc_on_when_leaving
       - automation.desktop_on_when_leaving
       - automation.living_room_lamps_on_when_leaving
+      - automation.media_center_on_when_leaving
 
   UPS Automations:
     control: hidden
@@ -311,6 +312,9 @@
     - sensor.cpu
     - sensor.cpu_temperature
     - sensor.lets_encrypt_expiration
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.load_15m
 
   HA Version Info:
     - sensor.installed_version

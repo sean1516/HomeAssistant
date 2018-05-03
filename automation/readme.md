@@ -15,6 +15,7 @@ This notification is used to notify me if my Lets Encrypt certificate does not a
 ### Device Offline.yaml Automations:
 This notification is used to notify me if on of my home automation devices goes offline.  Generally this is someone flipping a switch which cuts the power or a network connectivity issue.
 * __[Notify Me if a Home Automation Device is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml)__
+* __[Notify Me if a Yeelight is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml#L28)__
 
 ### Door Security.yaml Automations:
 These automations are used to notify me when a door is opened when no one is home or the garage door is left open when we leave.
@@ -37,6 +38,7 @@ These notifications are triggered when I leave my home zone and no one is home. 
 * __[Notify Me if the Home Theater PC is left on and no one is home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml#L1)__
 * __[Notify Me if the Desktop PC is left on and no one is home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml#L47)__
 * __[Notify Me if the Living Room Lamps are left on and no one is home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml#L92)__
+* __[Notify Me if the Media Center is left on and no one is home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml#L145)__  This is an effort to automate my 'dumb'TV and amplifier based on power usage.  Knowing the power being drawing I can assume which device is left on as they have unique power usage. 
 
 ### Living Room Lamps.yaml Automations:
 These lamps are the main light source when you walk in through the garage (our primary point of entry).  

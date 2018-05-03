@@ -141,6 +141,62 @@
       - service: light.turn_off
         entity_id: light.yeelightrgb2
 
+        
+####################################################
+#                                                  #
+#            MEDIA CENTER ON WHEN AWAY             #
+#                                                  #
+####################################################
+
+  - alias: "Media Center On When leaving"
+    trigger:
+      - platform: zone
+        entity_id: device_tracker.adamsiphone
+        zone: zone.home
+        event: 'leave'
+      - platform: zone
+        entity_id: device_tracker.amysiphone
+        zone: zone.home
+        event: 'leave'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states.sensor.edimax2_watts | float > 10 }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+    action:
+      - service: notify.ios_adams_iphone
+        data_template:
+          message: 'The Media Center is pulling {{ states("sensor.edimax2_watts") }} watts and you are gone'
+          data:      
+            push:
+              badge: 0
+              category: 'mediacenter' 
+
+
+  - alias: TV on when away notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: TV_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.tvpower
+
+  - alias: Receiver on when away notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: RECEIVER_OFF
+    action:
+      - service: switch.turn_off
+        entity_id: switch.receiverpower                
+
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #
