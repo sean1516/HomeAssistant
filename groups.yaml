@@ -140,6 +140,7 @@
     control: hidden
     entities:
       - automation.notify_if_ha_device_offline
+      - automation.notify_if_yeelight_offline
       - automation.lets_encrypt_cert_did_not_update
 
   Other Automations:
@@ -194,12 +195,6 @@
     entities:
       - binary_sensor.edimax_switch_1
       - binary_sensor.edimax_switch_2
-      - binary_sensor.yeelight_1
-      - binary_sensor.yeelight_2
-      - binary_sensor.yeelight_3
-      - binary_sensor.yeelight_4
-      - binary_sensor.yeelight_5
-      - binary_sensor.yeelight_rgb_2
       - binary_sensor.ikea_tradfri_gateway
       - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage

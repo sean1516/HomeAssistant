@@ -141,6 +141,10 @@ automation.notify_if_ip_changes:
 automation.notify_if_new_devices:
   friendly_name: Notify if New Devices
   icon: mdi:new-box
+  
+automation.notify_if_yeelight_offline:
+  friendly_name: Notify if Yeelight Offline
+  icon: mdi:lightbulb-outline
 
 automation.open_back_door_increase_brightness:
   friendly_name: Open Back Door Increase Brightness

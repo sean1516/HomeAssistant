@@ -17,7 +17,7 @@ If you are just getting started with Home Assistant I highly recommend checking 
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.67.1__. My preferred installation method is an [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.67.1__. My preferred installation method is the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.

@@ -13,12 +13,6 @@
           - binary_sensor.netgear_switch
           - binary_sensor.edimax_switch_1
           - binary_sensor.edimax_switch_2
-          - binary_sensor.yeelight_1
-          - binary_sensor.yeelight_2
-          - binary_sensor.yeelight_3
-          - binary_sensor.yeelight_4
-          - binary_sensor.yeelight_5
-          - binary_sensor.yeelight_rgb_2
           - binary_sensor.ikea_tradfri_gateway
           - binary_sensor.broadlink_rm_mini_3
           - binary_sensor.mqtt_server
@@ -30,6 +24,30 @@
       data_template:
         title: "Home Assistant Device is Offline"
         message: "{{ trigger.to_state.attributes.friendly_name }} is offline"
+
+#########################################################
+#                                                       #
+#             NOTIFY IF YEELIGHT OFFLINE                #
+#                                                       #
+#########################################################
+
+  - alias: "Notify if Yeelight Offline"
+    trigger:
+      - platform: state
+        entity_id:
+          - light.yeelight_1
+          - light.yeelight_2
+          - light.yeelight_3
+          - light.yeelight_4
+          - light.yeelight_5
+          - light.yeelight_rgb_2
+        to: 'unavailable'
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Yeelight is Offline"
+        message: "{{ trigger.to_state.attributes.friendly_name }} is offline"
+
 
 #########################################################
 #                                                       #
