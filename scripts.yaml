@@ -11,7 +11,7 @@
     alias: Music
     sequence:
       - service: homeassistant.turn_on
-        entity_id: switch.input__video1
+        entity_id: switch.receivervideo1
 
 ####################################################
 #                                                  #
@@ -23,7 +23,7 @@
     alias: TV
     sequence:
       - service: homeassistant.turn_on
-        entity_id: switch.input__video2
+        entity_id: switch.receivervideo2
       - service: switch.turn_on
         entity_id: switch.htpc_switch
 
@@ -37,17 +37,17 @@
     alias: Volume Up
     sequence:
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_up
+        entity_id: switch.receivervolup
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_up
+        entity_id: switch.receivervolup
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_up
+        entity_id: switch.receivervolup
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_up
+        entity_id: switch.receivervolup
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_up
+        entity_id: switch.receivervolup
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_up
+        entity_id: switch.receivervolup
 
 ####################################################
 #                                                  #
@@ -59,17 +59,17 @@
     alias: Volume Down
     sequence:
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_down
+        entity_id: switch.receivervoldwn
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_down
+        entity_id: switch.receivervoldwn
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_down
+        entity_id: switch.receivervoldwn
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_down
+        entity_id: switch.receivervoldwn
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_down
+        entity_id: switch.receivervoldwn
       - service: homeassistant.turn_on
-        entity_id: switch.receiver_volume_down
+        entity_id: switch.receivervoldwn
 
 ####################################################
 #                                                  #
