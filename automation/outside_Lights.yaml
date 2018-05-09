@@ -31,7 +31,7 @@
             - light.yeelight2
             - light.yeelight3
             - light.yeelight4
-          brightness_pct: 20
+          brightness_pct: 10
 
 #########################################################
 #                                                       #
@@ -66,7 +66,7 @@
             - light.yeelight1
             - light.yeelight2
             - light.yeelight3
-          brightness_pct: 20
+          brightness_pct: 10
 
 #########################################################
 #                                                       #
@@ -93,7 +93,7 @@
       - service: light.turn_on
         data:
           entity_id: light.yeelight4
-          brightness_pct: 20
+          brightness_pct: 10
 
 #########################################################
 #                                                       #

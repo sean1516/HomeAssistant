@@ -199,6 +199,8 @@
       - binary_sensor.ikea_tradfri_gateway
       - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage
+      - binary_sensor.nest
+      - binary_sensor.echo
 
 ####################################################
 #                     LIGHTS                       #
@@ -439,6 +441,8 @@
       - switch.tvhdmi
       - switch.tvpower
       - switch.tvtv
+      - script.tv
+      - script.music
 
 ####################################################
 #                    ZWAVE                         #

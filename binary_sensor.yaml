@@ -19,11 +19,12 @@
 
 ####################################################
 #                                                  #
-#                       PING                       #
+#                  PING                            #
 #                                                  #
 ####################################################
 
 #https://home-assistant.io/components/binary_sensor.ping/
+
   - platform: ping
     host: 192.168.1.23
     name: Linux Laptop
@@ -43,24 +44,6 @@
     host: 192.168.1.4
     name: Edimax Switch 2
   - platform: ping
-    host: 192.168.1.10
-    name: Yeelight 1
-  - platform: ping
-    host: 192.168.1.11
-    name: Yeelight 2
-  - platform: ping
-    host: 192.168.1.12
-    name: Yeelight 3
-  - platform: ping
-    host: 192.168.1.26
-    name: Yeelight 4
-  - platform: ping
-    host: 192.168.1.28
-    name: Yeelight 5
-  - platform: ping
-    host: 192.168.1.25
-    name: Yeelight RGB 2
-  - platform: ping
     host: 192.168.1.20
     name: Ikea Tradfri Gateway
   - platform: ping
@@ -72,6 +55,27 @@
   - platform: ping
     host: 192.168.1.38
     name: Ubiquiti AP
+
+####################################################
+#                                                  #
+#              TEMPLATE SENSORS                    #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/binary_sensor.template/
+
+  - platform: template
+    sensors:
+      nest:
+        friendly_name: "Nest Thermostat"
+        entity_id: device_tracker.18b430868bb9
+        device_class: connectivity
+        value_template: "{{ is_state('device_tracker.18b430868bb9', 'home') }}"
+      echo:
+        friendly_name: "Echo Dot"
+        entity_id: device_tracker.6854fd8aee8c
+        device_class: connectivity
+        value_template: "{{ is_state('device_tracker.6854fd8aee8c', 'home') }}"
 
 ####################################################
 #                                                  #

@@ -6,9 +6,6 @@
 #                                                  #
 ####################################################
 
-device_tracker.000c29b08c39:
-  friendly_name: MQTT Server
-  icon: mdi:server-network
 
 device_tracker.0011326ef7c5:
   friendly_name: NAS
@@ -80,7 +77,7 @@ device_tracker.a088b4bb64ec:
 
 device_tracker.adamsiphone:
   friendly_name: Adam
-  entity_picture: !secret adam_entity_picture
+  icon: mdi:human-male
 
 device_tracker.amysapple_watch:
   friendly_name: Amy's Apple Watch
@@ -88,7 +85,7 @@ device_tracker.amysapple_watch:
 
 device_tracker.amysiphone:
   friendly_name: Amy
-  entity_picture: !secret amy_entity_picture
+  icon: mdi:human-female
 
 device_tracker.b072bf276553:
   friendly_name: Ikea Tradfri Gateway

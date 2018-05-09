@@ -15,8 +15,8 @@
           - binary_sensor.edimax_switch_2
           - binary_sensor.ikea_tradfri_gateway
           - binary_sensor.broadlink_rm_mini_3
-          - binary_sensor.mqtt_server
-          - binary_sensor.esxi_host
+          - binary_sensor.nest
+          - binary_sensor.echo
         from: 'on'
         to: 'off'
     action:

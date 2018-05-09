@@ -121,6 +121,10 @@ automation.living_room_lamps_on_when_leaving:
 automation.low_battery_adams_phone:
   friendly_name: Low iPhone Battery
   icon: mdi:battery-charging-30
+  
+automation.media_center_on_when_leaving:
+  friendly_name: Media Center On When leaving
+  icon: mdi:television-classic
 
 automation.morning_briefing:
   icon: mdi:weather-sunset

@@ -28,7 +28,7 @@ switch.htpc_switch:
   emulated_hue_hidden: false
   emulated_hue_name: computer
 
-switch.recievervideo1:
+switch.receivervideo1:
   friendly_name: Input - Video1
   emulated_hue_hidden: true
 
