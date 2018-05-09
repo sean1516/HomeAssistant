@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://travis-ci.org/SilvrrGIT/HomeAssistant.svg?branch=master">  <img src="https://img.shields.io/github/last-commit/SilvrrGIT/HomeAssistant.svg?style=plasticr">
+ <img src="https://img.shields.io/github/last-commit/SilvrrGIT/HomeAssistant.svg?style=plasticr">
 </p>
 
 These are the [Home Assistant](https://home-assistant.io/) configuration files used in my Home Assistant (HA) setup. I relied on repositories of other HA users quite a bit when I was getting started for ideas and example code.  Hopefully this repository will help someone else who is getting started. 
