@@ -284,9 +284,8 @@
   Devices:
     - binary_sensor.linux_laptop
     - binary_sensor.modem
-    - binary_sensor.netgear_router
     - binary_sensor.NAS
-    - binary_sensor.netgear_switch
+    - binary_sensor.ubiquiti`_switch
     - binary_sensor.ubiquiti_ap
     - binary_sensor.esxi_host
 
