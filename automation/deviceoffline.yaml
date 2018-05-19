@@ -10,13 +10,14 @@
         entity_id:
           - binary_sensor.modem
           - binary_sensor.NAS
-          - binary_sensor.netgear_switch
+          - binary_sensor.ubiquiti_switch
           - binary_sensor.edimax_switch_1
           - binary_sensor.edimax_switch_2
           - binary_sensor.ikea_tradfri_gateway
           - binary_sensor.broadlink_rm_mini_3
           - binary_sensor.nest
           - binary_sensor.echo
+          - binary_sensor.ubiquiti_ap
         from: 'on'
         to: 'off'
     action:
