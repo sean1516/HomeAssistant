@@ -36,7 +36,7 @@
     name: NAS
   - platform: ping
     host: 192.168.1.19
-    name: Netgear Switch
+    name: Ubiquiti Switch
   - platform: ping
     host: 192.168.1.21
     name: Edimax Switch 1
