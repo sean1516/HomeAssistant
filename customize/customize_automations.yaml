@@ -94,6 +94,10 @@ automation.interior_garage_door_opened_when_away:
   friendly_name: Inside Garage Door Opened When Away
   icon: mdi:security-home
 
+automation.interior_garage_door_open_light_on:
+  friendly_name: Interior Garage Door Open Light On
+  icon: mdi:lightbulb-outline
+
 automation.lamps_on_bedtime_notification:
   friendly_name: Laps On At Bedtime Notification
   icon: mdi:lightbulb-outline
@@ -198,6 +202,10 @@ automation.trash_day_reminder:
 automation.turn_off_away_when_home:
   friendly_name: Turn Off Nest Away Mode When Home
   icon: mdi:home-outline
+
+automation.turn_off_interior_garage_light_after_5:
+  friendly_name: Turn Off Interior Garage Light After 5 Min
+  icon: mdi:lightbulb-outline
 
 automation.turn_off_living_room_lamps_at_midnight:
   friendly_name: Turn off Living Room Lamps - Midnight

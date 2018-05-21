@@ -6,6 +6,9 @@
 #                                                  #
 ####################################################
 
+device_tracker.000c29b08c39:
+  friendly_name: MQTT Server
+  icon: mdi:server-network
 
 device_tracker.0011326ef7c5:
   friendly_name: NAS

@@ -37,7 +37,7 @@ light.yeelight4:
   emulated_hue_hidden: true
 
 light.yeelight5:
-  friendly_name: Spare
+  friendly_name: Interior Garage Light
   icon: mdi:mdi:lightbulb-outline
   emulated_hue_hidden: true
 

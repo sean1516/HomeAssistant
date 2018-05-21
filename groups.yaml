@@ -16,9 +16,11 @@
       - group.living_room
       - group.dining_room
       - group.master_bedroom
+      - group.pink_room
       - group.exterior
       - group.garage
       - group.climate
+      - group.blue_room
 
   Device Status:
    view: yes
@@ -117,6 +119,8 @@
       - automation.set_notification_bulb2_normal
       - automation.lamps_on_when_home
       - automation.turn_off_living_room_lamps_at_midnight
+      - automation.interior_garage_door_open_light_on
+      - automation.turn_off_interior_garage_light_after_5
 
   Network Security Automations:
     control: hidden
@@ -210,6 +214,10 @@
     - light.yeelight2
     - light.yeelight4
 
+  Garage Lights:
+    - light.yeelight3
+    - light.yeelight2
+
   Bedroom Lights:
     - light.tradfri_bulb_e26_ws_opal_980lm
     - light.tradfri_bulb_e26_ws_opal_980lm_2
@@ -248,6 +256,8 @@
       - switch.edimax1
       - light.yeelightrgb2
       - input_select.notification_bulb2_color
+      - script.tv
+      - script.music
 
   Dining Room:
     control: hidden
@@ -255,6 +265,11 @@
       - sensor.downstairs_thermostat_temperature
       - sensor.downstairs_thermostat_humidity
       - sensor.gehingepinsensor2
+
+  Pink Room:
+    control: hidden
+    entities:
+      - switch.desktop_switch
 
   Master Bedroom:
     control: hidden
@@ -276,6 +291,7 @@
       - sensor.garagedoorstatus
       - cover.garage
       - sensor.gehingepinsensor1
+      - light.yeelight5
 
 ####################################################
 #                   SENSORS                        #
@@ -285,7 +301,7 @@
     - binary_sensor.linux_laptop
     - binary_sensor.modem
     - binary_sensor.NAS
-    - binary_sensor.ubiquiti`_switch
+    - binary_sensor.ubiquiti_switch
     - binary_sensor.ubiquiti_ap
     - binary_sensor.esxi_host
 
@@ -294,7 +310,6 @@
     - sensor.disk_use_percent_home
     - sensor.memory_use_percent
     - sensor.since_last_boot_templated
-    - sensor.ha_uptime
     - sensor.network_in_eth0
     - sensor.network_out_eth0
     - sensor.cpu
@@ -312,6 +327,7 @@
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
+    - sensor.garage_door_wifi_signal_strength
 
   Phone Status:
     - sensor.battery_adamsiphone
@@ -321,6 +337,10 @@
     - sensor.interval_adamsiphone
     - sensor.battery_iphone
     - device_tracker.70ef002dc94f
+
+  Nest Temperature & Humidity:
+    - sensor.downstairs_thermostat_temperature
+    - sensor.downstairs_thermostat_humidity
 
   Climate:
     - climate.downstairs

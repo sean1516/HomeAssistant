@@ -33,6 +33,11 @@ These automations are used to turn a light on to signify the dog needs to be fed
 * __[Turn off The PM Automation and Notification Light PM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L56)__
 * __[Reset all the Automations at 1:00 AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L77)__
 
+### Garage Light.yaml Automations:
+Simple automations to turn on a light when the interior garage door opens.  If the light is left on for 5 mintues it automatically turns off. 
+* __[Interior Garage Door Open Light On ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml#L7)__
+* __[Turn Off Garage Light After 5 Minutes](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml#L19)__
+
 ### Leaving_Notifications.yaml Automations:
 These notifications are triggered when I leave my home zone and no one is home.  These send a iOS app notification with an action option to turn the device off. These are primarily a power saving item and are the same framework as the bedtime notification as above. 
 * __[Notify Me if the Home Theater PC is left on and no one is home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml#L1)__

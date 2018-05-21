@@ -126,10 +126,6 @@ sensor.gps_adamsiphone:
   friendly_name: Adam GPS Accuracy
   icon: mdi:satellite-variant
 
-sensor.ha_uptime:
-  friendly_name: HA Uptime
-  icon: mdi:clock-start
-
 sensor.installed_version:
   friendly_name: Installed
   icon: mdi:folder-download
