@@ -68,9 +68,9 @@ A detailed description of each of my automations and a link to the yaml file is 
 
 # Control Panel / Front End Screen Shots:
 
-## Rooms
+## Home
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/Rooms.PNG">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/home.PNG">
 </p>
 
 ## Device Status
