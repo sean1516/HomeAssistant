@@ -75,27 +75,27 @@ A detailed description of each of my automations and a link to the yaml file is 
 
 ## Device Status
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/DeviceStatus.PNG">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/devicestatus.PNG">
 </p>
 
 ## Home Assistant Status
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/HA.PNG">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/ha.PNG">
 </p>
 
 ## Automations
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/Automations.PNG">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/automations.PNG">
 </p>
 
 ## Switches
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/Switches.PNG">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/switches.PNG">
 </p>
 
 ## Weather
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/Weather.PNG">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/weather.PNG">
 </p>
 
 ## Other
