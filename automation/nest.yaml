@@ -71,7 +71,7 @@
       - service: climate.set_operation_mode
         data:
           entity_id: climate.downstairs
-          operation_mode: 'heat'
+          operation_mode: 'cool'
 
 #########################################################
 #                                                       #
@@ -97,7 +97,7 @@
       - service: climate.set_operation_mode
         data:
           entity_id: climate.downstairs
-          operation_mode: 'heat'
+          operation_mode: 'cool'
 
 #########################################################
 #                                                       #
