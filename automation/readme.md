@@ -29,9 +29,6 @@ These automations are used to notify me when a door is opened when no one is hom
 These automations are used to turn a light on to signify the dog needs to be fed.  A amazon dash button is used to signify the dog has been fed which either turns off the notification light or turn off the automation. 
 * __[Turn on Notification Light AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L1)__
 * __[Turn on Notification Light PM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L18)__
-* __[Turn off The AM Automation and Notification Light AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L35)__
-* __[Turn off The PM Automation and Notification Light PM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L56)__
-* __[Reset all the Automations at 1:00 AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L77)__
 
 ### Garage Light.yaml Automations:
 Simple automations to turn on a light when the interior garage door opens.  If the light is left on for 5 mintues it automatically turns off. 
