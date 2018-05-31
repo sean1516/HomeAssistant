@@ -155,11 +155,8 @@
   Feed The Dog Automations:
     control: hidden
     entities:
-      - automation.dog_has_been_fed__evening
-      - automation.dog_has_been_fed__morning
       - automation.feed_the_dog_evening
       - automation.feed_the_dog_morning
-      - automation.reset_feed_the_dog_notifications
 
   Leaving Automations:
     control: hidden

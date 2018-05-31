@@ -38,14 +38,6 @@ automation.desktop_pc_on_when_away:
   friendly_name: Desktop PC on When Away
   icon: mdi:windows
 
-automation.dog_has_been_fed__evening:
-  friendly_name: Dog has been fed - Evening
-  icon: mdi:paw
-
-automation.dog_has_been_fed__morning:
-  friendly_name: Dog has been fed - Morning
-  icon: mdi:paw
-
 automation.exterior_garage_door_left_open_when_away:
   friendly_name: Outside Garage Door Left Open When Away
   icon: mdi:security-home
@@ -170,10 +162,6 @@ automation.power_restored:
   friendly_name: Power Restored
   icon: mdi:power-plug
   intitial_state: false
-
-automation.reset_feed_the_dog_notifications:
-  friendly_name: Reset Feed the Dog Notifications
-  icon: mdi:paw
 
 automation.send_notification_upon_failed_login_attempt:
   friendly_name: Failed HA Login Attempt Notification
