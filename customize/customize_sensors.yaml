@@ -46,6 +46,14 @@ sensor.cpu_load_total:
   emulated_hue_hidden: true
   icon: mdi:chip
 
+sensor.dht_sensor_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer-lines
+
+sensor.dht_sensor_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+
 sensor.disk_use_percent_home:
   friendly_name: Disk Use
   icon: mdi:harddisk

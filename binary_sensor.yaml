@@ -55,6 +55,16 @@
   - platform: ping
     host: 192.168.1.38
     name: Ubiquiti AP
+  - platform: ping
+    host: 192.168.1.35
+    name: MQTT Server
+  - platform: ping
+    host: 192.168.1.36
+    name: Sonoff Basic 1
+  - platform: ping
+    host: 192.168.1.37
+    name: Sonoff POW 1
+
 
 ####################################################
 #                                                  #

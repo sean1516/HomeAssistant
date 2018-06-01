@@ -77,7 +77,7 @@
         value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
 
       upsstate:
-        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
+        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
 
 ####################################################
 #                                                  #
@@ -328,6 +328,74 @@
       - humidity
     temperature_offset: '-1'
     humidity_offset: '-12'
+
+####################################################
+#                                                  #
+#                     SONOFFS                      #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.mqtt/
+
+  # - platform: mqtt
+  #   name: "th161 temperature"
+  #   state_topic: "tele/th161/SENSOR"
+  #   value_template: "{{ value_json['AM2301'].Temperature }}"
+  #   unit_of_measurement: "°F"
+  #
+  # - platform: mqtt
+  #   name: "th161 humidity"
+  #   state_topic: "tele/th161/SENSOR"
+  #   value_template: "{{ value_json['AM2301'].Humidity }}"
+  #   unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "POW1 Energy"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Today"] }}'
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    name: "POW1 Power"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Power"] }}'
+    unit_of_measurement: "W"
+
+  - platform: mqtt
+    name: "POW1 Voltage"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
+    unit_of_measurement: "V"
+
+  - platform: mqtt
+    name: "POW1 Current"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Current"] }}'
+    unit_of_measurement: "A"
+
+  # - platform: mqtt
+  #   name: "POW2 Energy"
+  #   state_topic: "tele/pow2/SENSOR"
+  #   value_template: '{{ value_json["ENERGY"]["Today"] }}'
+  #   unit_of_measurement: "kWh"
+  #
+  # - platform: mqtt
+  #   name: "POW2 Power"
+  #   state_topic: "tele/pow2/SENSOR"
+  #   value_template: '{{ value_json["ENERGY"]["Power"] }}'
+  #   unit_of_measurement: "W"
+  #
+  # - platform: mqtt
+  #   name: "POW2 Voltage"
+  #   state_topic: "tele/pow2/SENSOR"
+  #   value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
+  #   unit_of_measurement: "V"
+  #
+  # - platform: mqtt
+  #   name: "POW2 Current"
+  #   state_topic: "tele/pow2/SENSOR"
+  #   value_template: '{{ value_json["ENERGY"]["Current"] }}'
+  #   unit_of_measurement: "A"
 
 ####################################################
 #                                                  #

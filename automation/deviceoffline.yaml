@@ -18,6 +18,9 @@
           - binary_sensor.nest
           - binary_sensor.echo
           - binary_sensor.ubiquiti_ap
+          - binary_sensor.sonoff_basic_1
+          - binary_sensor.sonoff_pow_1
+          - binary_sensor.mqtt_server
         from: 'on'
         to: 'off'
     action:

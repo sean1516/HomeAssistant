@@ -90,6 +90,61 @@
 
 ####################################################
 #                                                  #
+#                     SONOFFS                      #
+#                                                  #
+####################################################
+
+  # - platform: mqtt
+  #   name: "TH161"
+  #   state_topic: "stat/th161/POWER"
+  #   command_topic: "cmnd/th161/POWER"
+  #   availability_topic: "tele/th161/LWT"
+  #   qos: 1
+  #   payload_on: "ON"
+  #   payload_off: "OFF"
+  #   payload_available: "Online"
+  #   payload_not_available: "Offline"
+  #   retain: true
+
+  - platform: mqtt
+    name: "POW1"
+    state_topic: "stat/pow1/POWER"
+    command_topic: "cmnd/pow1/POWER"
+    availability_topic: "tele/pow1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
+  # - platform: mqtt
+  #   name: "POW2"
+  #   state_topic: "stat/pow2/POWER"
+  #   command_topic: "cmnd/pow2/POWER"
+  #   availability_topic: "tele/pow2/LWT"
+  #   qos: 1
+  #   payload_on: "ON"
+  #   payload_off: "OFF"
+  #   payload_available: "Online"
+  #   payload_not_available: "Offline"
+  #   retain: true
+
+  - platform: mqtt
+    name: "Basic1"
+    state_topic: "stat/basic1/POWER"
+    command_topic: "cmnd/basic1/POWER"
+    availability_topic: "tele/basic1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
+
+####################################################
+#                                                  #
 #           END OF CONFIGURATION FILE              #
 #                                                  #
 ####################################################
