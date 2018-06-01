@@ -20,7 +20,7 @@ If you are just getting started with Home Assistant I highly recommend checking 
 
 
 # Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.67.1__. My preferred installation method is the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.69.1__. My preferred installation method is the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
 
 For MQTT I installed Mosquitto ontop of Rasbian.  My preferred installation method is outlined [here](https://youtu.be/AsDHEDbyLfg) in a video from [Bruhautomation](https://github.com/bruhautomation).  
 
