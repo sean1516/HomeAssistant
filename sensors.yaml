@@ -315,6 +315,22 @@
 
 ####################################################
 #                                                  #
+#                 DHT22 SENSOR                     #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.dht/
+  - platform: dht
+    sensor: DHT22
+    pin: 4
+    monitored_conditions:
+      - temperature
+      - humidity
+    temperature_offset: '-1'
+    humidity_offset: '-12'
+
+####################################################
+#                                                  #
 #            END OF CONFIGURATION FILE             #
 #                                                  #
 ####################################################
