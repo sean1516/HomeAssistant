@@ -20,7 +20,7 @@ device_tracker.1008b1e21779:
 
 device_tracker.18b430868bb9:
   friendly_name: Nest Thermostat
-  icon: mdi:nest-thermostat
+  icon: mdi:thermostat
 
 device_tracker.286c071064f1:
   friendly_name: Yeelight RGB 1
@@ -45,10 +45,6 @@ device_tracker.347c25a0db80:
 device_tracker.34ea34e3da0d:
   friendly_name: Broadlink RM Mini 3
   icon: mdi:remote
-
-device_tracker.78e1039637ca:
-  friendly_name: Dash Button
-  icon: mdi:amazon
 
 device_tracker.6854fd8aee8c:
   friendly_name: Amazon Echo Dot
