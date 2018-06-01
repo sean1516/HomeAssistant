@@ -21,7 +21,7 @@
         arg: eth0
       - type: load_1m
       - type: load_5m
-      - type: load_15m      
+      - type: load_15m
 
 #https://home-assistant.io/components/sensor.cpuspeed/
   - platform: cpuspeed

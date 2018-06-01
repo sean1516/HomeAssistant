@@ -16,11 +16,10 @@
       - group.living_room
       - group.dining_room
       - group.master_bedroom
-      - group.pink_room
+      - group.basement
       - group.exterior
       - group.garage
       - group.climate
-      - group.blue_room
 
   Device Status:
    view: yes
@@ -155,8 +154,11 @@
   Feed The Dog Automations:
     control: hidden
     entities:
+      - automation.dog_has_been_fed__evening
+      - automation.dog_has_been_fed__morning
       - automation.feed_the_dog_evening
       - automation.feed_the_dog_morning
+      - automation.reset_feed_the_dog_notifications
 
   Leaving Automations:
     control: hidden
@@ -263,10 +265,12 @@
       - sensor.downstairs_thermostat_humidity
       - sensor.gehingepinsensor2
 
-  Pink Room:
+  Basement:
     control: hidden
     entities:
       - switch.desktop_switch
+      - sensor.dht_sensor_temperature
+      - sensor.dht_sensor_humidity
 
   Master Bedroom:
     control: hidden
