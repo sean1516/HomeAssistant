@@ -29,7 +29,7 @@ I think this is an often overlooked part of any internet connected project.  I a
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L34) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L39).
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level.
 - I separate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
-- Using the tools in [PFSense](https://www.pfsense.org/) I block a large amount of traffic from ever reaching my network using PFblockerNG and a combination of published lists, and custom rules.
+- Using the tools in [PFSense](https://www.pfsense.org/) I block a large amount of traffic from ever reaching my network using PFblockerNG, Suricata and a combination of published lists, and custom rules.
 - All the traffic connecting to my Home Assistant instance is logged and e-mailed to me regularly.  I only access my instance from a few devices to it is pretty easy to spot traffic that is not 'normal'.
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.  
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://www.splitbrain.org/blog/2017-08/10-homeassistant_duckdns_letsencrypt) to get it setup.
@@ -112,7 +112,3 @@ A detailed description of each of my automations and a link to the yaml file is 
 # Questions?
 
 The best way to get help on Home Assistant is the [Home Assistant Forum](https://community.home-assistant.io/).  If you have a specific question about my configuration send me a Private Message on the HA forum, my username over there is [Silvrr](https://community.home-assistant.io/u/silvrr/).  If you have found something incorrect, please submit an issue here on Github and ill get it fixed.
-
-### My Device Reviews on the Home Assistant Forum:
-* __[Xiaomi Yeelights](https://community.home-assistant.io/t/yeelight-led-bulbs-rgb-and-white-bulbs/14620)__
-* __[Edimax Wi-Fi Smart Plugs (SP-2101W)](https://community.home-assistant.io/t/edimax-wi-fi-smart-switch-plug-sp-2101w/9036)__
