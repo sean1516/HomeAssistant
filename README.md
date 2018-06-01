@@ -13,11 +13,16 @@ If you are just getting started with Home Assistant I highly recommend checking 
 
 # Hardware Running HA:
 * __[Raspberry Pi 3 Model B+ ](https://www.amazon.com/dp/B07BDR5PDW/ref=psdc_1048424_t2_B07BFH96M3)__ 
-
 * __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
+
+# Hardware Running MQTT Server:
+* __[Raspberry Pi 2 Model B ](https://www.amazon.com/Raspberry-Pi-Model-Desktop-Linux/dp/B00T2U7R7I)__ 
+
 
 # Installation Process:
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.67.1__. My preferred installation method is the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
+
+For MQTT I installed Mosquitto ontop of Rasbian.  My preferred installation method is outlined [here](https://youtu.be/AsDHEDbyLfg) in a video from [Bruhautomation](https://github.com/bruhautomation).  
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -46,7 +51,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 ### Local Network Devices:
 * __[Xiaomi Yeelight RGBW E27 Smart LED Bulbs](http://www.gearbest.com/smart-lighting/pp_361555.html)__ *
 * __[Xiaomi Yeelight E27 Smart LED Bulbs](http://www.gearbest.com/smart-light-bulb/pp_278478.html)__ *
-* __[Ikea TRÅDFRI Gateway](http://www.ikea.com/us/en/catalog/products/00337813/)__
+* __[Ikea TRÅDFRI Gateway](http://www.ikea.com/us/en/catalog/products/00337813/)__*
 * __[Ikea TRÅDFRI LED Bulbs](http://www.ikea.com/us/en/catalog/products/20318267/)__
 * __[Ikea TRÅDFRI Remote](http://www.ikea.com/us/en/catalog/products/20303317/)__
 * __[Edimax Wi-Fi Smart Plugs (SP-2101W)](https://www.amazon.com/Edimax-Wi-Fi-Energy-Management-SP-2101W/dp/B00N4OBJAO/)__ *
@@ -59,6 +64,8 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Aeotec Z-wave Range Extender ](https://www.amazon.com/Aeotec-Range-Extender-Z-Wave-repeater/dp/B01M6CKJXC)__
 * __[Dome Miniature, Z-Wave Plus Door/Window Sensor](https://www.amazon.com/Dome-Home-Automation-Miniature-DMWD1/dp/B01JGMZNNG)__
 * __[Ubiquiti Unifi Ap-AC Long Range - Wireless Access Point](https://www.amazon.com/Ubiquiti-Unifi-Ap-AC-Long-Range/dp/B015PRCBBI)__ used for presence detection
+* __[Sonoff Basic (Flashed with Tasmota)](https://www.amazon.com/Sonoff-Wireless-Modified-Low-cost-Compatible/dp/B06WWNBD3Y?ref=ast_p_ei)__*
+* __[Sonoff POW (Flashed with Tasmota)](https://www.amazon.com/Sonoff-Consumption-Monitoring-Appliances-Compatible/dp/B06XSD6PD6?ref=ast_p_ei)__*
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 
