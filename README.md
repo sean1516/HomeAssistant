@@ -10,12 +10,10 @@ If you are just getting started with Home Assistant I highly recommend checking 
 # Automations:
 A detailed description of each of my automations and a link to the yaml file is located [HERE](https://github.com/SilvrrGIT/HomeAssistant/tree/master/automation#bedtime_notificationsyaml-automations)
 
-# Hardware Running HA:
-* __[Raspberry Pi 3 Model B+ ](https://www.amazon.com/dp/B07BDR5PDW/ref=psdc_1048424_t2_B07BFH96M3)__ 
-* __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
-
-# Hardware Running MQTT Server:
-* __[Raspberry Pi 2 Model B ](https://www.amazon.com/Raspberry-Pi-Model-Desktop-Linux/dp/B00T2U7R7I)__ 
+# Hardware Running My Home Assistant Setup:
+* Main Server __[Raspberry Pi 3 Model B+ ](https://www.amazon.com/dp/B07BDR5PDW/ref=psdc_1048424_t2_B07BFH96M3)__ (Runs Home Assisstant and Ubiquiti Unifi Controller)
+* Zwave Hub __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
+* MQTT Server __[Raspberry Pi 2 Model B ](https://www.amazon.com/Raspberry-Pi-Model-Desktop-Linux/dp/B00T2U7R7I)__ (Runs Mosquitto) 
 
 
 # Installation Process:
