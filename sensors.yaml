@@ -104,36 +104,6 @@
 
 ####################################################
 #                                                  #
-#           WEATHER UNDERGROUND DATA               #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.wunderground/
-  - platform: wunderground
-    api_key: !secret wu_api_key
-    pws_id: !secret wu_pws_id
-    monitored_conditions:
-      - temp_f
-      - precip_today_in
-      - wind_string
-      - relative_humidity
-      - weather
-      - weather_1d
-      - weather_1n
-      - weather_2d
-      - weather_2n
-      - weather_3d
-      - weather_3n
-      - weather_4d
-      - weather_4n
-      - weather_1h
-      - weather_6h
-      - visibility_mi
-      - precip_1hr_in
-      - feelslike_f
-
-####################################################
-#                                                  #
 #             iPHONE BATTERY STATUS                #
 #                                                  #
 ####################################################
@@ -216,32 +186,32 @@
 ####################################################
 
 #https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-
-      edimax1_watts:
-        value_template: '{% if states.switch.edimax1.attributes["current_power_w"] is defined %}{{ (states.switch.edimax1.attributes["current_power_w"] | float ) | round(1)}}{% else %}0{% endif %}'
-        unit_of_measurement: 'W'
-
-      edimax1_kwh:
-        value_template: '{% if states.switch.edimax1.attributes["today_energy_kwh"] is defined %}{{ (states.switch.edimax1.attributes["today_energy_kwh"] | float ) | round(1)}}{% else %}0{% endif %}'
-        unit_of_measurement: 'kWh'
-
-      edimax1_cost:
-        value_template: '{% if states.switch.edimax1.attributes %}{{ states("sensor.edimax1_kwh") | round  (2) |  float * 16 }}{% endif %}'
-        unit_of_measurement: '¢'
-
-      edimax2_watts:
-        value_template: '{% if states.switch.edimax2.attributes["current_power_w"] is defined %}{{ (states.switch.edimax2.attributes["current_power_w"] | float ) | round(1)}}{% else %}0{% endif %}'
-        unit_of_measurement: 'W'
-
-      edimax2_kwh:
-        value_template: '{% if states.switch.edimax2.attributes["today_energy_kwh"] is defined %}{{ (states.switch.edimax2.attributes["today_energy_kwh"] | float ) | round(1)}}{% else %}0{% endif %}'
-        unit_of_measurement: 'kWh'
-
-      edimax2_cost:
-        value_template: '{% if states.switch.edimax2.attributes %}{{ states("sensor.edimax2_kwh") | round  (2) |  float * 16 }}{% endif %}'
-        unit_of_measurement: '¢'
+  # - platform: template
+  #   sensors:
+  #
+  #     edimax1_watts:
+  #       value_template: '{% if states.switch.edimax1.attributes["current_power_w"] is defined %}{{ (states.switch.edimax1.attributes["current_power_w"] | float ) | round(1)}}{% else %}0{% endif %}'
+  #       unit_of_measurement: 'W'
+  #
+  #     edimax1_kwh:
+  #       value_template: '{% if states.switch.edimax1.attributes["today_energy_kwh"] is defined %}{{ (states.switch.edimax1.attributes["today_energy_kwh"] | float ) | round(1)}}{% else %}0{% endif %}'
+  #       unit_of_measurement: 'kWh'
+  #
+  #     edimax1_cost:
+  #       value_template: '{% if states.switch.edimax1.attributes %}{{ states("sensor.edimax1_kwh") | round  (2) |  float * 16 }}{% endif %}'
+  #       unit_of_measurement: '¢'
+  #
+  #     edimax2_watts:
+  #       value_template: '{% if states.switch.edimax2.attributes["current_power_w"] is defined %}{{ (states.switch.edimax2.attributes["current_power_w"] | float ) | round(1)}}{% else %}0{% endif %}'
+  #       unit_of_measurement: 'W'
+  #
+  #     edimax2_kwh:
+  #       value_template: '{% if states.switch.edimax2.attributes["today_energy_kwh"] is defined %}{{ (states.switch.edimax2.attributes["today_energy_kwh"] | float ) | round(1)}}{% else %}0{% endif %}'
+  #       unit_of_measurement: 'kWh'
+  #
+  #     edimax2_cost:
+  #       value_template: '{% if states.switch.edimax2.attributes %}{{ states("sensor.edimax2_kwh") | round  (2) |  float * 16 }}{% endif %}'
+  #       unit_of_measurement: '¢'
 
 ####################################################
 #                                                  #
@@ -277,7 +247,7 @@
         value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
 
       backdoorstatusbatt:
-        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101	 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101	.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
 
 ####################################################
@@ -312,22 +282,6 @@
     host: !secret host
     port: 8123
     name: Lets Encrypt Expiration
-
-####################################################
-#                                                  #
-#                 DHT22 SENSOR                     #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.dht/
-  - platform: dht
-    sensor: DHT22
-    pin: 4
-    monitored_conditions:
-      - temperature
-      - humidity
-    temperature_offset: '-1'
-    humidity_offset: '-12'
 
 ####################################################
 #                                                  #
@@ -396,6 +350,22 @@
   #   state_topic: "tele/pow2/SENSOR"
   #   value_template: '{{ value_json["ENERGY"]["Current"] }}'
   #   unit_of_measurement: "A"
+
+####################################################
+#                                                  #
+#                 DHT22 SENSOR                     #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.dht/
+  # - platform: dht
+  #   sensor: DHT22
+  #   pin: 4
+  #   monitored_conditions:
+  #     - temperature
+  #     - humidity
+  #   temperature_offset: '-1'
+  #   humidity_offset: '-12'
 
 ####################################################
 #                                                  #

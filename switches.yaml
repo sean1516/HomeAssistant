@@ -48,17 +48,17 @@
 ####################################################
 
 #https://home-assistant.io/components/switch.edimax/
-  - platform: edimax
-    host: 192.168.1.21
-    username: !secret edimax_username
-    password: !secret edimax_password
-    name: Edimax1
-
-  - platform: edimax
-    host: 192.168.1.4
-    username: !secret edimax_username
-    password: !secret edimax_password
-    name: Edimax2
+  # - platform: edimax
+  #   host: 192.168.1.21
+  #   username: !secret edimax_username
+  #   password: !secret edimax_password
+  #   name: Edimax1
+  #
+  # - platform: edimax
+  #   host: 192.168.1.4
+  #   username: !secret edimax_username
+  #   password: !secret edimax_password
+  #   name: Edimax2
 
 ####################################################
 #                                                  #

@@ -61,7 +61,7 @@
   Switches:
    view: yes
    entities:
-     - group.edimax_switches
+     # - group.edimax_switches
      - group.bedroom_lights
      - group.yeelights
      - group.broadlink_ir_switches
@@ -72,7 +72,6 @@
     entities:
      - camera.radar
      - group.local_weather
-     - group.forecast4
      - weather.bartlett
 
   Other:
@@ -196,8 +195,8 @@
   Home Automation Device Status:
     control: hidden
     entities:
-      - binary_sensor.edimax_switch_1
-      - binary_sensor.edimax_switch_2
+      # - binary_sensor.edimax_switch_1
+      # - binary_sensor.edimax_switch_2
       - binary_sensor.ikea_tradfri_gateway
       - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage
@@ -287,8 +286,6 @@
     control: hidden
     entities:
       - group.outside_lights
-      - sensor.pws_temp_f
-      - sensor.pws_relative_humidity
       - sensor.backdoorstatus
 
   Garage:
@@ -357,29 +354,7 @@
     - sensor.downstairs_away_mode
 
   Local Weather:
-    - sensor.pws_weather
-    - sensor.pws_precip_today_in
-    - sensor.pws_precip_1hr_in
-    - sensor.pws_temp_f
-    - sensor.pws_feelslike_f
-    - sensor.pws_wind_string
-    - sensor.pws_relative_humidity
-    - sensor.pws_visibility_mi
     - sun.sun
-
-  forecast4:
-    name: Four Day Forecast
-    entities:
-     - sensor.pws_weather_1d
-     - sensor.pws_weather_1n
-     - sensor.pws_weather_2d
-     - sensor.pws_weather_2n
-     - sensor.pws_weather_3d
-     - sensor.pws_weather_3n
-     - sensor.pws_weather_4d
-     - sensor.pws_weather_4n
-     - sensor.pws_weather_5d
-     - sensor.pws_weather_5n
 
   Synology NAS:
     control: hidden
@@ -417,17 +392,17 @@
 #                   SWITCHES                       #
 ####################################################
 
-  Edimax Switches:
-    control: hidden
-    entities:
-      - switch.edimax1
-      - sensor.edimax1_watts
-      - sensor.edimax1_kwh
-      - sensor.edimax1_cost
-      - switch.edimax2
-      - sensor.edimax2_watts
-      - sensor.edimax2_kwh
-      - sensor.edimax2_cost
+  # Edimax Switches:
+  #   control: hidden
+  #   entities:
+  #     - switch.edimax1
+  #     - sensor.edimax1_watts
+  #     - sensor.edimax1_kwh
+  #     - sensor.edimax1_cost
+  #     - switch.edimax2
+  #     - sensor.edimax2_watts
+  #     - sensor.edimax2_kwh
+  #     - sensor.edimax2_cost
 
   Computer Shutdown & Restart:
     control: hidden

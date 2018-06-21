@@ -11,9 +11,8 @@
       from: 'off'
       to: 'on'
     condition:
-        condition: state
-        entity_id: 'device_tracker.adamsiphone'
-        state: 'not_home'
+        condition: template
+        value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
     action:
       service: notify.home_assistant
       data:

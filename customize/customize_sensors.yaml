@@ -81,29 +81,29 @@ sensor.downstairs_thermostat_temperature:
   friendly_name: Nest Temperature
   icon: mdi:thermometer-lines
 
-sensor.edimax1_cost:
-  friendly_name: Cost
-  icon: mdi:coin
-
-sensor.edimax1_kwh:
-  friendly_name: kWh
-  icon: mdi:chart-line
-
-sensor.edimax1_watts:
-  friendly_name: Watts
-  icon: mdi:power-plug
-
-sensor.edimax2_cost:
-  friendly_name: Cost
-  icon: mdi:coin
-
-sensor.edimax2_kwh:
-  friendly_name: kWh
-  icon: mdi:chart-line
-
-sensor.edimax2_watts:
-  friendly_name: Watts
-  icon: mdi:power-plug
+# sensor.edimax1_cost:
+#   friendly_name: Cost
+#   icon: mdi:coin
+#
+# sensor.edimax1_kwh:
+#   friendly_name: kWh
+#   icon: mdi:chart-line
+#
+# sensor.edimax1_watts:
+#   friendly_name: Watts
+#   icon: mdi:power-plug
+#
+# sensor.edimax2_cost:
+#   friendly_name: Cost
+#   icon: mdi:coin
+#
+# sensor.edimax2_kwh:
+#   friendly_name: kWh
+#   icon: mdi:chart-line
+#
+# sensor.edimax2_watts:
+#   friendly_name: Watts
+#   icon: mdi:power-plug
 
 sensor.garagedoorstatus:
   friendly_name: Exterior Garage Door
@@ -192,23 +192,6 @@ sensor.pow2_voltage:
 sensor.pow2_current:
   friendly_name: Amps
   icon: mdi:flash-circle
-
-sensor.pws_precip_1hr_in:
-  icon: mdi:water
-
-sensor.pws_precip_today_in:
-  icon: mdi:water
-
-sensor.pws_relative_humidity:
-  friendly_name: Outside Humidity
-  icon: mdi:water-percent
-
-sensor.pws_temp_f:
-  friendly_name: Outside Temperature
-  icon: mdi:thermometer-lines
-
-sensor.pws_weather:
-  friendly_name: Current Conditions
 
 sensor.ram_use:
   friendly_name: Ram Use
