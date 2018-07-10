@@ -20,14 +20,10 @@
 #https://www.home-assistant.io/components/sensor.darksky/
   - platform: darksky
     api_key: !secret darksky
-    latitude: !secret latitude
-    longitude: !secret longitude
-    language: en
     monitored_conditions:
       - temperature
       - humidity
     update_interal: '00:15'
-    units: us
 
 ####################################################
 #                                                  #
@@ -287,7 +283,6 @@
 #https://home-assistant.io/components/sensor.synologydsm/
   - platform: synologydsm
     host: 192.168.2.2
-    port: 5000
     username: !secret nas_username
     password: !secret nas_password
     monitored_conditions:

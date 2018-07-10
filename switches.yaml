@@ -142,7 +142,6 @@
     payload_not_available: "Offline"
     retain: true
 
-
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #
