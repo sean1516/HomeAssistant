@@ -3,27 +3,30 @@
 
 ####################################################
 #                                                  #
+#          CUSTOM COMPONENT - AUTHENTICATED        #
+#                                                  #
+####################################################
+
+#https://github.com/custom-components/sensor.authenticated
+  - platform: authenticated
+    enable_notification: 'True'
+
+####################################################
+#                                                  #
 #               DARK SKY WEATHER                   #
 #                                                  #
 ####################################################
 
+#https://www.home-assistant.io/components/sensor.darksky/
   - platform: darksky
     api_key: !secret darksky
     latitude: !secret latitude
     longitude: !secret longitude
     language: en
     monitored_conditions:
-      - summary
-      - precip_type
-      - precip_intensity
-      - precip_probability
       - temperature
-      - apparent_temperature
       - humidity
-      - hourly_summary
-      - daily_summary
-      - precip_intensity_max
-    update_interal: '01:00'
+    update_interal: '00:15'
     units: us
 
 ####################################################

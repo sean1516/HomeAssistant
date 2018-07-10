@@ -45,23 +45,6 @@ sensor.connected_clients:
 sensor.cpu_load_total:
   icon: mdi:chip
 
-sensor.dark_sky_daily_summary:
-  icon: mdi:weather-cloudy
-
-sensor.dark_sky_hourly_summary:
-    icon: mdi:weather-cloudy
-
-sensor.dark_sky_summary:
-  icon: mdi:weather-cloudy
-
-sensor.dht_sensor_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer-lines
-
-sensor.dht_sensor_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-
 sensor.disk_use_percent_home:
   friendly_name: Disk Use
   icon: mdi:harddisk
@@ -186,21 +169,21 @@ sensor.pow1_current:
   friendly_name: Amps
   icon: mdi:flash-circle
 
-sensor.pow2_energy:
-  friendly_name: kWh
-  icon: mdi:chart-line
-
-sensor.pow2_power:
-  friendly_name: Watts
-  icon: mdi:power-plug
-
-sensor.pow2_voltage:
-  friendly_name: Volts
-  icon: mdi:power-socket-us
-
-sensor.pow2_current:
-  friendly_name: Amps
-  icon: mdi:flash-circle
+# sensor.pow2_energy:
+#   friendly_name: kWh
+#   icon: mdi:chart-line
+#
+# sensor.pow2_power:
+#   friendly_name: Watts
+#   icon: mdi:power-plug
+#
+# sensor.pow2_voltage:
+#   friendly_name: Volts
+#   icon: mdi:power-socket-us
+#
+# sensor.pow2_current:
+#   friendly_name: Amps
+#   icon: mdi:flash-circle
 
 sensor.ram_use:
   friendly_name: Ram Use
@@ -234,13 +217,13 @@ sensor.temperature_sda:
 sensor.temperature_sdb:
   icon: mdi:thermometer-lines
 
-sensor.th161_humidity:
-  icon: mdi:water-percent
-  friendly_name: Humidity
-
-sensor.th161_temperature:
-  icon: mdi:thermometer-lines
-  friendly_name: Temperature
+# sensor.th161_humidity:
+#   icon: mdi:water-percent
+#   friendly_name: Humidity
+#
+# sensor.th161_temperature:
+#   icon: mdi:thermometer-lines
+#   friendly_name: Temperature
 
 sensor.tradfri_remote_control:
   icon: mdi:battery-50

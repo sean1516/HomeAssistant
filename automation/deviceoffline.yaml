@@ -23,6 +23,8 @@
           - binary_sensor.mqtt_server
         from: 'on'
         to: 'off'
+        for:
+          seconds: 60
     action:
       service: notify.home_assistant
       data_template:
@@ -46,6 +48,8 @@
           - light.yeelight5
           - light.yeelightrgb2
         to: 'unavailable'
+        for:
+          seconds: 60
     action:
       service: notify.home_assistant
       data_template:

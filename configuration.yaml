@@ -91,18 +91,6 @@ duckdns:
 
 ####################################################
 #                                                  #
-#                OPEN WEATHER MAP                  #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/weather.openweathermap/
-weather:
-  platform: openweathermap
-  api_key: !secret api_key
-  name: Bartlett
-
-####################################################
-#                                                  #
 #                      NEST                        #
 #                                                  #
 ####################################################
@@ -161,18 +149,6 @@ weblink:
 #https://home-assistant.io/docs/z-wave/
 zwave:
  usb_path: /dev/serial/by-id/usb-0658_0200-if00
- autoheal: false
-
-####################################################
-#                                                  #
-#               INPUT TEXT                         #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/input_text/
-input_text:
-  amybriefinput:
-    name: Amy Brief Input
 
 ####################################################
 #                                                  #
