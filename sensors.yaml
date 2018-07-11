@@ -3,16 +3,6 @@
 
 ####################################################
 #                                                  #
-#          CUSTOM COMPONENT - AUTHENTICATED        #
-#                                                  #
-####################################################
-
-#https://github.com/custom-components/sensor.authenticated
-  - platform: authenticated
-    enable_notification: 'True'
-
-####################################################
-#                                                  #
 #               DARK SKY WEATHER                   #
 #                                                  #
 ####################################################
