@@ -28,7 +28,8 @@ I think this is an often overlooked part of any internet connected project.  I a
 - I separate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
 - Using the tools in [PFSense](https://www.pfsense.org/) I block a large amount of traffic from ever reaching my network using PFblockerNG, Suricata and a combination of published lists, and custom rules.
 - All the traffic connecting to my Home Assistant instance is logged and e-mailed to me regularly.  I only access my instance from a few devices to it is pretty easy to spot traffic that is not 'normal'.
-- Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.  
+- Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
+- Frontend log-ins are tracked using a [Custom Component](https://github.com/custom-components/sensor.authenticated)
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://www.splitbrain.org/blog/2017-08/10-homeassistant_duckdns_letsencrypt) to get it setup.
 
 # Editing the Configuration Files:
