@@ -193,18 +193,6 @@ sensor.since_last_boot_templated:
   friendly_name: Last Boot
   icon: mdi:clock
 
-sensor.speedtest_download:
-  friendly_name: Download
-  icon: mdi:cloud-download
-
-sensor.speedtest_ping:
-  friendly_name: Ping
-  icon: mdi:bullseye
-
-sensor.speedtest_upload:
-  friendly_name: Upload
-  icon: mdi:cloud-upload
-
 sensor.status_smart_sda:
   icon: mdi:medical-bag
 

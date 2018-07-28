@@ -36,14 +36,18 @@
             - thu
             - fri
     action:
-      - service: climate.set_away_mode
-        data:
-          entity_id: climate.downstairs
-          away_mode: 'true'
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.nest_mode
+          value: '{{ states.climate.downstairs.attributes.operation_mode }}'
       - service: climate.set_operation_mode
         data:
           entity_id: climate.downstairs
           operation_mode: 'eco'
+      - service: climate.set_away_mode
+        data:
+          entity_id: climate.downstairs
+          away_mode: 'true'
 
 #########################################################
 #                                                       #
@@ -69,9 +73,9 @@
           entity_id: climate.downstairs
           away_mode: 'false'
       - service: climate.set_operation_mode
-        data:
+        data_template:
           entity_id: climate.downstairs
-          operation_mode: 'cool'
+          operation_mode: '{{ states.input_text.nest_mode.state }}'
 
 #########################################################
 #                                                       #
@@ -95,9 +99,9 @@
           entity_id: climate.downstairs
           away_mode: 'false'
       - service: climate.set_operation_mode
-        data:
+        data_template:
           entity_id: climate.downstairs
-          operation_mode: 'cool'
+          operation_mode: '{{ states.input_text.nest_mode.state }}'
 
 #########################################################
 #                                                       #

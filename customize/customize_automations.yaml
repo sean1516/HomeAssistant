@@ -117,7 +117,7 @@ automation.living_room_lamps_on_when_leaving:
 automation.low_battery_adams_phone:
   friendly_name: Low iPhone Battery
   icon: mdi:battery-charging-30
-  
+
 automation.media_center_on_when_leaving:
   friendly_name: Media Center On When leaving
   icon: mdi:television-classic
@@ -141,7 +141,7 @@ automation.notify_if_ip_changes:
 automation.notify_if_new_devices:
   friendly_name: Notify if New Devices
   icon: mdi:new-box
-  
+
 automation.notify_if_yeelight_offline:
   friendly_name: Notify if Yeelight Offline
   icon: mdi:lightbulb-outline
@@ -165,6 +165,10 @@ automation.power_restored:
 
 automation.send_notification_upon_failed_login_attempt:
   friendly_name: Failed HA Login Attempt Notification
+  icon: mdi:lock-outline
+
+automation.send_notification_upon_sucessful_login_attempt:
+  friendly_name: Sucessful HA Login Notification
   icon: mdi:lock-outline
 
 automation.set_nest_away_mode_at_1600:

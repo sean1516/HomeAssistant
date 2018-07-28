@@ -26,7 +26,6 @@
    entities:
      - group.devices
      - group.computer_shutdown__restart
-     - group.network_performance
      - group.phone_status
      - group.Synology_nas
      - group.entertainment_center
@@ -118,6 +117,7 @@
     entities:
       - automation.desktop_pc_on_when_away
       - automation.send_notification_upon_failed_login_attempt
+      - automation.send_notification_upon_sucessful_login_attempt
       - automation.notify_if_new_devices
 
   Security Automations:
@@ -318,12 +318,6 @@
   HA Version Info:
     - sensor.installed_version
     - sensor.latest_version
-
-  Network Performance:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
-    - sensor.garage_door_wifi_signal_strength
 
   Phone Status:
     - sensor.battery_adamsiphone

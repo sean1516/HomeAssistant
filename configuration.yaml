@@ -166,6 +166,17 @@ mqtt:
 
 ####################################################
 #                                                  #
+#                   INPUT TEXT                     #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/input_text/
+input_text:
+  nest_mode:
+    name: Heating/Cooling Mode
+
+####################################################
+#                                                  #
 #            END OF CONFIGURATION FILE             #
 #                                                  #
 ####################################################
