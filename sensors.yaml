@@ -260,6 +260,8 @@
 #https://home-assistant.io/components/sensor.synologydsm/
   - platform: synologydsm
     host: 192.168.1.14
+    port: 5000
+    ssl: 'false'
     username: !secret nas_username
     password: !secret nas_password
     monitored_conditions:

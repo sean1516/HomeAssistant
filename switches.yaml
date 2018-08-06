@@ -69,7 +69,7 @@
 #https://home-assistant.io/components/switch.wake_on_lan/
   - platform: wake_on_lan
     name: HTPC Switch
-    mac_address: "78:2b:cb:9f:60:cd"
+    mac_address: "90:B1:1C:75:2E:AE"
     host: 192.168.1.5
     turn_off:
       service: shell_command.htpc
