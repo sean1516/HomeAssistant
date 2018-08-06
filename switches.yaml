@@ -59,7 +59,7 @@
     payload_not_available: "Offline"
     retain: true
 
-- platform: mqtt
+  - platform: mqtt
     name: "Basic1"
     state_topic: "stat/basic1/POWER"
     command_topic: "cmnd/basic1/POWER"
