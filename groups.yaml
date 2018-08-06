@@ -328,10 +328,6 @@
     - sensor.battery_iphone
     - device_tracker.70ef002dc94f
 
-  Nest Temperature & Humidity:
-    - sensor.downstairs_thermostat_temperature
-    - sensor.downstairs_thermostat_humidity
-
   Climate:
     - climate.downstairs
     - binary_sensor.downstairs_thermostat_fan
