@@ -46,20 +46,11 @@ group.devices:
 group.dining_room:
   friendly_name: Dining Room
 
-group.edimax_switches:
-  friendly_name: Edimax Switches
-
-group.etekcity_rf_switches:
-  friendly_name: Etekcity RF Switches
-
 group.exterior:
   friendly_name: Exterior
 
 group.feed_the_dog_automations:
   friendly_name: Feed the dog Automations
-
-group.forecast4:
-  friendly_name: Forecast
 
 group.garage:
   friendly_name: Garage
@@ -81,15 +72,6 @@ group.leaving_automations:
 
 group.living_room:
   friendly_name: Living Room
-
-group.local_weather:
-  friendly_name: Local Weather
-
-group.nest_temperature__humidity:
-  friendly_name: Nest Temperature & Humidity
-
-group.network_performance:
-  friendly_name: Network Performance
 
 group.network_security_automations:
   friendly_name: Network Security Automations
@@ -121,9 +103,6 @@ group.ups:
 
 group.ups_automations:
   friendly_name: UPS Automations
-
-group.weather:
-  friendly_name: Weather
 
 group.weblinks:
   friendly_name: Weblinks

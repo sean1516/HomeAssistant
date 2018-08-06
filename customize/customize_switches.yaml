@@ -17,16 +17,6 @@ switch.desktop_switch:
   icon: mdi:desktop-tower
   emulated_hue_hidden: true
 
-# switch.edimax1:
-#   friendly_name: Spare Edimax Switch 1
-#   icon: mdi:power
-#   emulated_hue_hidden: true
-#
-# switch.edimax2:
-#   friendly_name: Spare Edimax Switch 1
-#   icon: mdi:power
-#   emulated_hue_hidden: true
-
 switch.htpc_switch:
   friendly_name: HTPC Switch
   icon: mdi:youtube-tv

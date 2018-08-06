@@ -3,13 +3,52 @@
 
 ####################################################
 #                                                  #
-#       CUSTOM COMPONENT - AUTHENTICATED           #
+#         AUTHENTICATED - CUSTOM COMPONENT         #
 #                                                  #
 ####################################################
 
 #https://github.com/custom-components/sensor.authenticated
   - platform: authenticated
     enable_notification: 'True'
+    
+####################################################
+#                                                  #
+#               CERTIFICATE EXPIRY                 #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.cert_expiry/
+  - platform: cert_expiry
+    host: !secret host
+    port: 8123
+    name: Lets Encrypt Expiration
+
+####################################################
+#                                                  #
+#                 COMMAND LINE                     #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.command_line/
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+
+  -  platform: command_line
+     name: Installed version
+     command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
+
+####################################################
+#                                                  #
+#                  CPU SPEED                       #
+#                                                  #
+####################################################   
+   
+#https://home-assistant.io/components/sensor.cpuspeed/
+  - platform: cpuspeed
+    name: CPU
 
 ####################################################
 #                                                  #
@@ -27,137 +66,35 @@
 
 ####################################################
 #                                                  #
-#              HA SERVER METRICS                   #
+#                      MQTT                        #
 #                                                  #
 ####################################################
 
-#https://home-assistant.io/components/sensor.systemmonitor/
-  - platform: systemmonitor
-    resources:
-      - type: disk_use_percent
-        arg: /home
-      - type: memory_use_percent
-      - type: processor_use
-      - type: since_last_boot
-      - type: network_in
-        arg: eth0
-      - type: network_out
-        arg: eth0
-      - type: load_1m
-      - type: load_5m
-      - type: load_15m
+#https://home-assistant.io/components/sensor.mqtt/
 
-#https://home-assistant.io/components/sensor.cpuspeed/
-  - platform: cpuspeed
-    name: CPU
+  - platform: mqtt
+    name: "POW1 Current"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Current"] }}'
+    unit_of_measurement: "A"
 
-#https://www.home-assistant.io/components/sensor.command_line/
-  - platform: command_line
-    name: CPU Temperature
-    command: "cat /sys/class/thermal/thermal_zone0/temp"
-    unit_of_measurement: "°C"
-    value_template: '{{ value | multiply(0.001) | round(1) }}'
+  - platform: mqtt
+    name: "POW1 Energy"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Today"] }}'
+    unit_of_measurement: "kWh"
 
-####################################################
-#                                                  #
-#                HA VERSION INFO                   #
-#                                                  #
-####################################################
+  - platform: mqtt
+    name: "POW1 Power"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Power"] }}'
+    unit_of_measurement: "W"
 
-#https://home-assistant.io/components/sensor.command_line/
-  -  platform: command_line
-     name: Installed version
-     command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
-
-#https://www.home-assistant.io/components/sensor.rest/
-  - platform: rest
-    resource: https://pypi.python.org/pypi/homeassistant/json
-    name: Latest Version
-    value_template: "{{ value_json.info.version }}"
-    scan_interval: 3600
-
-####################################################
-#                                                  #
-#                    UPS DATA                      #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.nut/
-  - platform: nut
-    resources:
-      - ups.load
-      - input.voltage
-      - battery.runtime
-      - battery.voltage
-      - battery.charge
-    host: 192.168.1.14
-    name: UPS
-
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-      approxwattage:
-        unit_of_measurement: 'W'
-        value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
-
-      upsstate:
-        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
-
-####################################################
-#                                                  #
-#             iPHONE BATTERY STATUS                #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-      battery_adamsiphone:
-        unit_of_measurement: '%'
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.battery | round(0) }}'
-
-      battery_iphone:
-        unit_of_measurement: '%'
-        value_template: '{{ states.device_tracker.amysiphone.attributes.battery | round(0) }}'
-
-      charging_adamsiphone:
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.battery_status }}'
-
-      gps_adamsiphone:
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.gps_accuracy | round(0) }}'
-
-      interval_adamsiphone:
-        unit_of_measurement: 'min'
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.interval | round(0) }}'
-
-####################################################
-#                                                  #
-#   CORRECTING VALUE OUTPUT OF MULTIPLE SENSORS    #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-      since_last_boot_templated:
-        value_template: >-
-          {%- set slb = states.sensor.since_last_boot.state.split(' ') -%}
-          {%- set count = slb | length -%}
-          {%- set hms = slb[count - 1] -%}
-          {%- set hms_trimmed = hms.split('.')[0] -%}
-          {%- set hms_split = hms_trimmed.split(':') -%}
-          {%- set hours = hms_split[0] | int -%}
-
-          {%- if count == 3 -%}
-            {{ slb[0] ~ ' ' ~ slb[1] ~ ' ' }}
-          {%- endif -%}
-          {%- if hours > 0 -%}
-            {%- if hours == 1 -%}
-              1 hour
-            {%- else -%}
-              {{ hours }} hours
-            {%- endif -%}
-          {%- endif -%}
+  - platform: mqtt
+    name: "POW1 Voltage"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
+    unit_of_measurement: "V"
 
 ####################################################
 #                                                  #
@@ -174,82 +111,35 @@
       - operation_mode
       - hvac_state
 
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-     downstairs_away_mode:
-       value_template: '{{ states.climate.downstairs.attributes["away_mode"] }}'
-
 ####################################################
 #                                                  #
-#           EDIMAX SWTICH POWER CONSUMPTION        #
+#                       NUT                        #
 #                                                  #
 ####################################################
 
-#https://home-assistant.io/components/sensor.template/
-  # - platform: template
-  #   sensors:
-  #
-  #     edimax1_watts:
-  #       value_template: '{% if states.switch.edimax1.attributes["current_power_w"] is defined %}{{ (states.switch.edimax1.attributes["current_power_w"] | float ) | round(1)}}{% else %}0{% endif %}'
-  #       unit_of_measurement: 'W'
-  #
-  #     edimax1_kwh:
-  #       value_template: '{% if states.switch.edimax1.attributes["today_energy_kwh"] is defined %}{{ (states.switch.edimax1.attributes["today_energy_kwh"] | float ) | round(1)}}{% else %}0{% endif %}'
-  #       unit_of_measurement: 'kWh'
-  #
-  #     edimax1_cost:
-  #       value_template: '{% if states.switch.edimax1.attributes %}{{ states("sensor.edimax1_kwh") | round  (2) |  float * 16 }}{% endif %}'
-  #       unit_of_measurement: '¢'
-  #
-  #     edimax2_watts:
-  #       value_template: '{% if states.switch.edimax2.attributes["current_power_w"] is defined %}{{ (states.switch.edimax2.attributes["current_power_w"] | float ) | round(1)}}{% else %}0{% endif %}'
-  #       unit_of_measurement: 'W'
-  #
-  #     edimax2_kwh:
-  #       value_template: '{% if states.switch.edimax2.attributes["today_energy_kwh"] is defined %}{{ (states.switch.edimax2.attributes["today_energy_kwh"] | float ) | round(1)}}{% else %}0{% endif %}'
-  #       unit_of_measurement: 'kWh'
-  #
-  #     edimax2_cost:
-  #       value_template: '{% if states.switch.edimax2.attributes %}{{ states("sensor.edimax2_kwh") | round  (2) |  float * 16 }}{% endif %}'
-  #       unit_of_measurement: '¢'
+#https://home-assistant.io/components/sensor.nut/
+  - platform: nut
+    resources:
+      - ups.load
+      - input.voltage
+      - battery.runtime
+      - battery.voltage
+      - battery.charge
+    host: 192.168.1.14
+    name: UPS
 
 ####################################################
 #                                                  #
-#               ZWAVE DOOR SENSORS                 #
+#                      REST                        #
 #                                                  #
 ####################################################
 
-#https://home-assistant.io/components/sensor.template/
-  - platform: template
-    sensors:
-      gehingepinsensor1:
-        value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '22' %}Open{% endif %}"
-
-      gehingepinsensor1batt:
-        value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor.attributes.battery_level }} {% else %} Unknown {% endif %}'
-        unit_of_measurement: '%'
-
-      gehingepinsensor2:
-        value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '22' %}Open{% endif %}"
-
-      gehingepinsensor2batt:
-        value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
-        unit_of_measurement: '%'
-
-      garagedoorstatus:
-        value_template: "{%if states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '0' %}Closed{% elif states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '255' %}Open{% endif %}"
-
-      garagedoorstatusbatt:
-        value_template: '{% if states.zwave.vision_zg8101_garage_door_detector %} {{ states.zwave.vision_zg8101_garage_door_detector.attributes.battery_level }} {% else %} Unknown {% endif %}'
-        unit_of_measurement: '%'
-
-      backdoorstatus:
-        value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
-
-      backdoorstatusbatt:
-        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101	 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101	.attributes.battery_level }} {% else %} Unknown {% endif %}'
-        unit_of_measurement: '%'
+#https://www.home-assistant.io/components/sensor.rest/
+  - platform: rest
+    resource: https://pypi.python.org/pypi/homeassistant/json
+    name: Latest Version
+    value_template: "{{ value_json.info.version }}"
+    scan_interval: 3600
 
 ####################################################
 #                                                  #
@@ -275,99 +165,110 @@
 
 ####################################################
 #                                                  #
-#               CERTIFICATE EXPIRY                 #
+#                 SYSTEM MONITOR                   #
 #                                                  #
 ####################################################
 
-#https://home-assistant.io/components/sensor.cert_expiry/
-  - platform: cert_expiry
-    host: !secret host
-    port: 8123
-    name: Lets Encrypt Expiration
+#https://home-assistant.io/components/sensor.systemmonitor/
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_use_percent
+      - type: processor_use
+      - type: since_last_boot
+      - type: network_in
+        arg: eth0
+      - type: network_out
+        arg: eth0
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
 
 ####################################################
 #                                                  #
-#                     SONOFFS                      #
+#                      TEMPLATE                    #
 #                                                  #
 ####################################################
 
-#https://home-assistant.io/components/sensor.mqtt/
+#https://home-assistant.io/components/sensor.template/
+  - platform: template
+    sensors:
 
-  # - platform: mqtt
-  #   name: "th161 temperature"
-  #   state_topic: "tele/th161/SENSOR"
-  #   value_template: "{{ value_json['AM2301'].Temperature }}"
-  #   unit_of_measurement: "°F"
-  #
-  # - platform: mqtt
-  #   name: "th161 humidity"
-  #   state_topic: "tele/th161/SENSOR"
-  #   value_template: "{{ value_json['AM2301'].Humidity }}"
-  #   unit_of_measurement: "%"
+      approxwattage:
+        unit_of_measurement: 'W'
+        value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
 
-  - platform: mqtt
-    name: "POW1 Energy"
-    state_topic: "tele/pow1/SENSOR"
-    value_template: '{{ value_json["ENERGY"]["Today"] }}'
-    unit_of_measurement: "kWh"
+      backdoorstatus:
+        value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
 
-  - platform: mqtt
-    name: "POW1 Power"
-    state_topic: "tele/pow1/SENSOR"
-    value_template: '{{ value_json["ENERGY"]["Power"] }}'
-    unit_of_measurement: "W"
+      backdoorstatusbatt:
+        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101	 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101	.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
 
-  - platform: mqtt
-    name: "POW1 Voltage"
-    state_topic: "tele/pow1/SENSOR"
-    value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
-    unit_of_measurement: "V"
+      battery_adamsiphone:
+        unit_of_measurement: '%'
+        value_template: '{{ states.device_tracker.adamsiphone.attributes.battery | round(0) }}'
 
-  - platform: mqtt
-    name: "POW1 Current"
-    state_topic: "tele/pow1/SENSOR"
-    value_template: '{{ value_json["ENERGY"]["Current"] }}'
-    unit_of_measurement: "A"
+      battery_iphone:
+        unit_of_measurement: '%'
+        value_template: '{{ states.device_tracker.amysiphone.attributes.battery | round(0) }}'
 
-  # - platform: mqtt
-  #   name: "POW2 Energy"
-  #   state_topic: "tele/pow2/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Today"] }}'
-  #   unit_of_measurement: "kWh"
-  #
-  # - platform: mqtt
-  #   name: "POW2 Power"
-  #   state_topic: "tele/pow2/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Power"] }}'
-  #   unit_of_measurement: "W"
-  #
-  # - platform: mqtt
-  #   name: "POW2 Voltage"
-  #   state_topic: "tele/pow2/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
-  #   unit_of_measurement: "V"
-  #
-  # - platform: mqtt
-  #   name: "POW2 Current"
-  #   state_topic: "tele/pow2/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Current"] }}'
-  #   unit_of_measurement: "A"
+      charging_adamsiphone:
+        value_template: '{{ states.device_tracker.adamsiphone.attributes.battery_status }}'
+ 
+      downstairs_away_mode:
+        value_template: '{{ states.climate.downstairs.attributes["away_mode"] }}'
 
-####################################################
-#                                                  #
-#                 DHT22 SENSOR                     #
-#                                                  #
-####################################################
+      garagedoorstatus:
+        value_template: "{%if states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '0' %}Closed{% elif states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '255' %}Open{% endif %}"
 
-#https://home-assistant.io/components/sensor.dht/
-  # - platform: dht
-  #   sensor: DHT22
-  #   pin: 4
-  #   monitored_conditions:
-  #     - temperature
-  #     - humidity
-  #   temperature_offset: '-1'
-  #   humidity_offset: '-12'
+      garagedoorstatusbatt:
+        value_template: '{% if states.zwave.vision_zg8101_garage_door_detector %} {{ states.zwave.vision_zg8101_garage_door_detector.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+      gehingepinsensor1:
+        value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '22' %}Open{% endif %}"
+
+      gehingepinsensor1batt:
+        value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+
+      gehingepinsensor2:
+        value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '22' %}Open{% endif %}"
+
+      gehingepinsensor2batt:
+        value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+ 
+      gps_adamsiphone:
+        value_template: '{{ states.device_tracker.adamsiphone.attributes.gps_accuracy | round(0) }}'
+
+      interval_adamsiphone:
+        unit_of_measurement: 'min'
+        value_template: '{{ states.device_tracker.adamsiphone.attributes.interval | round(0) }}'
+
+      since_last_boot_templated:
+        value_template: >-
+          {%- set slb = states.sensor.since_last_boot.state.split(' ') -%}
+          {%- set count = slb | length -%}
+          {%- set hms = slb[count - 1] -%}
+          {%- set hms_trimmed = hms.split('.')[0] -%}
+          {%- set hms_split = hms_trimmed.split(':') -%}
+          {%- set hours = hms_split[0] | int -%}
+
+          {%- if count == 3 -%}
+            {{ slb[0] ~ ' ' ~ slb[1] ~ ' ' }}
+          {%- endif -%}
+          {%- if hours > 0 -%}
+            {%- if hours == 1 -%}
+              1 hour
+            {%- else -%}
+              {{ hours }} hours
+            {%- endif -%}
+          {%- endif -%}
+
+      upsstate:
+        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
 
 ####################################################
 #                                                  #

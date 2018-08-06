@@ -32,7 +32,6 @@
       - service: homeassistant.turn_on
         entity_id: automation.interior_garage_door_opened_when_away
 
-
 #########################################################
 #                                                       #
 #        Exterior GARAGE DOOR OPENED AND AWAY           #

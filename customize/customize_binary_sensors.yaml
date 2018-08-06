@@ -16,14 +16,8 @@ binary_sensor.linux_laptop:
 binary_sensor.modem:
   icon: mdi:server-network
 
-binary_sensor.netgear_router:
-  icon: mdi:router-wireless
-
 binary_sensor.NAS:
   icon: mdi:harddisk
-
-binary_sensor.netgear_switch:
-  icon: mdi:switch
 
 ####################################################
 #                                                  #

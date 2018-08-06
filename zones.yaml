@@ -3,18 +3,7 @@
 
 ####################################################
 #                                                  #
-#                     HOME                         #
-#                                                  #
-####################################################
-
-  - name: Home
-    latitude: !secret latitude
-    longitude: !secret longitude
-    radius: 750
-
-####################################################
-#                                                  #
-#                 ADAM WORK                        #
+#                    ZONES                         #
 #                                                  #
 ####################################################
 
@@ -23,17 +12,16 @@
     longitude: !secret adam_work_longitude
     radius: 350
 
-####################################################
-#                                                  #
-#                  AMY WORK                        #
-#                                                  #
-####################################################
-
   - name: Amy Work
     latitude: !secret amy_work_latitude
     longitude: !secret amy_work_longitude
     radius: 350
 
+  - name: Home
+    latitude: !secret latitude
+    longitude: !secret longitude
+    radius: 750
+    
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #

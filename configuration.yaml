@@ -20,18 +20,15 @@ homeassistant:
 #                                                  #
 ####################################################
 
-#https://home-assistant.io/components/history/
-history:
-
-#https://home-assistant.io/components/sun/
-sun:
-
 #https://home-assistant.io/components/config/
 config:
 
 #https://www.home-assistant.io/components/frontend/
 frontend:
   javascript_version: latest
+
+#https://home-assistant.io/components/history/
+history:
 
 #https://home-assistant.io/components/http/
 http:
@@ -42,17 +39,20 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 2
 
-#https://home-assistant.io/components/recorder/
-recorder:
-  purge_interval: 1
-  purge_keep_days: 3
-
 #https://home-assistant.io/components/logger/
 logger:
   default: error
   logs:
     homeassistant.components.sensor.template: critical
     homeassistant.components.cover: critical
+
+#https://home-assistant.io/components/recorder/
+recorder:
+  purge_interval: 1
+  purge_keep_days: 3
+
+#https://home-assistant.io/components/sun/
+sun:
 
 ####################################################
 #                                                  #
@@ -61,22 +61,22 @@ logger:
 ####################################################
 
 #https://home-assistant.io/docs/configuration/splitting_configuration/
-group: !include groups.yaml
-device_tracker: !include device_tracker.yaml
-notify: !include notification.yaml
-switch: !include switches.yaml
-sensor: !include sensors.yaml
 automation: !include_dir_merge_list automation/
-script: !include scripts.yaml
-shell_command: !include shell_commands.yaml
 binary_sensor: !include binary_sensor.yaml
-light: !include lights.yaml
 camera: !include camera.yaml
-zone: !include zones.yaml
-input_select: !include input_select.yaml
 cover: !include cover.yaml
-ios: !include ios.yaml
+device_tracker: !include device_tracker.yaml
+group: !include groups.yaml
 input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+ios: !include ios.yaml
+light: !include lights.yaml
+notify: !include notification.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+shell_command: !include shell_commands.yaml
+switch: !include switches.yaml
+zone: !include zones.yaml
 
 ####################################################
 #                                                  #
@@ -91,17 +91,6 @@ duckdns:
 
 ####################################################
 #                                                  #
-#                      NEST                        #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/nest/
-nest:
-  client_id: !secret client_id
-  client_secret: secret client_secret
-
-####################################################
-#                                                  #
 #               EMULATED HUE                       #
 #                                                  #
 ####################################################
@@ -112,6 +101,42 @@ emulated_hue:
   exposed_domains:
     - light
     - switch
+
+####################################################
+#                                                  #
+#                   INPUT TEXT                     #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/input_text/
+input_text:
+  nest_mode:
+    name: Heating/Cooling Mode
+
+####################################################
+#                                                  #
+#                     MQTT                         #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/docs/mqtt/broker/#run-your-own
+mqtt:
+  broker: 192.168.1.35
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqttusername
+  password: !secret mqttpassword
+
+####################################################
+#                                                  #
+#                      NEST                        #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/nest/
+nest:
+  client_id: !secret client_id
+  client_secret: secret client_secret
 
 ####################################################
 #                                                  #
@@ -149,31 +174,6 @@ weblink:
 #https://home-assistant.io/docs/z-wave/
 zwave:
  usb_path: /dev/serial/by-id/usb-0658_0200-if00
-
-####################################################
-#                                                  #
-#                     MQTT                         #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/docs/mqtt/broker/#run-your-own
-mqtt:
-  broker: 192.168.1.35
-  port: 1883
-  client_id: home-assistant-1
-  username: !secret mqttusername
-  password: !secret mqttpassword
-
-####################################################
-#                                                  #
-#                   INPUT TEXT                     #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/input_text/
-input_text:
-  nest_mode:
-    name: Heating/Cooling Mode
 
 ####################################################
 #                                                  #

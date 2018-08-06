@@ -54,14 +54,6 @@ device_tracker.70ef002dc94f:
   friendly_name: Amy's Iphone Wifi
   icon: mdi:cellphone-iphone
 
-device_tracker.74da384a9d63:
-  friendly_name: Edimax Switch 2
-  icon: mdi:power
-
-device_tracker.74da384aa769:
-  friendly_name: Edimax Switch 1
-  icon: mdi:power
-
 device_tracker.782bcb9f60cd:
   friendly_name: HTPC
   icon: mdi:windows
@@ -105,10 +97,6 @@ device_tracker.b8ca3a8e9261:
 device_tracker.c0a53e6bfa77:
   friendly_name: Adam's iPhone Wifi
   icon: mdi:cellphone-iphone
-
-device_tracker.dcef09df09f4:
-  friendly_name: Netgear Switch
-  icon: mdi:switch
 
 device_tracker.e4a471841fac:
   friendly_name: Amy's Work Laptop

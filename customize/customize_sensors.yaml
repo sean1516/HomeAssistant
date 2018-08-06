@@ -38,10 +38,6 @@ sensor.charging_adamsiphone:
   friendly_name: Adam Charging Status
   icon: mdi:battery-charging
 
-sensor.connected_clients:
-  friendly_name: Connections
-  icon: mdi:lan-connect
-
 sensor.cpu_load_total:
   icon: mdi:chip
 
@@ -72,30 +68,6 @@ sensor.downstairs_thermostat_target:
 sensor.downstairs_thermostat_temperature:
   friendly_name: Nest Temperature
   icon: mdi:thermometer-lines
-
-# sensor.edimax1_cost:
-#   friendly_name: Cost
-#   icon: mdi:coin
-#
-# sensor.edimax1_kwh:
-#   friendly_name: kWh
-#   icon: mdi:chart-line
-#
-# sensor.edimax1_watts:
-#   friendly_name: Watts
-#   icon: mdi:power-plug
-#
-# sensor.edimax2_cost:
-#   friendly_name: Cost
-#   icon: mdi:coin
-#
-# sensor.edimax2_kwh:
-#   friendly_name: kWh
-#   icon: mdi:chart-line
-#
-# sensor.edimax2_watts:
-#   friendly_name: Watts
-#   icon: mdi:power-plug
 
 sensor.garagedoorstatus:
   friendly_name: Exterior Garage Door
@@ -149,10 +121,6 @@ sensor.memory_usage_real:
   friendly_name: Memory Usage
   icon: mdi:chip
 
-sensor.motion:
-  friendly_name: Motion
-  icon: mdi:run-fast
-
 sensor.pow1_energy:
   friendly_name: kWh
   icon: mdi:chart-line
@@ -168,22 +136,6 @@ sensor.pow1_voltage:
 sensor.pow1_current:
   friendly_name: Amps
   icon: mdi:flash-circle
-
-# sensor.pow2_energy:
-#   friendly_name: kWh
-#   icon: mdi:chart-line
-#
-# sensor.pow2_power:
-#   friendly_name: Watts
-#   icon: mdi:power-plug
-#
-# sensor.pow2_voltage:
-#   friendly_name: Volts
-#   icon: mdi:power-socket-us
-#
-# sensor.pow2_current:
-#   friendly_name: Amps
-#   icon: mdi:flash-circle
 
 sensor.ram_use:
   friendly_name: Ram Use
@@ -204,14 +156,6 @@ sensor.temperature_sda:
 
 sensor.temperature_sdb:
   icon: mdi:thermometer-lines
-
-# sensor.th161_humidity:
-#   icon: mdi:water-percent
-#   friendly_name: Humidity
-#
-# sensor.th161_temperature:
-#   icon: mdi:thermometer-lines
-#   friendly_name: Temperature
 
 sensor.tradfri_remote_control:
   icon: mdi:battery-50

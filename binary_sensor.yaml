@@ -11,12 +11,8 @@
 
   - platform: nest
     monitored_conditions:
-      - online
       - fan
-      - is_using_emergency_heat
-      - is_locked
-      - has_leaf
-
+      
 ####################################################
 #                                                  #
 #                  PING                            #
@@ -37,12 +33,6 @@
   - platform: ping
     host: 192.168.1.19
     name: Ubiquiti Switch
-  # - platform: ping
-  #   host: 192.168.1.21
-  #   name: Edimax Switch 1
-  # - platform: ping
-  #   host: 192.168.1.4
-  #   name: Edimax Switch 2
   - platform: ping
     host: 192.168.1.20
     name: Ikea Tradfri Gateway
@@ -64,7 +54,6 @@
   - platform: ping
     host: 192.168.1.37
     name: Sonoff POW 1
-
 
 ####################################################
 #                                                  #

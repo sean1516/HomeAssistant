@@ -12,7 +12,6 @@
       service: switch.turn_on
       entity_id: switch.basic1
 
-
 #########################################################
 #                                                       #
 #         TURN ON LIVING ROOM LAMPS WHEN HOME           #

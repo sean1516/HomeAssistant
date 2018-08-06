@@ -145,11 +145,8 @@
   Feed The Dog Automations:
     control: hidden
     entities:
-      - automation.dog_has_been_fed__evening
-      - automation.dog_has_been_fed__morning
       - automation.feed_the_dog_evening
       - automation.feed_the_dog_morning
-      - automation.reset_feed_the_dog_notifications
 
   Leaving Automations:
     control: hidden
@@ -186,8 +183,6 @@
   Home Automation Device Status:
     control: hidden
     entities:
-      # - binary_sensor.edimax_switch_1
-      # - binary_sensor.edimax_switch_2
       - binary_sensor.ikea_tradfri_gateway
       - binary_sensor.broadlink_rm_mini_3
       - binary_sensor.open_garage
@@ -196,7 +191,6 @@
       - binary_sensor.sonoff_basic_1
       - binary_sensor.sonoff_pow_1
       - binary_sensor.mqtt_server
-
 
 ####################################################
 #                     LIGHTS                       #
@@ -264,8 +258,6 @@
     control: hidden
     entities:
       - switch.desktop_switch
-      - sensor.dht_sensor_temperature
-      - sensor.dht_sensor_humidity
 
   Master Bedroom:
     control: hidden
@@ -299,7 +291,6 @@
     - binary_sensor.NAS
     - binary_sensor.ubiquiti_switch
     - binary_sensor.ubiquiti_ap
-    - binary_sensor.esxi_host
 
   HA Server Monitor:
     - sensor.processor_use
@@ -372,18 +363,6 @@
 #                   SWITCHES                       #
 ####################################################
 
-  # Edimax Switches:
-  #   control: hidden
-  #   entities:
-  #     - switch.edimax1
-  #     - sensor.edimax1_watts
-  #     - sensor.edimax1_kwh
-  #     - sensor.edimax1_cost
-  #     - switch.edimax2
-  #     - sensor.edimax2_watts
-  #     - sensor.edimax2_kwh
-  #     - sensor.edimax2_cost
-
   Computer Shutdown & Restart:
     control: hidden
     entities:
@@ -410,19 +389,11 @@
     control: hidden
     entities:
       - switch.basic1
-      # - switch.th161
-      # - sensor.th161_temperature
-      # - sensor.th161_humidity
       - switch.pow1
       - sensor.pow1_energy
       - sensor.pow1_power
       - sensor.pow1_voltage
       - sensor.pow1_current
-      # - switch.pow2
-      # - sensor.pow2_energy
-      # - sensor.pow2_power
-      # - sensor.pow2_voltage
-      # - sensor.pow2_current
 
 ####################################################
 #                    ZWAVE                         #

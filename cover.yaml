@@ -9,7 +9,6 @@
 
 #https://home-assistant.io/components/cover.opengarage/
 
-
   - platform: opengarage
     covers:
       garage:

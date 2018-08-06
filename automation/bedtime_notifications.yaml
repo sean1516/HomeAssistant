@@ -61,7 +61,6 @@
       - service: switch.turn_off
         entity_id: switch.htpc_switch
 
-
 ####################################################
 #                                                  #
 #            DESKTOP ON AT BEDTIME                 #
