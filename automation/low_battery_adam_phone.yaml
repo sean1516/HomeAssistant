@@ -13,15 +13,9 @@
         entity_id: sensor.battery_adamsiphone
         below: 30
     condition:
-      condition: time
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-      after: '06:00:00'
-      before: '18:00:00'
+      condition: zone
+      entity_id: device_tracker.adamsiphone
+      zone: zone.adam_work
     action:
       service: notify.ios_adams_iphone
       data:
