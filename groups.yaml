@@ -28,8 +28,8 @@
      - group.computer_shutdown__restart
      - group.phone_status
      - group.Synology_nas
-     - group.entertainment_center
      - group.ups
+     - group.wifi
 
   HA:
     view: yes
@@ -38,8 +38,10 @@
       - group.Home_Automation_Device_Status
       - group.ha_server_monitor
       - group.ha_version_info
+      - group.ha_file_size
       - group.zwave
       - group.batteries
+      - group.docker_containers
 
   Automations:
     view: yes
@@ -60,17 +62,10 @@
   Switches:
    view: yes
    entities:
-     # - group.edimax_switches
      - group.bedroom_lights
      - group.yeelights
      - group.broadlink_ir_switches
      - group.sonoff_switches
-
-  Other:
-    view: yes
-    entities:
-     - camera.adam_location
-     - group.weblinks
 
 ####################################################
 #                                                  #
@@ -135,6 +130,7 @@
       - automation.notify_if_ha_device_offline
       - automation.notify_if_yeelight_offline
       - automation.lets_encrypt_cert_did_not_update
+      - automation.alert_when_a_container_goes_offline
 
   Other Automations:
     control: hidden
@@ -190,7 +186,6 @@
       - binary_sensor.echo
       - binary_sensor.sonoff_basic_1
       - binary_sensor.sonoff_pow_1
-      - binary_sensor.mqtt_server
 
 ####################################################
 #                     LIGHTS                       #
@@ -222,11 +217,6 @@
 ####################################################
 #                      OTHER                       #
 ####################################################
-
-  Weblinks:
-    - weblink.home_assistant_chat
-    - weblink.home_assistant_forum
-    - weblink.home_assistant_webpage
 
   Location:
     - device_tracker.adamsiphone
@@ -277,7 +267,7 @@
     control: hidden
     entities:
       - sensor.garagedoorstatus
-      - cover.garage
+      - cover.garage_door
       - sensor.gehingepinsensor1
       - light.yeelight5
 
@@ -297,8 +287,8 @@
     - sensor.disk_use_percent_home
     - sensor.memory_use_percent
     - sensor.since_last_boot_templated
-    - sensor.network_in_eth0
-    - sensor.network_out_eth0
+    - sensor.network_in_eno1
+    - sensor.network_out_eno1
     - sensor.cpu
     - sensor.cpu_temperature
     - sensor.lets_encrypt_expiration
@@ -309,6 +299,10 @@
   HA Version Info:
     - sensor.installed_version
     - sensor.latest_version
+
+  HA File Size:
+    - sensor.homeassistantlog
+    - sensor.homeassistant_v2db
 
   Phone Status:
     - sensor.battery_adamsiphone
@@ -326,10 +320,12 @@
     - sensor.downstairs_thermostat_operation_mode
     - sensor.downstairs_thermostat_target
     - sensor.downstairs_away_mode
+    - sensor.downstairs_thermostat_time_to_target
 
   Synology NAS:
     control: hidden
     entities:
+      - switch.nas_switch
       - sensor.cpu_load_total
       - sensor.memory_usage_real
       - sensor.network_down
@@ -358,6 +354,12 @@
       - sensor.gehingepinsensor2batt
       - sensor.garagedoorstatusbatt
       - sensor.backdoorstatusbatt
+
+  Wifi:
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.wifisignal
 
 ####################################################
 #                   SWITCHES                       #
@@ -394,6 +396,18 @@
       - sensor.pow1_power
       - sensor.pow1_voltage
       - sensor.pow1_current
+
+  Docker Containers:
+    control: hidden
+    entities:
+      - switch.home_assistant
+      - script.restart_hass
+      - switch.ha_dockermon
+      - script.restart_hadockermon
+      - switch.unifi
+      - script.restart_unifi
+      - switch.mqtt
+      - script.restart_mqtt
 
 ####################################################
 #                    ZWAVE                         #

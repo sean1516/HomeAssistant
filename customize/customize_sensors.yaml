@@ -97,6 +97,12 @@ sensor.gps_adamsiphone:
   friendly_name: Adam GPS Accuracy
   icon: mdi:satellite-variant
 
+sensor.homeassistantlog:
+  friendly_name: Log File
+
+sensor.homeassistant_v2db:
+  friendly_name: Database
+
 sensor.installed_version:
   friendly_name: Installed
   icon: mdi:folder-download
@@ -185,6 +191,10 @@ sensor.volume_used_volume_1:
 
 sensor.volume_used_volume_2:
   icon: mdi:harddisk
+
+sensor.wifisignal:
+  icon: mdi:wifi
+  friendly_name: WiFi Signal
 
 ####################################################
 #                                                  #

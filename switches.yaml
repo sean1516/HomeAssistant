@@ -73,6 +73,41 @@
 
 ####################################################
 #                                                  #
+#                REST SWITCHES                     #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/switch.rest/
+  - platform: rest
+    resource: http://192.168.1.24:8126/container/home-assistant
+    name: Home Assistant
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://192.168.1.24:8126/container/ha-dockermon
+    name: HA Dockermon
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://192.168.1.24:8126/container/unifi
+    name: Unifi
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://192.168.1.24:8126/container/MQTT
+    name: MQTT
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+####################################################
+#                                                  #
 #             WAKE ON LAN SWITCHES                 #
 #                                                  #
 ####################################################
@@ -80,7 +115,7 @@
 #https://home-assistant.io/components/switch.wake_on_lan/
   - platform: wake_on_lan
     name: HTPC Switch
-    mac_address: "90:B1:1C:75:2E:AE"
+    mac_address: "78:2b:cb:9f:60:cd"
     host: 192.168.1.5
     turn_off:
       service: shell_command.htpc
@@ -98,6 +133,11 @@
     host: 192.168.1.8
     turn_off:
       service: shell_command.laptop
+
+  - platform: wake_on_lan
+    name: NAS Switch
+    mac_address: "00:11:32:6e:f7:c5"
+    host: 192.168.1.14
 
 ####################################################
 #                                                  #

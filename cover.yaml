@@ -18,26 +18,6 @@
 
 ####################################################
 #                                                  #
-#                 TEMPLATE COVER                   #
-#                                                  #
-####################################################
-
-  - platform: template
-    covers:
-      garage:
-        friendly_name: "Garage Door"
-        value_template: "{{states.sensor.garagedoorstatus.state}}"
-        open_cover:
-          service: cover.open_cover
-          data:
-            entity_id: cover.garage_door
-        close_cover:
-          service: cover.close_cover
-          data:
-            entity_id: cover.garage_door
-
-####################################################
-#                                                  #
 #            END OF CONFIGURATION FILE             #
 #                                                  #
 ####################################################

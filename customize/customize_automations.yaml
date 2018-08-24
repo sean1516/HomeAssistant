@@ -6,6 +6,10 @@
 #                                                  #
 ####################################################
 
+automation.alert_when_a_container_goes_offline:
+  friendly_name: Alert When a Container Goes Offline
+  icon: mdi:docker
+  
 automation.back_door_opened_when_away:
   friendly_name: Back Door Opened When Away
   icon: mdi:security-home

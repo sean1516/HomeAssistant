@@ -48,20 +48,25 @@ script.volumeup:
   emulated_hue_hidden: false
   emulated_hue_name: Volume Up
 
-####################################################
-#                                                  #
-#                   WEBLINKS                       #
-#                                                  #
-####################################################
+script.restart_hass:
+  friendly_name: Restart Home Assistant
+  icon: mdi:home-assistant
+  emulated_hue_hidden: true
 
-weblink.home_assistant_chat:
-  friendly_name: Home Assistant Chat
+script.restart_unifi:
+  friendly_name: Restart Unifi
+  icon: mdi:server
+  emulated_hue_hidden: true
 
-weblink.home_assistant_forum:
-  friendly_name: Home Assistant Forum
+script.restart_mqtt:
+  friendly_name: Restart MQTT
+  icon: mdi:server
+  emulated_hue_hidden: true
 
-weblink.home_assistant_webpage:
-  friendly_name: Home Assistant Webpage
+script.restart_hadockermon:
+  friendly_name: Restart HA-Dockermon
+  icon: mdi:docker
+  emulated_hue_hidden: true
 
 ####################################################
 #                                                  #

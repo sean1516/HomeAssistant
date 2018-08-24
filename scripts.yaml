@@ -3,29 +3,17 @@
 
 ####################################################
 #                                                  #
-#                Turn On Music                     #
+#                 NORMAL LIGHT                     #
 #                                                  #
 ####################################################
 
-  music:
-    alias: Music
+  normallight:
     sequence:
-      - service: homeassistant.turn_on
-        entity_id: switch.receivervideo1
-
-####################################################
-#                                                  #
-#                   Turn On TV                     #
-#                                                  #
-####################################################
-
-  tv:
-    alias: TV
-    sequence:
-      - service: homeassistant.turn_on
-        entity_id: switch.receivervideo2
-      - service: switch.turn_on
-        entity_id: switch.htpc_switch
+      - service: light.turn_on
+        entity_id: light.yeelightrgb2
+        data:
+          brightness: 254
+          color_temp: 336.02150537634407
 
 ####################################################
 #                                                  #
@@ -73,17 +61,49 @@
 
 ####################################################
 #                                                  #
-#                 NORMAL LIGHT                     #
+#                RESTART DOCKER CONTAINERS         #
 #                                                  #
 ####################################################
 
-  normallight:
+  restart_hass:
     sequence:
-      - service: light.turn_on
-        entity_id: light.yeelightrgb2
-        data:
-          brightness: 254
-          color_temp: 336.02150537634407
+      - service: shell_command.restart_hass
+
+  restart_unifi:
+    sequence:
+      - service: shell_command.restart_unifi
+
+  restart_mqtt:
+    sequence:
+      - service: shell_command.restart_mqtt
+
+  restart_hadockermon:
+    sequence:
+      - service: shell_command.restart_hadockermon
+
+####################################################
+#                                                  #
+#                Turn On Music                     #
+#                                                  #
+####################################################
+
+  music:
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: switch.receivervideo1
+
+####################################################
+#                                                  #
+#                   Turn On TV                     #
+#                                                  #
+####################################################
+
+  tv:
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: switch.receivervideo2
+      - service: switch.turn_on
+        entity_id: switch.htpc_switch
 
 ####################################################
 #                                                  #

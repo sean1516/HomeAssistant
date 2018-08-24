@@ -23,6 +23,31 @@ switch.htpc_switch:
   emulated_hue_hidden: false
   emulated_hue_name: computer
 
+switch.home_assistant:
+  friendly_name: Home Assistant
+  icon: mdi:home-assistant
+  emulated_hue_hidden: true
+
+switch.ha_dockermon:
+  friendly_name: HA-Dockermon
+  icon: mdi:docker
+  emulated_hue_hidden: true
+
+switch.unifi:
+  friendly_name: Unifi
+  icon: mdi:server
+  emulated_hue_hidden: true
+
+switch.mqtt:
+  friendly_name: MQTT
+  icon: mdi:server
+  emulated_hue_hidden: true
+
+switch.nas_switch:
+  friendly_name: NAS Switch
+  icon: mdi:nas
+  emulated_hue_hidden: true
+
 switch.receivervideo1:
   friendly_name: Input - Video1
   emulated_hue_hidden: true

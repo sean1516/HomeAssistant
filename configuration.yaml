@@ -13,7 +13,8 @@ homeassistant:
   unit_system: imperial
   time_zone: !secret time_zone
   customize: !include_dir_merge_named customize/
-
+  whitelist_external_dirs:
+    - /config
 ####################################################
 #                                                  #
 #                     GENERAL                      #
@@ -46,6 +47,9 @@ logger:
     homeassistant.components.sensor.template: critical
     homeassistant.components.cover: critical
 
+#https://www.home-assistant.io/components/map/
+map:
+
 #https://home-assistant.io/components/recorder/
 recorder:
   purge_interval: 1
@@ -63,7 +67,6 @@ sun:
 #https://home-assistant.io/docs/configuration/splitting_configuration/
 automation: !include_dir_merge_list automation/
 binary_sensor: !include binary_sensor.yaml
-camera: !include camera.yaml
 cover: !include cover.yaml
 device_tracker: !include device_tracker.yaml
 group: !include groups.yaml
@@ -121,11 +124,9 @@ input_text:
 
 #https://home-assistant.io/docs/mqtt/broker/#run-your-own
 mqtt:
-  broker: 192.168.1.35
+  broker: 192.168.1.24
   port: 1883
   client_id: home-assistant-1
-  username: !secret mqttusername
-  password: !secret mqttpassword
 
 ####################################################
 #                                                  #
@@ -151,29 +152,13 @@ tradfri:
 
 ####################################################
 #                                                  #
-#                   WEBLINKS                       #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/weblink/
-weblink:
-  entities:
-    - name: Home Assistant Webpage
-      url: https://home-assistant.io/
-    - name: Home Assistant Forum
-      url: https://community.home-assistant.io/
-    - name: Home Assistant Chat
-      url: https://discordapp.com/channels/330944238910963714/330944238910963714
-
-####################################################
-#                                                  #
 #                     ZWAVE                        #
 #                                                  #
 ####################################################
 
 #https://home-assistant.io/docs/z-wave/
 zwave:
- usb_path: /dev/serial/by-id/usb-0658_0200-if00
+ usb_path: /dev/ttyACM0
 
 ####################################################
 #                                                  #

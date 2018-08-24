@@ -3,6 +3,17 @@
 
 ####################################################
 #                                                  #
+#              RESTART DOCER CONTAINERS            #
+#                                                  #
+####################################################
+
+  restart_hass: 'curl http://192.168.1.24:8126/container/home-assistant/restart'
+  restart_unifi: 'curl http://192.168.1.24:8126/container/unifi/restart'
+  restart_mqtt: 'curl http://192.168.1.24:8126/container/MQTT/restart'
+  restart_hadockermon: 'curl http://192.168.1.24:8126/container/ha-dockermon/restart'
+
+####################################################
+#                                                  #
 #              SHUTDOWN COMPUTERS                  #
 #                                                  #
 ####################################################

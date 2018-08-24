@@ -7,19 +7,18 @@ These are the [Home Assistant](https://home-assistant.io/) configuration files u
 
 If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
 
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.76.2__.
+
 # Automations:
 A detailed description of each of my automations and a link to the yaml file is located [HERE](https://github.com/SilvrrGIT/HomeAssistant/tree/master/automation#bedtime_notificationsyaml-automations)
 
 # Hardware Running My Home Assistant Setup:
-* Main Server __[Raspberry Pi 3 Model B+ ](https://www.amazon.com/dp/B07BDR5PDW/ref=psdc_1048424_t2_B07BFH96M3)__ (Runs Home Assisstant and Ubiquiti Unifi Controller)
-* Zwave Hub __[Aeotec Z-Stick Gen 5 ](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)__
-* MQTT Server __[Raspberry Pi 2 Model B ](https://www.amazon.com/Raspberry-Pi-Model-Desktop-Linux/dp/B00T2U7R7I)__ (Runs Mosquitto) 
-
-
-# Installation Process:
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.75.2__. My preferred installation method is the [Hassbian Install Method. ](https://home-assistant.io/docs/installation/hassbian/installation/)
-
-For MQTT I installed Mosquitto ontop of Rasbian.  My preferred installation method is outlined [here](https://youtu.be/AsDHEDbyLfg) in a video from [Bruhautomation](https://github.com/bruhautomation).  
+## __[Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__
+This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Docker 18.06.1-ce](https://www.docker.com/)__.  There are four docker containers running:
+* __[Home Assistant](https://hub.docker.com/r/homeassistant/home-assistant/)__
+* __[HA-Dockermon](https://hub.docker.com/r/philhawthorne/ha-dockermon/)__ Container monitor/control
+* __[Unifi](https://hub.docker.com/r/linuxserver/unifi/)__ A unifi controller
+* __[Eclipse-Mosquitto](https://hub.docker.com/r/_/eclipse-mosquitto/)__ MQTT Broker
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -96,16 +95,6 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 ## Switches
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/switches.png">
-</p>
-
-## Weather
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/weather.png">
-</p>
-
-## Other
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/Other.PNG">
 </p>
 
 # Questions?

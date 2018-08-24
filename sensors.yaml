@@ -10,7 +10,7 @@
 #https://github.com/custom-components/sensor.authenticated
   - platform: authenticated
     enable_notification: 'True'
-    
+
 ####################################################
 #                                                  #
 #               CERTIFICATE EXPIRY                 #
@@ -36,16 +36,12 @@
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
 
-  -  platform: command_line
-     name: Installed version
-     command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
-
 ####################################################
 #                                                  #
 #                  CPU SPEED                       #
 #                                                  #
-####################################################   
-   
+####################################################
+
 #https://home-assistant.io/components/sensor.cpuspeed/
   - platform: cpuspeed
     name: CPU
@@ -63,6 +59,18 @@
       - temperature
       - humidity
     update_interal: '00:15'
+
+####################################################
+#                                                  #
+#                    FILESIZE                      #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.filesize/
+  - platform: filesize
+    file_paths:
+      - /config/home-assistant_v2.db
+      - /config/home-assistant.log
 
 ####################################################
 #                                                  #
@@ -118,15 +126,16 @@
 ####################################################
 
 #https://home-assistant.io/components/sensor.nut/
-  - platform: nut
-    resources:
-      - ups.load
-      - input.voltage
-      - battery.runtime
-      - battery.voltage
-      - battery.charge
-    host: 192.168.1.14
-    name: UPS
+  # - platform: nut
+  #   resources:
+  #     - ups.load
+  #     - input.voltage
+  #     - battery.runtime
+  #     - battery.voltage
+  #     - battery.charge
+  #   host: 192.168.1.14
+  #   port: 3493
+  #   name: UPS
 
 ####################################################
 #                                                  #
@@ -143,25 +152,37 @@
 
 ####################################################
 #                                                  #
+#                      REST                        #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.speedtest/
+  - platform: speedtest
+    monitored_conditions:
+      - download
+      - upload
+
+####################################################
+#                                                  #
 #                     SYNOLOGY                     #
 #                                                  #
 ####################################################
 
 #https://home-assistant.io/components/sensor.synologydsm/
-  - platform: synologydsm
-    host: 192.168.1.14
-    port: 5000
-    ssl: 'false'
-    username: !secret nas_username
-    password: !secret nas_password
-    monitored_conditions:
-      - cpu_total_load
-      - memory_real_usage
-      - network_up
-      - network_down
-      - disk_smart_status
-      - disk_temp
-      - volume_percentage_used
+  # - platform: synologydsm
+  #   host: 192.168.1.14
+  #   port: 5000
+  #   ssl: 'false'
+  #   username: !secret nas_username
+  #   password: !secret nas_password
+  #   monitored_conditions:
+  #     - cpu_total_load
+  #     - memory_real_usage
+  #     - network_up
+  #     - network_down
+  #     - disk_smart_status
+  #     - disk_temp
+  #     - volume_percentage_used
 
 ####################################################
 #                                                  #
@@ -178,9 +199,9 @@
       - type: processor_use
       - type: since_last_boot
       - type: network_in
-        arg: eth0
+        arg: eno1
       - type: network_out
-        arg: eth0
+        arg: eno1
       - type: load_1m
       - type: load_5m
       - type: load_15m
@@ -195,30 +216,30 @@
   - platform: template
     sensors:
 
-      approxwattage:
-        unit_of_measurement: 'W'
-        value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
+      # approxwattage:
+      #   unit_of_measurement: 'W'
+      #   value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
 
       backdoorstatus:
         value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
 
       backdoorstatusbatt:
-        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101	 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101	.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
 
       battery_adamsiphone:
         unit_of_measurement: '%'
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.battery | round(0) }}'
+        value_template: '{% if states.device_tracker.adamsiphone %} {{ states.device_tracker.adamsiphone.attributes.battery | round(0) }} {% else %} Unknown {% endif %}'
 
       battery_iphone:
         unit_of_measurement: '%'
-        value_template: '{{ states.device_tracker.amysiphone.attributes.battery | round(0) }}'
+        value_template: '{% if states.device_tracker.amysiphone %} {{ states.device_tracker.amysiphone.attributes.battery | round(0) }} {% else %} Unknown {% endif %}'
 
       charging_adamsiphone:
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.battery_status }}'
- 
+        value_template: '{% if states.device_tracker.adamsiphone %} {{ states.device_tracker.adamsiphone.attributes.battery_status }} {% else %} Unknown {% endif %}'
+
       downstairs_away_mode:
-        value_template: '{{ states.climate.downstairs.attributes["away_mode"] }}'
+        value_template: '{% if states.climate.downstairs %} {{ states.climate.downstairs.attributes.away_mode }} {% else %} Unknown {% endif %}'
 
       garagedoorstatus:
         value_template: "{%if states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '0' %}Closed{% elif states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '255' %}Open{% endif %}"
@@ -226,6 +247,7 @@
       garagedoorstatusbatt:
         value_template: '{% if states.zwave.vision_zg8101_garage_door_detector %} {{ states.zwave.vision_zg8101_garage_door_detector.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
+
       gehingepinsensor1:
         value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '22' %}Open{% endif %}"
 
@@ -239,13 +261,13 @@
       gehingepinsensor2batt:
         value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
- 
+
       gps_adamsiphone:
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.gps_accuracy | round(0) }}'
+        value_template: '{% if states.device_tracker.adamsiphone %} {{ states.device_tracker.adamsiphone.attributes.gps_accuracy | round(0) }} {% else %} Unknown {% endif %}'
 
       interval_adamsiphone:
         unit_of_measurement: 'min'
-        value_template: '{{ states.device_tracker.adamsiphone.attributes.interval | round(0) }}'
+        value_template: '{% if states.device_tracker.adamsiphone %} {{ states.device_tracker.adamsiphone.attributes.interval }} {% else %} Unknown {% endif %}'
 
       since_last_boot_templated:
         value_template: >-
@@ -267,8 +289,22 @@
             {%- endif -%}
           {%- endif -%}
 
-      upsstate:
-        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
+      # upsstate:
+      #   value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
+
+      wifisignal:
+        value_template: '{% if states.cover.garage_door	 %} {{ states.cover.garage_door.attributes.wifi_signal }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: 'db'
+
+####################################################
+#                                                  #
+#                   VERSION                        #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.version/
+  - platform: version
+    name: Installed Version
 
 ####################################################
 #                                                  #
