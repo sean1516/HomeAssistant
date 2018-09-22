@@ -29,6 +29,7 @@
           entity_id: sensor.downstairs_away_mode
           state: 'off'
         - condition: time
+          before: '12:00:00'
           weekday:
             - mon
             - tue
@@ -36,10 +37,10 @@
             - thu
             - fri
     action:
-      - service: input_text.set_value
+      - service: input_select.select_option
         data_template:
-          entity_id: input_text.nest_mode
-          value: '{{ states.climate.downstairs.attributes.operation_mode }}'
+          entity_id: input_select.nestmode
+          option: '{{ states.climate.downstairs.attributes.operation_mode }}'
       - service: climate.set_operation_mode
         data:
           entity_id: climate.downstairs
@@ -75,7 +76,7 @@
       - service: climate.set_operation_mode
         data_template:
           entity_id: climate.downstairs
-          operation_mode: '{{ states.input_text.nest_mode.state }}'
+          operation_mode: '{{ states.input_select.nestmode.state }}'
 
 #########################################################
 #                                                       #
@@ -101,7 +102,7 @@
       - service: climate.set_operation_mode
         data_template:
           entity_id: climate.downstairs
-          operation_mode: '{{ states.input_text.nest_mode.state }}'
+          operation_mode: '{{ states.input_select.nestmode.state }}'
 
 #########################################################
 #                                                       #

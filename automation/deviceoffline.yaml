@@ -69,6 +69,7 @@
           - switch.home_assistant
           - switch.ha_dockermon
           - switch.unifi
+          - switch.portainer
         to: 'off'
         for:
           minutes: 5
