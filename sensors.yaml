@@ -126,16 +126,16 @@
 ####################################################
 
 #https://home-assistant.io/components/sensor.nut/
-  # - platform: nut
-  #   resources:
-  #     - ups.load
-  #     - input.voltage
-  #     - battery.runtime
-  #     - battery.voltage
-  #     - battery.charge
-  #   host: 192.168.1.14
-  #   port: 3493
-  #   name: UPS
+  - platform: nut
+    resources:
+      - ups.load
+      - input.voltage
+      - battery.runtime
+      - battery.voltage
+      - battery.charge
+    host: 192.168.1.14
+    port: 3493
+    name: UPS
 
 ####################################################
 #                                                  #
@@ -169,20 +169,20 @@
 ####################################################
 
 #https://home-assistant.io/components/sensor.synologydsm/
-  # - platform: synologydsm
-  #   host: 192.168.1.14
-  #   port: 5000
-  #   ssl: 'false'
-  #   username: !secret nas_username
-  #   password: !secret nas_password
-  #   monitored_conditions:
-  #     - cpu_total_load
-  #     - memory_real_usage
-  #     - network_up
-  #     - network_down
-  #     - disk_smart_status
-  #     - disk_temp
-  #     - volume_percentage_used
+  - platform: synologydsm
+    host: 192.168.1.14
+    port: 5000
+    ssl: 'false'
+    username: !secret nas_username
+    password: !secret nas_password
+    monitored_conditions:
+      - cpu_total_load
+      - memory_real_usage
+      - network_up
+      - network_down
+      - disk_smart_status
+      - disk_temp
+      - volume_percentage_used
 
 ####################################################
 #                                                  #
@@ -216,9 +216,9 @@
   - platform: template
     sensors:
 
-      # approxwattage:
-      #   unit_of_measurement: 'W'
-      #   value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
+      approxwattage:
+        unit_of_measurement: 'W'
+        value_template: '{{ states("sensor.ups_load") | float /100*900 }}'
 
       backdoorstatus:
         value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
@@ -289,8 +289,8 @@
             {%- endif -%}
           {%- endif -%}
 
-      # upsstate:
-      #   value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
+      upsstate:
+        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
 
       wifisignal:
         value_template: '{% if states.cover.garage_door	 %} {{ states.cover.garage_door.attributes.wifi_signal }} {% else %} Unknown {% endif %}'

@@ -25,11 +25,10 @@
    view: yes
    entities:
      - group.devices
-     - group.computer_shutdown__restart
      - group.phone_status
      - group.Synology_nas
      - group.ups
-     - group.wifi
+     - group.network
 
   HA:
     view: yes
@@ -252,7 +251,6 @@
   Master Bedroom:
     control: hidden
     entities:
-      - switch.laptop_switch
       - group.bedroom_lights
 
   Exterior:
@@ -355,7 +353,7 @@
       - sensor.garagedoorstatusbatt
       - sensor.backdoorstatusbatt
 
-  Wifi:
+  Network:
     entities:
       - sensor.speedtest_download
       - sensor.speedtest_upload
@@ -364,13 +362,6 @@
 ####################################################
 #                   SWITCHES                       #
 ####################################################
-
-  Computer Shutdown & Restart:
-    control: hidden
-    entities:
-      - switch.desktop_switch
-      - switch.htpc_switch
-      - switch.laptop_switch
 
   Broadlink IR Switches:
     control: hidden
@@ -408,6 +399,8 @@
       - script.restart_unifi
       - switch.mqtt
       - script.restart_mqtt
+      - switch.portainer
+      - script.restart_portainer
 
 ####################################################
 #                    ZWAVE                         #

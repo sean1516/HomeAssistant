@@ -43,17 +43,9 @@ http:
 #https://home-assistant.io/components/logger/
 logger:
   default: error
-  logs:
-    homeassistant.components.sensor.template: critical
-    homeassistant.components.cover: critical
 
 #https://www.home-assistant.io/components/map/
 map:
-
-#https://home-assistant.io/components/recorder/
-recorder:
-  purge_interval: 1
-  purge_keep_days: 3
 
 #https://home-assistant.io/components/sun/
 sun:
@@ -75,6 +67,7 @@ input_select: !include input_select.yaml
 ios: !include ios.yaml
 light: !include lights.yaml
 notify: !include notification.yaml
+recorder: !include recorder.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
 shell_command: !include shell_commands.yaml
@@ -104,17 +97,6 @@ emulated_hue:
   exposed_domains:
     - light
     - switch
-
-####################################################
-#                                                  #
-#                   INPUT TEXT                     #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/input_text/
-input_text:
-  nest_mode:
-    name: Heating/Cooling Mode
 
 ####################################################
 #                                                  #

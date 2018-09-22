@@ -11,6 +11,7 @@
   restart_unifi: 'curl http://192.168.1.24:8126/container/unifi/restart'
   restart_mqtt: 'curl http://192.168.1.24:8126/container/MQTT/restart'
   restart_hadockermon: 'curl http://192.168.1.24:8126/container/ha-dockermon/restart'
+  restart_portainer: 'curl http://192.168.1.24:8126/container/portainer/restart'
 
 ####################################################
 #                                                  #
@@ -20,7 +21,6 @@
 
   desktop: !secret desktop
   htpc: !secret htpc
-  laptop: !secret laptop
 
 #Above removed as they contain personal information.  Commmand should be formatted as:
 # "net rpc shutdown -I IPADDRESS -U USERNAME%PASSWORD"

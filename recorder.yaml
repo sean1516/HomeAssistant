@@ -1,0 +1,70 @@
+
+#https://home-assistant.io/components/binary_sensor/
+
+  purge_interval: 1
+  purge_keep_days: 3
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+      - group
+      - light
+      - script
+      - sensor
+      - switch
+      - zone
+      - zwave
+    entities:
+      - binary_sensor.downstairs_thermostat_has_leaf
+      - binary_sensor.downstairs_thermostat_is_locked
+      - binary_sensor.downstairs_thermostat_is_using_emergency_heat
+      - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor
+      - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor_2
+      - binary_sensor.home_away
+      - binary_sensor.unknown_id021f_unknown_type0003_id0101_sensor
+      - binary_sensor.vision_zg8101_garage_door_detector_sensor
+      - sun.sun
+      - sensor.last_boot
+      - sensor.date
+      - input_boolean.vacation
+  include:
+    entities:
+      - group.bedroom_lights
+      - group.outside_lights
+      - light.yeelightrgb2
+      - sensor.garagedoorstatus
+      - sensor.approxwattage
+      - sensor.backdoorstatus
+      - sensor.downstairs_thermostat_operation_mode
+      - sensor.garagedoorstatus
+      - sensor.gehingepinsensor1
+      - sensor.gehingepinsensor2
+      - sensor.homeassistant_v2db
+      - sensor.homeassistantlog
+      - sensor.load_15m
+      - sensor.load_5m
+      - sensor.load_1m
+      - sensor.memory_use_percent
+      - sensor.pow1_power
+      - sensor.pow1_voltage
+      - sensor.processor_use
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.ups_battery_runtime
+      - sensor.upsstate
+      - sensor.wifisignal
+      - switch.basic1
+      - switch.desktop_switch
+      - switch.htpc_switch
+      - switch.pow1
+    domains:
+      - climate
+      - device_tracker
+      - binary_sensor
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

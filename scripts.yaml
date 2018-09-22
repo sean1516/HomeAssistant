@@ -81,6 +81,10 @@
     sequence:
       - service: shell_command.restart_hadockermon
 
+  restart_portainer:
+    sequence:
+      - service: shell_command.restart_portainer
+
 ####################################################
 #                                                  #
 #                Turn On Music                     #
