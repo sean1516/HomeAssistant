@@ -68,6 +68,16 @@ script.restart_hadockermon:
   icon: mdi:docker
   emulated_hue_hidden: true
 
+script.restart_portainer:
+  friendly_name: Restart Portainer
+  icon: mdi:pier-crane
+  emulated_hue_hidden: true
+
+script.tv:
+  friendly_name: TV
+  icon: mdi:television
+  emulated_hue_hidden: true
+
 ####################################################
 #                                                  #
 #                     ZONES                        #

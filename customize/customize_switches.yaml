@@ -1,3 +1,4 @@
+
 #https://home-assistant.io/docs/configuration/customizing-devices/
 
 ####################################################
@@ -48,6 +49,11 @@ switch.nas_switch:
   icon: mdi:nas
   emulated_hue_hidden: true
 
+switch.portainer:
+  friendly_name: Portainer
+  icon: mdi:pier-crane
+  emulated_hue_hidden: true
+
 switch.receivervideo1:
   friendly_name: Input - Video1
   emulated_hue_hidden: true
@@ -64,11 +70,6 @@ switch.tvhdmi:
 switch.tvtv:
   friendly_name: Tv Input
   icon: mdi:television
-  emulated_hue_hidden: true
-
-switch.laptop_switch:
-  friendly_name: Laptop Switch
-  icon: mdi:laptop
   emulated_hue_hidden: true
 
 switch.pow1:
