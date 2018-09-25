@@ -57,6 +57,9 @@
         data_template:
           title: New Home Assistant Login
           message: "{{ states.persistent_notification.notification.attributes.title }} {{ states.persistent_notification.notification.attributes.message }}"
+      - service: persistent_notification.dismiss
+        data:
+          notification_id: 'notification'
 
 #########################################################
 #                                                       #
