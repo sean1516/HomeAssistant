@@ -14,12 +14,13 @@ A detailed description of each of my automations and a link to the yaml file is 
 
 # Hardware Running My Home Assistant Setup:
 ## __[Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__
-This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Docker 18.06.1-ce](https://www.docker.com/)__.  There are four docker containers running:
+This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Docker 18.06.1-ce](https://www.docker.com/)__.  There are six docker containers running:
 * __[Home Assistant](https://hub.docker.com/r/homeassistant/home-assistant/)__
 * __[HA-Dockermon](https://hub.docker.com/r/philhawthorne/ha-dockermon/)__ Container monitor/control
 * __[Unifi](https://hub.docker.com/r/linuxserver/unifi/)__ A unifi controller
 * __[Eclipse-Mosquitto](https://hub.docker.com/r/_/eclipse-mosquitto/)__ MQTT Broker
 * __[Portainer](https://hub.docker.com/r/portainer/portainer/)__ Docker Container viewer/manager
+* __[TasmoAdmin](https://hub.docker.com/r/raymondmm/tasmoadmin/)__ Easy managment of tasmota flashed devices
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
