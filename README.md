@@ -5,12 +5,10 @@
 
 These are the [Home Assistant](https://home-assistant.io/) configuration files used in my Home Assistant (HA) setup. I relied on repositories of other HA users quite a bit when I was getting started for ideas and example code.  Hopefully this repository will help someone else who is getting started. 
 
-If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
-
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.76.2__.
-
 # Automations:
 A detailed description of each of my automations and a link to the yaml file is located [HERE](https://github.com/SilvrrGIT/HomeAssistant/tree/master/automation#bedtime_notificationsyaml-automations)
+
+This is the most important part of Home Assistant!  Remote contorl and voice commmands are nice, however, it not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplesst things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
 # Hardware Running My Home Assistant Setup:
 ## __[Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__
@@ -21,6 +19,8 @@ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running 
 * __[Eclipse-Mosquitto](https://hub.docker.com/r/_/eclipse-mosquitto/)__ MQTT Broker
 * __[Portainer](https://hub.docker.com/r/portainer/portainer/)__ Docker Container viewer/manager
 * __[TasmoAdmin](https://hub.docker.com/r/raymondmm/tasmoadmin/)__ Easy managment of tasmota flashed devices
+
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.76.2__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -101,3 +101,5 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Questions?
 
 The best way to get help on Home Assistant is the [Home Assistant Forum](https://community.home-assistant.io/).  If you have a specific question about my configuration send me a Private Message on the HA forum, my username over there is [Silvrr](https://community.home-assistant.io/u/silvrr/).  If you have found something incorrect, please submit an issue here on Github and ill get it fixed.
+
+If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
