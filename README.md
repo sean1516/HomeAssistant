@@ -10,8 +10,8 @@ A detailed description of each of my automations and a link to the yaml file is 
 
 This is the most important part of Home Assistant!  Remote control and voice commmands are nice, however, that is not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplest things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
-# Hardware Running My Home Assistant Setup:
-## __[Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__
+# Server Running My Home Assistant Setup:
+I am currently using a [Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf) as my host.
 This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Docker 18.06.1-ce](https://www.docker.com/)__.  There are six docker containers running:
 * __[Home Assistant](https://hub.docker.com/r/homeassistant/home-assistant/)__
 * __[HA-Dockermon](https://hub.docker.com/r/philhawthorne/ha-dockermon/)__ Container monitor/control
@@ -71,7 +71,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 
-# Control Panel / Front End Screen Shots:
+# Front End Screen Shots:
 
 ## Home
 <p align="center">
