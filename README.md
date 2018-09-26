@@ -8,7 +8,7 @@ These are the [Home Assistant](https://home-assistant.io/) configuration files u
 # Automations:
 A detailed description of each of my automations and a link to the yaml file is located [HERE](https://github.com/SilvrrGIT/HomeAssistant/tree/master/automation#bedtime_notificationsyaml-automations)
 
-This is the most important part of Home Assistant!  Remote contorl and voice commmands are nice, however, it not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplesst things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
+This is the most important part of Home Assistant!  Remote control and voice commmands are nice, however, that is not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplest things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
 # Hardware Running My Home Assistant Setup:
 ## __[Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__
