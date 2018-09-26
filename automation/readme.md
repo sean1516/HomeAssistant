@@ -84,7 +84,8 @@ Some simple automations to turn my outside house lights on at sunset and off at 
 ### PC_Security.yaml Automations:
 * __[Notify me if the Desktop PC is turned on while away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L1)__
 * __[Notify me if there is a failed login attempt to the HA front end ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23)__
-* __[Notify me of a new device added to my Wifi network ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L42)__
+* __[Notify me if there is a sucessful login attempt to the HA front end ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L41)__
+* __[Notify me of a new device added to my Wifi network ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L64)__
 
 ### UPS.yaml Automations:
 * __[Notify me if there is a power outage ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/ups.yaml#L1)__
