@@ -12,15 +12,18 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 # Server Running My Home Assistant Setup:
 I am currently using a [Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf) as my host.
-This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Docker 18.06.1-ce](https://www.docker.com/)__.  There are six docker containers running:
-* __[Home Assistant](https://hub.docker.com/r/homeassistant/home-assistant/)__
-* __[HA-Dockermon](https://hub.docker.com/r/philhawthorne/ha-dockermon/)__ Container monitor/control
-* __[Unifi](https://hub.docker.com/r/linuxserver/unifi/)__ A unifi controller
-* __[Eclipse-Mosquitto](https://hub.docker.com/r/_/eclipse-mosquitto/)__ MQTT Broker
-* __[Portainer](https://hub.docker.com/r/portainer/portainer/)__ Docker Container viewer/manager
-* __[TasmoAdmin](https://hub.docker.com/r/raymondmm/tasmoadmin/)__ Easy managment of tasmota flashed devices
+This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Hass.io](https://www.home-assistant.io/hassio/)__.  I am also running the following add-ons:
+* __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
+* __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
+* __[Network UPS Tools](https://github.com/asciinaut/hassio-addons)__ A NUT Server
+* __[Pi-Hole](https://github.com/hassio-addons/addon-pi-hole/blob/master/README.md)__ DNS Server / Ad Blocker
+* __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ Shutdown Windows Computers
+* __[SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh/blob/master/README.md)__ SSH for Hass.io
+* __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
+* __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
+* __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.76.2__.
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.79.2__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -33,9 +36,7 @@ I think this is an often overlooked part of any internet connected project.  I a
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://www.splitbrain.org/blog/2017-08/10-homeassistant_duckdns_letsencrypt) to get it setup.
 
 # Editing the Configuration Files:
-What works for me is creating a Samba share that I can then edit on any computer in my house.  
-
-For setting up Samba see this video: [Samba Setup](https://www.youtube.com/watch?v=iQwWEsuRWUw&t=5s)
+What works for me is creating a Samba share that I can then edit on any computer in my house.  I am doing this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
 
 After you have the Samba share setup, I like to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
 
@@ -65,7 +66,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 
 ## Hardwired Devices
 * __[Cyberpower CP1500PFCLCD UPS ](https://www.amazon.com/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W)__ used to detect power outages and keep network and HA running in a power outage.
-* __[Synology DiskStation DS216J ](https://www.amazon.com/Synology-DiskStation-3-5-Inches-1xGigabit-DS216J/dp/B01BNPT1EG)__* used as a NAS (obviously) and as the NUT server. 
+* __[Synology DiskStation DS216J ](https://www.amazon.com/Synology-DiskStation-3-5-Inches-1xGigabit-DS216J/dp/B01BNPT1EG)__* 
 * __[Ubiquiti Unifi Ap-AC Long Range - Wireless Access Point](https://www.amazon.com/Ubiquiti-Unifi-Ap-AC-Long-Range/dp/B015PRCBBI)__ used for presence detection
 * __[Ikea TRÅDFRI Gateway](http://www.ikea.com/us/en/catalog/products/00337813/)__*
 

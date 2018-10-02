@@ -16,7 +16,6 @@ This notification is used to notify me if my Lets Encrypt certificate does not a
 This notification is used to notify me if on of my home automation devices goes offline.  Generally this is someone flipping a switch which cuts the power or a network connectivity issue.
 * __[Notify Me if a Home Automation Device is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml)__
 * __[Notify Me if a Yeelight is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml#L28)__
-* __[Notify Me if a Docker Container is offline ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml#L57)__
 
 ### Door Security.yaml Automations:
 These automations are used to notify me when a door is opened when no one is home or the garage door is left open when we leave.

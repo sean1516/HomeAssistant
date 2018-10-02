@@ -12,9 +12,10 @@ homeassistant:
   elevation: 244
   unit_system: imperial
   time_zone: !secret time_zone
-  customize: !include_dir_merge_named customize/
+  customize: !include customize.yaml
   whitelist_external_dirs:
     - /config
+
 ####################################################
 #                                                  #
 #                     GENERAL                      #
@@ -34,11 +35,11 @@ history:
 #https://home-assistant.io/components/http/
 http:
   api_password: !secret api_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
   base_url: !secret base_url
   ip_ban_enabled: true
   login_attempts_threshold: 2
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 #https://home-assistant.io/components/logger/
 logger:
@@ -49,6 +50,9 @@ map:
 
 #https://home-assistant.io/components/sun/
 sun:
+
+#https://www.home-assistant.io/hassio/
+hassio:
 
 ####################################################
 #                                                  #
@@ -61,7 +65,6 @@ automation: !include_dir_merge_list automation/
 binary_sensor: !include binary_sensor.yaml
 cover: !include cover.yaml
 device_tracker: !include device_tracker.yaml
-group: !include groups.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
 ios: !include ios.yaml
@@ -70,7 +73,6 @@ notify: !include notification.yaml
 recorder: !include recorder.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
-shell_command: !include shell_commands.yaml
 switch: !include switches.yaml
 zone: !include zones.yaml
 
@@ -93,10 +95,49 @@ duckdns:
 
 #https://home-assistant.io/components/emulated_hue/
 emulated_hue:
-  host_ip: 192.168.1.24
-  exposed_domains:
-    - light
-    - switch
+  expose_by_default: false
+  entities:
+    light.yeelightrgb2:
+      hidden: false
+      name: Notification
+    switch.basic1:
+      name: Lamps
+      hidden: false
+    switch.receiverpower:
+      hidden: false
+      name: Amplifier
+    switch.tvpower:
+      hidden: false
+      name: TV
+    script.music:
+      hidden: false
+      name: Music
+    script.normallight:
+      hidden: false
+      name: normal light
+    script.volumedown:
+      hidden: false
+      name: Volume Down
+    script.volumeup:
+      hidden: false
+      name: Volume Up
+    switch.htpc_switch:
+      hidden: false
+      name: computer
+
+####################################################
+#                                                  #
+#                     GROUP                        #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/group
+group:
+  Outside Lights:
+    - light.yeelight1
+    - light.yeelight3
+    - light.yeelight2
+    - light.yeelight4
 
 ####################################################
 #                                                  #
@@ -123,6 +164,18 @@ nest:
 
 ####################################################
 #                                                  #
+#                PANEL CUSTOM                      #
+#                                                  #
+####################################################
+
+panel_custom:
+  - name: zwavegraph2
+    sidebar_title: ZWave Graph2
+    sidebar_icon: mdi:access-point-network
+    url_path: zwave
+
+####################################################
+#                                                  #
 #                TRADFRI HUB                       #
 #                                                  #
 ####################################################
@@ -131,6 +184,17 @@ nest:
 tradfri:
   host: 192.168.1.20
   allow_tradfri_groups: false
+
+####################################################
+#                                                  #
+#                   WEATHER                        #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/weather.yweather/
+weather:
+  - platform: yweather
+    woeid: !secret woeid
 
 ####################################################
 #                                                  #

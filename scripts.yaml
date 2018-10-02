@@ -61,32 +61,6 @@
 
 ####################################################
 #                                                  #
-#                RESTART DOCKER CONTAINERS         #
-#                                                  #
-####################################################
-
-  restart_hass:
-    sequence:
-      - service: shell_command.restart_hass
-
-  restart_unifi:
-    sequence:
-      - service: shell_command.restart_unifi
-
-  restart_mqtt:
-    sequence:
-      - service: shell_command.restart_mqtt
-
-  restart_hadockermon:
-    sequence:
-      - service: shell_command.restart_hadockermon
-
-  restart_portainer:
-    sequence:
-      - service: shell_command.restart_portainer
-
-####################################################
-#                                                  #
 #                Turn On Music                     #
 #                                                  #
 ####################################################

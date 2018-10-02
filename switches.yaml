@@ -60,6 +60,18 @@
     retain: true
 
   - platform: mqtt
+    name: "POW2"
+    state_topic: "stat/pow2/POWER"
+    command_topic: "cmnd/pow2/POWER"
+    availability_topic: "tele/pow2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
+  - platform: mqtt
     name: "Basic1"
     state_topic: "stat/basic1/POWER"
     command_topic: "cmnd/basic1/POWER"
@@ -73,48 +85,6 @@
 
 ####################################################
 #                                                  #
-#                REST SWITCHES                     #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/switch.rest/
-  - platform: rest
-    resource: http://192.168.1.24:8126/container/home-assistant
-    name: Home Assistant
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-  - platform: rest
-    resource: http://192.168.1.24:8126/container/ha-dockermon
-    name: HA Dockermon
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-  - platform: rest
-    resource: http://192.168.1.24:8126/container/unifi
-    name: Unifi
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-  - platform: rest
-    resource: http://192.168.1.24:8126/container/MQTT
-    name: MQTT
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-  - platform: rest
-    resource: http://192.168.1.24:8126/container/portainer
-    name: Portainer
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-####################################################
-#                                                  #
 #             WAKE ON LAN SWITCHES                 #
 #                                                  #
 ####################################################
@@ -125,14 +95,20 @@
     mac_address: "78:2b:cb:9f:60:cd"
     host: 192.168.1.5
     turn_off:
-      service: shell_command.htpc
+      service: hassio.addon_stdin
+      data:
+        addon: core_rpc_shutdown
+        input: htpc
 
   - platform: wake_on_lan
     name: Desktop Switch
     mac_address: "b8:ca:3a:8e:92:61"
     host: 192.168.1.6
     turn_off:
-      service: shell_command.desktop
+      service: hassio.addon_stdin
+      data:
+        addon: core_rpc_shutdown
+        input: desktop
 
   - platform: wake_on_lan
     name: NAS Switch

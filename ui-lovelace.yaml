@@ -1,0 +1,729 @@
+####################################################
+#                                                  #
+#                      RESOURCE                    #
+#                                                  #
+####################################################
+resources:
+  #https://github.com/thomasloven/lovelace-slider-entity-row
+  - url: /local/custom_ui/slider-entity-row.js
+    type: js
+
+####################################################
+#                                                  #
+#                      HOME                        #
+#                                                  #
+####################################################
+
+title: Home
+views:
+  - title: Rooms
+    icon: mdi:home
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: glance
+            title: Doors
+            entities:
+              - entity: sensor.gehingepinsensor1
+                name: Int. Garage
+                icon: mdi:door
+              - entity: sensor.backdoorstatus
+                name: Back
+                icon: mdi:door
+              - entity: sensor.garagedoorstatus
+                name: Garage
+                icon: mdi:garage
+              - entity: sensor.gehingepinsensor2
+                name: Front
+                icon: mdi:door
+            column_width: 25%
+          - type: entities
+            entities:
+              - cover.garage_door
+      - type: entities
+        title: Living Room
+        show_header_toggle: false
+        entities:
+          - switch.htpc_switch
+          - entity: switch.basic1
+            name: Living Room Lamps
+          - entity: light.yeelightrgb2
+            name: Notification Light
+          - entity: input_select.notification_bulb2_color
+            name: Notification Light Color
+          - entity: script.tv
+            name: Turn On TV
+            icon: mdi:television
+          - entity: script.music
+            name: Turn On Music
+            icon: mdi:music
+      - type: glance
+        title: Bedroom Lights
+        entities:
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm
+            tap_action: toggle
+            name: Amy's Bedside
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2
+            tap_action: toggle
+            name: Adam's Bedside
+        column_width: 50%
+      - type: glance
+        title: Outside Lights
+        entities:
+          - entity: light.yeelight1
+            tap_action: toggle
+            name: Front Porch
+          - entity: light.yeelight3
+            tap_action: toggle
+            name: Garage Right
+          - entity: light.yeelight2
+            name: Garage Left
+            tap_action: toggle.
+          - entity: light.yeelight4
+            tap_action: toggle
+            name: Back Porch
+        column_width: 25%
+      - type: weather-forecast
+        title: Weather
+        entity: weather.yweather
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Nest
+            entities:
+              - climate.downstairs
+          - type: glance
+            entities:
+              - entity: binary_sensor.downstairs_thermostat_fan
+                name: Fan
+              - entity: sensor.downstairs_thermostat_hvac_state
+                name: State
+                icon: mdi:thermostat
+              - entity: sensor.downstairs_thermostat_operation_mode
+                name: Mode
+                icon: mdi:information-outline
+              - entity: sensor.downstairs_thermostat_target
+                name: Target
+                icon: mdi:thermometer-lines
+              - entity: sensor.downstairs_away_mode
+                name: Away
+                icon: mdi:home-outline
+
+####################################################
+#                                                  #
+#                  DEVICE STATUS                   #
+#                                                  #
+####################################################
+
+  - title: Device Status
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: glance
+            title: Location
+            entities:
+              - entity: device_tracker.adamsiphone
+                name: Adam GPS
+              - entity: device_tracker.c0a53e6bfa77
+                name: Adam WiFi
+              - entity: device_tracker.amysiphone
+                name: Amy GPS
+              - entity: device_tracker.70ef002dc94f
+                name: Amy WiFi
+            column_width: 25%
+          - type: glance
+            title: Adam's Phone Status
+            entities:
+              - entity: sensor.adams_iphone_battery_level
+                name: Battery
+              - entity: sensor.adams_iphone_battery_state
+                name: Charging?
+              - entity: sensor.gps_adamsiphone
+                name: GPS
+                icon: mdi:satellite-variant
+              - entity: sensor.interval_adamsiphone
+                name: Update Freq.
+                icon: mdi:av-timer
+            column_width: 25%
+          - type: glance
+            title: Amy's Phone Status
+            entities:
+              - entity: sensor.amys_iphone_battery_level
+                name: Battery
+              - entity: sensor.amys_iphone_battery_state
+                name: Charging?
+              - entity: sensor.gps_iphone
+                name: GPS
+                icon: mdi:satellite-variant
+              - entity: sensor.interval_iphone
+                name: Update Freq.
+                icon: mdi:av-timer
+            column_width: 25%
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Wired Devices
+            show_header_toggle: false
+            entities:
+              - entity: binary_sensor.desktop
+              - entity: binary_sensor.modem
+              - entity: binary_sensor.nas
+              - entity: binary_sensor.ubiquiti_switch
+              - entity: binary_sensor.ubiquiti_ap
+          - type: entities
+            title: Wireless Devices
+            show_header_toggle: true
+            entities:
+              - entity: device_tracker.a088b4bb64ec
+              - entity: device_tracker.lenovo_laptop
+      - type: glance
+        title: UPS Status
+        entities:
+          - entity: sensor.upsstate
+            name: State
+            icon: mdi:flash-circle
+          - entity: sensor.approxwattage
+            name: Watts
+            icon: mdi:gauge
+          - entity: sensor.ups_battery_runtime
+            name: Runtime
+            icon: mdi:battery-unknown
+          - entity: sensor.ups_battery_charge
+            name: Charge
+            icon: mdi:battery-charging
+          - entity: sensor.ups_load
+            name: Load
+            icon: mdi:speedometer
+        column_width: 20%
+      - type: vertical-stack
+        cards:
+          - type: glance
+            title: NAS Load
+            entities:
+              - entity: sensor.cpu_load_total
+                name: CPU
+                icon: mdi:chip
+              - entity: sensor.memory_usage_real
+                name: Memory
+                icon: mdi:chip
+              - entity: sensor.network_down
+                name: Download
+              - entity: sensor.network_up
+                name: Upload
+            column_width: 25%
+          - type: glance
+            title: NAS Disk 1 Status
+            entities:
+              - entity: sensor.status_smart_sda
+                name: Smart Status
+                icon: mdi:medical-bag
+              - entity: sensor.temperature_sda
+                name: Temperature
+                icon: mdi:thermometer-lines
+              - entity: sensor.volume_used_volume_1
+                name: Used
+                icon: mdi:harddisk
+              - entity: sensor.total_size_volume_1
+                name: Total Size
+                icon: mdi:harddisk
+            column_width: 25%
+          - type: glance
+            title: NAS Disk 2 Status
+            entities:
+              - entity: sensor.status_smart_sdb
+                name: Smart Status
+                icon: mdi:medical-bag
+              - entity: sensor.temperature_sdb
+                name: Temperature
+                icon: mdi:thermometer-lines
+              - entity: sensor.volume_used_volume_2
+                name: Used
+                icon: mdi:harddisk
+              - entity: sensor.total_size_volume_2
+                name: Total Size
+                icon: mdi:harddisk
+            column_width: 25%
+      - type: glance
+        title: Network Status
+        entities:
+          - entity: sensor.speedtest_download
+            name: Download
+          - entity: sensor.speedtest_upload
+            name: Upload
+          - entity: sensor.wifisignal
+            name: WiFi Signal
+            icon: mdi:wifi
+        column_width: 33%
+      - type: glance
+        title: PiHole Stats
+        entities:
+          - entity: sensor.pihole_ads_blocked_today
+            name: Ads Blocked
+          - entity: sensor.pihole_dns_queries_today
+            name: DNS Queries
+          - entity: sensor.pihole_dns_unique_clients
+            name: Unique Clients
+        column_width: 33%
+
+####################################################
+#                                                  #
+#                HOME ASSISTANT                    #
+#                                                  #
+####################################################
+
+  - title: HA
+    icon: mdi:home-assistant
+    cards:
+      - type: entities
+        title: Home Automation Device Status
+        show_header_toggle: false
+        entities:
+          - device_tracker.34ea34e3da0d
+          - device_tracker.a020a63452ee
+          - device_tracker.18b430868bb9
+          - device_tracker.6854fd8aee8c
+          - device_tracker.2c3ae844b860
+          - device_tracker.pow17279
+          - device_tracker.sonoff_pow_2
+          - device_tracker.286c07ac908d
+          - device_tracker.f0b4299fe446
+          - device_tracker.f0b429a8e3f3
+          - device_tracker.f0b429a900ec
+          - device_tracker.286c07b1776d
+          - device_tracker.286c07b19f98
+      - type: vertical-stack
+        cards:
+          - type: glance
+            title: Server Load
+            entities:
+              - entity: sensor.processor_use
+                name: Processor
+              - entity: sensor.memory_use_percent
+                name: Memory
+                icon: mdi:chip
+              - entity: sensor.load_1m
+                icon: mdi:speedometer
+              - entity: sensor.load_5m
+                icon: mdi:speedometer
+            column_width: 25%
+          - type: glance
+            title: Server Information
+            entities:
+               - entity: sensor.since_last_boot_templated
+                 name: Last Boot
+                 icon: mdi:clock
+               - entity: sensor.network_in_eno1
+                 name: Network In
+               - entity: sensor.network_out_eno1
+                 name: Network Out
+            column_width: 33%
+          - type: glance
+            title: HA File Size
+            show_header_toggle: true
+            entities:
+              - entity: sensor.homeassistantlog
+                name: Log File
+              - entity: sensor.homeassistant_v2db
+                name: Database
+              - entity: sensor.disk_use_percent_home
+                name: Disk Use
+                icon: mdi:harddisk
+            column_width: 33.3%
+          - type: glance
+            title: Home Assistant Info
+            entities:
+              - entity: sensor.installed_version
+                name: Installed
+                icon: mdi:folder-download
+              - entity: sensor.latest_version
+                name: Latest Release
+                icon: mdi:github-circle
+              - entity: sensor.lets_encrypt_expiration
+                name: Lets Encrypt Expiration
+                icon: mdi:timelapse
+            column_width: 33.3%
+      - type: entities
+        title: Zwave
+        show_header_toggle: true
+        entities:
+          - entity: zwave.aeotec_zw090_zstick_gen5_us
+            name: Aeotec Zstick
+          - entity: zwave.aeotec_zw117_range_extender_6
+            name: Aeotec Range Extender
+          - entity: zwave.ge_32563_hinge_pin_smart_door_sensor
+            name: GE Hinge Pin Sensor 1
+          - entity: zwave.ge_32563_hinge_pin_smart_door_sensor_2
+            name: GE Hinge Pin Sensor 2
+          - entity: zwave.vision_zg8101_garage_door_detector
+            name: Vision Garage Door  Sensor
+          - entity: zwave.unknown_id021f_unknown_type0003_id0101
+            name: Dome Door Sensor
+      - type: entities
+        title: Batteries
+        show_header_toggle: true
+        entities:
+          - entity: sensor.tradfri_remote_control
+            icon: mdi:battery-50
+            name: Tradfri Remote Battery
+          - entity: sensor.gehingepinsensor1batt
+            icon: mdi:battery-50
+            name: GE Hinge Pin Sensor 1
+          - entity: sensor.gehingepinsensor2batt
+            icon: mdi:battery-50
+            name: GE Hinge Pin Sensor 2
+          - entity: sensor.garagedoorstatusbatt
+            icon: mdi:battery-50
+            name: Garage Door Sensor
+          - entity: sensor.backdoorstatusbatt
+            icon: mdi:battery-50
+            name: Back Door Sensor
+
+####################################################
+#                                                  #
+#                  AUTOMATIONS                     #
+#                                                  #
+####################################################
+
+  - title: Automations
+    cards:
+      - type: entities
+        title: Vacation Mode
+        show_header_toggle: false
+        entities:
+          - entity: input_boolean.vacation
+            icon: mdi:beach
+      - type: entities
+        title: Bedtime Notifications
+        show_header_toggle: true
+        entities:
+          - entity: automation.desktop_on_at_bedtime
+            name: Desktop on at Bedtime
+            icon: mdi:hotel
+          - entity: automation.garage_door_open_at_bedtime
+            name: Garage Door Open at Bedtime
+            icon: mdi:hotel
+          - entity: automation.htpc_on_at_bedtime
+            name: HTPC on at Bedtime
+            icon: mdi:hotel
+          - entity: automation.living_room_lamps_on_at_bedtime
+            name: Laps On At Bedtime Notification
+            icon: mdi:hotel
+      - type: entities
+        title: Automations For Lights
+        show_header_toggle: false
+        entities:
+          - entity: automation.turn_off_outside_lights
+            name: Turn Off Outside Lights - Sunrise
+            icon: mdi:lightbulb-outline
+          - entity: automation.turn_on_outside_lights
+            name: Turn on Outside Lights - Sunset
+            icon: mdi:lightbulb-outline
+          - entity: automation.open_back_door_increase_brightness
+            name: Open Back Doors Increase Brightness
+            icon: mdi:lightbulb-outline
+          - entity: automation.open_front_doors_increase_brightness
+            name: Open Front Doors Increase Brightness
+            icon: mdi:lightbulb-outline
+          - entity: automation.turn_on_living_room_lamps
+            name: Turn on Living Room Lamps - Sunset
+            icon: mdi:lightbulb-outline
+          - entity: automation.set_notification_bulb2_color
+            name: Set Notification Bulb 2 Color
+            icon: mdi:lightbulb-outline
+          - entity: automation.set_notification_bulb2_normal
+            name: Set Notification Bulb 2 Normal
+            icon: mdi:lightbulb-outline
+          - entity: automation.lamps_on_when_home
+            name: Lamps on When Home
+            icon: mdi:lightbulb-outline
+          - entity: automation.turn_off_living_room_lamps_at_midnight
+            name: Turn off Living Room Lamps - Midnight
+            icon: mdi:lightbulb-outline
+          - entity: automation.interior_garage_door_open_light_on
+            name: Interior Garage Door Open Light On
+            icon: mdi:lightbulb-outline
+          - entity: automation.turn_off_interior_garage_light_after_5
+            name: Turn Off Interior Garage Light After 5 Min
+            icon: mdi:lightbulb-outline
+      - type: entities
+        title: Security Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.front_door_opened_when_away
+            name: Front Door Opened When Away
+            icon: mdi:security-home
+          - entity: automation.back_door_opened_when_away
+            name: Back Door Opened When Away
+            icon: mdi:security-home
+          - entity: automation.interior_garage_door_opened_when_away
+            name: Inside Garage Door Opened When Away
+            icon: mdi:security-home
+          - entity: automation.exterior_garage_door_opened_when_away
+            name: Outside Garage Door Opened When Away
+            icon: mdi:security-home
+          - entity: automation.exterior_garage_door_left_open_when_away
+            name: Outside Garage Door Left Open When Away
+            icon: mdi:security-home
+      - type: entities
+        title: Network Security Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.desktop_pc_on_when_away
+            name: Desktop PC on When Away
+            icon: mdi:windows
+          - entity: automation.send_notification_upon_failed_login_attempt
+            name: Failed HA Login Attempt Notification
+            icon: mdi:lock-outline
+          - entity: automation.send_notification_upon_sucessful_login_attempt
+            name: Sucessful HA Login Notification
+            icon: mdi:lock-outline
+          - entity: automation.notify_if_new_devices
+            name: Notify if New Devices
+            icon: mdi:new-box
+      - type: entities
+        title: Home Assistant Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.notify_if_ha_device_offline
+            name: Notify if HA device Offline
+            icon: mdi:exclamation
+          - entity: automation.notify_if_yeelight_offline
+            name: Notify if Yeelight Offline
+            icon: mdi:lightbulb-outline
+          - entity: automation.lets_encrypt_cert_did_not_update
+            name: Lets Encrypt Certificate Did Not Update
+            icon: mdi:certificate
+      - type: entities
+        title: Other Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.low_battery_adams_phone
+            name: Low iPhone Battery
+            icon: mdi:battery-charging-30
+          - entity: automation.computer_on_tv_on
+            name: Computer On TV On
+            icon: mdi:television
+      - type: entities
+        title: Climate Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.set_nest_away_mode_when_leaving
+            name: Set Nest Away Mode When Leaving
+            icon: mdi:home-outline
+          - entity: automation.set_nest_away_mode_at_1600
+            name: Turn Off Nest Away Mode at 1600
+            icon: mdi:home-outline
+          - entity: automation.turn_off_away_when_home
+            name: Turn Off Nest Away Mode When Home
+            icon: mdi:home-outline
+          - entity: input_select.nestmode
+            name: Nest Automation Mode
+            icon: mdi:thermostat
+          - entity: automation.nest_fan
+            name: Nest Fan
+            icon: mdi:fan
+      - type: entities
+        title: Feed the dog Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.feed_the_dog_evening
+            name: Feed the dog evening
+            icon: mdi:paw
+          - entity: automation.feed_the_dog_morning
+            name: Feed the dog morning
+            icon: mdi:paw
+      - type: entities
+        title: Leaving Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.htpc_on_when_leaving
+            name: HTPC On When Leaving
+            icon: mdi:windows
+          - entity: automation.desktop_on_when_leaving
+            name: Desktop On When Leaving
+            icon: mdi:windows
+          - entity: automation.living_room_lamps_on_when_leaving
+            name: Living Room Lamps on When Leaving
+            icon: mdi:lightbulb-outline
+          - entity: automation.media_center_on_when_leaving
+            name: Media Center On When leaving
+            icon: mdi:television-classic
+      - type: entities
+        title: UPS Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.power_outage
+            name: Power Outage
+            icon: mdi:power-plug
+          - entity: automation.power_restored
+            name: Power Restored
+            icon: mdi:power-plug
+      - type: entities
+        title: Vacation Mode Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.turn_off_vacation_mode
+            name: Turn Off Vacation Mode
+            icon: mdi:beach
+          - entity: automation.turn_on_vacation_mode
+            name: Turn On Vacation Mode
+            icon: mdi:beach
+      - type: entities
+        title: Maintenance Reminder Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.trash_day_reminder
+            name: Trash Day
+            icon: mdi:delete-empty
+          - entity: automation.furnace_filter_reminder
+            name: Furnace Filter
+            icon: mdi:fire
+          - entity: automation.belle_flea_tick_and_heartworm_reminder
+            name: Belle Flea Tick and Heartworm
+            icon: mdi:paw
+          - entity: automation.water_softener_reminder
+            name: Water Softener
+            icon: mdi:water-pump
+
+####################################################
+#                                                  #
+#                   SWITCHES                       #
+#                                                  #
+####################################################
+
+  - title: Switches
+    cards:
+      - type: entities
+        title: Bedroom Lights
+        show_header_toggle: true
+        entities:
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm
+            type: custom:slider-entity-row
+            break_slider: true
+            name: Amy's Bedside
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2
+            type: custom:slider-entity-row
+            break_slider: true
+            name: Adam's Bedside
+      - type: entities
+        title: Yeelights
+        show_header_toggle: false
+        entities:
+          - entity: light.yeelight1
+            name: Front Porch
+            type: custom:slider-entity-row
+            break_slider: true
+          - entity: light.yeelight3
+            name: Garage Right
+            type: custom:slider-entity-row
+            break_slider: true
+          - entity: light.yeelight2
+            name: Garage Left
+            type: custom:slider-entity-row
+            break_slider: true
+          - entity: light.yeelight4
+            name: Back Porch
+            type: custom:slider-entity-row
+            break_slider: true
+          - entity: light.yeelight5
+            icon: mdi:mdi:lightbulb-outline
+            name: Interior Garage Light
+            type: custom:slider-entity-row
+            break_slider: true
+          - entity: light.yeelightrgb2
+            icon: mdi:mdi:lightbulb-outline
+            name: Notification Light
+            type: custom:slider-entity-row
+            break_slider: true
+          - entity: input_select.notification_bulb2_color
+            name: Notification Light Color
+      - type: entities
+        title: Broadlink IR Switches
+        show_header_toggle: false
+        entities:
+          - entity: switch.receivermute
+            name: Receiver-Mute
+            icon: mdi:volume-mute
+          - entity: switch.receiverpower
+            name: Receiver-Power
+            icon: mdi:speaker
+          - entity: switch.receivervideo1
+            name: Receiver - Video 1
+            icon: mdi:television
+          - entity: switch.receivervideo2
+            name: Receiver - Video 2
+            icon: mdi:speaker
+          - entity: switch.receivervoldwn
+            name: Receiver - Volume Down
+            icon: mdi:volume-minus
+          - entity: switch.receivervolup
+            name: Receiver - Voume Up
+            icon: mdi:volume-plus
+          - entity: switch.tvhdmi
+            name: TV - HDMI
+            icon: mdi:video-input-hdmi
+          - entity: switch.tvpower
+            name: TV - Power
+            icon: mdi:television
+          - entity: switch.tvtv
+            name: TV - Input Select
+            icon: mdi:television
+          - entity: script.tv
+            name: Script - Turn On TV
+            icon: mdi:television
+          - entity: script.music
+            name: Script - Turn On Music
+            icon: mdi:music
+          - entity: script.volumeup
+            name: Script - Volume Up
+            icon: mdi:volume-plus
+          - entity: script.volumedown
+            name: Script - Volume Down
+            icon: mdi:volume-minus
+      - type: entities
+        title: Sonoff Switches
+        show_header_toggle: false
+        entities:
+          - entity: switch.basic1
+            name: Sonoff Basic 1
+          - entity: switch.pow1
+            name: Sonoff POW 1
+          - entity: sensor.pow1_energy
+            name: kWh
+            icon: mdi:chart-line
+          - entity: sensor.pow1_power
+            name: Watts
+            icon: mdi:power-plug
+          - entity: sensor.pow1_voltage
+            name: Volts
+            icon: mdi:power-socket-us
+          - entity: sensor.pow1_current
+            name: Amps
+            icon: mdi:flash-circle
+          - entity: switch.pow2
+            name: Sonoff POW 2
+          - entity: sensor.pow2_energy
+            name: kWh
+            icon: mdi:chart-line
+          - entity: sensor.pow2_power
+            name: Watts
+            icon: mdi:power-plug
+          - entity: sensor.pow2_voltage
+            name: Volts
+            icon: mdi:power-socket-us
+          - entity: sensor.pow2_current
+            name: Amps
+            icon: mdi:flash-circle
+      - type: entities
+        title: Computer Switches
+        show_header_toggle: false
+        entities:
+          - switch.htpc_switch
+          - switch.desktop_switch
+          - switch.nas_switch
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

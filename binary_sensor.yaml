@@ -22,9 +22,6 @@
 #https://home-assistant.io/components/binary_sensor.ping/
 
   - platform: ping
-    host: 192.168.1.23
-    name: Linux Laptop
-  - platform: ping
     host: 192.168.100.1
     name: Modem
   - platform: ping
@@ -37,41 +34,11 @@
     host: 192.168.1.20
     name: Ikea Tradfri Gateway
   - platform: ping
-    host: 192.168.1.32
-    name: Broadlink RM Mini 3
-  - platform: ping
-    host: 192.168.1.18
-    name: Open Garage
-  - platform: ping
     host: 192.168.1.38
     name: Ubiquiti AP
   - platform: ping
-    host: 192.168.1.36
-    name: Sonoff Basic 1
-  - platform: ping
-    host: 192.168.1.37
-    name: Sonoff POW 1
-
-####################################################
-#                                                  #
-#              TEMPLATE SENSORS                    #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/binary_sensor.template/
-
-  - platform: template
-    sensors:
-      nest:
-        friendly_name: "Nest Thermostat"
-        entity_id: device_tracker.18b430868bb9
-        device_class: connectivity
-        value_template: "{{ is_state('device_tracker.18b430868bb9', 'home') }}"
-      echo:
-        friendly_name: "Echo Dot"
-        entity_id: device_tracker.6854fd8aee8c
-        device_class: connectivity
-        value_template: "{{ is_state('device_tracker.6854fd8aee8c', 'home') }}"
+    host: 192.168.1.6
+    name: Desktop
 
 ####################################################
 #                                                  #

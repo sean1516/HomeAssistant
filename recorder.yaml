@@ -15,6 +15,7 @@
       - switch
       - zone
       - zwave
+      - device_tracker
     entities:
       - binary_sensor.downstairs_thermostat_has_leaf
       - binary_sensor.downstairs_thermostat_is_locked
@@ -46,22 +47,31 @@
       - sensor.load_5m
       - sensor.load_1m
       - sensor.memory_use_percent
-      - sensor.pow1_power
-      - sensor.pow1_voltage
       - sensor.processor_use
       - sensor.speedtest_download
       - sensor.speedtest_upload
       - sensor.ups_battery_runtime
       - sensor.upsstate
       - sensor.wifisignal
-      - switch.basic1
       - switch.desktop_switch
       - switch.htpc_switch
+      - switch.basic1
       - switch.pow1
+      - sensor.pow1_energy
+      - sensor.pow1_power
+      - sensor.pow1_voltage
+      - sensor.pow1_current
+      - switch.pow2
+      - sensor.pow2_energy
+      - sensor.pow2_power
+      - sensor.pow2_voltage
+      - sensor.pow2_current
+      - device_tracker.c0a53e6bfa77
+      - device_tracker.70ef002dc94f
     domains:
       - climate
-      - device_tracker
       - binary_sensor
+      - cover
 
 ####################################################
 #                                                  #

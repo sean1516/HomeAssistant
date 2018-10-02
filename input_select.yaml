@@ -30,6 +30,7 @@
 
   nestmode:
     name: Nest Mode
+    icon: mdi:thermostat
     options:
      - heat
      - cool
