@@ -25,6 +25,10 @@ These automations are used to notify me when a door is opened when no one is hom
 * __[Notify Me if the back door is opened and I am away ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L115)__
 * __[Notify Me if the garage door is left open when I leave ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml#L83)__
 
+### Downloader.yaml Automations:
+* __[Notify Me if a downloader download fails ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/downloader.yaml#L1)__
+* __[Notify Me if a downloader download completes ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/downloader.yaml#L17)__
+
 ### Feed the dog.yaml Automations:
 These automations are used to turn a light on to signify the dog needs to be fed.  A amazon dash button is used to signify the dog has been fed which either turns off the notification light or turn off the automation. 
 * __[Turn on Notification Light AM ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/feed_the_dog.yaml#L1)__
