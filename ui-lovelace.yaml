@@ -177,8 +177,9 @@ views:
             title: Wireless Devices
             show_header_toggle: true
             entities:
-              - entity: device_tracker.a088b4bb64ec
               - entity: device_tracker.lenovo_laptop
+              - entity: device_tracker.linux_laptop_wifi
+              - entity: device_tracker.amazon1197e775e
       - type: glance
         title: UPS Status
         entities:
@@ -733,6 +734,9 @@ views:
           - entity: switch.nas_switch
             name: NAS
             icon: mdi:nas
+          - entity: switch.lenovo_switch
+            name: Lenovo Laptop
+            icon: mdi:windows
 
 ####################################################
 #                                                  #

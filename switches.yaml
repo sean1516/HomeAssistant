@@ -111,6 +111,16 @@
         input: desktop
 
   - platform: wake_on_lan
+    name: Lenovo Switch
+    mac_address: "10:08:B1:E2:17:79"
+    host: 192.168.1.8
+    turn_off:
+      service: hassio.addon_stdin
+      data:
+        addon: core_rpc_shutdown
+        input: lenovo
+
+  - platform: wake_on_lan
     name: NAS Switch
     mac_address: "00:11:32:6e:f7:c5"
     host: 192.168.1.14
