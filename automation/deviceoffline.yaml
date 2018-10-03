@@ -12,17 +12,22 @@
           - binary_sensor.NAS
           - binary_sensor.ubiquiti_switch
           - binary_sensor.ikea_tradfri_gateway
-          - binary_sensor.broadlink_rm_mini_3
-          - binary_sensor.nest
-          - binary_sensor.echo
           - binary_sensor.ubiquiti_ap
-          - binary_sensor.sonoff_basic_1
-          - binary_sensor.sonoff_pow_1
-          - binary_sensor.open_garage
         from: 'on'
         to: 'off'
         for:
           seconds: 60
+      - platform: state
+        entity_id:
+          - device_tracker.34ea34e3da0d
+          - device_tracker.a020a63452ee
+          - device_tracker.18b430868bb9
+          - device_tracker.6854fd8aee8c
+          - device_tracker.2c3ae844b860
+          - device_tracker.pow17279
+          - device_tracker.sonoff_pow_2
+        from: 'home'
+        to: 'not_home'
     action:
       service: notify.home_assistant
       data_template:
@@ -53,43 +58,6 @@
       data_template:
         title: "Yeelight is Offline"
         message: "{{ trigger.to_state.attributes.friendly_name }} is offline"
-
-#########################################################
-#                                                       #
-#         NOTIFY IF DOCKER CONTAINER OFFLINE            #
-#                                                       #
-#########################################################
-
-  - alias: Alert when a container goes offline
-    initial_state: 'on'
-    trigger:
-      - platform: state
-        entity_id:
-          - switch.mqtt
-          - switch.home_assistant
-          - switch.ha_dockermon
-          - switch.unifi
-          - switch.portainer
-        to: 'off'
-        for:
-          minutes: 5
-    condition:
-      condition: and
-      conditions:
-      # Only send this once per hour
-        - condition: template
-          value_template: >
-            {% if states.automation.alert_when_a_critical_container_goes_offline.last_triggered is not none %}
-              {% if as_timestamp(now()) | int   -  as_timestamp(states.automation.alert_when_a_critical_container_goes_offline.attributes.last_triggered) | int > 3600 %} true {% else %} false
-              {% endif %}
-            {% else %}
-            false
-            {% endif %}
-    action:
-      - service: notify.home_assistant
-        data_template:
-          message: 'Docker container for {{ trigger.to_state.name }} is not running. Please check the status of this container as some features may stop functioning.'
-          title: Container Alert
 
 #########################################################
 #                                                       #
