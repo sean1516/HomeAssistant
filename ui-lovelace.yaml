@@ -7,6 +7,9 @@ resources:
   #https://github.com/thomasloven/lovelace-slider-entity-row
   - url: /local/custom_ui/slider-entity-row.js
     type: js
+  #https://github.com/kalkih/mini-graph-card
+  - url: /local/custom_ui/mini-graph-card.js?v=0.0.1
+    type: module
 
 ####################################################
 #                                                  #
@@ -111,6 +114,22 @@ views:
               - entity: sensor.downstairs_away_mode
                 name: Away
                 icon: mdi:home-outline
+          - type: horizontal-stack
+            cards:
+              - type: "custom:mini-graph-card"
+                entity: sensor.downstairs_thermostat_temperature
+                name: Nest Temperature
+                line_color: '#e74c3c'
+                line_width: 8
+                more_info: false
+                accuracy: 25
+              - type: "custom:mini-graph-card"
+                entity: sensor.downstairs_thermostat_humidity
+                name: Nest Humidity
+                line_color: '#3498db'
+                line_width: 8
+                more_info: false
+                accuracy: 25
 
 ####################################################
 #                                                  #
