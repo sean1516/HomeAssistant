@@ -22,6 +22,7 @@ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running 
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
+* __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.79.2__.
 
