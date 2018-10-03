@@ -11,22 +11,37 @@
       - group
       - light
       - script
-      - sensor
       - switch
       - zone
       - zwave
-      - device_tracker
     entities:
       - binary_sensor.downstairs_thermostat_has_leaf
       - binary_sensor.downstairs_thermostat_is_locked
       - binary_sensor.downstairs_thermostat_is_using_emergency_heat
+      - binary_sensor.downstairs_thermostat_online
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor_2
       - binary_sensor.home_away
       - binary_sensor.unknown_id021f_unknown_type0003_id0101_sensor
       - binary_sensor.vision_zg8101_garage_door_detector_sensor
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_access_control
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_level
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_level_2
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_type
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_type_2
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_sourcenodeid
+      - sensor.ge_32563_hinge_pin_smart_door_sensor_sourcenodeid_2
+      - sensor.home_eta
+      - sensor.unknown_id021f_unknown_type0003_id0101_access_control
+      - sensor.unknown_id021f_unknown_type0003_id0101_alarm_level
+      - sensor.unknown_id021f_unknown_type0003_id0101_sourenodeid
+      - sensor.vision_zg8101_garage_door_detector_alarm_level
+      - sensor.vision_zg8101_garage_door_detector_alarm_type
+      - sensor.vision_zg8101_garage_door_detector_burglar
+      - sensor.vision_zg8101_garage_door_detector_sourcenodeid 
       - sun.sun
-      - sensor.last_boot
+      - sensor.since_last_boot
       - sensor.date
       - input_boolean.vacation
   include:
@@ -34,44 +49,20 @@
       - group.bedroom_lights
       - group.outside_lights
       - light.yeelightrgb2
-      - sensor.garagedoorstatus
-      - sensor.approxwattage
-      - sensor.backdoorstatus
-      - sensor.downstairs_thermostat_operation_mode
-      - sensor.garagedoorstatus
-      - sensor.gehingepinsensor1
-      - sensor.gehingepinsensor2
-      - sensor.homeassistant_v2db
-      - sensor.homeassistantlog
-      - sensor.load_15m
-      - sensor.load_5m
-      - sensor.load_1m
-      - sensor.memory_use_percent
-      - sensor.processor_use
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - sensor.ups_battery_runtime
-      - sensor.upsstate
-      - sensor.wifisignal
       - switch.desktop_switch
       - switch.htpc_switch
       - switch.basic1
       - switch.pow1
-      - sensor.pow1_energy
-      - sensor.pow1_power
-      - sensor.pow1_voltage
-      - sensor.pow1_current
       - switch.pow2
-      - sensor.pow2_energy
-      - sensor.pow2_power
-      - sensor.pow2_voltage
-      - sensor.pow2_current
       - device_tracker.c0a53e6bfa77
       - device_tracker.70ef002dc94f
     domains:
       - climate
       - binary_sensor
       - cover
+      - sensor
+      - device_tracker
+
 
 ####################################################
 #                                                  #

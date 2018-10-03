@@ -3,6 +3,7 @@
 #                      RESOURCE                    #
 #                                                  #
 ####################################################
+
 resources:
   #https://github.com/thomasloven/lovelace-slider-entity-row
   - url: /local/custom_ui/slider-entity-row.js
@@ -607,6 +608,16 @@ views:
           - entity: automation.water_softener_reminder
             name: Water Softener
             icon: mdi:water-pump
+      - type: entities
+        title: Downloader Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.download_complete
+            name: Downloader - Download Complete
+            icon: mdi:cloud-download
+          - entity: automation.download_failed
+            name: Downloader - Download Failed
+            icon: mdi:cloud-download
 
 ####################################################
 #                                                  #
