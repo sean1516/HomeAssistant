@@ -1,0 +1,37 @@
+#########################################################
+#                                                       #
+#              NOTIFY IF DOWNLOAD FAILS                 #
+#                                                       #
+#########################################################
+
+  - alias: "Download Failed"
+    trigger:
+      platform: event
+      event_type: downloader_download_failed
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Download failed"
+        message: "Download Failed.  The download of {{trigger.event.data.url}} was unable to complete."
+
+#########################################################
+#                                                       #
+#            NOTIFY IF DOWNLOAD COMPLETES               #
+#                                                       #
+#########################################################
+
+  - alias: "Download Complete"
+    trigger:
+      platform: event
+      event_type: downloader_download_completed
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Download Complete"
+        message: "Download Complete.  The download of {{trigger.event.data.url}} is complete."
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
