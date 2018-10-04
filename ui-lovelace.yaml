@@ -11,6 +11,9 @@ resources:
   #https://github.com/kalkih/mini-graph-card
   - url: /local/custom_ui/mini-graph-card.js?v=0.0.1
     type: module
+  #https://github.com/custom-cards/vertical-stack-in-card
+  - url: /local/custom_ui/vertical-stack-in-card.js?v=0.0.2
+    type: js
 
 ####################################################
 #                                                  #
@@ -23,7 +26,7 @@ views:
   - title: Rooms
     icon: mdi:home
     cards:
-      - type: vertical-stack
+      - type: custom:vertical-stack-in-card
         cards:
           - type: glance
             title: Doors
@@ -44,26 +47,30 @@ views:
           - type: entities
             entities:
               - cover.garage_door
-      - type: entities
+      - type: custom:vertical-stack-in-card
         title: Living Room
-        show_header_toggle: false
-        entities:
-          - entity: switch.htpc_switch
-            icon: mdi:youtube-tv
-          - entity: switch.basic1
-            name: Living Room Lamps
-            icon: mdi:lightbulb-outline
-          - entity: light.yeelightrgb2
-            name: Notification Light
-            icon: mdi:lightbulb-outline
-          - entity: input_select.notification_bulb2_color
-            name: Notification Light Color
-          - entity: script.tv
-            name: Turn On TV
-            icon: mdi:television
-          - entity: script.music
-            name: Turn On Music
-            icon: mdi:music
+        cards:
+          - type: glance
+            entities:
+              - entity: switch.htpc_switch
+                icon: mdi:youtube-tv
+              - entity: switch.basic1
+                name: Living Room Lamps
+                icon: mdi:lightbulb-outline
+              - entity: light.yeelightrgb2
+                name: Notification Light
+                icon: mdi:lightbulb-outline
+            column_width: 33%
+          - type: entities
+            entities:
+              - entity: input_select.notification_bulb2_color
+                name: Notification Light Color
+              - entity: script.tv
+                name: Turn On TV
+                icon: mdi:television
+              - entity: script.music
+                name: Turn On Music
+                icon: mdi:music
       - type: glance
         title: Bedroom Lights
         entities:
@@ -93,12 +100,13 @@ views:
       - type: weather-forecast
         title: Weather
         entity: weather.yweather
-      - type: vertical-stack
+      - type: custom:vertical-stack-in-card
         cards:
           - type: entities
-            title: Nest
+            title: HVAC Status
             entities:
-              - climate.downstairs
+              - entity: climate.downstairs
+                name: Nest Thermostat
           - type: glance
             entities:
               - entity: binary_sensor.downstairs_thermostat_fan
@@ -115,22 +123,23 @@ views:
               - entity: sensor.downstairs_away_mode
                 name: Away
                 icon: mdi:home-outline
-          - type: horizontal-stack
-            cards:
-              - type: "custom:mini-graph-card"
-                entity: sensor.downstairs_thermostat_temperature
-                name: Nest Temperature
-                line_color: '#e74c3c'
-                line_width: 8
-                more_info: false
-                accuracy: 25
-              - type: "custom:mini-graph-card"
-                entity: sensor.downstairs_thermostat_humidity
-                name: Nest Humidity
-                line_color: '#3498db'
-                line_width: 8
-                more_info: false
-                accuracy: 25
+          # - type: horizontal-stack
+          #   title: Nest Graphs
+          #   cards:
+          #     - type: "custom:mini-graph-card"
+          #       entity: sensor.downstairs_thermostat_temperature
+          #       name: Temperature
+          #       line_color: '#e74c3c'
+          #       line_width: 8
+          #       more_info: false
+          #       accuracy: 25
+          #     - type: "custom:mini-graph-card"
+          #       entity: sensor.downstairs_thermostat_humidity
+          #       name: Humidity
+          #       line_color: '#3498db'
+          #       line_width: 8
+          #       more_info: false
+          #       accuracy: 25
 
 ####################################################
 #                                                  #
@@ -140,7 +149,7 @@ views:
 
   - title: Device Status
     cards:
-      - type: vertical-stack
+      - type: custom:vertical-stack-in-card
         cards:
           - type: glance
             title: Location
@@ -219,7 +228,7 @@ views:
             name: Load
             icon: mdi:speedometer
         column_width: 20%
-      - type: vertical-stack
+      - type: custom:vertical-stack-in-card
         cards:
           - type: glance
             title: NAS Load
@@ -236,7 +245,7 @@ views:
                 name: Upload
             column_width: 25%
           - type: glance
-            title: NAS Disk 1 Status
+            title: Disk 1 Status
             entities:
               - entity: sensor.status_smart_sda
                 name: Smart Status
@@ -252,7 +261,7 @@ views:
                 icon: mdi:harddisk
             column_width: 25%
           - type: glance
-            title: NAS Disk 2 Status
+            title: Disk 2 Status
             entities:
               - entity: sensor.status_smart_sdb
                 name: Smart Status
