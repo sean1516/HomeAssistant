@@ -111,6 +111,7 @@
 #########################################################
 
   - alias: Nest Fan
+    initial_state: false
     trigger:
       - platform: state
         entity_id: binary_sensor.downstairs_thermostat_fan

@@ -198,7 +198,7 @@ weather:
 
 #https://home-assistant.io/docs/z-wave/
 zwave:
- usb_path: /dev/ttyACM0
+ usb_path: /dev/ttyACM1
 
 ####################################################
 #                                                  #

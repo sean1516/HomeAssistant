@@ -118,6 +118,10 @@
       - ups.load
       - battery.runtime
       - battery.charge
+      - input.voltage
+      - battery.voltage
+      - output.voltage
+      - ups.status.display
     host: 192.168.1.24
     port: 3493
     username: nut
@@ -287,9 +291,6 @@
               {{ hours }} hours
             {%- endif -%}
           {%- endif -%}
-
-      upsstate:
-        value_template: "{%if states.sensor.ups_load.attributes.state == 'Online' %}Online{% elif states.sensor.ups_load.attributes.state == 'Forced Shutdown Online' %}Forced Shutdown Online{% elif states.sensor.ups_load.attributes.state == 'Online Battery Charging' %}Online Battery Charging{% elif states.sensor.ups_load.attributes.state == 'unknown' %}Power Outage{% endif %}"
 
       wifisignal:
         value_template: '{% if states.cover.garage_door	 %} {{ states.cover.garage_door.attributes.wifi_signal }} {% else %} Unknown {% endif %}'

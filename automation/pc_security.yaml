@@ -37,6 +37,9 @@
         data_template:
           title: "{{ states.persistent_notification.httplogin.attributes.message }}"
           message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
+      - service: persistent_notification.dismiss
+        data:
+          notification_id: 'httplogin'
 
 #########################################################
 #                                                       #

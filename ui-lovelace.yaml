@@ -8,11 +8,8 @@ resources:
   #https://github.com/thomasloven/lovelace-slider-entity-row
   - url: /local/custom_ui/slider-entity-row.js
     type: js
-  #https://github.com/kalkih/mini-graph-card
-  - url: /local/custom_ui/mini-graph-card.js?v=0.0.1
-    type: module
   #https://github.com/custom-cards/vertical-stack-in-card
-  - url: /local/custom_ui/vertical-stack-in-card.js?v=0.0.2
+  - url: /local/custom_ui/vertical-stack-in-card.js?v.0.0.2
     type: js
 
 ####################################################
@@ -54,12 +51,16 @@ views:
             entities:
               - entity: switch.htpc_switch
                 icon: mdi:youtube-tv
+                name: HTPC
+                tap_action: toggle
               - entity: switch.basic1
-                name: Living Room Lamps
+                name: Lamps
                 icon: mdi:lightbulb-outline
+                tap_action: toggle
               - entity: light.yeelightrgb2
-                name: Notification Light
+                name: Notification
                 icon: mdi:lightbulb-outline
+                tap_action: toggle
             column_width: 33%
           - type: entities
             entities:
@@ -92,7 +93,7 @@ views:
             name: Garage Right
           - entity: light.yeelight2
             name: Garage Left
-            tap_action: toggle.
+            tap_action: toggle
           - entity: light.yeelight4
             tap_action: toggle
             name: Back Porch
@@ -100,46 +101,48 @@ views:
       - type: weather-forecast
         title: Weather
         entity: weather.yweather
-      - type: custom:vertical-stack-in-card
+      - type: vertical-stack
         cards:
-          - type: entities
-            title: HVAC Status
-            entities:
-              - entity: climate.downstairs
-                name: Nest Thermostat
-          - type: glance
-            entities:
-              - entity: binary_sensor.downstairs_thermostat_fan
-                name: Fan
-              - entity: sensor.downstairs_thermostat_hvac_state
-                name: State
-                icon: mdi:thermostat
-              - entity: sensor.downstairs_thermostat_operation_mode
-                name: Mode
-                icon: mdi:information-outline
-              - entity: sensor.downstairs_thermostat_target
-                name: Target
-                icon: mdi:thermometer-lines
-              - entity: sensor.downstairs_away_mode
-                name: Away
-                icon: mdi:home-outline
-          # - type: horizontal-stack
-          #   title: Nest Graphs
-          #   cards:
-          #     - type: "custom:mini-graph-card"
-          #       entity: sensor.downstairs_thermostat_temperature
-          #       name: Temperature
-          #       line_color: '#e74c3c'
-          #       line_width: 8
-          #       more_info: false
-          #       accuracy: 25
-          #     - type: "custom:mini-graph-card"
-          #       entity: sensor.downstairs_thermostat_humidity
-          #       name: Humidity
-          #       line_color: '#3498db'
-          #       line_width: 8
-          #       more_info: false
-          #       accuracy: 25
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: entities
+                title: HVAC Status
+                entities:
+                  - entity: climate.downstairs
+                    name: Nest Thermostat
+              - type: glance
+                entities:
+                  - entity: binary_sensor.downstairs_thermostat_fan
+                    name: Fan
+                  - entity: sensor.downstairs_thermostat_hvac_state
+                    name: State
+                    icon: mdi:thermostat
+                  - entity: sensor.downstairs_thermostat_operation_mode
+                    name: Mode
+                    icon: mdi:information-outline
+                  - entity: sensor.downstairs_thermostat_target
+                    name: Target
+                    icon: mdi:thermometer-lines
+                  - entity: sensor.downstairs_away_mode
+                    name: Away
+                    icon: mdi:home-outline
+          - type: horizontal-stack
+            title: Nest Graphs
+            cards:
+              - type: sensor
+                entity: sensor.downstairs_thermostat_temperature
+                name: Temperature
+                line_color: '#e74c3c'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+              - type: sensor
+                entity: sensor.downstairs_thermostat_humidity
+                name: Humidity
+                line_color: '#3498db'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
 
 ####################################################
 #                                                  #
@@ -212,22 +215,31 @@ views:
       - type: glance
         title: UPS Status
         entities:
-          - entity: sensor.upsstate
+          - entity: sensor.ups_status
             name: State
             icon: mdi:flash-circle
+          - entity: sensor.ups_load
+            name: Load
+            icon: mdi:speedometer
           - entity: sensor.approxwattage
             name: Watts
             icon: mdi:gauge
           - entity: sensor.ups_battery_runtime
             name: Runtime
             icon: mdi:battery-unknown
+          - entity: sensor.ups_input_voltage
+            name: Input
+            icon: mdi:power-plug
+          - entity: sensor.ups_battery_voltage
+            name: Battery
+            icon: mdi:battery-charging
           - entity: sensor.ups_battery_charge
             name: Charge
             icon: mdi:battery-charging
-          - entity: sensor.ups_load
-            name: Load
-            icon: mdi:speedometer
-        column_width: 20%
+          - entity: sensor.ups_output_voltage
+            name: Output
+            icon: mdi:power-socket-us
+        column_width: 25%
       - type: custom:vertical-stack-in-card
         cards:
           - type: glance

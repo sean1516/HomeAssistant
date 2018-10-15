@@ -13,6 +13,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 # Server Running My Home Assistant Setup:
 I am currently using a [Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf) as my host.
 This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Hass.io](https://www.home-assistant.io/hassio/)__.  I am also running the following add-ons:
+* __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
 * __[Network UPS Tools](https://github.com/asciinaut/hassio-addons)__ A NUT Server
@@ -22,9 +23,9 @@ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running 
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
-* __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.79.3__.
+
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.80.0__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
