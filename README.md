@@ -19,13 +19,13 @@ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running 
 * __[Network UPS Tools](https://github.com/asciinaut/hassio-addons)__ A NUT Server
 * __[Pi-Hole](https://github.com/hassio-addons/addon-pi-hole/blob/master/README.md)__ DNS Server / Ad Blocker
 * __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ Shutdown Windows Computers
-* __[SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh/blob/master/README.md)__ SSH for Hass.io
+* __[SSH](https://www.home-assistant.io/addons/ssh/)__ SSH for Hass.io
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.80.0__.
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.81.1__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -34,7 +34,6 @@ I think this is an often overlooked part of any internet connected project.  I a
 - I separate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
 - Using the port forwarding options in my [Unifi Security Gateway](https://www.amazon.com/Ubiquiti-Unifi-Security-Gateway-USG/dp/B00LV8YZLK) I limit the connections to my open port to only IPs I typically connect from.  Port Scanners and the like do not see an open port or a service running on that port!
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
-- Frontend log-ins are tracked using a [Custom Component](https://github.com/custom-components/sensor.authenticated)
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://www.splitbrain.org/blog/2017-08/10-homeassistant_duckdns_letsencrypt) to get it setup.
 
 # Editing the Configuration Files:
