@@ -3,16 +3,6 @@
 
 ####################################################
 #                                                  #
-#         AUTHENTICATED - CUSTOM COMPONENT         #
-#                                                  #
-####################################################
-
-#https://github.com/custom-components/sensor.authenticated
-  - platform: authenticated
-    enable_notification: 'True'
-
-####################################################
-#                                                  #
 #               CERTIFICATE EXPIRY                 #
 #                                                  #
 ####################################################
@@ -257,20 +247,6 @@
       gehingepinsensor2batt:
         value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
-
-      gps_adamsiphone:
-        value_template: '{% if states.device_tracker.adamsiphone %} {{ states.device_tracker.adamsiphone.attributes.gps_accuracy | round(0) }} {% else %} Unknown {% endif %}'
-
-      gps_iphone:
-        value_template: '{% if states.device_tracker.amysiphone %} {{ states.device_tracker.amysiphone.attributes.gps_accuracy | round(0) }} {% else %} Unknown {% endif %}'
-
-      interval_adamsiphone:
-        unit_of_measurement: 'min'
-        value_template: '{% if states.device_tracker.adamsiphone %} {{ states.device_tracker.adamsiphone.attributes.interval }} {% else %} Unknown {% endif %}'
-
-      interval_iphone:
-        unit_of_measurement: 'min'
-        value_template: '{% if states.device_tracker.amysiphone %} {{ states.device_tracker.amysiphone.attributes.interval }} {% else %} Unknown {% endif %}'
 
       since_last_boot_templated:
         value_template: >-

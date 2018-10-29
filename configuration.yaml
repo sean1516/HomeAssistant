@@ -158,18 +158,6 @@ nest:
 
 ####################################################
 #                                                  #
-#                PANEL CUSTOM                      #
-#                                                  #
-####################################################
-
-panel_custom:
-  - name: zwavegraph2
-    sidebar_title: ZWave Graph2
-    sidebar_icon: mdi:access-point-network
-    url_path: zwave
-
-####################################################
-#                                                  #
 #                TRADFRI HUB                       #
 #                                                  #
 ####################################################
@@ -198,7 +186,7 @@ weather:
 
 #https://home-assistant.io/docs/z-wave/
 zwave:
- usb_path: /dev/ttyACM1
+ usb_path: /dev/ttyACM0
 
 ####################################################
 #                                                  #

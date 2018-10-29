@@ -7,7 +7,7 @@
   - alias: "Set Nest Away Mode When Leaving"
     trigger:
       - platform: state
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adams_iphone
         from: 'home'
         to: 'not_home'
         for:
@@ -22,7 +22,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: state
@@ -87,7 +87,7 @@
   - alias: "Turn Off Away When Home"
     trigger:
       - platform: state
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adams_iphone
         from: 'not_home'
         to: 'home'
       - platform: state

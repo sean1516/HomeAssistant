@@ -9,7 +9,7 @@ resources:
   - url: /local/custom_ui/slider-entity-row.js
     type: js
   #https://github.com/custom-cards/vertical-stack-in-card
-  - url: /local/custom_ui/vertical-stack-in-card.js?v.0.0.2
+  - url: /local/custom_ui/vertical-stack-in-card.js?v.0.0.7
     type: js
 
 ####################################################
@@ -155,44 +155,28 @@ views:
       - type: custom:vertical-stack-in-card
         cards:
           - type: glance
-            title: Location
-            entities:
-              - entity: device_tracker.adamsiphone
-                name: Adam GPS
-              - entity: device_tracker.c0a53e6bfa77
-                name: Adam WiFi
-              - entity: device_tracker.amysiphone
-                name: Amy GPS
-              - entity: device_tracker.70ef002dc94f
-                name: Amy WiFi
-            column_width: 25%
-          - type: glance
             title: Adam's Phone Status
             entities:
+              - entity: device_tracker.adams_iphone
+                name: GPS
+              - entity: device_tracker.c0a53e6bfa77
+                name: WiFi
               - entity: sensor.adams_iphone_battery_level
                 name: Battery
               - entity: sensor.adams_iphone_battery_state
                 name: Charging?
-              - entity: sensor.gps_adamsiphone
-                name: GPS
-                icon: mdi:satellite-variant
-              - entity: sensor.interval_adamsiphone
-                name: Update Freq.
-                icon: mdi:av-timer
             column_width: 25%
           - type: glance
             title: Amy's Phone Status
             entities:
+              - entity: device_tracker.amysiphone
+                name: GPS
+              - entity: device_tracker.70ef002dc94f
+                name: WiFi
               - entity: sensor.amys_iphone_battery_level
                 name: Battery
               - entity: sensor.amys_iphone_battery_state
                 name: Charging?
-              - entity: sensor.gps_iphone
-                name: GPS
-                icon: mdi:satellite-variant
-              - entity: sensor.interval_iphone
-                name: Update Freq.
-                icon: mdi:av-timer
             column_width: 25%
       - type: vertical-stack
         cards:
@@ -300,7 +284,7 @@ views:
             icon: mdi:wifi
         column_width: 33%
       - type: glance
-        title: PiHole Stats
+        title: PiHole
         entities:
           - entity: sensor.pihole_ads_blocked_today
             name: Ads Blocked
@@ -308,7 +292,11 @@ views:
             name: DNS Queries
           - entity: sensor.pihole_dns_unique_clients
             name: Unique Clients
-        column_width: 33%
+          - entity: switch.pihole_switch
+            name: PiHole
+            tap_action: toggle
+            icon: mdi:dns
+        column_width: 25%
 
 ####################################################
 #                                                  #
@@ -518,9 +506,6 @@ views:
             icon: mdi:windows
           - entity: automation.send_notification_upon_failed_login_attempt
             name: Failed HA Login Attempt Notification
-            icon: mdi:lock-outline
-          - entity: automation.send_notification_upon_sucessful_login_attempt
-            name: Sucessful HA Login Notification
             icon: mdi:lock-outline
           - entity: automation.notify_if_new_devices
             name: Notify if New Devices

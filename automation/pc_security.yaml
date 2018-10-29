@@ -12,7 +12,7 @@
       to: 'on'
     condition:
         condition: template
-        value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
     action:
       service: notify.home_assistant
       data:
@@ -40,29 +40,6 @@
       - service: persistent_notification.dismiss
         data:
           notification_id: 'httplogin'
-
-#########################################################
-#                                                       #
-#                 SUCESSFUL LOGIN ATTEMPTS              #
-#                                                       #
-#########################################################
-
-  - alias: "Send notification upon sucessful login attempt"
-    trigger:
-      - platform: state
-        entity_id: persistent_notification.notification
-        to: 'notifying'
-    condition:
-      - condition: template
-        value_template: "{{ trigger.to_state.state != 'None' }}"
-    action:
-      - service: notify.home_assistant
-        data_template:
-          title: New Home Assistant Login
-          message: "{{ states.persistent_notification.notification.attributes.title }} {{ states.persistent_notification.notification.attributes.message }}"
-      - service: persistent_notification.dismiss
-        data:
-          notification_id: 'notification'
 
 #########################################################
 #                                                       #

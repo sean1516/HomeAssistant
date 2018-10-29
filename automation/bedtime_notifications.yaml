@@ -7,7 +7,7 @@
   - alias: Garage Door Open at Bedtime
     trigger:
       platform: state
-      entity_id: sensor.charging_adamsiphone
+      entity_id: sensor.adams_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and
@@ -32,7 +32,7 @@
   - alias: HTPC on at Bedtime
     trigger:
       platform: state
-      entity_id: sensor.charging_adamsiphone
+      entity_id: sensor.adams_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and
@@ -70,7 +70,7 @@
   - alias: Desktop on at Bedtime
     trigger:
       platform: state
-      entity_id: sensor.charging_adamsiphone
+      entity_id: sensor.adams_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and
@@ -108,7 +108,7 @@
   - alias: Living Room Lamps on at Bedtime
     trigger:
       platform: state
-      entity_id: sensor.charging_adamsiphone
+      entity_id: sensor.adams_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and

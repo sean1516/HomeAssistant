@@ -19,16 +19,6 @@
     password: !secret notification_password
     recipient: !secret notification_recipient
 
-  - name: Home_Assistant_Amy
-    platform: smtp
-    server: smtp.gmail.com
-    port: 587
-    sender: !secret notification_sender
-    starttls: true
-    username: !secret notification_username
-    password: !secret notification_password
-    recipient: !secret amy_notification_recipeient
-
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #

@@ -7,14 +7,14 @@
   - alias: "Low Battery Adams Phone"
     trigger:
       - platform: numeric_state
-        entity_id: sensor.battery_adamsiphone
+        entity_id: sensor.adams_iphone_battery_level
         below: 50
       - platform: numeric_state
-        entity_id: sensor.battery_adamsiphone
+        entity_id: sensor.adams_iphone_battery_level
         below: 30
     condition:
       condition: zone
-      entity_id: device_tracker.adamsiphone
+      entity_id: device_tracker.adams_iphone
       zone: zone.adam_work
     action:
       service: notify.ios_adams_iphone

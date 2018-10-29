@@ -7,7 +7,7 @@
   - alias: "HTPC On When leaving"
     trigger:
       - platform: zone
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adams_iphone
         zone: zone.home
         event: 'leave'
       - platform: zone
@@ -18,7 +18,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: state
@@ -52,7 +52,7 @@
   - alias: "Desktop On When leaving"
     trigger:
       - platform: zone
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adams_iphone
         zone: zone.home
         event: 'leave'
       - platform: zone
@@ -63,7 +63,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: state
@@ -97,7 +97,7 @@
   - alias: "Living Room Lamps On When leaving"
     trigger:
       - platform: zone
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adams_iphone
         zone: zone.home
         event: 'leave'
       - platform: zone
@@ -108,7 +108,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: or
@@ -149,7 +149,7 @@
   - alias: "Media Center On When leaving"
     trigger:
       - platform: zone
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adams_iphone
         zone: zone.home
         event: 'leave'
       - platform: zone
@@ -164,7 +164,7 @@
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
     action:
       - service: notify.ios_adams_iphone
         data_template:
