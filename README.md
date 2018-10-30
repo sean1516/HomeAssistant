@@ -25,7 +25,7 @@ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running 
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.81.1__.
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.81.2__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
