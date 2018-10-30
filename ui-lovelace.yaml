@@ -105,11 +105,13 @@ views:
         cards:
           - type: custom:vertical-stack-in-card
             cards:
-              - type: entities
-                title: HVAC Status
-                entities:
-                  - entity: climate.downstairs
-                    name: Nest Thermostat
+              # - type: entities
+              #   title: HVAC Status
+              #   entities:
+              #     - entity: climate.downstairs
+              #       name: Nest Thermostat
+              - type: thermostat
+                entity: climate.downstairs
               - type: glance
                 entities:
                   - entity: binary_sensor.downstairs_thermostat_fan
@@ -127,7 +129,6 @@ views:
                     name: Away
                     icon: mdi:home-outline
           - type: horizontal-stack
-            title: Nest Graphs
             cards:
               - type: sensor
                 entity: sensor.downstairs_thermostat_temperature
@@ -196,34 +197,40 @@ views:
               - entity: device_tracker.lenovo_laptop
               - entity: device_tracker.linux_laptop_wifi
               - entity: device_tracker.amazon1197e775e
-      - type: glance
-        title: UPS Status
-        entities:
-          - entity: sensor.ups_status
-            name: State
-            icon: mdi:flash-circle
-          - entity: sensor.ups_load
-            name: Load
-            icon: mdi:speedometer
-          - entity: sensor.approxwattage
-            name: Watts
-            icon: mdi:gauge
-          - entity: sensor.ups_battery_runtime
-            name: Runtime
-            icon: mdi:battery-unknown
-          - entity: sensor.ups_input_voltage
-            name: Input
-            icon: mdi:power-plug
-          - entity: sensor.ups_battery_voltage
-            name: Battery
-            icon: mdi:battery-charging
-          - entity: sensor.ups_battery_charge
-            name: Charge
-            icon: mdi:battery-charging
-          - entity: sensor.ups_output_voltage
-            name: Output
-            icon: mdi:power-socket-us
-        column_width: 25%
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: glance
+            title: UPS Output Status
+            entities:
+              - entity: sensor.ups_status
+                name: State
+                icon: mdi:flash-circle
+              - entity: sensor.ups_load
+                name: Load
+                icon: mdi:speedometer
+              - entity: sensor.approxwattage
+                name: Watts
+                icon: mdi:gauge
+              - entity: sensor.ups_battery_runtime
+                name: Runtime
+                icon: mdi:battery-unknown
+            column_width: 25%
+          - type: glance
+            title: UPS Input Status
+            entities:
+              - entity: sensor.ups_input_voltage
+                name: Input
+                icon: mdi:power-plug
+              - entity: sensor.ups_battery_voltage
+                name: Battery
+                icon: mdi:battery-charging
+              - entity: sensor.ups_battery_charge
+                name: Charge
+                icon: mdi:battery-charging
+              - entity: sensor.ups_output_voltage
+                name: Output
+                icon: mdi:power-socket-us
+            column_width: 25%
       - type: custom:vertical-stack-in-card
         cards:
           - type: glance
