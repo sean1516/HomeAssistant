@@ -114,7 +114,7 @@
     initial_state: false
     trigger:
       - platform: state
-        entity_id: binary_sensor.downstairs_thermostat_fan
+        entity_id: sensor.downstairs_thermostat_hvac_state
         to: 'off'
         for:
           minutes: 60
