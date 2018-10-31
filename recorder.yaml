@@ -35,11 +35,17 @@
       - sensor.home_eta
       - sensor.unknown_id021f_unknown_type0003_id0101_access_control
       - sensor.unknown_id021f_unknown_type0003_id0101_alarm_level
-      - sensor.unknown_id021f_unknown_type0003_id0101_sourenodeid
+      - sensor.unknown_id021f_unknown_type0003_id0101_sensor
+      - sensor.unknown_id021f_unknown_type0003_id0101_alarm_type
+      - sensor.unknown_id021f_unknown_type0003_id0101_sourcenodeid
       - sensor.vision_zg8101_garage_door_detector_alarm_level
       - sensor.vision_zg8101_garage_door_detector_alarm_type
       - sensor.vision_zg8101_garage_door_detector_burglar
-      - sensor.vision_zg8101_garage_door_detector_sourcenodeid 
+      - sensor.vision_zg8101_garage_door_detector_sourcenodeid
+      - sensor.total_size_volume_1
+      - sensor.total_size_volume_2
+      - sensor.since_last_boot_templated
+      - sensor.lets_encrypt_expiration
       - sun.sun
       - sensor.since_last_boot
       - sensor.date

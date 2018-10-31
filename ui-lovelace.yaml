@@ -200,7 +200,7 @@ views:
       - type: custom:vertical-stack-in-card
         cards:
           - type: glance
-            title: UPS Output Status
+            title: UPS Status
             entities:
               - entity: sensor.ups_status
                 name: State
@@ -216,7 +216,6 @@ views:
                 icon: mdi:battery-unknown
             column_width: 25%
           - type: glance
-            title: UPS Input Status
             entities:
               - entity: sensor.ups_input_voltage
                 name: Input
