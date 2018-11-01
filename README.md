@@ -34,7 +34,8 @@ I think this is an often overlooked part of any internet connected project.  I a
 - I separate my traffic into different subnets and by default these subnets cannot talk to one another.  For example my devices on Wifi only have access to the internet or my Local Area Network (LAN) if I allow it.  
 - Using the port forwarding options in my [Unifi Security Gateway](https://www.amazon.com/Ubiquiti-Unifi-Security-Gateway-USG/dp/B00LV8YZLK) I limit the connections to my open port to only IPs I typically connect from.  Port Scanners and the like do not see an open port or a service running on that port!
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
-- My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://www.splitbrain.org/blog/2017-08/10-homeassistant_duckdns_letsencrypt) to get it setup.
+- My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://github.com/SilvrrGIT/HomeAssistant/wiki/Let's-Encrypt-Setup-(Hassbian,-Python-Virtual-Environment)) to get it setup on Hassbian and now use the __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ add-on in Hass.io to do the same thing.
+- [Test your secuirty and test it often](https://community.home-assistant.io/t/test-your-security-and-test-it-often/76354).
 
 # Editing the Configuration Files:
 What works for me is creating a Samba share that I can then edit on any computer in my house.  I am doing this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
