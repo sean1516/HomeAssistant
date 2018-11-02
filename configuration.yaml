@@ -132,6 +132,13 @@ group:
     - light.yeelight3
     - light.yeelight2
     - light.yeelight4
+  Bedroom Lights:
+    - light.tradfri_bulb_e26_ws_opal_980lm
+    - light.tradfri_bulb_e26_ws_opal_980lm_2
+  Front Lights:
+    - light.yeelight1
+    - light.yeelight3
+    - light.yeelight2
 
 ####################################################
 #                                                  #

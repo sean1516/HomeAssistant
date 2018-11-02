@@ -14,12 +14,98 @@ resources:
 
 ####################################################
 #                                                  #
-#                      HOME                        #
+#                 PHONE VIEW                       #
 #                                                  #
 ####################################################
 
 title: Home
 views:
+  - title: Phone View
+    icon: mdi:cellphone-iphone
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ## Exterior Control
+          - type: horizontal-stack
+            cards:
+              - type: entity-button
+                entity: cover.garage_door
+                tap_action: toggle
+              - type: entity-button
+                entity: group.front_lights
+                tap_action: toggle
+                icon: mdi:lightbulb-outline
+                name: Front Lights
+              - type: entity-button
+                entity: light.yeelight4
+                tap_action: toggle
+                icon: mdi:lightbulb-outline
+                name: Back Light
+          - type: markdown
+            content: >
+              ## Living Room Control
+          - type: horizontal-stack
+            cards:
+              - type: entity-button
+                entity: switch.basic1
+                icon: mdi:lightbulb-outline
+                tap_action: toggle
+                name: Living Room
+              - type: entity-button
+                entity: switch.htpc_switch
+                icon: mdi:youtube-tv
+                name: HTPC
+                tap_action: toggle
+              - type: entity-button
+                entity: light.yeelightrgb2
+                name: Notification
+                icon: mdi:lightbulb-outline
+                tap_action: toggle
+          - type: horizontal-stack
+            cards:
+              - type: entity-button
+                entity: script.tv
+                name: Turn On TV
+                icon: mdi:television
+              - type: entity-button
+                entity: script.music
+                name: Turn On Music
+                icon: mdi:music
+              - type: entity-button
+                entity: group.bedroom_lights
+                tap_action: toggle
+                icon: mdi:lightbulb-outline
+          - type: markdown
+            content: >
+              ## Bed Room Control
+          - type: horizontal-stack
+            cards:
+              - type: entity-button
+                entity: light.tradfri_bulb_e26_ws_opal_980lm
+                icon: mdi:lightbulb-outline
+                name: Amy's Bedside
+              - type: entity-button
+                entity: group.bedroom_lights
+                icon: mdi:lightbulb-outline
+                tap_action: toggle
+              - type: entity-button
+                entity: light.tradfri_bulb_e26_ws_opal_980lm_2
+                icon: mdi:lightbulb-outline
+                name: Adam's Bedside
+          - type: markdown
+            content: >
+              ## Thermostat
+          - type: thermostat
+            entity: climate.downstairs
+
+####################################################
+#                                                  #
+#                       HOME                       #
+#                                                  #
+####################################################
+
   - title: Rooms
     icon: mdi:home
     cards:

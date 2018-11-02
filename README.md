@@ -76,6 +76,13 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 
 # Front End Screen Shots:
 
+## Phone View
+I have this as a test for a quick phone view for my most used items.  I have this as my default view so it loads on my phone all the time.  I have added /lovelace/1 to my desktop bookmarks to have them skip this view when loading and instead default to the 'home' view below.  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/phone.png">
+</p>
+
+
 ## Home
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/home.png">
