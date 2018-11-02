@@ -146,6 +146,58 @@
     value_template: "{{ value_json.info.version }}"
     scan_interval: 3600
 
+  - platform: rest
+    resource: https://api.github.com/repos/silvrrgit/homeassistant
+    name: Stars
+    value_template: "{{ value_json.stargazers_count }}"
+    scan_interval: 3600
+    username: silvrrgit
+    password:  !secret gittoken
+    authentication: basic
+    headers:
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant
+
+  - platform: rest
+    resource: https://api.github.com/repos/silvrrgit/homeassistant
+    name: Issues
+    value_template: "{{ value_json.open_issues }}"
+    scan_interval: 3600
+    username: silvrrgit
+    password:  !secret gittoken
+    authentication: basic
+    headers:
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant
+
+  - platform: rest
+    resource: https://api.github.com/repos/silvrrgit/homeassistant
+    name: Subscribers
+    value_template: "{{ value_json.subscribers_count }}"
+    scan_interval: 3600
+    username: silvrrgit
+    password:  !secret gittoken
+    authentication: basic
+    headers:
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant
+
+  - platform: rest
+    resource: https://api.github.com/repos/silvrrgit/homeassistant
+    name: Forks
+    value_template: "{{ value_json.forks }}"
+    scan_interval: 3600
+    username: silvrrgit
+    password:  !secret gittoken
+    authentication: basic
+    headers:
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant
+
 ####################################################
 #                                                  #
 #                   SPEETEST                       #

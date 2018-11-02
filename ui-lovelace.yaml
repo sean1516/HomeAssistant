@@ -40,7 +40,7 @@ views:
               - entity: sensor.gehingepinsensor2
                 name: Front
                 icon: mdi:door
-            column_width: 25%
+            columns: 4
           - type: entities
             entities:
               - cover.garage_door
@@ -61,7 +61,7 @@ views:
                 name: Notification
                 icon: mdi:lightbulb-outline
                 tap_action: toggle
-            column_width: 33%
+            columns: 3
           - type: entities
             entities:
               - entity: input_select.notification_bulb2_color
@@ -81,7 +81,7 @@ views:
           - entity: light.tradfri_bulb_e26_ws_opal_980lm_2
             tap_action: toggle
             name: Adam's Bedside
-        column_width: 50%
+        columns: 2
       - type: glance
         title: Outside Lights
         entities:
@@ -97,7 +97,7 @@ views:
           - entity: light.yeelight4
             tap_action: toggle
             name: Back Porch
-        column_width: 25%
+        columns: 4
       - type: weather-forecast
         title: Weather
         entity: weather.yweather
@@ -166,7 +166,7 @@ views:
                 name: Battery
               - entity: sensor.adams_iphone_battery_state
                 name: Charging?
-            column_width: 25%
+            columns: 4
           - type: glance
             title: Amy's Phone Status
             entities:
@@ -178,7 +178,7 @@ views:
                 name: Battery
               - entity: sensor.amys_iphone_battery_state
                 name: Charging?
-            column_width: 25%
+            columns: 4
       - type: vertical-stack
         cards:
           - type: entities
@@ -214,7 +214,7 @@ views:
               - entity: sensor.ups_battery_runtime
                 name: Runtime
                 icon: mdi:battery-unknown
-            column_width: 25%
+            columns: 4
           - type: glance
             entities:
               - entity: sensor.ups_input_voltage
@@ -229,7 +229,7 @@ views:
               - entity: sensor.ups_output_voltage
                 name: Output
                 icon: mdi:power-socket-us
-            column_width: 25%
+            columns: 4
       - type: custom:vertical-stack-in-card
         cards:
           - type: glance
@@ -245,7 +245,7 @@ views:
                 name: Download
               - entity: sensor.network_up
                 name: Upload
-            column_width: 25%
+            columns: 4
           - type: glance
             title: Disk 1 Status
             entities:
@@ -261,7 +261,7 @@ views:
               - entity: sensor.total_size_volume_1
                 name: Total Size
                 icon: mdi:harddisk
-            column_width: 25%
+            columns: 4
           - type: glance
             title: Disk 2 Status
             entities:
@@ -277,7 +277,7 @@ views:
               - entity: sensor.total_size_volume_2
                 name: Total Size
                 icon: mdi:harddisk
-            column_width: 25%
+            columns: 4
       - type: glance
         title: Network Status
         entities:
@@ -288,7 +288,7 @@ views:
           - entity: sensor.wifisignal
             name: WiFi Signal
             icon: mdi:wifi
-        column_width: 33%
+        columns: 3
       - type: glance
         title: PiHole
         entities:
@@ -302,7 +302,7 @@ views:
             name: PiHole
             tap_action: toggle
             icon: mdi:dns
-        column_width: 25%
+        columns: 4
 
 ####################################################
 #                                                  #
@@ -344,7 +344,7 @@ views:
                 icon: mdi:speedometer
               - entity: sensor.load_5m
                 icon: mdi:speedometer
-            column_width: 25%
+            columns: 4
           - type: glance
             title: Server Information
             entities:
@@ -355,7 +355,7 @@ views:
                  name: Network In
                - entity: sensor.network_out_eno1
                  name: Network Out
-            column_width: 33%
+            columns: 3
           - type: glance
             title: HA File Size
             show_header_toggle: true
@@ -367,7 +367,7 @@ views:
               - entity: sensor.disk_use_percent_home
                 name: Disk Use
                 icon: mdi:harddisk
-            column_width: 33.3%
+            columns: 3
           - type: glance
             title: Home Assistant Info
             entities:
@@ -380,7 +380,23 @@ views:
               - entity: sensor.lets_encrypt_expiration
                 name: Lets Encrypt Expiration
                 icon: mdi:timelapse
-            column_width: 33.3%
+            columns: 3
+      - type: glance
+        title: Home Assistant GitHub
+        entities:
+          - entity: sensor.stars
+            name: Stars
+            icon: mdi:star-circle
+          - entity: sensor.subscribers
+            name: Subscribers
+            icon: mdi:github-circle
+          - entity: sensor.issues
+            name: Issues
+            icon: mdi:alert-circle
+          - entity: sensor.forks
+            name: Forks
+            icon: mdi:directions-fork
+        columns: 4
       - type: entities
         title: Zwave
         show_header_toggle: true
@@ -529,6 +545,9 @@ views:
           - entity: automation.lets_encrypt_cert_did_not_update
             name: Lets Encrypt Certificate Did Not Update
             icon: mdi:certificate
+          - entity: automation.hassio_snapshot
+            name: Nightly Hass.io Snapshot
+            icon: mdi:file-restore
       - type: entities
         title: Other Automations
         show_header_toggle: false
@@ -630,6 +649,25 @@ views:
           - entity: automation.download_failed
             name: Downloader - Download Failed
             icon: mdi:cloud-download
+      - type: entities
+        title: Github Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.new_home_assitant_version
+            name: New home Assistant Version
+            icon: mdi:home-assistant
+          - entity: automation.new_github_star
+            name: New Github Star
+            icon: mdi:star-circle
+          - entity: automation.new_github_fork
+            name: New Github Fork
+            icon: mdi:directions-fork
+          - entity: automation.new_github_subscriber
+            name: New Github Subscriber
+            icon: mdi:github-circle
+          - entity: automation.github_issues
+            name: Github Issues
+            icon: mdi:alert-circle
 
 ####################################################
 #                                                  #

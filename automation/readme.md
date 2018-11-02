@@ -39,6 +39,14 @@ Simple automations to turn on a light when the interior garage door opens.  If t
 * __[Interior Garage Door Open Light On ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml#L7)__
 * __[Turn Off Garage Light After 5 Minutes](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml#L19)__
 
+### Github.yaml Automations:
+Simple automations to let me know if there is a new home assistant version or if there are changes to my github stats. 
+* __[New Homeassistant Version ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/github.yaml#L1)__
+* __[New Github Star](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/github.yaml#L17)__
+* __[New Github Fork](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/github.yaml#L33)__
+* __[New Github Subscriber](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/github.yaml#L49)__
+* __[Github Issues](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/github.yaml#L65)__
+
 ### Leaving_Notifications.yaml Automations:
 These notifications are triggered when I leave my home zone and no one is home.  These send a iOS app notification with an action option to turn the device off. These are primarily a power saving item and are the same framework as the bedtime notification as above. 
 * __[Notify Me if the Home Theater PC is left on and no one is home ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml#L1)__
@@ -89,6 +97,9 @@ Some simple automations to turn my outside house lights on at sunset and off at 
 * __[Notify me if there is a failed login attempt to the HA front end ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23)__
 * __[Notify me if there is a sucessful login attempt to the HA front end ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L41)__
 * __[Notify me of a new device added to my Wifi network ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L64)__
+
+### Snapshot.yaml Automations:
+* __[Nightly Full Hassio Snapshot ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/snapshot.yaml#L1)__
 
 ### UPS.yaml Automations:
 * __[Notify me if there is a power outage ](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/ups.yaml#L1)__
