@@ -43,22 +43,6 @@
 
 ####################################################
 #                                                  #
-#             COMMAND lINE SWITCHES                #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/switch.command_line/
-#https://community.home-assistant.io/t/pi-hole-switch/22004
-  - platform: command_line
-    switches:
-      pihole_switch:
-        command_on: !secret piholeon
-        command_off: !secret piholeoff
-        command_state: "curl -X GET 'http://192.168.1.24:4865/admin/api.php?status'"
-        value_template: "{{ value_json.status == 'enabled' }}"
-
-####################################################
-#                                                  #
 #                      MQTT                        #
 #                                                  #
 ####################################################

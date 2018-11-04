@@ -7,12 +7,12 @@
   - alias: "New Home Assitant Version"
     trigger:
       - platform: state
-        entity_id: sensor.latest_version
+        entity_id: sensor.hassio_version
     action:
       service: notify.ios_adams_iphone
       data:
         title: "New Home Assistant Version"
-        message: "Version {{ states.sensor.latest_version.state }} is available!"
+        message: "Version {{ states.sensor.hassio_version.state }} is available!"
 
 #########################################################
 #                                                       #
@@ -32,7 +32,7 @@
 
 #########################################################
 #                                                       #
-#                     New Github Fork                  #
+#                     New Github Fork                   #
 #                                                       #
 #########################################################
 

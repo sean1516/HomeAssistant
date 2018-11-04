@@ -120,30 +120,15 @@
 
 ####################################################
 #                                                  #
-#                     PiHole                       #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/sensor.pi_hole/
-  - platform: pi_hole
-    host: 192.168.1.24:4865
-    verify_ssl: false
-    monitored_conditions:
-      - ads_blocked_today
-      - dns_queries_today
-      - unique_clients
-
-####################################################
-#                                                  #
 #                      REST                        #
 #                                                  #
 ####################################################
 
 #https://www.home-assistant.io/components/sensor.rest/
   - platform: rest
-    resource: https://pypi.python.org/pypi/homeassistant/json
-    name: Latest Version
-    value_template: "{{ value_json.info.version }}"
+    resource: https://s3.amazonaws.com/hassio-version/stable.json
+    name: Hassio Version
+    value_template: "{{ value_json.homeassistant.default }}"
     scan_interval: 3600
 
   - platform: rest

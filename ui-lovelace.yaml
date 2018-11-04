@@ -14,98 +14,11 @@ resources:
 
 ####################################################
 #                                                  #
-#                 PHONE VIEW                       #
-#                                                  #
-####################################################
-
-title: Home
-views:
-  - title: Phone View
-    icon: mdi:cellphone-iphone
-    cards:
-      - type: vertical-stack
-        cards:
-          - type: markdown
-            content: >
-              ## Exterior Control
-          - type: horizontal-stack
-            cards:
-              - type: entity-button
-                entity: cover.garage_door
-                tap_action: toggle
-              - type: entity-button
-                entity: group.front_lights
-                tap_action: toggle
-                icon: mdi:lightbulb-outline
-                name: Front Lights
-              - type: entity-button
-                entity: light.yeelight4
-                tap_action: toggle
-                icon: mdi:lightbulb-outline
-                name: Back Light
-          - type: markdown
-            content: >
-              ## Living Room Control
-          - type: horizontal-stack
-            cards:
-              - type: entity-button
-                entity: switch.basic1
-                icon: mdi:lightbulb-outline
-                tap_action: toggle
-                name: Living Room
-              - type: entity-button
-                entity: switch.htpc_switch
-                icon: mdi:youtube-tv
-                name: HTPC
-                tap_action: toggle
-              - type: entity-button
-                entity: light.yeelightrgb2
-                name: Notification
-                icon: mdi:lightbulb-outline
-                tap_action: toggle
-          - type: horizontal-stack
-            cards:
-              - type: entity-button
-                entity: script.tv
-                name: Turn On TV
-                icon: mdi:television
-              - type: entity-button
-                entity: script.music
-                name: Turn On Music
-                icon: mdi:music
-              - type: entity-button
-                entity: group.bedroom_lights
-                tap_action: toggle
-                icon: mdi:lightbulb-outline
-          - type: markdown
-            content: >
-              ## Bed Room Control
-          - type: horizontal-stack
-            cards:
-              - type: entity-button
-                entity: light.tradfri_bulb_e26_ws_opal_980lm
-                icon: mdi:lightbulb-outline
-                name: Amy's Bedside
-              - type: entity-button
-                entity: group.bedroom_lights
-                icon: mdi:lightbulb-outline
-                tap_action: toggle
-              - type: entity-button
-                entity: light.tradfri_bulb_e26_ws_opal_980lm_2
-                icon: mdi:lightbulb-outline
-                name: Adam's Bedside
-          - type: markdown
-            content: >
-              ## Thermostat
-          - type: thermostat
-            entity: climate.downstairs
-
-####################################################
-#                                                  #
 #                       HOME                       #
 #                                                  #
 ####################################################
-
+title: Home
+views:
   - title: Rooms
     icon: mdi:home
     cards:
@@ -246,7 +159,7 @@ views:
             entities:
               - entity: device_tracker.adams_iphone
                 name: GPS
-              - entity: device_tracker.c0a53e6bfa77
+              - entity: device_tracker.d81c79eb20c9
                 name: WiFi
               - entity: sensor.adams_iphone_battery_level
                 name: Battery
@@ -258,31 +171,13 @@ views:
             entities:
               - entity: device_tracker.amysiphone
                 name: GPS
-              - entity: device_tracker.70ef002dc94f
+              - entity: device_tracker.d81c79a4a851
                 name: WiFi
               - entity: sensor.amys_iphone_battery_level
                 name: Battery
               - entity: sensor.amys_iphone_battery_state
                 name: Charging?
             columns: 4
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: Wired Devices
-            show_header_toggle: false
-            entities:
-              - entity: binary_sensor.desktop
-              - entity: binary_sensor.modem
-              - entity: binary_sensor.nas
-              - entity: binary_sensor.ubiquiti_switch
-              - entity: binary_sensor.ubiquiti_ap
-          - type: entities
-            title: Wireless Devices
-            show_header_toggle: true
-            entities:
-              - entity: device_tracker.lenovo_laptop
-              - entity: device_tracker.linux_laptop_wifi
-              - entity: device_tracker.amazon1197e775e
       - type: custom:vertical-stack-in-card
         cards:
           - type: glance
@@ -375,21 +270,24 @@ views:
             name: WiFi Signal
             icon: mdi:wifi
         columns: 3
-      - type: glance
-        title: PiHole
-        entities:
-          - entity: sensor.pihole_ads_blocked_today
-            name: Ads Blocked
-          - entity: sensor.pihole_dns_queries_today
-            name: DNS Queries
-          - entity: sensor.pihole_dns_unique_clients
-            name: Unique Clients
-          - entity: switch.pihole_switch
-            name: PiHole
-            tap_action: toggle
-            icon: mdi:dns
-        columns: 4
-
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Wired Devices
+            show_header_toggle: false
+            entities:
+              - entity: binary_sensor.desktop
+              - entity: binary_sensor.modem
+              - entity: binary_sensor.nas
+              - entity: binary_sensor.ubiquiti_switch
+              - entity: binary_sensor.ubiquiti_ap
+          - type: entities
+            title: Wireless Devices
+            show_header_toggle: true
+            entities:
+              - entity: device_tracker.lenovo_laptop
+              - entity: device_tracker.linux_laptop_wifi
+              - entity: device_tracker.amazon1197e775e
 ####################################################
 #                                                  #
 #                HOME ASSISTANT                    #
@@ -460,7 +358,7 @@ views:
               - entity: sensor.installed_version
                 name: Installed
                 icon: mdi:folder-download
-              - entity: sensor.latest_version
+              - entity: sensor.hassio_version
                 name: Latest Release
                 icon: mdi:github-circle
               - entity: sensor.lets_encrypt_expiration

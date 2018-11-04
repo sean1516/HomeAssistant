@@ -17,7 +17,6 @@ This desktop has 4 GB of RAM a SSD and a i5 3470T (low power CPU) swapped in.  T
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
 * __[Network UPS Tools](https://github.com/asciinaut/hassio-addons)__ A NUT Server
-* __[Pi-Hole](https://github.com/hassio-addons/addon-pi-hole/blob/master/README.md)__ DNS Server / Ad Blocker
 * __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ Shutdown Windows Computers
 * __[SSH](https://www.home-assistant.io/addons/ssh/)__ SSH for Hass.io
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
@@ -25,7 +24,7 @@ This desktop has 4 GB of RAM a SSD and a i5 3470T (low power CPU) swapped in.  T
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.81.2__.
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.81.5__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -47,7 +46,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 ## Cloud Controlled Devices:
 * __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)
 * __[Nest Thermostat](https://nest.com/thermostat/meet-nest-thermostat/)__
-* __[iCloud Presence Detection / iPhone 8 Plus](https://www.apple.com/shop/buy-iphone/iphone-8)__
+* __[iCloud Presence Detection / iPhone XR](https://www.apple.com/iphone-xr/)__
 
 ## Wifi Connected Devices
 * __[Xiaomi Yeelight RGBW E27 Smart LED Bulbs](http://www.gearbest.com/smart-lighting/pp_361555.html)__ *
@@ -75,13 +74,6 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 *Block these from external network access and they will still work on your local network with Home Assistant.
 
 # Front End Screen Shots:
-
-## Phone View
-I have this as a test for a quick phone view for my most used items.  I have this as my default view so it loads on my phone all the time.  I have added /lovelace/1 to my desktop bookmarks to have them skip this view when loading and instead default to the 'home' view below.  
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/phone.png">
-</p>
-
 
 ## Home
 <p align="center">
