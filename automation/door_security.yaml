@@ -18,9 +18,9 @@
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.70ef002dc94f') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.c0a53e6bfa77') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
     action:
       - service: notify.ios_adams_iphone
         data:
@@ -51,9 +51,9 @@
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.70ef002dc94f') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.c0a53e6bfa77') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -79,9 +79,9 @@
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.70ef002dc94f') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.c0a53e6bfa77') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -139,9 +139,9 @@
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.70ef002dc94f') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.c0a53e6bfa77') != 'home' }}"
+          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
     action:
       service: notify.ios_adams_iphone
       data:
