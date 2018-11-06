@@ -60,8 +60,8 @@
       - switch.basic1
       - switch.pow1
       - switch.pow2
-      - device_tracker.c0a53e6bfa77
-      - device_tracker.70ef002dc94f
+      - device_tracker.d81c79a4a851
+      - device_tracker.d81c79eb20c9
     domains:
       - climate
       - binary_sensor

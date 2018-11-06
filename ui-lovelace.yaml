@@ -104,11 +104,6 @@ views:
         cards:
           - type: custom:vertical-stack-in-card
             cards:
-              # - type: entities
-              #   title: HVAC Status
-              #   entities:
-              #     - entity: climate.downstairs
-              #       name: Nest Thermostat
               - type: thermostat
                 entity: climate.downstairs
               - type: glance
