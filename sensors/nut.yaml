@@ -1,0 +1,30 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                       NUT                        #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.nut/
+  - platform: nut
+    resources:
+      - ups.load
+      - battery.runtime
+      - battery.charge
+      - input.voltage
+      - battery.voltage
+      - output.voltage
+      - ups.status.display
+    host: 192.168.1.24
+    port: 3493
+    username: nut
+    password: nut
+    name: UPS
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

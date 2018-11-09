@@ -1,0 +1,31 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                      REST                        #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.rest/
+  - platform: rest
+    resource: https://s3.amazonaws.com/hassio-version/stable.json
+    name: Hassio Version
+    value_template: "{{ value_json.homeassistant.default }}"
+    scan_interval: 3600
+
+####################################################
+#                                                  #
+#                   VERSION                        #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.version/
+  - platform: version
+    name: Installed Version
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

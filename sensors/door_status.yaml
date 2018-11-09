@@ -1,0 +1,30 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                      TEMPLATE                    #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.template/
+  - platform: template
+    sensors:
+
+      backdoorstatus:
+        value_template: "{%if states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '23' %}Closed{% elif states.sensor.unknown_id021f_unknown_type0003_id0101_access_control.state == '22' %}Open{% endif %}"
+
+      garagedoorstatus:
+        value_template: "{%if states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '0' %}Closed{% elif states.sensor.vision_zg8101_garage_door_detector_alarm_level.state == '255' %}Open{% endif %}"
+
+      gehingepinsensor1:
+        value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control.state == '22' %}Open{% endif %}"
+
+      gehingepinsensor2:
+        value_template: "{%if states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '23' %}Closed{% elif states.sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2.state == '22' %}Open{% endif %}"
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

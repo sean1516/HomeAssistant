@@ -1,0 +1,34 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                      TEMPLATE                    #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.template/
+  - platform: template
+    sensors:
+
+      backdoorstatusbatt:
+        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+
+      garagedoorstatusbatt:
+        value_template: '{% if states.zwave.vision_zg8101_garage_door_detector %} {{ states.zwave.vision_zg8101_garage_door_detector.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+
+      gehingepinsensor1batt:
+        value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+
+      gehingepinsensor2batt:
+        value_template: '{% if states.zwave.ge_32563_hinge_pin_smart_door_sensor_2 %} {{ states.zwave.ge_32563_hinge_pin_smart_door_sensor_2.attributes.battery_level }} {% else %} Unknown {% endif %}'
+        unit_of_measurement: '%'
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

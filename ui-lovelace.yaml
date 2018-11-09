@@ -8,24 +8,24 @@ resources:
   #https://github.com/thomasloven/lovelace-slider-entity-row
   - url: /local/custom_ui/slider-entity-row.js
     type: js
-  #https://github.com/custom-cards/vertical-stack-in-card
-  - url: /local/custom_ui/vertical-stack-in-card.js?v.0.0.7
-    type: js
 
 ####################################################
 #                                                  #
 #                       HOME                       #
 #                                                  #
 ####################################################
+
 title: Home
+background: center / cover no-repeat url("/local/background2.jpg") fixed
 views:
+
   - title: Rooms
     icon: mdi:home
     cards:
-      - type: custom:vertical-stack-in-card
+      - type: vertical-stack
         cards:
           - type: glance
-            title: Doors
+            title: Door Status
             entities:
               - entity: sensor.gehingepinsensor1
                 name: Int. Garage
@@ -43,15 +43,12 @@ views:
           - type: entities
             entities:
               - cover.garage_door
-      - type: custom:vertical-stack-in-card
+      - type: vertical-stack
         title: Living Room
         cards:
           - type: glance
+            title: Living Room Lamps
             entities:
-              - entity: switch.htpc_switch
-                icon: mdi:youtube-tv
-                name: HTPC
-                tap_action: toggle
               - entity: switch.basic1
                 name: Lamps
                 icon: mdi:lightbulb-outline
@@ -60,11 +57,17 @@ views:
                 name: Notification
                 icon: mdi:lightbulb-outline
                 tap_action: toggle
+              - entity: input_select.notification_bulb2_color
+                name: Notification Bulb Color
             columns: 3
           - type: entities
+            show_header_toggle: false
+            title: Entertainment Center
             entities:
-              - entity: input_select.notification_bulb2_color
-                name: Notification Light Color
+              - entity: switch.htpc_switch
+                icon: mdi:youtube-tv
+                name: HTPC
+                tap_action: toggle
               - entity: script.tv
                 name: Turn On TV
                 icon: mdi:television
@@ -102,10 +105,12 @@ views:
         entity: weather.yweather
       - type: vertical-stack
         cards:
-          - type: custom:vertical-stack-in-card
+          - type: vertical-stack
             cards:
-              - type: thermostat
-                entity: climate.downstairs
+              - type: entities
+                title: Nest Thermostat
+                entities:
+                 - entity: climate.downstairs
               - type: glance
                 entities:
                   - entity: binary_sensor.downstairs_thermostat_fan
@@ -127,14 +132,14 @@ views:
               - type: sensor
                 entity: sensor.downstairs_thermostat_temperature
                 name: Temperature
-                line_color: '#e74c3c'
+                line_color: '#03a9f4'
                 line_width: 8
                 accuracy: 30
                 hours_to_show: 24
               - type: sensor
                 entity: sensor.downstairs_thermostat_humidity
                 name: Humidity
-                line_color: '#3498db'
+                line_color: '#03a9f4'
                 line_width: 8
                 accuracy: 30
                 hours_to_show: 24
@@ -147,7 +152,7 @@ views:
 
   - title: Device Status
     cards:
-      - type: custom:vertical-stack-in-card
+      - type: vertical-stack
         cards:
           - type: glance
             title: Adam's Phone Status
@@ -173,7 +178,7 @@ views:
               - entity: sensor.amys_iphone_battery_state
                 name: Charging?
             columns: 4
-      - type: custom:vertical-stack-in-card
+      - type: vertical-stack
         cards:
           - type: glance
             title: UPS Status
@@ -190,9 +195,6 @@ views:
               - entity: sensor.ups_battery_runtime
                 name: Runtime
                 icon: mdi:battery-unknown
-            columns: 4
-          - type: glance
-            entities:
               - entity: sensor.ups_input_voltage
                 name: Input
                 icon: mdi:power-plug
@@ -206,7 +208,7 @@ views:
                 name: Output
                 icon: mdi:power-socket-us
             columns: 4
-      - type: custom:vertical-stack-in-card
+      - type: vertical-stack
         cards:
           - type: glance
             title: NAS Load
@@ -223,7 +225,7 @@ views:
                 name: Upload
             columns: 4
           - type: glance
-            title: Disk 1 Status
+            title: NAS Disk 1 Status
             entities:
               - entity: sensor.status_smart_sda
                 name: Smart Status
@@ -239,7 +241,7 @@ views:
                 icon: mdi:harddisk
             columns: 4
           - type: glance
-            title: Disk 2 Status
+            title: NAS Disk 2 Status
             entities:
               - entity: sensor.status_smart_sdb
                 name: Smart Status
@@ -283,6 +285,7 @@ views:
               - entity: device_tracker.lenovo_laptop
               - entity: device_tracker.linux_laptop_wifi
               - entity: device_tracker.amazon1197e775e
+
 ####################################################
 #                                                  #
 #                HOME ASSISTANT                    #
