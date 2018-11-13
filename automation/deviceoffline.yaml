@@ -13,6 +13,7 @@
           - binary_sensor.ubiquiti_switch
           - binary_sensor.ikea_tradfri_gateway
           - binary_sensor.ubiquiti_ap
+          - binary_sensor.downstairs_thermostat_online
         from: 'on'
         to: 'off'
         for:
@@ -21,7 +22,6 @@
         entity_id:
           - device_tracker.34ea34e3da0d
           - device_tracker.a020a63452ee
-          - device_tracker.18b430868bb9
           - device_tracker.6854fd8aee8c
           - device_tracker.2c3ae844b860
           - device_tracker.pow17279
