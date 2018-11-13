@@ -24,7 +24,7 @@ This desktop has 4 GB of RAM a SSD and a i5 3470T (low power CPU) swapped in.  T
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.81.5__.
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.82.0__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
