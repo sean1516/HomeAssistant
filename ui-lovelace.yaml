@@ -154,76 +154,59 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - type: glance
-            title: Adam's Phone Status
-            entities:
-              - entity: device_tracker.adams_iphone
-                name: GPS
-              - entity: device_tracker.d81c79eb20c9
-                name: WiFi
-              - entity: sensor.adams_iphone_battery_level
-                name: Battery
-              - entity: sensor.adams_iphone_battery_state
-                name: Charging?
-            columns: 4
-          - type: glance
-            title: Amy's Phone Status
-            entities:
-              - entity: device_tracker.amysiphone
-                name: GPS
-              - entity: device_tracker.d81c79a4a851
-                name: WiFi
-              - entity: sensor.amys_iphone_battery_level
-                name: Battery
-              - entity: sensor.amys_iphone_battery_state
-                name: Charging?
-            columns: 4
-      - type: vertical-stack
-        cards:
-          - type: glance
+          - type: entities
             title: UPS Status
             entities:
               - entity: sensor.ups_status
                 name: State
                 icon: mdi:flash-circle
-              - entity: sensor.ups_load
-                name: Load
-                icon: mdi:speedometer
-              - entity: sensor.approxwattage
-                name: Watts
-                icon: mdi:gauge
-              - entity: sensor.ups_battery_runtime
-                name: Runtime
-                icon: mdi:battery-unknown
               - entity: sensor.ups_input_voltage
-                name: Input
-                icon: mdi:power-plug
               - entity: sensor.ups_battery_voltage
-                name: Battery
-                icon: mdi:battery-charging
-              - entity: sensor.ups_battery_charge
-                name: Charge
-                icon: mdi:battery-charging
               - entity: sensor.ups_output_voltage
-                name: Output
-                icon: mdi:power-socket-us
-            columns: 4
+              - entity: sensor.ups_battery_charge
+                icon: mdi:battery-charging
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.approxwattage
+                name: Load
+                icon: mdi:gauge
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+                height: 100
+              - type: sensor
+                entity: sensor.ups_battery_runtime
+                name: Runtime
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+                height: 100
       - type: vertical-stack
         cards:
-          - type: glance
+          - type: markdown
             title: NAS Load
-            entities:
-              - entity: sensor.cpu_load_total
-                name: CPU
-                icon: mdi:chip
-              - entity: sensor.memory_usage_real
+            content: " "
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.cpu_load_total
+                name: Processor
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+                height: 120
+              - type: sensor
+                entity: sensor.memory_usage_real
                 name: Memory
-                icon: mdi:chip
-              - entity: sensor.network_down
-                name: Download
-              - entity: sensor.network_up
-                name: Upload
-            columns: 4
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+                height: 120
           - type: glance
             title: NAS Disk 1 Status
             entities:
@@ -256,35 +239,53 @@ views:
                 name: Total Size
                 icon: mdi:harddisk
             columns: 4
-      - type: glance
-        title: Network Status
-        entities:
-          - entity: sensor.speedtest_download
-            name: Download
-          - entity: sensor.speedtest_upload
-            name: Upload
-          - entity: sensor.wifisignal
-            name: WiFi Signal
-            icon: mdi:wifi
-        columns: 3
       - type: vertical-stack
         cards:
-          - type: entities
-            title: Wired Devices
-            show_header_toggle: false
+          - type: markdown
+            title: Network Status
+            content: " "
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.speedtest_download
+                name: Download
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+              - type: sensor
+                entity: sensor.speedtest_upload
+                name: Upload
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+      - type: vertical-stack
+        cards:
+          - type: glance
+            title: Adam's Phone Status
             entities:
-              - entity: binary_sensor.desktop
-              - entity: binary_sensor.modem
-              - entity: binary_sensor.nas
-              - entity: binary_sensor.ubiquiti_switch
-              - entity: binary_sensor.ubiquiti_ap
-          - type: entities
-            title: Wireless Devices
-            show_header_toggle: true
+              - entity: device_tracker.adams_iphone
+                name: GPS
+              - entity: device_tracker.d81c79eb20c9
+                name: WiFi
+              - entity: sensor.adams_iphone_battery_level
+                name: Battery
+              - entity: sensor.adams_iphone_battery_state
+                name: Charging?
+            columns: 4
+          - type: glance
+            title: Amy's Phone Status
             entities:
-              - entity: device_tracker.lenovo_laptop
-              - entity: device_tracker.linux_laptop_wifi
-              - entity: device_tracker.amazon1197e775e
+              - entity: device_tracker.amysiphone
+                name: GPS
+              - entity: device_tracker.d81c79a4a851
+                name: WiFi
+              - entity: sensor.amys_iphone_battery_level
+                name: Battery
+              - entity: sensor.amys_iphone_battery_state
+                name: Charging?
+            columns: 4
 
 ####################################################
 #                                                  #
@@ -295,38 +296,33 @@ views:
   - title: HA
     icon: mdi:home-assistant
     cards:
-      - type: entities
-        title: Home Automation Device Status
-        show_header_toggle: false
-        entities:
-          - device_tracker.34ea34e3da0d
-          - device_tracker.a020a63452ee
-          - device_tracker.18b430868bb9
-          - device_tracker.6854fd8aee8c
-          - device_tracker.2c3ae844b860
-          - device_tracker.pow17279
-          - device_tracker.sonoff_pow_2
-          - device_tracker.286c07ac908d
-          - device_tracker.f0b4299fe446
-          - device_tracker.f0b429a8e3f3
-          - device_tracker.f0b429a900ec
-          - device_tracker.286c07b1776d
-          - device_tracker.286c07b19f98
       - type: vertical-stack
         cards:
           - type: glance
             title: Server Load
             entities:
-              - entity: sensor.processor_use
-                name: Processor
-              - entity: sensor.memory_use_percent
-                name: Memory
-                icon: mdi:chip
               - entity: sensor.load_1m
                 icon: mdi:speedometer
               - entity: sensor.load_5m
                 icon: mdi:speedometer
-            columns: 4
+              - entity: sensor.load_15m
+                icon: mdi:speedometer
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.processor_use
+                name: Processor
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
+              - type: sensor
+                entity: sensor.memory_use_percent
+                name: Memory
+                line_color: '#03a9f4'
+                line_width: 8
+                accuracy: 30
+                hours_to_show: 24
           - type: glance
             title: Server Information
             entities:
@@ -350,19 +346,6 @@ views:
                 name: Disk Use
                 icon: mdi:harddisk
             columns: 3
-          - type: glance
-            title: Home Assistant Info
-            entities:
-              - entity: sensor.installed_version
-                name: Installed
-                icon: mdi:folder-download
-              - entity: sensor.hassio_version
-                name: Latest Release
-                icon: mdi:github-circle
-              - entity: sensor.lets_encrypt_expiration
-                name: Lets Encrypt Expiration
-                icon: mdi:timelapse
-            columns: 3
       - type: glance
         title: Home Assistant GitHub
         entities:
@@ -385,8 +368,8 @@ views:
         entities:
           - entity: zwave.aeotec_zw090_zstick_gen5_us
             name: Aeotec Zstick
-          - entity: zwave.aeotec_zw117_range_extender_6
-            name: Aeotec Range Extender
+          # - entity: zwave.aeotec_zw117_range_extender_6
+          #   name: Aeotec Range Extender
           - entity: zwave.ge_32563_hinge_pin_smart_door_sensor
             name: GE Hinge Pin Sensor 1
           - entity: zwave.ge_32563_hinge_pin_smart_door_sensor_2
@@ -395,6 +378,19 @@ views:
             name: Vision Garage Door  Sensor
           - entity: zwave.unknown_id021f_unknown_type0003_id0101
             name: Dome Door Sensor
+      - type: glance
+        title: Home Assistant Info
+        entities:
+          - entity: sensor.installed_version
+            name: Installed
+            icon: mdi:folder-download
+          - entity: sensor.hassio_version
+            name: Latest Release
+            icon: mdi:github-circle
+          - entity: sensor.lets_encrypt_expiration
+            name: Lets Encrypt Expiration
+            icon: mdi:timelapse
+        columns: 3
       - type: entities
         title: Batteries
         show_header_toggle: true
@@ -414,6 +410,65 @@ views:
           - entity: sensor.backdoorstatusbatt
             icon: mdi:battery-50
             name: Back Door Sensor
+
+####################################################
+#                                                  #
+#               CONNECTED DEVICES                  #
+#                                                  #
+####################################################
+
+  - title: Connected Devices
+    cards:
+      - type: entities
+        title: Home Automation Devices
+        show_header_toggle: false
+        entities:
+          - device_tracker.34ea34e3da0d
+          - device_tracker.a020a63452ee
+          - device_tracker.6854fd8aee8c
+          - entity: binary_sensor.downstairs_thermostat_online
+            icon: mdi:thermostat
+            name: Nest
+      - type: entities
+        title: Sonoffs
+        show_header_toggle: false
+        entities:
+          - device_tracker.2c3ae844b860
+          - device_tracker.pow17279
+          - device_tracker.sonoff_pow_2
+      - type: entities
+        title: Yeelights
+        show_header_toggle: false
+        entities:
+          - device_tracker.286c07ac908d
+          - device_tracker.f0b4299fe446
+          - device_tracker.f0b429a8e3f3
+          - device_tracker.f0b429a900ec
+          - device_tracker.286c07b1776d
+          - device_tracker.286c07b19f98
+      - type: entities
+        title: Wired Devices
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.desktop
+          - entity: binary_sensor.modem
+          - entity: binary_sensor.nas
+          - entity: binary_sensor.ubiquiti_switch
+          - entity: binary_sensor.ubiquiti_ap
+          - entity: binary_sensor.ikea_tradfri_gateway
+            icon: mdi:server
+            name: Tradfri Gateway
+      - type: entities
+        title: Wireless Devices
+        show_header_toggle: true
+        entities:
+          - entity: device_tracker.lenovo_laptop
+          - entity: device_tracker.linux_laptop_wifi
+          - entity: device_tracker.amazon1197e775e
+          - entity: device_tracker.d81c79eb20c9
+            name: Adam's iPhone
+          - entity: device_tracker.d81c79a4a851
+            name: Amy's iPhone
 
 ####################################################
 #                                                  #
