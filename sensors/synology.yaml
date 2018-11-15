@@ -17,8 +17,6 @@
     monitored_conditions:
       - cpu_total_load
       - memory_real_usage
-      - network_up
-      - network_down
       - disk_smart_status
       - disk_temp
       - volume_percentage_used

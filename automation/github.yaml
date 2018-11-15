@@ -24,6 +24,11 @@
     trigger:
       - platform: state
         entity_id: sensor.stars
+    condition:
+      - condition: template
+        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+      - condition: template
+        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -40,6 +45,11 @@
     trigger:
       - platform: state
         entity_id: sensor.forks
+    condition:
+      - condition: template
+        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+      - condition: template
+        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -56,6 +66,11 @@
     trigger:
       - platform: state
         entity_id: sensor.subscribers
+    condition:
+      - condition: template
+        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+      - condition: template
+        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -72,6 +87,11 @@
     trigger:
       - platform: state
         entity_id: sensor.issues
+    condition:
+      - condition: template
+        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+      - condition: template
+        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
     action:
       service: notify.ios_adams_iphone
       data:

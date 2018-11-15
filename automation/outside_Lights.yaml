@@ -10,7 +10,11 @@
       event: sunrise
     action:
       - service: homeassistant.turn_off
-        entity_id: group.outside_lights
+        entity_id:
+          - light.yeelight1
+          - light.yeelight2
+          - light.yeelight3
+          - light.yeelight4
 
 #########################################################
 #                                                       #
