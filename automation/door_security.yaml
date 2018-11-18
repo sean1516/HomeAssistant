@@ -14,7 +14,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
@@ -47,7 +47,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
@@ -75,7 +75,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
@@ -97,7 +97,7 @@
   - alias: "Exterior Garage Door Left Open When Away"
     trigger:
       - platform: zone
-        entity_id: device_tracker.adams_iphone
+        entity_id: device_tracker.adamsiphone
         zone: zone.home
         event: 'leave'
       - platform: zone
@@ -108,7 +108,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: state
@@ -135,7 +135,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template

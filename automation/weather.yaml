@@ -29,6 +29,29 @@
       data:
         title: Cook County Weather Alert
         message: "The National Weather Service has issued a {{ states.sensor.cook_nws_alert_event.state }} for your area. It expires at {{ as_timestamp(state_attr('sensor.cook_nws_alert_event', 'features')[0].properties.expires)| timestamp_custom('%-I:%M %p on %-m-%-d-%Y') }}."
+
+#########################################################
+#                                                       #
+#                   WEATHER UPDATE                      #
+#                                                       #
+#########################################################
+
+- alias: Update Weather Sensors
+  trigger:
+      platform: time
+      at: '00:00:01'
+  action:
+    - service: homeassistant.update_entity
+      entity_id:
+        - sensor.forecast_0
+        - sensor.forecast_1
+        - sensor.forecast_2
+        - sensor.forecast_3
+        - sensor.forecast_4
+        - sensor.forecast_5
+        - sensor.forecast_6
+        - sensor.forecast_7
+
 #########################################################
 #                                                       #
 #            END OF CONFIGURATION FILE                  #

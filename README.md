@@ -11,8 +11,9 @@ A detailed description of each of my automations and a link to the yaml file is 
 This is the most important part of Home Assistant!  Remote control and voice commmands are nice, however, that is not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplest things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
 # Server Running My Home Assistant Setup:
-I am currently using a [Dell Optiplex 9010 Small Form Factor (SFF)](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf) as my host.
-This desktop has 4 GB of RAM a SSD and a i5 3470T (low power CPU) swapped in.  The machine is running __[Ubuntu Server 18.04](https://www.ubuntu.com/download/server)__ and __[Hass.io](https://www.home-assistant.io/hassio/)__.  I am also running the following add-ons:
+I am currently using a [Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) as my host.
+The machine is running [HassOS](https://github.com/home-assistant/hassos) and [Hass.io](https://www.home-assistant.io/hassio/).  I am also running the following add-ons:
+
 * __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
@@ -45,7 +46,6 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 
 ## Cloud Controlled Devices:
 * __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)
-* __[Nest Thermostat](https://nest.com/thermostat/meet-nest-thermostat/)__
 * __[iCloud Presence Detection / iPhone XR](https://www.apple.com/iphone-xr/)__
 
 ## Wifi Connected Devices
@@ -57,13 +57,13 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[OpenGarage Door Controller ](https://www.amazon.com/OpenGarage-WiFi-enabled-Garage-Door-Opener/dp/B01M4RL0CL)__*
 
 ## Zwave / Zigbee Devices
-
 * __[Ikea TRÅDFRI LED Bulbs](http://www.ikea.com/us/en/catalog/products/20318267/)__
 * __[Ikea TRÅDFRI Remote](http://www.ikea.com/us/en/catalog/products/20303317/)__
 * __[Mono Price Z-wave Door Tilt Sensor ](https://www.monoprice.com/product?p_id=11987)__
 * __[GE Z-Wave Plus Hinge Pin Door Sensors ](https://www.amazon.com/GE-Wireless-Attaches-Existing-32563/dp/B01KQDIUAW/)__
 * __[Aeotec Z-wave Range Extender ](https://www.amazon.com/Aeotec-Range-Extender-Z-Wave-repeater/dp/B01M6CKJXC)__
 * __[Dome Miniature, Z-Wave Plus Door/Window Sensor](https://www.amazon.com/Dome-Home-Automation-Miniature-DMWD1/dp/B01JGMZNNG)__
+* __[Go Control Thermostat](https://www.irisbylowes.com/products/gocontrol-programmable-thermostat/)__
 
 ## Hardwired Devices
 * __[Cyberpower CP1500PFCLCD UPS ](https://www.amazon.com/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W)__ used to detect power outages and keep network and HA running in a power outage.

@@ -6,9 +6,6 @@
 #                                                  #
 ####################################################
 
-binary_sensor.downstairs_thermostat_fan:
-  icon: mdi:fan
-
 binary_sensor.modem:
   icon: mdi:server-network
 

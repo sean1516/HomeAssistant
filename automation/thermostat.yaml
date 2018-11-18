@@ -1,0 +1,92 @@
+#########################################################
+#                                                       #
+#              SET Thermostat AWAY MODE - ON            #
+#                                                       #
+#########################################################
+
+  - alias: "Set Thermostat Away Mode When Leaving"
+    trigger:
+      - platform: state
+        entity_id: device_tracker.adamsiphone
+        from: 'home'
+        to: 'not_home'
+        for:
+          minutes: 10
+      - platform: state
+        entity_id: device_tracker.amysiphone
+        from: 'home'
+        to: 'not_home'
+        for:
+          minutes: 10
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: time
+          before: '12:00:00'
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.linear_heating
+          temperature: 62
+
+#########################################################
+#                                                       #
+#            SET Thermostat AWAY MODE - OFF  1600       #
+#                                                       #
+#########################################################
+
+  - alias: "Set Thermostat Away Mode at 1600"
+    trigger:
+      platform: time
+      at: '16:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      - service: climate.temperature
+        data:
+          entity_id: climate.linear_heating
+          temperature: 69
+
+#########################################################
+#                                                       #
+#        SET Thermostat AWAY MODE - OFF WHEN HOME       #
+#                                                       #
+#########################################################
+
+  - alias: "Turn Off Away When Home"
+    trigger:
+      - platform: state
+        entity_id: device_tracker.adamsiphone
+        from: 'not_home'
+        to: 'home'
+      - platform: state
+        entity_id: device_tracker.amysiphone
+        from: 'not_home'
+        to: 'home'
+    action:
+      - service: climate.temperature
+        data:
+          entity_id: climate.linear_heating
+          temperature: 69
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

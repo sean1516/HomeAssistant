@@ -12,7 +12,7 @@
       to: 'on'
     condition:
         condition: template
-        value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+        value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
     action:
       service: notify.home_assistant
       data:

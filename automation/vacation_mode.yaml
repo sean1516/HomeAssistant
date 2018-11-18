@@ -12,17 +12,17 @@
       to: 'on'
     action:
       - service: automation.trigger
-        entity_id: automation.set_nest_away_mode_when_leaving
+        entity_id: automation.set_thermostat_away_mode_when_leaving
       - service: automation.turn_off
         entity_id: automation.feed_the_dog_evening
       - service: automation.turn_off
         entity_id: automation.feed_the_dog_morning
       - service: automation.turn_off
-        entity_id: automation.nest_fan
+        entity_id: automation.thermostat_fan
       - service: automation.turn_off
-        entity_id: automation.set_nest_away_mode_at_1600
+        entity_id: automation.set_thermostat_away_mode_at_1600
       - service: automation.turn_off
-        entity_id: automation.set_nest_away_mode_when_leaving
+        entity_id: automation.set_thermostat_away_mode_when_leaving
       - service: automation.turn_off
         entity_id: automation.turn_off_away_when_home
       - service: automation.turn_off
@@ -54,11 +54,11 @@
       - service: automation.turn_on
         entity_id: automation.dog_has_been_fed__morning
       - service: automation.turn_on
-        entity_id: automation.nest_fan
+        entity_id: automation.thermostat_fan
       - service: automation.turn_on
-        entity_id: automation.set_nest_away_mode_at_1600
+        entity_id: automation.set_thermostat_away_mode_at_1600
       - service: automation.turn_on
-        entity_id: automation.set_nest_away_mode_when_leaving
+        entity_id: automation.set_thermostat_away_mode_when_leaving
       - service: automation.turn_on
         entity_id: automation.turn_off_away_when_home
       - service: automation.turn_on

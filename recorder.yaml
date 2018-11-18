@@ -15,10 +15,6 @@
       - zone
       - zwave
     entities:
-      - binary_sensor.downstairs_thermostat_has_leaf
-      - binary_sensor.downstairs_thermostat_is_locked
-      - binary_sensor.downstairs_thermostat_is_using_emergency_heat
-      - binary_sensor.downstairs_thermostat_online
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor_2
       - binary_sensor.home_away
@@ -58,6 +54,7 @@
       - switch.desktop_switch
       - switch.htpc_switch
       - switch.basic1
+      - switch.basic2
       - switch.pow1
       - switch.pow2
       - device_tracker.d81c79a4a851

@@ -108,37 +108,12 @@ views:
           - type: vertical-stack
             cards:
               - type: entities
-                title: Nest Thermostat
+                title: Thermostat
                 entities:
-                 - entity: climate.downstairs
-              - type: glance
-                entities:
-                  - entity: binary_sensor.downstairs_thermostat_fan
-                    name: Fan
-                  - entity: sensor.downstairs_thermostat_hvac_state
-                    name: State
-                    icon: mdi:thermostat
-                  - entity: sensor.downstairs_thermostat_operation_mode
-                    name: Mode
-                    icon: mdi:information-outline
-                  - entity: sensor.downstairs_thermostat_target
-                    name: Target
-                    icon: mdi:thermometer-lines
-                  - entity: sensor.downstairs_away_mode
-                    name: Away
-                    icon: mdi:home-outline
-          - type: horizontal-stack
-            cards:
+                 - entity: climate.linear_heating
               - type: sensor
-                entity: sensor.downstairs_thermostat_temperature
+                entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
                 name: Temperature
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
-                hours_to_show: 24
-              - type: sensor
-                entity: sensor.downstairs_thermostat_humidity
-                name: Humidity
                 line_color: '#03a9f4'
                 line_width: 8
                 accuracy: 30
@@ -157,7 +132,7 @@ views:
           - type: glance
             title: Adam's Phone Status
             entities:
-              - entity: device_tracker.adams_iphone
+              - entity: device_tracker.adamsiphone
                 name: GPS
               - entity: device_tracker.d81c79eb20c9
                 name: WiFi
@@ -330,9 +305,9 @@ views:
                - entity: sensor.since_last_boot_templated
                  name: Last Boot
                  icon: mdi:clock
-               - entity: sensor.network_in_eno1
+               - entity: sensor.network_in_eth0
                  name: Network In
-               - entity: sensor.network_out_eno1
+               - entity: sensor.network_out_eth0
                  name: Network Out
             columns: 3
           - type: glance
@@ -427,9 +402,6 @@ views:
           - device_tracker.34ea34e3da0d
           - device_tracker.a020a63452ee
           - device_tracker.6854fd8aee8c
-          - entity: binary_sensor.downstairs_thermostat_online
-            icon: mdi:thermostat
-            name: Nest
           - entity: binary_sensor.ikea_tradfri_gateway
             icon: mdi:server
             name: Tradfri Gateway
@@ -438,6 +410,7 @@ views:
         show_header_toggle: false
         entities:
           - device_tracker.2c3ae844b860
+          - device_tracker.sonoff_basic_2
           - device_tracker.pow17279
           - device_tracker.sonoff_pow_2
       - type: entities
@@ -606,21 +579,15 @@ views:
         title: Climate Automations
         show_header_toggle: false
         entities:
-          - entity: automation.set_nest_away_mode_when_leaving
-            name: Set Nest Away Mode When Leaving
+          - entity: automation.set_thermostat_away_mode_when_leaving
+            name: Set thermostat Away Mode When Leaving
             icon: mdi:home-outline
-          - entity: automation.set_nest_away_mode_at_1600
-            name: Turn Off Nest Away Mode at 1600
+          - entity: automation.set_thermostat_away_mode_at_1600
+            name: Turn Off thermostat Away Mode at 1600
             icon: mdi:home-outline
           - entity: automation.turn_off_away_when_home
-            name: Turn Off Nest Away Mode When Home
+            name: Turn Off thermostat Away Mode When Home
             icon: mdi:home-outline
-          - entity: input_select.nestmode
-            name: Nest Automation Mode
-            icon: mdi:thermostat
-          - entity: automation.nest_fan
-            name: Nest Fan
-            icon: mdi:fan
       - type: entities
         title: Feed the dog Automations
         show_header_toggle: false
@@ -824,6 +791,9 @@ views:
         entities:
           - entity: switch.basic1
             name: Sonoff Basic 1
+            icon: mdi:toggle-switch
+          - entity: switch.basic2
+            name: Sonoff Basic 2
             icon: mdi:toggle-switch
           - entity: switch.pow1
             name: Sonoff POW 1

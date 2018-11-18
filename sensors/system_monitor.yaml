@@ -16,9 +16,9 @@
       - type: processor_use
       - type: since_last_boot
       - type: network_in
-        arg: eno1
+        arg: eth0
       - type: network_out
-        arg: eno1
+        arg: eth0
       - type: load_1m
       - type: load_5m
       - type: load_15m
