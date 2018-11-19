@@ -111,11 +111,28 @@ views:
                 title: Thermostat
                 entities:
                  - entity: climate.linear_heating
+              - type: glance
+                entities:
+                 - entity: sensor.fanmode
+                   name: Fan Mode
+                   icon: mdi:fan
+                 - entity: sensor.fanstate
+                   name: Fan State
+                   icon: mdi:fan
+                 - entity: sensor.operationmode
+                   name: HVAC Mode
+                   icon: mdi:settings
+                 - entity: sensor.operatingstate
+                   name: HVAC State
+                   icon: mdi:settings
+                 - entity: sensor.setpoint
+                   name: Setpoint
+                   icon: mdi:temperature-fahrenheit
               - type: sensor
                 entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
                 name: Temperature
                 line_color: '#03a9f4'
-                line_width: 8
+                line_width: 4
                 accuracy: 30
                 hours_to_show: 24
 
@@ -354,6 +371,8 @@ views:
             name: Vision Garage Door  Sensor
           - entity: zwave.unknown_id021f_unknown_type0003_id0101
             name: Dome Door Sensor
+          - entity: zwave.linear_gctbz48_battery_powered_zwave_thermostat_3
+            name: Thermostat
       - type: glance
         title: Home Assistant Info
         entities:

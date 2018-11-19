@@ -59,6 +59,7 @@ hassio:
 downloader:
   download_dir: /share
 
+#https://www.home-assistant.io/components/climate/
 climate:
   - platform: zwave
 

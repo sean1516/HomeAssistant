@@ -17,7 +17,6 @@
     entities:
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor_2
-      - binary_sensor.home_away
       - binary_sensor.unknown_id021f_unknown_type0003_id0101_sensor
       - binary_sensor.vision_zg8101_garage_door_detector_sensor
       - sensor.ge_32563_hinge_pin_smart_door_sensor_access_control
@@ -28,7 +27,6 @@
       - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_type_2
       - sensor.ge_32563_hinge_pin_smart_door_sensor_sourcenodeid
       - sensor.ge_32563_hinge_pin_smart_door_sensor_sourcenodeid_2
-      - sensor.home_eta
       - sensor.unknown_id021f_unknown_type0003_id0101_access_control
       - sensor.unknown_id021f_unknown_type0003_id0101_alarm_level
       - sensor.unknown_id021f_unknown_type0003_id0101_sensor
