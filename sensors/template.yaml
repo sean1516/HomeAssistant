@@ -33,6 +33,21 @@
             {%- endif -%}
           {%- endif -%}
 
+      setpoint:
+        unit_of_measurement: '°F'
+        value_template: "{{ state_attr('climate.linear_heating', 'temperature') }}"
+
+      fanstate:
+        value_template: "{{ state_attr('climate.linear_heating', 'fan_state') }}"
+
+      fanmode:
+        value_template: "{{ state_attr('climate.linear_heating', 'fan_mode') }}"
+
+      operatingstate:
+        value_template: "{{ state_attr('climate.linear_heating', 'operating_state') }}"
+
+      operationmode:
+        value_template: "{{ state_attr('climate.linear_heating', 'operation_mode') }}"
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #
