@@ -26,9 +26,9 @@
         entity_id: sensor.stars
     condition:
       - condition: template
-        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+        value_template: "{{ states('sensor.stars') != 'None' }} "
       - condition: template
-        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
+        value_template: "{{ trigger.from_state.state != 'None' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -47,9 +47,9 @@
         entity_id: sensor.forks
     condition:
       - condition: template
-        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+        value_template: "{{ states('sensor.forks') != 'None' }}"
       - condition: template
-        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
+        value_template: "{{ trigger.from_state.state != 'None' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -68,9 +68,9 @@
         entity_id: sensor.subscribers
     condition:
       - condition: template
-        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+        value_template: "{{ states('sensor.subscribers') != 'None' }}"
       - condition: template
-        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
+        value_template: "{{ trigger.from_state.state != 'None' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -89,9 +89,9 @@
         entity_id: sensor.issues
     condition:
       - condition: template
-        value_template: "{% if states('sensor.stars') %} true {% else %} false {% endif %} "
+        value_template: "{{ states('sensor.issues') != 'None' }}"
       - condition: template
-        value_template: "{% if states('trigger.from_state.state') | float > 0 %} true {% else %} false {% endif %}"
+        value_template: "{{ trigger.from_state.state != 'None' }}"
     action:
       service: notify.ios_adams_iphone
       data:

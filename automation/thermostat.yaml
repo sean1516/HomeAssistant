@@ -58,7 +58,7 @@
         - thu
         - fri
     action:
-      - service: climate.temperature
+      - service: climate.set_temperature
         data:
           entity_id: climate.linear_heating
           temperature: 69
@@ -80,7 +80,7 @@
         from: 'not_home'
         to: 'home'
     action:
-      - service: climate.temperature
+      - service: climate.set_temperature
         data:
           entity_id: climate.linear_heating
           temperature: 69

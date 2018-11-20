@@ -13,7 +13,7 @@
     value_template: '{{states.sensor.dupage_nws_alert_count.state | int > 0}}'
   action:
     - service: notify.ios_adams_iphone
-      data:
+      data_template:
         title: Dupage County Weather Alert
         message: "The National Weather Service has issued a {{ states.sensor.dupage_nws_alert_event.state }} for your area. It expires at {{ as_timestamp(state_attr('sensor.dupage_nws_alert_event', 'features')[0].properties.expires)| timestamp_custom('%-I:%M %p on %-m-%-d-%Y') }}."
 
@@ -26,7 +26,7 @@
     value_template: '{{states.sensor.cook_nws_alert_count.state | int > 0}}'
   action:
     - service: notify.ios_adams_iphone
-      data:
+      data_template:
         title: Cook County Weather Alert
         message: "The National Weather Service has issued a {{ states.sensor.cook_nws_alert_event.state }} for your area. It expires at {{ as_timestamp(state_attr('sensor.cook_nws_alert_event', 'features')[0].properties.expires)| timestamp_custom('%-I:%M %p on %-m-%-d-%Y') }}."
 
