@@ -16,6 +16,7 @@ homeassistant:
   whitelist_external_dirs:
     - /config
     - /share
+    - /config/comcast
 
 ####################################################
 #                                                  #
@@ -72,7 +73,6 @@ climate:
 #https://home-assistant.io/docs/configuration/splitting_configuration/
 automation: !include_dir_merge_list automation/
 binary_sensor: !include binary_sensor.yaml
-cover: !include cover.yaml
 device_tracker: !include device_tracker.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
@@ -157,6 +157,32 @@ group:
 #   client_id: home-assistant-1
 #   username: !secret mqttun
 #   password: !secret mqttpw
+
+####################################################
+#                                                  #
+#                   OPEN GARAGE                    #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/cover.opengarage/
+cover:
+  - platform: opengarage
+    covers:
+      garage:
+        host:  192.168.1.18
+        device_key: !secret device_key
+        name:  Garage Door
+
+####################################################
+#                                                  #
+#                SHELL COMMAND                     #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/shell_command/
+
+shell_command:
+  comcast: !secret comcast
 
 ####################################################
 #                                                  #
