@@ -6,18 +6,10 @@
 
   - alias: "Set Thermostat Away Mode When Leaving"
     trigger:
-      - platform: state
-        entity_id: device_tracker.adamsiphone
-        from: 'home'
-        to: 'not_home'
-        for:
-          minutes: 10
-      - platform: state
-        entity_id: device_tracker.amysiphone
-        from: 'home'
-        to: 'not_home'
-        for:
-          minutes: 10
+      - platform: template
+        value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+      - platform: template
+        value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
     condition:
       condition: and
       conditions:
@@ -73,11 +65,9 @@
     trigger:
       - platform: state
         entity_id: device_tracker.adamsiphone
-        from: 'not_home'
         to: 'home'
       - platform: state
         entity_id: device_tracker.amysiphone
-        from: 'not_home'
         to: 'home'
     action:
       - service: climate.set_temperature
