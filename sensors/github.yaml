@@ -12,6 +12,7 @@
   - platform: command_line
     command: 'curl https://api.github.com/repos/silvrrgit/homeassistant'
     name: github
+    scan_interval: 3600
     value_template: '{{ value_json.name }}'
     json_attributes:
       - open_issues
@@ -30,19 +31,19 @@
     sensors:
 
       issues:
-        value_template: '{% if states.sensor.github %} {{ states.sensor.github.attributes.open_issues }} {% else %} Unknown {% endif %}'
+        value_template: "{{ state_attr('sensor.github', 'open_issues') }}"
         entity_id: sensor.github
 
       subscribers:
-        value_template: '{% if states.sensor.github %} {{ states.sensor.github.attributes.subscribers_count }} {% else %} Unknown {% endif %}'
+        value_template: "{{ state_attr('sensor.github', 'subscribers_count') }}"
         entity_id: sensor.github
 
       forks:
-        value_template: '{% if states.sensor.github %} {{ states.sensor.github.attributes.forks }} {% else %} Unknown {% endif %}'
+        value_template: "{{ state_attr('sensor.github', 'forks') }}"
         entity_id: sensor.github
 
       stars:
-        value_template: '{% if states.sensor.github %} {{ states.sensor.github.attributes.stargazers_count }} {% else %} Unknown {% endif %}'
+        value_template: "{{ state_attr('sensor.github', 'stargazers_count') }}"
         entity_id: sensor.github
 
 ####################################################
