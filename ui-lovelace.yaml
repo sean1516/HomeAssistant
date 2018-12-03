@@ -279,6 +279,20 @@ views:
                 name: Total Size
                 icon: mdi:harddisk
             columns: 4
+      - type: entities
+        title: Comcast Data Usage
+        entities:
+          - entity: sensor.comcast_utilization
+            name: Used
+            icon: mdi:percent
+          - entity: sensor.comcast_template
+            name: Days Left
+          - entity: sensor.comcast_avg_gb_current
+            name: Current Daily Avg.
+            icon: mdi:chart-line
+          - entity: sensor.comcast_avg_gb_left
+            name: Remaining Daily Avg.
+            icon: mdi:chart-line-stacked
 
 ####################################################
 #                                                  #
@@ -322,9 +336,9 @@ views:
                - entity: sensor.since_last_boot_templated
                  name: Last Boot
                  icon: mdi:clock
-               - entity: sensor.network_in_eth0
+               - entity: sensor.network_in_enp2s1
                  name: Network In
-               - entity: sensor.network_out_eth0
+               - entity: sensor.network_out_enp2s1
                  name: Network Out
             columns: 3
           - type: glance
@@ -453,7 +467,9 @@ views:
             name: HTPC
             icon: mdi:youtube-tv
           - entity: binary_sensor.modem
-          - entity: binary_sensor.nas
+          - entity: switch.nas_switch
+            name: NAS
+            icon: mdi:nas
           - entity: binary_sensor.ubiquiti_switch
           - entity: binary_sensor.ubiquiti_ap
           - entity: binary_sensor.ubiquiti_usg
@@ -461,7 +477,9 @@ views:
         title: Wireless Devices
         show_header_toggle: true
         entities:
-          - entity: device_tracker.lenovo_laptop
+          - entity: switch.lenovo_switch
+            name: Lenovo Laptop
+            icon: mdi:windows
           - entity: device_tracker.linux_laptop_wifi
           - entity: device_tracker.amazon1197e775e
           - entity: device_tracker.d81c79eb20c9
@@ -483,6 +501,25 @@ views:
         entities:
           - entity: input_boolean.vacation
             icon: mdi:beach
+      - type: entities
+        title: Christmas Automations
+        show_header_toggle: true
+        entities:
+          - entity: automation.turn_on_tree_sunset
+            name: Tree On at Sunset
+            icon: mdi:pine-tree
+          - entity: automation.tree_on_when_home
+            name: Tree On When Home
+            icon: mdi:pine-tree
+          - entity: automation.turn_off_tree_at_bedtime
+            name: Tree Off At Bedtime
+            icon: mdi:pine-tree
+          - entity:  automation.turn_on_tree_in_morning
+            name: Tree On In Morning
+            icon: mdi:pine-tree
+          - entity: automation.tree_off_when_leaving
+            name: Tree Off When Leaving
+            icon: mdi:pine-tree
       - type: entities
         title: Bedtime Notifications
         show_header_toggle: true
@@ -831,7 +868,7 @@ views:
             icon: mdi:flash-circle
           - entity: switch.pow2
             name: Sonoff POW 2
-            icon: mdi:toggle-switch
+            icon: mdi:pine-tree
           - entity: sensor.pow2_energy
             name: kWh
             icon: mdi:chart-line
