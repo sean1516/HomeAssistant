@@ -1,0 +1,98 @@
+#########################################################
+#                                                       #
+#                TURN ON TREE AT SUNSET                 #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn On Tree Sunset'
+    trigger:
+      platform: sun
+      event: sunset
+    action:
+      service: switch.turn_on
+      entity_id: switch.pow2
+
+#########################################################
+#                                                       #
+#              TURN ON Tree WHEN HOME                   #
+#                                                       #
+#########################################################
+
+  - alias: "Tree on when home"
+    trigger:
+      platform: state
+      entity_id: sensor.gehingepinsensor1
+      to: 'Open'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sensor.garagedoorstatus
+          state: 'Open'
+    action:
+      service: switch.turn_on
+      entity_id: switch.pow2
+
+#########################################################
+#                                                       #
+#               TURN OFF TREE AT BEDTIME                #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn Off Tree at Bedtime'
+    trigger:
+      platform: time
+      at: '22:00:00'
+    action:
+      service: switch.turn_off
+      entity_id: switch.pow2
+
+#########################################################
+#                                                       #
+#               TURN ON TREE IN MORNING                 #
+#                                                       #
+#########################################################
+
+  - alias: 'Turn On Tree In Morning'
+    trigger:
+      platform: time
+      at: '06:00:00'
+    action:
+      service: switch.turn_on
+      entity_id: switch.pow2
+
+#########################################################
+#                                                       #
+#               TURN OFF TREE WHEN GONE                 #
+#                                                       #
+#########################################################
+
+  - alias: "Tree Off When Leaving"
+    trigger:
+      - platform: template
+        value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+      - platform: template
+        value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+    action:
+      service: switch.turn_off
+      entity_id: switch.pow2
+
+########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
