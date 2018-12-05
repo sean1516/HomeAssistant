@@ -53,7 +53,7 @@
     action:
       service: notify.ios_adams_iphone
       data:
-        title: "New Github Star"
+        title: "New Github Fork"
         message: "The SilvrrGit HomeAssistant Repository now has {{ states.sensor.forks.state }} forks!"
 
 #########################################################
