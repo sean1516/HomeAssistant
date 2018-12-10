@@ -44,7 +44,7 @@
   - alias: 'Turn Off Living Room Lamps at Midnight'
     trigger:
       platform: time
-      at: '00:01:00'
+      at: '22:00:00'
     action:
       service: switch.turn_off
       entity_id: switch.basic1
