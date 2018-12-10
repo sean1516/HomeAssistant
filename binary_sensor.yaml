@@ -13,9 +13,6 @@
     host: 192.168.100.1
     name: Modem
   - platform: ping
-    host: 192.168.1.14
-    name: NAS
-  - platform: ping
     host: 192.168.1.19
     name: Ubiquiti Switch
   - platform: ping
@@ -26,7 +23,10 @@
     name: Ubiquiti AP
   - platform: ping
     host: 192.168.1.1
-    name: Ubiquiti USG
+    name: PFSense VM
+  - platform: ping
+    host: 192.168.1.14
+    name: NAS VM
 
 ####################################################
 #                                                  #

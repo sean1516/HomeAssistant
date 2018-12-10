@@ -93,12 +93,12 @@ views:
           - entity: light.yeelight3
             tap_action: toggle
             name: Garage Right
-          - entity: light.yeelight2
+          - entity: light.yeelight4
             name: Garage Left
             tap_action: toggle
-          - entity: light.yeelight4
-            tap_action: toggle
+          - entity: light.yeelight2
             name: Back Porch
+            tap_action: toggle
         columns: 4
       - type: weather-forecast
         title: Weather
@@ -224,61 +224,61 @@ views:
                 accuracy: 30
                 hours_to_show: 24
                 height: 100
-      - type: vertical-stack
-        cards:
-          - type: markdown
-            title: NAS Load
-            content: " "
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.cpu_load_total
-                name: Processor
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
-                hours_to_show: 24
-                height: 120
-              - type: sensor
-                entity: sensor.memory_usage_real
-                name: Memory
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
-                hours_to_show: 24
-                height: 120
-          - type: glance
-            title: NAS Disk 1 Status
-            entities:
-              - entity: sensor.status_smart_sda
-                name: Smart Status
-                icon: mdi:medical-bag
-              - entity: sensor.temperature_sda
-                name: Temperature
-                icon: mdi:thermometer-lines
-              - entity: sensor.volume_used_volume_1
-                name: Used
-                icon: mdi:harddisk
-              - entity: sensor.total_size_volume_1
-                name: Total Size
-                icon: mdi:harddisk
-            columns: 4
-          - type: glance
-            title: NAS Disk 2 Status
-            entities:
-              - entity: sensor.status_smart_sdb
-                name: Smart Status
-                icon: mdi:medical-bag
-              - entity: sensor.temperature_sdb
-                name: Temperature
-                icon: mdi:thermometer-lines
-              - entity: sensor.volume_used_volume_2
-                name: Used
-                icon: mdi:harddisk
-              - entity: sensor.total_size_volume_2
-                name: Total Size
-                icon: mdi:harddisk
-            columns: 4
+      # - type: vertical-stack
+      #   cards:
+      #     - type: markdown
+      #       title: NAS Load
+      #       content: " "
+      #     - type: horizontal-stack
+      #       cards:
+      #         - type: sensor
+      #           entity: sensor.cpu_load_total
+      #           name: Processor
+      #           line_color: '#03a9f4'
+      #           line_width: 8
+      #           accuracy: 30
+      #           hours_to_show: 24
+      #           height: 120
+      #         - type: sensor
+      #           entity: sensor.memory_usage_real
+      #           name: Memory
+      #           line_color: '#03a9f4'
+      #           line_width: 8
+      #           accuracy: 30
+      #           hours_to_show: 24
+      #           height: 120
+      #     - type: glance
+      #       title: NAS Disk 1 Status
+      #       entities:
+      #         - entity: sensor.status_smart_sda
+      #           name: Smart Status
+      #           icon: mdi:medical-bag
+      #         - entity: sensor.temperature_sda
+      #           name: Temperature
+      #           icon: mdi:thermometer-lines
+      #         - entity: sensor.volume_used_volume_1
+      #           name: Used
+      #           icon: mdi:harddisk
+      #         - entity: sensor.total_size_volume_1
+      #           name: Total Size
+      #           icon: mdi:harddisk
+      #       columns: 4
+      #     - type: glance
+      #       title: NAS Disk 2 Status
+      #       entities:
+      #         - entity: sensor.status_smart_sdb
+      #           name: Smart Status
+      #           icon: mdi:medical-bag
+      #         - entity: sensor.temperature_sdb
+      #           name: Temperature
+      #           icon: mdi:thermometer-lines
+      #         - entity: sensor.volume_used_volume_2
+      #           name: Used
+      #           icon: mdi:harddisk
+      #         - entity: sensor.total_size_volume_2
+      #           name: Total Size
+      #           icon: mdi:harddisk
+      #       columns: 4
       - type: entities
         title: Comcast Data Usage
         entities:
@@ -375,8 +375,6 @@ views:
         entities:
           - entity: zwave.aeotec_zw090_zstick_gen5_us
             name: Aeotec Zstick
-          # - entity: zwave.aeotec_zw117_range_extender_6
-          #   name: Aeotec Range Extender
           - entity: zwave.ge_32563_hinge_pin_smart_door_sensor
             name: GE Hinge Pin Sensor 1
           - entity: zwave.ge_32563_hinge_pin_smart_door_sensor_2
@@ -467,12 +465,12 @@ views:
             name: HTPC
             icon: mdi:youtube-tv
           - entity: binary_sensor.modem
-          - entity: switch.nas_switch
-            name: NAS
+          - entity: binary_sensor.nas_vm
+            name: NAS VM
             icon: mdi:nas
           - entity: binary_sensor.ubiquiti_switch
           - entity: binary_sensor.ubiquiti_ap
-          - entity: binary_sensor.ubiquiti_usg
+          - entity: binary_sensor.pfsense_vm
       - type: entities
         title: Wireless Devices
         show_header_toggle: true
@@ -778,11 +776,11 @@ views:
             name: Garage Right
             type: custom:slider-entity-row
             break_slider: true
-          - entity: light.yeelight2
+          - entity: light.yeelight4
             name: Garage Left
             type: custom:slider-entity-row
             break_slider: true
-          - entity: light.yeelight4
+          - entity: light.yeelight2
             name: Back Porch
             type: custom:slider-entity-row
             break_slider: true
@@ -891,9 +889,6 @@ views:
           - entity: switch.desktop_switch
             name: Desktop
             icon: mdi:desktop-tower
-          - entity: switch.nas_switch
-            name: NAS
-            icon: mdi:nas
           - entity: switch.lenovo_switch
             name: Lenovo Laptop
             icon: mdi:windows

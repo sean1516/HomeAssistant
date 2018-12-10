@@ -9,92 +9,20 @@
       - weblink
       - updater
       - group
-      - light
       - script
       - switch
       - zone
       - zwave
+      - sensor
     entities:
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor
       - binary_sensor.ge_32563_hinge_pin_smart_door_sensor_sensor_2
       - binary_sensor.unknown_id021f_unknown_type0003_id0101_sensor
       - binary_sensor.vision_zg8101_garage_door_detector_sensor
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_access_control
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_access_control_2
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_level
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_level_2
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_type
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_alarm_type_2
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_sourcenodeid
-      - sensor.ge_32563_hinge_pin_smart_door_sensor_sourcenodeid_2
-      - sensor.unknown_id021f_unknown_type0003_id0101_access_control
-      - sensor.unknown_id021f_unknown_type0003_id0101_alarm_level
-      - sensor.unknown_id021f_unknown_type0003_id0101_sensor
-      - sensor.unknown_id021f_unknown_type0003_id0101_alarm_type
-      - sensor.unknown_id021f_unknown_type0003_id0101_sourcenodeid
-      - sensor.vision_zg8101_garage_door_detector_alarm_level
-      - sensor.vision_zg8101_garage_door_detector_alarm_type
-      - sensor.vision_zg8101_garage_door_detector_burglar
-      - sensor.vision_zg8101_garage_door_detector_sourcenodeid
-      - sensor.total_size_volume_1
-      - sensor.total_size_volume_2
-      - sensor.since_last_boot_templated
-      - sensor.lets_encrypt_expiration
       - sun.sun
-      - sensor.since_last_boot
-      - sensor.date
       - input_boolean.vacation
-      - sensor.cook_nws_alert_count
-      - sensor.cook_nws_alert_event
-      - sensor.dupage_nws_alert_count
-      - sensor.dupage_nws_alert_event
-      - sensor.dark_sky_summary
-      - sensor.dark_sky_summary_1
-      - sensor.dark_sky_summary_2
-      - sensor.dark_sky_summary_3
-      - sensor.dark_sky_summary_4
-      - sensor.dark_sky_summary_5
-      - sensor.dark_sky_summary_6
-      - sensor.dark_sky_summary_7
-      - sensor.dark_sky_precip_probability
-      - sensor.dark_sky_precip_probability_1
-      - sensor.dark_sky_precip_probability_2
-      - sensor.dark_sky_precip_probability_3
-      - sensor.dark_sky_precip_probability_4
-      - sensor.dark_sky_precip_probability_5
-      - sensor.dark_sky_precip_probability_6
-      - sensor.dark_sky_precip_probability_7
-      - sensor.dark_sky_daytime_high_temperature
-      - sensor.dark_sky_daytime_high_temperature_1
-      - sensor.dark_sky_daytime_high_temperature_2
-      - sensor.dark_sky_daytime_high_temperature_3
-      - sensor.dark_sky_daytime_high_temperature_4
-      - sensor.dark_sky_daytime_high_temperature_5
-      - sensor.dark_sky_daytime_high_temperature_6
-      - sensor.dark_sky_daytime_high_temperature_7
-      - sensor.dark_sky_overnight_low_temperature
-      - sensor.dark_sky_overnight_low_temperature_1
-      - sensor.dark_sky_overnight_low_temperature_2
-      - sensor.dark_sky_overnight_low_temperature_3
-      - sensor.dark_sky_overnight_low_temperature_4
-      - sensor.dark_sky_overnight_low_temperature_5
-      - sensor.dark_sky_overnight_low_temperature_6
-      - sensor.dark_sky_overnight_low_temperature_7
-      - sensor.hassio_version
-      - sensor.installed_version
-      - sensor.forecast_0
-      - sensor.forecast_1
-      - sensor.forecast_2
-      - sensor.forecast_3
-      - sensor.forecast_4
-      - sensor.forecast_5
-      - sensor.forecast_6
-      - sensor.forecast_7
   include:
     entities:
-      - group.bedroom_lights
-      - group.outside_lights
-      - light.yeelightrgb2
       - switch.desktop_switch
       - switch.htpc_switch
       - switch.basic1
@@ -103,13 +31,34 @@
       - switch.pow2
       - device_tracker.d81c79a4a851
       - device_tracker.d81c79eb20c9
+      - sensor.backdoorstatus
+      - sensor.garagedoorstatus
+      - sensor.gehingepinsensor1
+      - sensor.gehingepinsensor2
+      - sensor.operatingstate
+      - sensor.operatingmode
+      - sensor.ups_battery_charge
+      - sensor.ups_battery_runtime
+      - sensor.ups_input_voltage
+      - sensor.ups_status
+      - sensor.approxwattage
+      - sensor.homeassistant_v2db
+      - sensor.load_1m
+      - sensor.load_5m
+      - sensor.load_15m
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.pow1_power
+      - sensor.pow2_power
+      - sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+      - sensor.processor_use
+      - sensor.memory_use_percent
     domains:
       - climate
       - binary_sensor
       - cover
-      - sensor
       - device_tracker
-
+      - light
 
 ####################################################
 #                                                  #

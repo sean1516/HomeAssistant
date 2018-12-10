@@ -18,7 +18,7 @@
 
 # Text colors
       primary-text-color: '#FFFFFF'                                                   # Primary text colour, here is referencing dark-primary-color
-      text-primary-color: '#FFFFFF' #'#03a9f4'                                                   # Primary text colour
+      text-primary-color: '#FFFFFF'                                                   # Primary text colour
       secondary-text-color: '#8c8d90'                                                 # For secondary titles in more info boxes etc.
       disabled-text-color: '#7F848E'                                                  # Disabled text colour
       label-badge-border-color: 'green'                                               # Label badge border, just a reference value
