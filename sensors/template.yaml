@@ -48,6 +48,7 @@
 
       operationmode:
         value_template: "{{ state_attr('climate.linear_heating', 'operation_mode') }}"
+
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #
