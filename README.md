@@ -13,7 +13,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 # Server Running My Home Assistant Setup:
 * __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which is a bare metal hypervisor that allows me to run mutiple virtual machines on the same physical hardware.  The HA virtual machine is given 2 cores, 2GB of RAM and a 16GB disk.
 
-The virtual machine is running [HassOS](https://github.com/home-assistant/hassos) as an operating system and [Hass.io](https://www.home-assistant.io/hassio/).  I am also running the following add-ons:
+The virtual machine is running [Ubuntu Server 16.04.5](https://www.ubuntu.com/) as an operating system and [Hass.io](https://www.home-assistant.io/hassio/).  I am also running the following add-ons:
 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
