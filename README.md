@@ -18,7 +18,7 @@ The virtual machine is running [Ubuntu Server 16.04.5](https://www.ubuntu.com/) 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
-* __[Network UPS Tools](https://github.com/asciinaut/hassio-addons)__ A NUT Server
+* __[Network UPS Tools](https://github.com/colindunn/hassio-addons)__ A NUT Server
 * __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ Shutdown Windows Computers
 * __[SSH](https://www.home-assistant.io/addons/ssh/)__ SSH for Hass.io
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
