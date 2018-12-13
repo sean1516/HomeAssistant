@@ -77,6 +77,7 @@
   - platform: darksky
     api_key: !secret darksky
     forecast:
+      - 0
       - 1
       - 2
       - 3
@@ -97,7 +98,7 @@
       forecast_0:
         friendly_name: "Today"
         value_template: >
-          {{states.sensor.dark_sky_daytime_high_temperature.state|round(0)}}°/{{states.sensor.dark_sky_overnight_low_temperature.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability.state|round(0)}}%
+          {{states.sensor.dark_sky_daytime_high_temperature_0.state|round(0)}}°/{{states.sensor.dark_sky_overnight_low_temperature_0.state|round(0)}}°/{{states.sensor.dark_sky_precip_probability_0.state|round(0)}}%
       forecast_1:
         friendly_name_template: >
           {%- set date = as_timestamp(now()) + (1 * 86400 ) -%}
