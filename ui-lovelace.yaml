@@ -24,6 +24,13 @@ views:
     cards:
       - type: vertical-stack
         cards:
+          - type: entities
+            title: Days Until Baby M Arrives
+            entities:
+              - entity: sensor.duedate
+                name: Countdown
+                icon: mdi:baby-buggy
+
           - type: glance
             title: Door Status
             entities:
@@ -224,61 +231,6 @@ views:
                 accuracy: 30
                 hours_to_show: 24
                 height: 100
-      # - type: vertical-stack
-      #   cards:
-      #     - type: markdown
-      #       title: NAS Load
-      #       content: " "
-      #     - type: horizontal-stack
-      #       cards:
-      #         - type: sensor
-      #           entity: sensor.cpu_load_total
-      #           name: Processor
-      #           line_color: '#03a9f4'
-      #           line_width: 8
-      #           accuracy: 30
-      #           hours_to_show: 24
-      #           height: 120
-      #         - type: sensor
-      #           entity: sensor.memory_usage_real
-      #           name: Memory
-      #           line_color: '#03a9f4'
-      #           line_width: 8
-      #           accuracy: 30
-      #           hours_to_show: 24
-      #           height: 120
-      #     - type: glance
-      #       title: NAS Disk 1 Status
-      #       entities:
-      #         - entity: sensor.status_smart_sda
-      #           name: Smart Status
-      #           icon: mdi:medical-bag
-      #         - entity: sensor.temperature_sda
-      #           name: Temperature
-      #           icon: mdi:thermometer-lines
-      #         - entity: sensor.volume_used_volume_1
-      #           name: Used
-      #           icon: mdi:harddisk
-      #         - entity: sensor.total_size_volume_1
-      #           name: Total Size
-      #           icon: mdi:harddisk
-      #       columns: 4
-      #     - type: glance
-      #       title: NAS Disk 2 Status
-      #       entities:
-      #         - entity: sensor.status_smart_sdb
-      #           name: Smart Status
-      #           icon: mdi:medical-bag
-      #         - entity: sensor.temperature_sdb
-      #           name: Temperature
-      #           icon: mdi:thermometer-lines
-      #         - entity: sensor.volume_used_volume_2
-      #           name: Used
-      #           icon: mdi:harddisk
-      #         - entity: sensor.total_size_volume_2
-      #           name: Total Size
-      #           icon: mdi:harddisk
-      #       columns: 4
       - type: entities
         title: Comcast Data Usage
         entities:
@@ -336,9 +288,9 @@ views:
                - entity: sensor.since_last_boot_templated
                  name: Last Boot
                  icon: mdi:clock
-               - entity: sensor.network_in_enp2s1
+               - entity: sensor.network_in_ens36
                  name: Network In
-               - entity: sensor.network_out_enp2s1
+               - entity: sensor.network_out_ens36
                  name: Network Out
             columns: 3
           - type: glance
@@ -417,6 +369,24 @@ views:
           - entity: sensor.backdoorstatusbatt
             icon: mdi:battery-50
             name: Back Door Sensor
+      - type: entities
+        title: Home Assistant Stats
+        show_header_toggle: true
+        entities:
+          - entity: sensor.tracker_count
+            icon: mdi:cellphone-link
+          - entity: sensor.lights_count
+            icon: mdi:lightbulb
+          - entity: sensor.binary_sensor_count
+            icon: mdi:nintendo-switch
+          - entity: sensor.switch_count
+            icon: mdi:toggle-switch
+          - entity: sensor.automation_count
+            icon: mdi:home-assistant
+          - entity: sensor.script_count
+            icon: mdi:script-text-outline
+          - entity: sensor.sensor_count
+            icon: mdi:gauge
 
 ####################################################
 #                                                  #
@@ -619,6 +589,12 @@ views:
           - entity: automation.hassio_snapshot
             name: Nightly Hass.io Snapshot
             icon: mdi:file-restore
+          - entity: automation.home_assistant_started
+            name: Home Assistant Started
+            icon: mdi:home-assistant
+          - entity: automation.home_assistant_stopped
+            name: Home Assistant Stopped
+            icon: mdi:home-assistant
       - type: entities
         title: Other Automations
         show_header_toggle: false
@@ -714,6 +690,16 @@ views:
           - entity: automation.download_failed
             name: Downloader - Download Failed
             icon: mdi:cloud-download
+      - type: entities
+        title: Morning Briefings
+        show_header_toggle: false
+        entities:
+          - entity: automation.morning_briefing_adam
+            name: Adam's Morning Briefing
+            icon: mdi:weather-sunset
+          - entity: automation.morning_briefing_amy
+            name: Amy's Morning Briefing
+            icon: mdi:weather-sunset
       - type: entities
         title: Github Automations
         show_header_toggle: false
