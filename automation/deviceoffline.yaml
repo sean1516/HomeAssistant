@@ -45,7 +45,6 @@
       - platform: state
         entity_id:
           - light.yeelight1
-          - light.yeelight2
           - light.yeelight3
           - light.yeelight4
           - light.yeelight5

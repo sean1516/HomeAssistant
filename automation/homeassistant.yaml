@@ -1,0 +1,54 @@
+####################################################
+#                                                  #
+#          HOME ASSISTANT START / STOP             #
+#                                                  #
+####################################################
+
+  - alias: Home Assistant Started
+    trigger:
+      platform: homeassistant
+      event: start
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Home Assistant Started"
+          message: "Home Assistant Has Started"
+
+  - alias: Home Assistant Stopped
+    trigger:
+      platform: homeassistant
+      event: shutdown
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Home Assistant Stopped"
+          message: "Home Assistant Has Stopped"
+
+
+#########################################################
+#                                                       #
+#                  TEMPLATE SENSOR UPDATE               #
+#                                                       #
+#########################################################
+
+  - alias: Update Template Sensors
+    trigger:
+        platform: time
+        minutes: '/10'
+    action:
+      - service: homeassistant.update_entity
+        entity_id:
+          - sensor.duedate
+          - sensor.tracker_count
+          - sensor.lights_count
+          - sensor.binary_sensor_count
+          - sensor.switch_count
+          - sensor.automation_count
+          - sensor.script_count
+          - sensor.sensor_count
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

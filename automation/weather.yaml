@@ -51,6 +51,7 @@
         - sensor.forecast_5
         - sensor.forecast_6
         - sensor.forecast_7
+        - sensor.duedate
 
 #########################################################
 #                                                       #

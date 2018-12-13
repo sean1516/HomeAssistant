@@ -1,0 +1,45 @@
+####################################################
+#                                                  #
+#                 MORNING BRIEFING                 #
+#                                                  #
+####################################################
+
+  - alias: "Morning Briefing Adam"
+    trigger:
+      platform: time
+      at: '06:00'
+    action:
+      - service: notify.home_assistant
+        data_template:
+          title: "Moring Briefing"
+          message: >
+                    Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
+                    {{ "\n" }}
+                    There are {{states('sensor.duedate')}} days until Baby M arrives!{{ "\n" }}
+                    {{ "\n" }}
+                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}}{{ "\n" }}
+                    {{ "\n" }}
+                    There is a {{states('sensor.dark_sky_precip_probability_0')}} chance of rain{{ "\n" }}
+
+  - alias: "Morning Briefing Amy"
+    trigger:
+      platform: time
+      at: '06:00'
+    action:
+      - service: notify.amy
+        data_template:
+          title: "Moring Briefing"
+          message: >
+                    Good Morning My Love! Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
+                    {{ "\n" }}
+                    There are {{states('sensor.duedate')}} days until Baby M arrives!{{ "\n" }}
+                    {{ "\n" }}
+                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}}{{ "\n" }}
+                    {{ "\n" }}
+                    There is a {{states('sensor.dark_sky_precip_probability_0')}} chance of rain{{ "\n" }}
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################
