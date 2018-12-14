@@ -17,7 +17,7 @@
                     {{ "\n" }}
                     There are {{states('sensor.duedate')}} days until Baby M arrives!{{ "\n" }}
                     {{ "\n" }}
-                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}}.  The high temperature today will be  {states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
+                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}}.  The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
                     {{ "\n" }}
                     There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
 
@@ -34,7 +34,7 @@
                     {{ "\n" }}
                     There are {{states('sensor.duedate')}} days until Baby M arrives!{{ "\n" }}
                     {{ "\n" }}
-                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}}.  The high temperature today will be  {states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
+                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}}.  The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
                     {{ "\n" }}
                     There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
 
