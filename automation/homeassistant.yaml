@@ -24,7 +24,6 @@
           title: "Home Assistant Stopped"
           message: "Home Assistant Has Stopped"
 
-
 #########################################################
 #                                                       #
 #                  TEMPLATE SENSOR UPDATE               #
@@ -46,6 +45,23 @@
           - sensor.automation_count
           - sensor.script_count
           - sensor.sensor_count
+
+#########################################################
+#                                                       #
+#                    DISK USE ALARM                     #
+#                                                       #
+#########################################################
+
+  - alias: "Disk Use Alarm"
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.disk_use_percent_
+        above: 85
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Hass.io VM Disk Use Alarm"
+        message: "Hass.io VM is running low on disk space, usage is currently at {{ states. sensor.disk_use_percent_home.state }} %!"
 
 ####################################################
 #                                                  #
