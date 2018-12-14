@@ -78,6 +78,11 @@ Simple automations to let me know if there is a new home assistant version or if
 * New Github Subscribers
 * Github Issues
 
+### Holiday_Birthday.yaml Automations:
+__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/holiday_birthday.yaml)__
+
+Notify me if its is a holiday or birthday based on the listed located [here.](https://github.com/SilvrrGIT/HomeAssistant/blob/master/json_data/days.json)
+
 ### HomeAssistant.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml)__
 
