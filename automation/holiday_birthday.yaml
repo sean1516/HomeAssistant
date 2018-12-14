@@ -1,0 +1,33 @@
+#########################################################
+#                                                       #
+#      NOTIFY IF ITS A HOLIDAY OR BIRTHDAY              #
+#                                                       #
+#########################################################
+
+  - alias: "Holiday and Birthday Notification"
+    hide_entity: false
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id:
+          - sensor.holiday
+    condition:
+      - condition: template
+        value_template: "{{ states('sensor.holiday') != 'unknown' }}"
+      - condition: template
+        value_template: "{{ states.sensor.holiday.state | trim != '' }}"
+    action:
+      - service: notify.home_assistant
+        data:
+          message: 'Today is {{ states.sensor.holiday.state }}.'
+          title: '{{ states.sensor.holiday.state }}'
+      - service: notify.ios
+        data:
+          message: 'Today is {{ states.sensor.holiday.state }}.'
+          title: '{{ states.sensor.holiday.state }}'
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
