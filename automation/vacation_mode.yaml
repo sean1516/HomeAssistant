@@ -3,6 +3,7 @@
 #               TURN ON VACATION MODE                   #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Turn on Vacation Mode
     trigger:
@@ -39,6 +40,7 @@
 #                TURN OFF VACATION MODE                 #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Turn off Vacation Mode
     trigger:

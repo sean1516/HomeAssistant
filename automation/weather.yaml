@@ -3,6 +3,7 @@
 #                   WEATHER ALERTS                      #
 #                                                       #
 #########################################################
+#            [Validated 12/14/2018 - v 83.3]            #
 
 - alias: Dupage NWS Notification Weather Alert
   trigger:
@@ -35,6 +36,7 @@
 #                   WEATHER UPDATE                      #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
 - alias: Update Weather Sensors
   trigger:

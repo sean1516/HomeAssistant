@@ -3,6 +3,7 @@
 #              SET Thermostat AWAY MODE - ON            #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Set Thermostat Away Mode When Leaving"
     trigger:
@@ -36,6 +37,7 @@
 #            SET Thermostat AWAY MODE - OFF  1600       #
 #                                                       #
 #########################################################
+#            [Validated 12/14/2018 - v 83.3]            #
 
   - alias: "Set Thermostat Away Mode at 1600"
     trigger:
@@ -60,6 +62,7 @@
 #        SET Thermostat AWAY MODE - OFF WHEN HOME       #
 #                                                       #
 #########################################################
+#            [Validated 12/07/2018 - v 83.3]            #
 
   - alias: "Turn Off Away When Home"
     trigger:

@@ -3,6 +3,7 @@
 #         INTERIOR GARAGE DOOR OPEN LIGHT ON            #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Interior Garage Door Open Light On"
     trigger:
@@ -21,6 +22,7 @@
 #         TURN OFF GARAGE LIGHT AFTER 5 MINUTES         #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: 'Turn Off Interior Garage Light After 5'
     trigger:

@@ -3,6 +3,7 @@
 #         NOTIFY DESKTOP PC TURNED ON AND AWAY          #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "DESKTOP PC ON WHEN AWAY"
     trigger:
@@ -24,6 +25,7 @@
 #                 FAILED LOGIN ATTEMPTS                 #
 #                                                       #
 #########################################################
+#            [Validated 12/10/2018 - v 83.3]            #
 
   - alias: "Send notification upon failed login attempt"
     trigger:
@@ -46,6 +48,7 @@
 #           NOTIFY OF NEW DEVICE ON NETWORK             #
 #                                                       #
 #########################################################
+#            [Validated 12/12/2018 - v 83.3]            #
 
   - alias: Notify If New Devices
     trigger:

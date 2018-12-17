@@ -3,6 +3,7 @@
 #             New Homeassistant Version                 #
 #                                                       #
 #########################################################
+#            [Validated 12/15/2018 - v 83.3]            #
 
   - alias: "New Home Assitant Version"
     trigger:
@@ -19,6 +20,7 @@
 #                     New Github Star                   #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "New Github Star"
     trigger:
@@ -40,6 +42,7 @@
 #                     New Github Fork                   #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "New Github Fork"
     trigger:
@@ -61,6 +64,7 @@
 #                 New Github Subscriber                 #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "New Github Subscriber"
     trigger:
@@ -82,6 +86,7 @@
 #                     Github Issues                     #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Github Issues"
     trigger:

@@ -3,6 +3,7 @@
 #                TURN ON TREE AT SUNSET                 #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: 'Turn On Tree Sunset'
     trigger:
@@ -17,6 +18,7 @@
 #              TURN ON Tree WHEN HOME                   #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "Tree on when home"
     trigger:
@@ -38,6 +40,7 @@
 #               TURN OFF TREE AT BEDTIME                #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: 'Turn Off Tree at Bedtime'
     trigger:
@@ -52,6 +55,7 @@
 #               TURN ON TREE IN MORNING                 #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: 'Turn On Tree In Morning'
     trigger:
@@ -66,6 +70,7 @@
 #               TURN OFF TREE WHEN GONE                 #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Tree Off When Leaving"
     trigger:

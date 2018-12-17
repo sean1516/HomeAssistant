@@ -3,6 +3,7 @@
 #             NOTIFY IF HA DEVICE OFFLINE               #
 #                                                       #
 #########################################################
+#            [Validated 12/07/2018 - v 83.3]            #
 
   - alias: "Notify if HA Device Offline"
     trigger:
@@ -39,6 +40,7 @@
 #             NOTIFY IF YEELIGHT OFFLINE                #
 #                                                       #
 #########################################################
+#            [Validated 12/10/2018 - v 83.3]            #
 
   - alias: "Notify if Yeelight Offline"
     trigger:

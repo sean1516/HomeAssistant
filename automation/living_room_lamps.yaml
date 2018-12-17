@@ -3,6 +3,7 @@
 #         TURN ON LIVING ROOM LAMPS AT SUNSET           #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: 'Turn On Living Room Lamps'
     trigger:
@@ -17,6 +18,7 @@
 #         TURN ON LIVING ROOM LAMPS WHEN HOME           #
 #                                                       #
 #########################################################
+#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "Lamps on when home"
     trigger:
@@ -37,9 +39,10 @@
 
 #########################################################
 #                                                       #
-#         TURN ON LIVING ROOM LAMPS AT SUNSET           #
+#        TURN OFF LIVING ROOM LAMPS AT MIDNIGHT         #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: 'Turn Off Living Room Lamps at Midnight'
     trigger:

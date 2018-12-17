@@ -3,6 +3,7 @@
 #      NOTIFY IF LETS ENCRYPT CERT DID NOT UPDATE       #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Lets Encrypt Cert Did Not Update"
     trigger:

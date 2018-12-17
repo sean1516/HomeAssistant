@@ -3,6 +3,7 @@
 #                     POWER OUTAGE                      #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Power Outage"
     trigger:
@@ -22,6 +23,7 @@
 #                     POWER RESTORED                    #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Power Restored"
     initial_state: false

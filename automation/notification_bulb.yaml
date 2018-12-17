@@ -3,6 +3,7 @@
 # NOTIFICATION BULB COLOR BASED ON INPUT SELECT - COLOR #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Set Notification Bulb2 Color
     trigger:
@@ -23,6 +24,7 @@
 # NOTIFICATION BULB COLOR BASED ON INPUT SELECT-NORMAL  #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Set Notification Bulb2 Normal
     trigger:

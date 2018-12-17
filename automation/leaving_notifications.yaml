@@ -43,11 +43,12 @@
       - service: switch.turn_off
         entity_id: switch.htpc_switch
 
-####################################################
-#                                                  #
-#             DESKTOP ON WHEN AWAY                 #
-#                                                  #
-####################################################
+#########################################################
+#                                                       #
+#                 DESKTOP ON WHEN AWAY                  #
+#                                                       #
+#########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Desktop On When leaving"
     trigger:
@@ -77,6 +78,13 @@
             push:
               badge: 0
               category: 'desktop'
+
+#########################################################
+#                                                       #
+#         DESKTOP ON WHEN AWAY - NOTIFICATION           #
+#                                                       #
+#########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Desktop on when away notification
     trigger:
