@@ -6,7 +6,7 @@
 
 resources:
   #https://github.com/thomasloven/lovelace-slider-entity-row
-  - url: /local/custom_ui/slider-entity-row.js
+  - url: /local/slider-entity-row.js
     type: js
 
 ####################################################
