@@ -1,0 +1,29 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#               HOLIDAYS / BIRTHDAYS               #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.rest/
+
+  - platform: rest
+    resource: https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/json_data/days.json
+    name: Holiday
+    scan_interval: 14400
+    value_template: >
+      {% set today = now().month  ~ '/' ~ now().day  %}
+      {% set holiday =  value_json.MAJOR_US.static[ today ] %}
+      {% if holiday | trim == "" %}
+        {% set today = now().month  ~ '/' ~ now().day ~ '/' ~ now().year %}
+        {% set holiday =  value_json.MAJOR_US.dynamic[ today ] %}
+      {% endif %}
+      {{ holiday }}
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################
