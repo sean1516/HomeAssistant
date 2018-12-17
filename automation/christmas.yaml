@@ -56,7 +56,7 @@
   - alias: 'Turn On Tree In Morning'
     trigger:
       platform: time
-      at: '06:00:00'
+      at: '07:00:00'
     action:
       service: switch.turn_on
       entity_id: switch.pow2

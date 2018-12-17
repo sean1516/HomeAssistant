@@ -21,7 +21,7 @@
         data:
           message: 'Today is {{ states.sensor.holiday.state }}.'
           title: '{{ states.sensor.holiday.state }}'
-      - service: notify.ios
+      - service: notify.ios_adams_iphone
         data:
           message: 'Today is {{ states.sensor.holiday.state }}.'
           title: '{{ states.sensor.holiday.state }}'

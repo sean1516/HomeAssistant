@@ -7,7 +7,7 @@
   - alias: "Feed The Dog Morning"
     trigger:
       platform: time
-      at: '06:00'
+      at: '07:00'
     action:
       service: light.turn_on
       data:
