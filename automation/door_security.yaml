@@ -37,6 +37,7 @@
 #        Exterior GARAGE DOOR OPENED AND AWAY           #
 #                                                       #
 #########################################################
+#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Exterior Garage Door Opened When Away"
     trigger:
