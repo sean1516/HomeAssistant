@@ -71,10 +71,6 @@ views:
             show_header_toggle: false
             title: Entertainment Center
             entities:
-              - entity: switch.htpc_switch
-                icon: mdi:youtube-tv
-                name: HTPC
-                tap_action: toggle
               - entity: script.tv
                 name: Turn On TV
                 icon: mdi:television
@@ -431,9 +427,6 @@ views:
           - entity: switch.desktop_switch
             name: Desktop
             icon: mdi:desktop-tower
-          - entity: switch.htpc_switch
-            name: HTPC
-            icon: mdi:youtube-tv
           - entity: binary_sensor.modem
           - entity: binary_sensor.nas_vm
             name: NAS VM
