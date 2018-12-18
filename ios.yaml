@@ -24,22 +24,6 @@
             destructive: no
             behavior: 'default'
 
-      - name: Htpc Off
-        identifier: 'Htpc'
-        actions:
-          - identifier: 'HTPC_OFF'
-            title: 'Htpc Off'
-            activationMode: 'background'
-            authenticationRequired: yes
-            destructive: yes
-            behavior: 'default'
-          - identifier: 'DISMISS'
-            title: 'Dismiss'
-            activationMode: 'background'
-            authenticationRequired: yes
-            destructive: no
-            behavior: 'default'
-
       - name: Dektop Off
         identifier: 'Desktop'
         actions:
