@@ -8,7 +8,6 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 
 These notifications are triggered after 10:00 PM when I plug my phone in (generally I am in bed when this happens).  These send an iOS app notification with an action option to turn the device off.  These are primarily a power saving items.
 * Notify Me if the garage door is open and I am in bed 
-* Notify Me if the Home Theater PC is left on and I am in bed 
 * Notify Me if the Desktop PC is left on and I am in bed 
 * Notify Me if the Living Room Lamps are left on and I am in bed
 
@@ -96,7 +95,6 @@ Some automations for Home Assistant related items.
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml)__
 
 These notifications are triggered when I leave my home zone and no one is home.  These send a iOS app notification with an action option to turn the device off. These are primarily a power saving item and are the same framework as the bedtime notification as above. 
-* Notify Me if the Home Theater PC is left on and no one is home 
 * Notify Me if the Desktop PC is left on and no one is home 
 * Notify Me if the Living Room Lamps are left on and no one is home 
 * Notify Me if the Media Center is left on and no one is home. This is an effort to automate my 'dumb'TV and amplifier based on power usage.  Knowing the power being drawing I can assume which device is left on as they have unique power usage. 
@@ -178,7 +176,7 @@ This is a single switch to turn on/off a number of automations and devices when 
 * Turn On Vacation Mode with Vacation Mode Switch ]
 * Turn Off Vacation Mode with Vacation Mode Switch
 
-### Vacation Mode.yaml Automations:
+### Weather.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/weather.yaml)__
 
 Notify of severe weather.  I work in one county and live in another so I have an automation for both counties. 
