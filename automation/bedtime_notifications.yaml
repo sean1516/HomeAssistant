@@ -25,44 +25,6 @@
 
 ####################################################
 #                                                  #
-#               HTPC ON AT BEDTIME                 #
-#                                                  #
-####################################################
-
-  - alias: HTPC on at Bedtime
-    trigger:
-      platform: state
-      entity_id: sensor.adams_iphone_battery_state
-      to: 'Charging'
-    condition:
-      condition: and
-      conditions:
-        - condition: state
-          entity_id: switch.htpc_switch
-          state: 'on'
-        - condition: time
-          after: '20:00:00'
-    action:
-      - service: notify.ios_adams_iphone
-        data:
-          message: "The HTPC is on and you are in bed"
-          data:
-            push:
-              badge: 0
-              category: 'htpc'
-
-  - alias: HTPC on bedtime notification
-    trigger:
-      platform: event
-      event_type: ios.notification_action_fired
-      event_data:
-        actionName: HTPC_OFF
-    action:
-      - service: switch.turn_off
-        entity_id: switch.htpc_switch
-
-####################################################
-#                                                  #
 #            DESKTOP ON AT BEDTIME                 #
 #                                                  #
 ####################################################
