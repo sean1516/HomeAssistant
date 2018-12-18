@@ -1,8 +1,9 @@
-####################################################
-#                                                  #
-#          HOME ASSISTANT START / STOP             #
-#                                                  #
-####################################################
+#########################################################
+#                                                       #
+#                   HOME ASSISTANT START                #
+#                                                       #
+#########################################################
+#            [Validated 12/18/2018 - v 83.3]            #
 
   - alias: Home Assistant Started
     trigger:
@@ -13,6 +14,13 @@
         data:
           title: "Home Assistant Started"
           message: "Home Assistant Has Started"
+
+#########################################################
+#                                                       #
+#                   HOME ASSISTANT STOP                 #
+#                                                       #
+#########################################################
+#            [Validated 12/18/2018 - v 83.3]            #
 
   - alias: Home Assistant Stopped
     trigger:
@@ -29,6 +37,7 @@
 #                  TEMPLATE SENSOR UPDATE               #
 #                                                       #
 #########################################################
+#            [Validated 12/15/2018 - v 83.3]            #
 
   - alias: Update Template Sensors
     trigger:
