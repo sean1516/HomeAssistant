@@ -40,7 +40,7 @@
 #                TURN OFF VACATION MODE                 #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
+
 
   - alias: Turn off Vacation Mode
     trigger:
@@ -52,9 +52,9 @@
       - service: automation.trigger
         entity_id: automation.turn_off_away_when_home
       - service: automation.turn_on
-        entity_id: automation.dog_has_been_fed__evening
+        entity_id: automation.feed_the_dog_evening
       - service: automation.turn_on
-        entity_id: automation.dog_has_been_fed__morning
+        entity_id: automation.feed_the_dog_morning
       - service: automation.turn_on
         entity_id: automation.thermostat_fan
       - service: automation.turn_on
