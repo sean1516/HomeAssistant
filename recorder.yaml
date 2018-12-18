@@ -24,7 +24,6 @@
   include:
     entities:
       - switch.desktop_switch
-      - switch.htpc_switch
       - switch.basic1
       - switch.basic2
       - switch.pow1
