@@ -3,7 +3,6 @@
 #               TURN ON VACATION MODE                   #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Turn on Vacation Mode
     trigger:
@@ -30,8 +29,6 @@
         entity_id: automation.desktop_on_at_bedtime
       - service: automation.turn_off
         entity_id: automation.garage_door_open_at_bedtime
-      - service: automation.turn_off
-        entity_id: automation.htpc_on_at_bedtime
       - service: automation.turn_off
         entity_id: automation.living_room_lamps_on_at_bedtime
 
@@ -67,8 +64,6 @@
         entity_id: automation.desktop_on_at_bedtime
       - service: automation.turn_on
         entity_id: automation.garage_door_open_at_bedtime
-      - service: automation.turn_on
-        entity_id: automation.htpc_on_at_bedtime
       - service: automation.turn_on
         entity_id: automation.living_room_lamps_on_at_bedtime
 
