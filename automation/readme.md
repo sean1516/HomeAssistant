@@ -124,11 +124,6 @@ A series of automations that trigger monthly or weekly to help me remember to pe
 * Dog Flea/Tick/Heartworm Reminder
 * Water Softener Reminder
 
-### Media Center.yaml Automation:
-__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/media_center.yaml)__
-
-* Turn on TV and Amplifier when HTPC turns on
-
 ### Morning Briefing.yaml Automation:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/morning_briefing.yaml)__
 
