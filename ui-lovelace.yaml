@@ -491,9 +491,6 @@ views:
           - entity: automation.garage_door_open_at_bedtime
             name: Garage Door Open at Bedtime
             icon: mdi:hotel
-          - entity: automation.htpc_on_at_bedtime
-            name: HTPC on at Bedtime
-            icon: mdi:hotel
           - entity: automation.living_room_lamps_on_at_bedtime
             name: Laps On At Bedtime Notification
             icon: mdi:hotel
@@ -598,9 +595,6 @@ views:
           - entity: automation.low_battery_adams_phone
             name: Low iPhone Battery
             icon: mdi:battery-charging-30
-          - entity: automation.computer_on_tv_on
-            name: Computer On TV On
-            icon: mdi:television
       - type: entities
         title: Climate Automations
         show_header_toggle: false
@@ -628,9 +622,6 @@ views:
         title: Leaving Automations
         show_header_toggle: false
         entities:
-          - entity: automation.htpc_on_when_leaving
-            name: HTPC On When Leaving
-            icon: mdi:windows
           - entity: automation.desktop_on_when_leaving
             name: Desktop On When Leaving
             icon: mdi:windows
@@ -865,9 +856,6 @@ views:
         title: Computer Switches
         show_header_toggle: false
         entities:
-          - entity: switch.htpc_switch
-            name: HTPC
-            icon: mdi:youtube-tv
           - entity: switch.desktop_switch
             name: Desktop
             icon: mdi:desktop-tower
