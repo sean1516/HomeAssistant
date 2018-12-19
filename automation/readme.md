@@ -1,6 +1,6 @@
 ## Automations
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/ScreenShots/automations.png">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/automations.png">
 </p>
 
 ### Bedtime_Notifications.yaml Automations:
@@ -11,7 +11,7 @@ These notifications are triggered after 10:00 PM when I plug my phone in (genera
 * Notify Me if the Desktop PC is left on and I am in bed 
 * Notify Me if the Living Room Lamps are left on and I am in bed
 
-<p align="center"> <img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/iosnotification.jpg"><img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/ScreenShots/ios%20action.jpg">
+<p align="center"> <img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/www/iosnotification.jpg"><img src="https://github.com/SilvrrGIT/HomeAssistant/blob/master/www/ios%20action.jpg">
 </p>
 
 ### Cert Update.yaml Automation:
