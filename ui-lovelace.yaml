@@ -71,9 +71,6 @@ views:
             show_header_toggle: false
             title: Entertainment Center
             entities:
-              - entity: script.tv
-                name: Turn On TV
-                icon: mdi:television
               - entity: script.music
                 name: Turn On Music
                 icon: mdi:music
@@ -799,9 +796,6 @@ views:
             icon: mdi:television
           - entity: switch.tvtv
             name: TV - Input Select
-            icon: mdi:television
-          - entity: script.tv
-            name: Script - Turn On TV
             icon: mdi:television
           - entity: script.music
             name: Script - Turn On Music
