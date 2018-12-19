@@ -224,20 +224,6 @@ views:
                 accuracy: 30
                 hours_to_show: 24
                 height: 100
-      - type: entities
-        title: Comcast Data Usage
-        entities:
-          - entity: sensor.comcast_utilization
-            name: Used
-            icon: mdi:percent
-          - entity: sensor.comcast_template
-            name: Days Left
-          - entity: sensor.comcast_avg_gb_current
-            name: Current Daily Avg.
-            icon: mdi:chart-line
-          - entity: sensor.comcast_avg_gb_left
-            name: Remaining Daily Avg.
-            icon: mdi:chart-line-stacked
 
 ####################################################
 #                                                  #
