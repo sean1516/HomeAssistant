@@ -16,7 +16,7 @@ homeassistant:
   whitelist_external_dirs:
     - /config
     - /share
-    - /config/comcast
+    - /config/android/adbkey
 
 ####################################################
 #                                                  #
@@ -141,6 +141,18 @@ group:
 
 ####################################################
 #                                                  #
+#                    MEDIA PLAYER                  #
+#                                                  #
+####################################################
+
+media_player:
+  - platform: firetv
+    name: Fire TV
+    host: 192.168.1.21
+    abdkey: config/android/adbkey
+
+####################################################
+#                                                  #
 #                     MQTT                         #
 #                                                  #
 ####################################################
@@ -167,6 +179,17 @@ cover:
         host:  192.168.1.18
         device_key: !secret device_key
         name:  Garage Door
+
+####################################################
+#                                                  #
+#                REST COMMAND                      #
+#                                                  #
+####################################################
+
+rest_command:
+  google_backup:
+    url: 'http://192.168.1.24:8055/gb/doBackup'
+    timeout: '300'
 
 ####################################################
 #                                                  #
