@@ -3,7 +3,7 @@
 #             Nightly Hass.io Snapshot                  #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
+#            [Validated XX/XX/2018 - v XX.X]            #
 
   - alias: Hassio Snapshot
     initial_state: 'on'
@@ -15,6 +15,8 @@
     - service: hassio.snapshot_full
       data_template:
         name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+    - delay: '00:30:00'
+    - service: rest_command.google_backup
     - service: notify.ios_adams_iphone
       data_template:
         title: New Hass.io Backup
