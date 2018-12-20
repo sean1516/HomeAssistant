@@ -15,6 +15,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 The virtual machine is running [Ubuntu Server 16.04.5](https://www.ubuntu.com/) as an operating system and [Hass.io](https://www.home-assistant.io/hassio/).  I am also running the following add-ons:
 
+* __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ Store a backup of my config in a google drive account. 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
