@@ -161,7 +161,9 @@ This set of automations is still in its infancy.  I replaced my nest thermostat 
 
 * Set the thermostat to 'away' temperature when everyone has left for the day. (weekdays only)
 * Turn the thermostat back to our 'home' temperature at 4:00 to preheat the house so it is warm when my wife arrives home.
-* If anyone comes home, turn the temperature back to the 'home' value. 
+* If anyone comes home, turn the temperature back to the 'home' value.
+* At bedtime lower the temperature 2 degrees.
+* Pre-heat the house for when we wake up.
 
 ### UPS.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/ups.yaml)__
