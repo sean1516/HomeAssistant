@@ -26,7 +26,7 @@ The virtual machine is running [Ubuntu Server 16.04.5](https://www.ubuntu.com/) 
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.83.3__.
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.84.5__.
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
