@@ -14,7 +14,6 @@
         arg: /home
       - type: memory_use_percent
       - type: processor_use
-      - type: since_last_boot
       - type: network_in
         arg: ens36
       - type: network_out
