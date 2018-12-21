@@ -580,6 +580,12 @@ views:
           - entity: automation.turn_off_away_when_home
             name: Turn Off thermostat Away Mode When Home
             icon: mdi:home-outline
+          - entity: automation.set_thermostat_temperature__2200
+            name: Set Overnight Temperature
+            icon: mdi:weather-night
+          - entity: automation.set_thermostat_temperature__0500
+            name: Set Morning Temperature
+            icon: mdi:weather-sunset
       - type: entities
         title: Feed the dog Automations
         show_header_toggle: false
