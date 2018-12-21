@@ -24,13 +24,6 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - type: entities
-            title: Days Until Baby M Arrives
-            entities:
-              - entity: sensor.duedate
-                name: Countdown
-                icon: mdi:baby-buggy
-
           - type: glance
             title: Door Status
             entities:
@@ -135,6 +128,12 @@ views:
                 line_width: 4
                 accuracy: 30
                 hours_to_show: 24
+          - type: entities
+            title: Days Until Baby M Arrives
+            entities:
+              - entity: sensor.duedate
+                name: Countdown
+                icon: mdi:baby-buggy
 
 ####################################################
 #                                                  #
@@ -144,6 +143,8 @@ views:
 
   - title: Device Status
     cards:
+      - type: media-control
+        entity: media_player.fire_tv
       - type: vertical-stack
         cards:
           - type: glance

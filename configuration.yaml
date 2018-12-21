@@ -16,7 +16,7 @@ homeassistant:
   whitelist_external_dirs:
     - /config
     - /share
-    - /config/android/adbkey
+
 
 ####################################################
 #                                                  #
@@ -145,11 +145,13 @@ group:
 #                                                  #
 ####################################################
 
+#https://www.home-assistant.io/components/media_player.firetv/
 media_player:
-  - platform: firetv
-    name: Fire TV
-    host: 192.168.1.21
-    abdkey: config/android/adbkey
+  platform: firetv
+  name: Fire TV
+  host: 192.168.1.21
+  adbkey: /config/android/adbkey
+  get_sources: false
 
 ####################################################
 #                                                  #
