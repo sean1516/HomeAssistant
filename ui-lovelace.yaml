@@ -43,30 +43,9 @@ views:
           - type: entities
             entities:
               - cover.garage_door
-      - type: vertical-stack
-        title: Living Room
-        cards:
-          - type: glance
-            title: Living Room Lamps
-            entities:
-              - entity: switch.basic1
-                name: Lamps
-                icon: mdi:lightbulb-outline
-                tap_action: toggle
-              - entity: light.yeelightrgb2
-                name: Notification
-                icon: mdi:lightbulb-outline
-                tap_action: toggle
-              - entity: input_select.notification_bulb2_color
-                name: Notification Bulb Color
-            columns: 3
-          - type: entities
-            show_header_toggle: false
-            title: Entertainment Center
-            entities:
-              - entity: script.music
-                name: Turn On Music
-                icon: mdi:music
+      - type: weather-forecast
+        title: Weather
+        entity: weather.yweather
       - type: glance
         title: Bedroom Lights
         entities:
@@ -93,9 +72,23 @@ views:
             name: Back Porch
             tap_action: toggle
         columns: 4
-      - type: weather-forecast
-        title: Weather
-        entity: weather.yweather
+      - type: vertical-stack
+        title: Living Room
+        cards:
+          - type: glance
+            title: Living Room Lamps
+            entities:
+              - entity: switch.basic1
+                name: Lamps
+                icon: mdi:lightbulb-outline
+                tap_action: toggle
+              - entity: light.yeelightrgb2
+                name: Notification
+                icon: mdi:lightbulb-outline
+                tap_action: toggle
+              - entity: input_select.notification_bulb2_color
+                name: Notification Bulb Color
+            columns: 3
       - type: vertical-stack
         cards:
           - type: vertical-stack
@@ -124,12 +117,12 @@ views:
               - type: sensor
                 entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
                 name: Temperature
-                line_color: '#03a9f4'
-                line_width: 4
-                accuracy: 30
                 hours_to_show: 24
+                graph: line
+                detail: 1
           - type: entities
             title: Days Until Baby M Arrives
+            show_header_toggle: false
             entities:
               - entity: sensor.duedate
                 name: Countdown
@@ -186,17 +179,15 @@ views:
               - type: sensor
                 entity: sensor.speedtest_download
                 name: Download
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
                 hours_to_show: 24
+                graph: line
+                detail: 1
               - type: sensor
                 entity: sensor.speedtest_upload
                 name: Upload
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
                 hours_to_show: 24
+                graph: line
+                detail: 1
 
       - type: vertical-stack
         cards:
@@ -217,19 +208,15 @@ views:
                 entity: sensor.approxwattage
                 name: Load
                 icon: mdi:gauge
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
                 hours_to_show: 24
-                height: 100
+                graph: line
+                detail: 1
               - type: sensor
                 entity: sensor.ups_battery_runtime
                 name: Runtime
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
                 hours_to_show: 24
-                height: 100
+                graph: line
+                detail: 1
 
 ####################################################
 #                                                  #
@@ -256,28 +243,23 @@ views:
               - type: sensor
                 entity: sensor.processor_use
                 name: Processor
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
                 hours_to_show: 24
+                graph: line
+                detail: 1
               - type: sensor
                 entity: sensor.memory_use_percent
                 name: Memory
-                line_color: '#03a9f4'
-                line_width: 8
-                accuracy: 30
                 hours_to_show: 24
+                graph: line
+                detail: 1
           - type: glance
             title: Server Information
             entities:
-               - entity: sensor.since_last_boot_templated
-                 name: Last Boot
-                 icon: mdi:clock
                - entity: sensor.network_in_ens36
                  name: Network In
                - entity: sensor.network_out_ens36
                  name: Network Out
-            columns: 3
+            columns: 2
           - type: glance
             title: HA File Size
             show_header_toggle: true
@@ -388,6 +370,7 @@ views:
           - device_tracker.34ea34e3da0d
           - device_tracker.a020a63452ee
           - device_tracker.6854fd8aee8c
+          - device_tracker.amazonb0c7bdc6f
           - entity: binary_sensor.ikea_tradfri_gateway
             icon: mdi:server
             name: Tradfri Gateway

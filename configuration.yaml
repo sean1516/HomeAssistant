@@ -17,7 +17,6 @@ homeassistant:
     - /config
     - /share
 
-
 ####################################################
 #                                                  #
 #                     GENERAL                      #
@@ -45,6 +44,10 @@ http:
 #https://home-assistant.io/components/logger/
 logger:
   default: error
+
+#https://www.home-assistant.io/lovelace/yaml-mode/
+lovelace:
+  mode: yaml
 
 #https://www.home-assistant.io/components/map/
 map:
