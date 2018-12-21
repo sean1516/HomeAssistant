@@ -46,6 +46,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 
 ## Cloud Controlled Devices:
 * __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)
+* __[Fire TV Stick 4K](https://www.amazon.com/Introducing-Fire-TV-Stick-4K-with-All-New-Alexa-Voice-Remote/dp/B079QHML21)__ 
 * __[iCloud Presence Detection / iPhone XR](https://www.apple.com/iphone-xr/)__
 
 ## Wifi Connected Devices
