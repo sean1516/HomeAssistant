@@ -154,9 +154,9 @@ views:
                 name: GPS
               - entity: device_tracker.d81c79eb20c9
                 name: WiFi
-              - entity: sensor.adams_iphone_battery_level
+              - entity: sensor.adamsiphonebattery
                 name: Battery
-              - entity: sensor.adams_iphone_battery_state
+              - entity: sensor.adamsiphonecharging
                 name: Charging?
             columns: 4
           - type: glance
@@ -166,9 +166,9 @@ views:
                 name: GPS
               - entity: device_tracker.d81c79a4a851
                 name: WiFi
-              - entity: sensor.amys_iphone_battery_level
+              - entity: sensor.amysiphonebattery
                 name: Battery
-              - entity: sensor.amys_iphone_battery_state
+              - entity: sensor.amysiphonecharging
                 name: Charging?
             columns: 4
       - type: vertical-stack
@@ -176,6 +176,11 @@ views:
           - type: markdown
             title: Network Status
             content: " "
+          - type: entities
+            entities:
+              - entity: sensor.myip
+                name: Public IP
+                icon: mdi:web
           - type: horizontal-stack
             cards:
               - type: sensor
