@@ -80,6 +80,33 @@
 
 #########################################################
 #                                                       #
+#            Overnight Thermostat Automations           #
+#                                                       #
+#########################################################
+#            [Validated XX/XX/201X - v XX.X]            #
+
+  - alias: "Set Thermostat Temperature - 2200"
+    trigger:
+      platform: time
+      at: '22:00'
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.linear_heating
+          temperature: 67
+
+  - alias: "Set Thermostat Temperature - 0500"
+    trigger:
+      platform: time
+      at: '05:00'
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.linear_heating
+          temperature: 69
+
+#########################################################
+#                                                       #
 #            END OF CONFIGURATION FILE                  #
 #                                                       #
 #########################################################
