@@ -54,6 +54,7 @@
       - sensor.memory_use_percent
       - sensor.setpoint
     domains:
+      - media_player
       - climate
       - binary_sensor
       - cover

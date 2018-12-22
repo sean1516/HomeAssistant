@@ -155,6 +155,7 @@ media_player:
   host: 192.168.1.21
   adbkey: /config/android/adbkey
   get_sources: false
+  get_source: false
 
 ####################################################
 #                                                  #

@@ -50,27 +50,33 @@ views:
         title: Bedroom Lights
         entities:
           - entity: light.tradfri_bulb_e26_ws_opal_980lm
-            tap_action: toggle
+            tap_action:
+              action: toggle
             name: Amy's Bedside
           - entity: light.tradfri_bulb_e26_ws_opal_980lm_2
-            tap_action: toggle
+            tap_action:
+              action: toggle
             name: Adam's Bedside
         columns: 2
       - type: glance
         title: Outside Lights
         entities:
           - entity: light.yeelight1
-            tap_action: toggle
+            tap_action:
+              action: toggle
             name: Front Porch
           - entity: light.yeelight3
-            tap_action: toggle
+            tap_action:
+              action: toggle
             name: Garage Right
           - entity: light.yeelight4
             name: Garage Left
-            tap_action: toggle
+            tap_action:
+              action: togglee
           - entity: light.yeelight2
             name: Back Porch
-            tap_action: toggle
+            tap_action:
+              action: toggle
         columns: 4
       - type: vertical-stack
         title: Living Room
@@ -81,11 +87,13 @@ views:
               - entity: switch.basic1
                 name: Lamps
                 icon: mdi:lightbulb-outline
-                tap_action: toggle
+                tap_action:
+                  action: toggle
               - entity: light.yeelightrgb2
                 name: Notification
                 icon: mdi:lightbulb-outline
-                tap_action: toggle
+                tap_action:
+                  action: toggle
               - entity: input_select.notification_bulb2_color
                 name: Notification Bulb Color
             columns: 3
@@ -94,6 +102,7 @@ views:
           - type: vertical-stack
             cards:
               - type: entities
+                show_header_toggle: false
                 title: Thermostat
                 entities:
                  - entity: climate.linear_heating
@@ -151,6 +160,7 @@ views:
                 name: Battery
               - entity: sensor.adamsiphonecharging
                 name: Charging?
+                icon: mdi:power-plug
             columns: 4
           - type: glance
             title: Amy's Phone Status
@@ -163,6 +173,7 @@ views:
                 name: Battery
               - entity: sensor.amysiphonecharging
                 name: Charging?
+                icon: mdi:power-plug
             columns: 4
       - type: vertical-stack
         cards:
@@ -192,6 +203,7 @@ views:
       - type: vertical-stack
         cards:
           - type: entities
+            show_header_toggle: false
             title: UPS Status
             entities:
               - entity: sensor.ups_status
@@ -290,7 +302,7 @@ views:
         columns: 4
       - type: entities
         title: Zwave
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: zwave.aeotec_zw090_zstick_gen5_us
             name: Aeotec Zstick
@@ -319,7 +331,7 @@ views:
         columns: 3
       - type: entities
         title: Batteries
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: sensor.tradfri_remote_control
             icon: mdi:battery-50
@@ -338,7 +350,7 @@ views:
             name: Back Door Sensor
       - type: entities
         title: Home Assistant Stats
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: sensor.tracker_count
             icon: mdi:cellphone-link
@@ -408,7 +420,7 @@ views:
           - entity: binary_sensor.pfsense_vm
       - type: entities
         title: Wireless Devices
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: switch.lenovo_switch
             name: Lenovo Laptop
@@ -436,7 +448,7 @@ views:
             icon: mdi:beach
       - type: entities
         title: Christmas Automations
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: automation.turn_on_tree_sunset
             name: Tree On at Sunset
@@ -455,7 +467,7 @@ views:
             icon: mdi:pine-tree
       - type: entities
         title: Bedtime Notifications
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: automation.desktop_on_at_bedtime
             name: Desktop on at Bedtime
@@ -705,7 +717,7 @@ views:
     cards:
       - type: entities
         title: Bedroom Lights
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: light.tradfri_bulb_e26_ws_opal_980lm
             type: custom:slider-entity-row
