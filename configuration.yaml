@@ -23,11 +23,19 @@ homeassistant:
 #                                                  #
 ####################################################
 
+#https://www.home-assistant.io/components/climate/
+climate:
+  - platform: zwave
+
 #https://home-assistant.io/components/config/
 config:
 
-#https://www.home-assistant.io/components/frontend/
-frontend: !include frontend.yaml
+#https://www.home-assistant.io/components/downloader/
+downloader:
+  download_dir: /share
+
+#https://www.home-assistant.io/hassio/
+hassio:
 
 #https://home-assistant.io/components/history/
 history:
@@ -55,17 +63,6 @@ map:
 #https://home-assistant.io/components/sun/
 sun:
 
-#https://www.home-assistant.io/hassio/
-hassio:
-
-#https://www.home-assistant.io/components/downloader/
-downloader:
-  download_dir: /share
-
-#https://www.home-assistant.io/components/climate/
-climate:
-  - platform: zwave
-
 ####################################################
 #                                                  #
 #      LINKS TO INDIVUAL CONFIGURATION FILES       #
@@ -76,6 +73,7 @@ climate:
 automation: !include_dir_merge_list automation/
 binary_sensor: !include binary_sensor.yaml
 device_tracker: !include device_tracker.yaml
+frontend: !include frontend.yaml
 input_boolean: !include input_boolean.yaml
 input_select: !include input_select.yaml
 ios: !include ios.yaml
@@ -121,26 +119,6 @@ emulated_hue:
     script.volumeup:
       hidden: false
       name: Volume Up
-
-####################################################
-#                                                  #
-#                     GROUP                        #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/group
-group:
-  Outside Lights:
-    - light.yeelight1
-    - light.yeelight3
-    - light.yeelight4
-  Bedroom Lights:
-    - light.tradfri_bulb_e26_ws_opal_980lm
-    - light.tradfri_bulb_e26_ws_opal_980lm_2
-  Front Lights:
-    - light.yeelight1
-    - light.yeelight3
-    - light.yeelight4
 
 ####################################################
 #                                                  #
@@ -196,16 +174,6 @@ rest_command:
   google_backup:
     url: 'http://192.168.1.24:8055/gb/doBackup'
     timeout: '300'
-
-####################################################
-#                                                  #
-#                SHELL COMMAND                     #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/shell_command/
-shell_command:
-  comcast: !secret comcast
 
 ####################################################
 #                                                  #
