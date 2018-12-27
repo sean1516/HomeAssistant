@@ -64,7 +64,7 @@
   - alias: "Disk Use Alarm"
     trigger:
       - platform: numeric_state
-        entity_id: sensor.disk_use_percent_
+        entity_id: sensor.disk_use_percent_home
         above: 85
     action:
       service: notify.home_assistant
