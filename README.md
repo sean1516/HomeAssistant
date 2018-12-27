@@ -11,7 +11,7 @@ A detailed description of each of my automations and a link to the yaml file is 
 This is the most important part of Home Assistant!  Remote control and voice commmands are nice, however, that is not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplest things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
 # Server Running My Home Assistant Setup:
-* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which is a bare metal hypervisor that allows me to run mutiple virtual machines on the same physical hardware.  The HA virtual machine is given 2 cores, 2GB of RAM and a 16GB disk.
+* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which is a bare metal hypervisor that allows me to run mutiple virtual machines on the same physical hardware.  The HA virtual machine is given 2 cores, 2GB of RAM and a 16GB disk. I also run a [Router](https://www.pfsense.org/) and NAS from the same box.  
 
 The virtual machine is running [Ubuntu Server 16.04.5](https://www.ubuntu.com/) as an operating system and [Hass.io](https://www.home-assistant.io/hassio/).  I am also running the following add-ons:
 
@@ -42,12 +42,16 @@ What works for me is creating a Samba share that I can then edit on any computer
 
 After you have the Samba share setup, I like to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
 
+# A Few Stats On my Setup:
+| Components | Network Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
+|:----------:|:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
+| 86         |36               |8       |6               |15        |74           |4        |121      |7              |         
 # Connected Devices:
 
 ## Cloud Controlled Devices:
 * __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)
-* __[Fire TV Stick 4K](https://www.amazon.com/Introducing-Fire-TV-Stick-4K-with-All-New-Alexa-Voice-Remote/dp/B079QHML21)__ 
-* __[iCloud Presence Detection / iPhone XR](https://www.apple.com/iphone-xr/)__
+* __[Amazon Fire TV Stick 4K](https://www.amazon.com/Introducing-Fire-TV-Stick-4K-with-All-New-Alexa-Voice-Remote/dp/B079QHML21)__ 
+* __[Apple iCloud Presence Detection / iPhone XR](https://www.apple.com/iphone-xr/)__
 
 ## Wifi Connected Devices
 * __[Xiaomi Yeelight RGBW E27 Smart LED Bulbs](http://www.gearbest.com/smart-lighting/pp_361555.html)__ *
@@ -113,5 +117,3 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # Questions?
 
 The best way to get help on Home Assistant is the [Home Assistant Forum](https://community.home-assistant.io/).  If you have a specific question about my configuration send me a Private Message on the HA forum, my username over there is [Silvrr](https://community.home-assistant.io/u/silvrr/).  If you have found something incorrect, please submit an issue here on Github and ill get it fixed.
-
-If you are just getting started with Home Assistant I highly recommend checking out this [YouTube Series](https://www.youtube.com/playlist?list=PLgtGAtCt_hGTc_GAEmMhQ_XVs80mZoBIG).  It helped me a lot in the beginning and I still frequently reference some videos today.  I also strongly recommend you read the [Home Assistant Docs](https://home-assistant.io/docs/).  So many questions asked on the  [Home Assistant Forum](https://community.home-assistant.io/) could be solved by reading the docs. I have tried to include links in my files to the associated guidance documents for easy reference.  
