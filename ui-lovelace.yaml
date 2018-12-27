@@ -354,6 +354,7 @@ views:
         entities:
           - entity: sensor.tracker_count
             icon: mdi:cellphone-link
+            name: Number of Network Devices
           - entity: sensor.lights_count
             icon: mdi:lightbulb
           - entity: sensor.binary_sensor_count
@@ -366,6 +367,8 @@ views:
             icon: mdi:script-text-outline
           - entity: sensor.sensor_count
             icon: mdi:gauge
+          - entity: sensor.zwave_count
+            icon: mdi:z-wave
 
 ####################################################
 #                                                  #
@@ -553,6 +556,9 @@ views:
         entities:
           - entity: automation.notify_if_ha_device_offline
             name: Notify if HA device Offline
+            icon: mdi:home-assistant
+          - entity: automation.notify_if_zwave_device_is_dead
+            name: Notify if Zwave device is Dead
             icon: mdi:home-assistant
           - entity: automation.notify_if_yeelight_offline
             name: Notify if Yeelight Offline
