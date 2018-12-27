@@ -51,11 +51,13 @@
       - service: switch.turn_off
         entity_id: switch.desktop_switch
 
-####################################################
-#                                                  #
-#         LIVING ROOM LAMPS ON WHEN AWAY           #
-#                                                  #
-####################################################
+#########################################################
+#                                                       #
+#            LIVING ROOM LAMPS ON WHEN AWAY             #
+#                                                       #
+#########################################################
+#            [Validated 12/22/2018 - v 84.5]            #
+
 
   - alias: "Living Room Lamps On When leaving"
     trigger:

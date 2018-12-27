@@ -83,7 +83,7 @@
 #            Overnight Thermostat Automations           #
 #                                                       #
 #########################################################
-#            [Validated XX/XX/201X - v XX.X]            #
+#            [Validated 12/22/2018 - v 84.5]            #
 
   - alias: "Set Thermostat Temperature - 2200"
     trigger:
