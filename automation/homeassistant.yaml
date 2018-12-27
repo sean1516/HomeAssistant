@@ -72,6 +72,29 @@
         title: "Hass.io VM Disk Use Alarm"
         message: "Hass.io VM is running low on disk space, usage is currently at {{ states. sensor.disk_use_percent_home.state }} %!"
 
+#########################################################
+#                                                       #
+#                 DEAD ZWAVE DEVICE                     #
+#                                                       #
+#########################################################
+
+  - alias: "Notify if Zwave Device is Dead"
+    trigger:
+      - platform: state
+        entity_id:
+          - zwave.aeotec_zw090_zstick_gen5_us
+          - zwave.ge_32563_hinge_pin_smart_door_sensor
+          - zwave.ge_32563_hinge_pin_smart_door_sensor_2
+          - zwave.vision_zg8101_garage_door_detector
+          - zwave.unknown_id021f_unknown_type0003_id0101
+          - zwave.linear_gctbz48_battery_powered_zwave_thermostat_3
+        to: 'dead'
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Home Assistant Zwave Device is dead"
+        message: "{{ trigger.to_state.attributes.friendly_name }} is dead."
+
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #
