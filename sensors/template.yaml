@@ -138,6 +138,18 @@
             {%- endfor -%}
           {%- endfor -%}
 
+      zwave_count:
+        friendly_name: 'Zwave Devices'
+        value_template: >
+          {%- set domains = ['zwave'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #
