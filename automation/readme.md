@@ -90,6 +90,7 @@ Some automations for Home Assistant related items.
 * Notify me when Home Assistant is shutting down
 * Manually update some sensor that will no longer auto update
 * Send me a notification if my Home Assistant VM disk gets full
+* Notify me if a Zwave device is dead
 
 ### Leaving_Notifications.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml)__
