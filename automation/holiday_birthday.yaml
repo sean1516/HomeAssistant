@@ -18,10 +18,6 @@
       - condition: template
         value_template: "{{ states.sensor.holiday.state | trim != '' }}"
     action:
-      - service: notify.home_assistant
-        data:
-          message: 'Today is {{ states.sensor.holiday.state }}.'
-          title: '{{ states.sensor.holiday.state }}'
       - service: notify.ios_adams_iphone
         data:
           message: 'Today is {{ states.sensor.holiday.state }}.'
