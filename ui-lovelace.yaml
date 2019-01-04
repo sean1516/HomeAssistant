@@ -812,27 +812,27 @@ views:
           - entity: switch.basic1
             name: Sonoff Basic 1
             icon: mdi:toggle-switch
-          - entity: switch.basic2
-            name: Sonoff Basic 2
-            icon: mdi:toggle-switch
-          - entity: switch.pow1
-            name: Sonoff POW 1
-            icon: mdi:toggle-switch
-          - entity: sensor.pow1_energy
-            name: kWh
-            icon: mdi:chart-line
-          - entity: sensor.pow1_power
-            name: Watts
-            icon: mdi:power-plug
-          - entity: sensor.pow1_voltage
-            name: Volts
-            icon: mdi:power-socket-us
-          - entity: sensor.pow1_current
-            name: Amps
-            icon: mdi:flash-circle
+          # - entity: switch.basic2
+          #   name: Sonoff Basic 2
+          #   icon: mdi:toggle-switch
+          # - entity: switch.pow1
+          #   name: Sonoff POW 1
+          #   icon: mdi:toggle-switch
+          # - entity: sensor.pow1_energy
+          #   name: kWh
+          #   icon: mdi:chart-line
+          # - entity: sensor.pow1_power
+          #   name: Watts
+          #   icon: mdi:power-plug
+          # - entity: sensor.pow1_voltage
+          #   name: Volts
+          #   icon: mdi:power-socket-us
+          # - entity: sensor.pow1_current
+          #   name: Amps
+          #   icon: mdi:flash-circle
           - entity: switch.pow2
             name: Sonoff POW 2
-            icon: mdi:pine-tree
+            icon: mdi:television-classic
           - entity: sensor.pow2_energy
             name: kWh
             icon: mdi:chart-line
