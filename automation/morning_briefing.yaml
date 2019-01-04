@@ -3,7 +3,7 @@
 #                   MORNING BRIEFING                    #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
+#            [Validated 01/04/2019 - v 84.5]            #
 
 
   - alias: "Morning Briefing Adam"
@@ -21,7 +21,7 @@
                     {{ "\n" }}
                     {% if is_state('sensor.holiday', '') %} {% else %}Today is {{ states.sensor.holiday.state}}.{% endif %}{{ "\n" }}
                     {{ "\n" }}
-                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
+                    The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
                     {{ "\n" }}
                     There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
 
@@ -40,7 +40,7 @@
                     {{ "\n" }}
                     {% if is_state('sensor.holiday', '') %} {% else %}Today is {{ states.sensor.holiday.state}}.{% endif %}{{ "\n" }}
                     {{ "\n" }}
-                    The current temperature is {{state_attr('weather.yweather', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
+                    The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
                     {{ "\n" }}
                     There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
 
