@@ -45,7 +45,7 @@ views:
               - cover.garage_door
       - type: weather-forecast
         title: Weather
-        entity: weather.yweather
+        entity: weather.dark_sky
       - type: glance
         title: Bedroom Lights
         entities:
@@ -866,7 +866,7 @@ views:
     cards:
       - type: weather-forecast
         title: Weather
-        entity: weather.yweather
+        entity: weather.dark_sky
       - type: entities
         title: Weather Alerts
         show_header_toggle: false

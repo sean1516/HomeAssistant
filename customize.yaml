@@ -9,6 +9,12 @@
 binary_sensor.modem:
   icon: mdi:server-network
 
+binary_sensor.NAS:
+  icon: mdi:harddisk
+
+binary_sensor.desktop:
+  icon: mdi:desktop-tower
+
 binary_sensor.ubiquiti_switch:
   icon: mdi:switch
 
@@ -51,7 +57,7 @@ light.yeelightrgb2:
 #                                                  #
 ####################################################
 
-weather.yweather:
+weather.dark_sky:
   friendly_name: Weather Forecast
 
 ####################################################

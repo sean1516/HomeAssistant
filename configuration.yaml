@@ -192,10 +192,10 @@ tradfri:
 #                                                  #
 ####################################################
 
-#https://www.home-assistant.io/components/weather.yweather/
+#https://www.home-assistant.io/components/weather.darksky/
 weather:
-  - platform: yweather
-    woeid: !secret woeid
+  - platform: darksky
+    api_key: !secret darksky
 
 ####################################################
 #                                                  #
