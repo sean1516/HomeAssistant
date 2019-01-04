@@ -105,11 +105,12 @@
       - service: light.turn_off
         entity_id: light.yeelightrgb2
 
-####################################################
-#                                                  #
-#            MEDIA CENTER ON WHEN AWAY             #
-#                                                  #
-####################################################
+#########################################################
+#                                                       #
+#               MEDIA CENTER ON WHEN AWAY               #
+#                                                       #
+#########################################################
+#            [Validated 01/03/2019 - v 84.5]            #
 
   - alias: "Media Center On When leaving"
     trigger:
@@ -125,7 +126,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('sensor.pow1_power') | float > 10 }}"
+          value_template: "{{ states('sensor.pow2_power') | float > 10 }}"
         - condition: template
           value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
         - condition: template
@@ -133,7 +134,7 @@
     action:
       - service: notify.ios_adams_iphone
         data_template:
-          message: 'The Media Center is pulling {{ states("sensor.pow1_power") }} watts and you are gone'
+          message: 'The Media Center is pulling {{ states("sensor.pow2_power") }} watts and you are gone'
           data:
             push:
               badge: 0
