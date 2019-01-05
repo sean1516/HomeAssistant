@@ -122,6 +122,20 @@ emulated_hue:
 
 ####################################################
 #                                                  #
+#                    GROUP                         #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/group/
+group:
+  outside_lights:
+    - light.yeelight1
+    - light.yeelight2
+    - light.yeelight3
+    - light.yeelight4
+
+####################################################
+#                                                  #
 #                    MEDIA PLAYER                  #
 #                                                  #
 ####################################################

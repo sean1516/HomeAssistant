@@ -49,11 +49,11 @@ views:
       - type: glance
         title: Bedroom Lights
         entities:
-          - entity: light.tradfri_bulb_e26_ws_opal_980lm
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
             tap_action:
               action: toggle
             name: Amy's Bedside
-          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
             tap_action:
               action: toggle
             name: Adam's Bedside
@@ -386,6 +386,12 @@ views:
           - device_tracker.a020a63452ee
           - device_tracker.6854fd8aee8c
           - device_tracker.amazonb0c7bdc6f
+          - entity: device_tracker.kuled13199
+            name: Kuled 1
+            icon: mdi:light-switch
+          - entity: device_tracker.kuled23631
+            name: Kuled 2
+            icon: mdi:light-switch
           - entity: binary_sensor.ikea_tradfri_gateway
             icon: mdi:server
             name: Tradfri Gateway
@@ -450,25 +456,6 @@ views:
           - entity: input_boolean.vacation
             icon: mdi:beach
       - type: entities
-        title: Christmas Automations
-        show_header_toggle: false
-        entities:
-          - entity: automation.turn_on_tree_sunset
-            name: Tree On at Sunset
-            icon: mdi:pine-tree
-          - entity: automation.tree_on_when_home
-            name: Tree On When Home
-            icon: mdi:pine-tree
-          - entity: automation.turn_off_tree_at_bedtime
-            name: Tree Off At Bedtime
-            icon: mdi:pine-tree
-          - entity:  automation.turn_on_tree_in_morning
-            name: Tree On In Morning
-            icon: mdi:pine-tree
-          - entity: automation.tree_off_when_leaving
-            name: Tree Off When Leaving
-            icon: mdi:pine-tree
-      - type: entities
         title: Bedtime Notifications
         show_header_toggle: false
         entities:
@@ -479,7 +466,7 @@ views:
             name: Garage Door Open at Bedtime
             icon: mdi:hotel
           - entity: automation.living_room_lamps_on_at_bedtime
-            name: Laps On At Bedtime Notification
+            name: Lamps On At Bedtime Notification
             icon: mdi:hotel
       - type: entities
         title: Automations For Lights
@@ -604,6 +591,12 @@ views:
           - entity: automation.set_thermostat_temperature__0500
             name: Set Morning Temperature
             icon: mdi:weather-sunset
+          - entity: automation.turn_on_bedroom_fan_with_hvac
+            name: Turn on Bedroom Fan with HVAC
+            icon: mdi:fan
+          - entity: automation.turn_off_bedroom_fan_with_hvac
+            name: Turn off Bedroom Fan with HVAC
+            icon: mdi:fan
       - type: entities
         title: Feed the dog Automations
         show_header_toggle: false
@@ -725,11 +718,11 @@ views:
         title: Bedroom Lights
         show_header_toggle: false
         entities:
-          - entity: light.tradfri_bulb_e26_ws_opal_980lm
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
             type: custom:slider-entity-row
             break_slider: true
             name: Amy's Bedside
-          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2
+          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
             type: custom:slider-entity-row
             break_slider: true
             name: Adam's Bedside
@@ -812,24 +805,24 @@ views:
           - entity: switch.basic1
             name: Sonoff Basic 1
             icon: mdi:toggle-switch
-          # - entity: switch.basic2
-          #   name: Sonoff Basic 2
-          #   icon: mdi:toggle-switch
-          # - entity: switch.pow1
-          #   name: Sonoff POW 1
-          #   icon: mdi:toggle-switch
-          # - entity: sensor.pow1_energy
-          #   name: kWh
-          #   icon: mdi:chart-line
-          # - entity: sensor.pow1_power
-          #   name: Watts
-          #   icon: mdi:power-plug
-          # - entity: sensor.pow1_voltage
-          #   name: Volts
-          #   icon: mdi:power-socket-us
-          # - entity: sensor.pow1_current
-          #   name: Amps
-          #   icon: mdi:flash-circle
+          - entity: switch.basic2
+            name: Sonoff Basic 2
+            icon: mdi:toggle-switch
+          - entity: switch.pow1
+            name: Sonoff POW 1
+            icon: mdi:toggle-switch
+          - entity: sensor.pow1_energy
+            name: kWh
+            icon: mdi:chart-line
+          - entity: sensor.pow1_power
+            name: Watts
+            icon: mdi:power-plug
+          - entity: sensor.pow1_voltage
+            name: Volts
+            icon: mdi:power-socket-us
+          - entity: sensor.pow1_current
+            name: Amps
+            icon: mdi:flash-circle
           - entity: switch.pow2
             name: Sonoff POW 2
             icon: mdi:television-classic
@@ -845,6 +838,16 @@ views:
           - entity: sensor.pow2_current
             name: Amps
             icon: mdi:flash-circle
+      - type: entities
+        title: Kuled Switches
+        show_header_toggle: false
+        entities:
+          - entity: switch.kuled1
+            name: Kuled 1
+            icon: mdi:light-switch
+          - entity: switch.kuled2
+            name: Kuled 2
+            icon: mdi:light-switch
       - type: entities
         title: Computer Switches
         show_header_toggle: false

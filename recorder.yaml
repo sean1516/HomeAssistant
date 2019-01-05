@@ -28,8 +28,8 @@
       - switch.basic2
       - switch.pow1
       - switch.pow2
-      - device_tracker.d81c79a4a851
-      - device_tracker.d81c79eb20c9
+      - switch.kuled1
+      - switch.kuled2
       - sensor.backdoorstatus
       - sensor.garagedoorstatus
       - sensor.gehingepinsensor1

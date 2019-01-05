@@ -50,9 +50,9 @@
 #https://www.home-assistant.io/components/switch.mqtt/
   - platform: mqtt
     name: "POW1"
-    state_topic: "stat/pow1/POWER"
-    command_topic: "cmnd/pow1/POWER"
-    availability_topic: "tele/pow1/LWT"
+    state_topic: "stat/sonoff/POWER"
+    command_topic: "cmnd/sonoff/POWER"
+    availability_topic: "tele/sonoff/LWT"
     qos: 1
     payload_on: "ON"
     payload_off: "OFF"
@@ -89,6 +89,30 @@
     state_topic: "stat/basic2/POWER"
     command_topic: "cmnd/basic2/POWER"
     availability_topic: "tele/basic2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
+  - platform: mqtt
+    name: "Kuled1"
+    state_topic: "stat/kuled1/POWER"
+    command_topic: "cmnd/kuled1/POWER"
+    availability_topic: "tele/kuled1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
+  - platform: mqtt
+    name: "Kuled2"
+    state_topic: "stat/kuled2/POWER"
+    command_topic: "cmnd/kuled2/POWER"
+    availability_topic: "tele/kuled2/LWT"
     qos: 1
     payload_on: "ON"
     payload_off: "OFF"
