@@ -1,0 +1,44 @@
+#########################################################
+#                                                       #
+#              AIR CIRCULATION AUTOMATION               #
+#                                                       #
+#########################################################
+#            [Validated 01/04/2019 - v 84.5]            #
+
+  - alias: "Turn on Bedroom Fan With HVAC"
+    trigger:
+      platform: state
+      entity_id: sensor.operatingstate
+      to: Heating
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    action:
+      - service: switch.turn_on
+        entity_id: switch.kuled1
+
+  - alias: "Turn off Bedroom Fan With HVAC"
+    trigger:
+      platform: state
+      entity_id: sensor.operatingstate
+      to: Idle
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+        - condition: template
+          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+    action:
+      - service: switch.turn_off
+        entity_id: switch.kuled1
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

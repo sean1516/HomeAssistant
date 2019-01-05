@@ -27,6 +27,8 @@
           - device_tracker.pow17279
           - device_tracker.sonoff_pow_2
           - device_tracker.sonoff_basic_2
+          - device_tracker.kuled13199
+          - device_tracker.kuled23631
         from: 'home'
         to: 'not_home'
     action:
