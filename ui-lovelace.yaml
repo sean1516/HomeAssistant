@@ -565,6 +565,9 @@ views:
           - entity: automation.disk_use_alarm
             name: Hass.io VM Disk Use Alarm
             icon: mdi:harddisk
+          - entity: automation.sensor_low_battery
+            name: Low Sensor Battery
+            icon: mdi:battery-charging-wireless-10
       - type: entities
         title: Other Automations
         show_header_toggle: false
