@@ -25,17 +25,6 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 
 This notification is used to notify me if my Lets Encrypt certificate does not auto renew after the days remaining in the certificate validity goes below 28 days.  It should auto renew at 30 days.  	
 
-### Christmas.yaml Automations:
-__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/christmas.yaml)__
-
-These automations are used to minimize the power used during the Christmas season.  I love the look of our tree and all the lights but they draw hundreds of watts and we don't need to be wasting that power.
-
-* Turn on the Christmas tree at sunset
-* Turn on the Christmas tree when we come home (triggerd by the garage door being open and our interior garage door opening)
-* Turn off the Christmas tree at bedtime
-* Turn on the Christmas tree in the morning
-* Turn off the Tree when everyone leaves for the day during the week. 
-
 ### Device Offline.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml)__
 
@@ -97,6 +86,7 @@ Some automations for Home Assistant related items.
 * Manually update some sensor that will no longer auto update
 * Send me a notification if my Home Assistant VM disk gets full
 * Notify me if a Zwave device is dead
+* Notify me if a battery power sensor battery is getting low
 
 ### Leaving_Notifications.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml)__
