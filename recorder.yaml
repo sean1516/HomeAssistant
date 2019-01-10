@@ -52,6 +52,7 @@
       - sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
       - sensor.processor_use
       - sensor.memory_use_percent
+      - sensor.disk_use_percent_home
       - sensor.setpoint
       - sensor.adamsiphonebattery
       - sensor.adamsiphonecharging
