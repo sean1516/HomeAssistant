@@ -119,6 +119,9 @@ emulated_hue:
     script.volumeup:
       hidden: false
       name: Volume Up
+    script.fire_tv:
+      hidden: false
+      name: Fire TV
 
 ####################################################
 #                                                  #

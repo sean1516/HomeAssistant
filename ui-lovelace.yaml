@@ -795,6 +795,9 @@ views:
           - entity: script.music
             name: Script - Turn On Music
             icon: mdi:music
+          - entity: script.fire_tv
+            name: Script - Turn On Fire TV
+            icon: mdi:fire
           - entity: script.volumeup
             name: Script - Volume Up
             icon: mdi:volume-plus
