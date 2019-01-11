@@ -152,7 +152,7 @@ views:
           - type: glance
             title: Adam's Phone Status
             entities:
-              - entity: device_tracker.adamsiphone
+              - entity: device_tracker.adam_siphone
                 name: GPS
               - entity: device_tracker.d81c79eb20c9
                 name: WiFi
@@ -165,7 +165,7 @@ views:
           - type: glance
             title: Amy's Phone Status
             entities:
-              - entity: device_tracker.amysiphone
+              - entity: device_tracker.amy_siphone
                 name: GPS
               - entity: device_tracker.d81c79a4a851
                 name: WiFi
