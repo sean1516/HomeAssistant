@@ -15,9 +15,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
@@ -49,9 +49,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
@@ -78,9 +78,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
@@ -101,20 +101,20 @@
   - alias: "Exterior Garage Door Left Open When Away"
     trigger:
       - platform: zone
-        entity_id: device_tracker.adamsiphone
+        entity_id: device_tracker.adam_siphone
         zone: zone.home
         event: 'leave'
       - platform: zone
-        entity_id: device_tracker.amysiphone
+        entity_id: device_tracker.amy_siphone
         zone: zone.home
         event: 'leave'
     condition:
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
         - condition: state
           entity_id: sensor.garagedoorstatus
           state: 'Open'
@@ -140,9 +140,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adamsiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amysiphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
         - condition: template
           value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
         - condition: template
