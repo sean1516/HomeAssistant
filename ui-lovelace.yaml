@@ -276,9 +276,9 @@ views:
             title: HA File Size
             show_header_toggle: true
             entities:
-              - entity: sensor.homeassistantlog
+              - entity: sensor.home_assistant_log
                 name: Log File
-              - entity: sensor.homeassistant_v2db
+              - entity: sensor.home_assistant_v2_db
                 name: Database
               - entity: sensor.disk_use_percent_home
                 name: Disk Use
@@ -588,10 +588,10 @@ views:
           - entity: automation.turn_off_away_when_home
             name: Turn Off thermostat Away Mode When Home
             icon: mdi:home-outline
-          - entity: automation.set_thermostat_temperature__2200
+          - entity: automation.set_thermostat_temperature_2200
             name: Set Overnight Temperature
             icon: mdi:weather-night
-          - entity: automation.set_thermostat_temperature__0500
+          - entity: automation.set_thermostat_temperature_0500
             name: Set Morning Temperature
             icon: mdi:weather-sunset
           - entity: automation.turn_on_bedroom_fan_with_hvac
