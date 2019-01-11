@@ -34,6 +34,33 @@
 
 #########################################################
 #                                                       #
+#                   ADDON STOPPED                       #
+#                                                       #
+#########################################################
+
+  - alias: Addon Stopped
+    trigger:
+      platform: state
+      entity_id:
+        - sensor.dasshio
+        - sensor.duckdns
+        - sensor.gdrivebackup
+        - sensor.mosquitto
+        - sensor.nut
+        - sensor.rpcshutdown
+        - sensor.samba
+        - sensor.ssh
+        - sensor.tasmoadmin
+        - sensor.unificontroller
+      to: stopped
+    action:
+      - service: notify.ios_adams_iphone
+        data_template:
+          title: "Hass.io Addon Stopped"
+          message: "{{ trigger.to_state.attributes.friendly_name }} addon is stopped"
+
+#########################################################
+#                                                       #
 #                  TEMPLATE SENSOR UPDATE               #
 #                                                       #
 #########################################################
@@ -71,7 +98,7 @@
       service: notify.home_assistant
       data_template:
         title: "Hass.io VM Disk Use Alarm"
-        message: "Hass.io VM is running low on disk space, usage is currently at {{ states. sensor.disk_use_percent_home.state }} %!"
+        message: "Hass.io VM is running low on disk space, usage is currently at {{ states.sensor.disk_use_percent_home.state }} %!"
 
 #########################################################
 #                                                       #
