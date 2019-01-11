@@ -239,6 +239,40 @@ views:
   - title: HA
     icon: mdi:home-assistant
     cards:
+      - type: entities
+        title: Hass.io Addons
+        show_header_toggle: false
+        entities:
+          - entity: switch.dasshio
+            name: Dasshio
+            icon: mdi:server-plus
+          - entity: switch.duckdns
+            name: DuckDNS
+            icon: mdi:server-plus
+          - entity: switch.gdrivebackup
+            name: Google Drive Backup
+            icon: mdi:server-plus
+          - entity: switch.mosquitto
+            name: Mosquitto MQTT
+            icon: mdi:server-plus
+          - entity: switch.nut
+            name: NUT
+            icon: mdi:server-plus
+          - entity: switch.rpcshutdown
+            name: RPC Shutdown
+            icon: mdi:server-plus
+          - entity: switch.samba
+            name: Samba
+            icon: mdi:server-plus
+          - entity: switch.ssh
+            name: SSH
+            icon: mdi:server-plus
+          - entity: switch.tasmoadmin
+            name: TasmoAdmin
+            icon: mdi:server-plus
+          - entity: switch.unificontroller
+            name: Unifi Controller
+            icon: mdi:server-plus
       - type: vertical-stack
         cards:
           - type: glance

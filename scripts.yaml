@@ -3,6 +3,24 @@
 
 ####################################################
 #                                                  #
+#                FIND MY IPHONE                    #
+#                                                  #
+####################################################
+
+  findadamsiphone:
+    sequence:
+      service: device_tracker.icloud_lost_iphone
+      data:
+        device_name: adam_siphone
+
+  findamysiphone:
+    sequence:
+      service: device_tracker.icloud_lost_iphone
+      data:
+        device_name: amy_siphone
+
+####################################################
+#                                                  #
 #                 NORMAL LIGHT                     #
 #                                                  #
 ####################################################
