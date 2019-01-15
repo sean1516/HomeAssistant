@@ -26,7 +26,7 @@ The virtual machine is running [Ubuntu Server 16.04.5](https://www.ubuntu.com/) 
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.85.0__
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.85.1__
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L45) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L48).
@@ -44,7 +44,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # A Few Stats On my Setup:
 | Components Used | Network Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:----------:|:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-| 87         |39               |8       |6               |27        |73           |7        |130      |7              |         
+| 87         |41               |8       |6               |27        |73           |7        |130      |7              |         
 # Connected Devices:
 
 ## Cloud Controlled Devices:
