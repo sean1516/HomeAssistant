@@ -53,11 +53,16 @@ views:
             tap_action:
               action: toggle
             name: Amy's Bedside
+          - entity: switch.kuled1
+            tap_action:
+              action: toggle
+            icon: mdi:fan
+            name: Fan
           - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
             tap_action:
               action: toggle
             name: Adam's Bedside
-        columns: 2
+        columns: 3
       - type: glance
         title: Outside Lights
         entities:
@@ -474,6 +479,16 @@ views:
             name: Adam's iPhone
           - entity: device_tracker.d81c79a4a851
             name: Amy's iPhone
+      - type: entities
+        title: Raspberry Pis
+        show_header_toggle: false
+        entities:
+          - entity: device_tracker.b827eb9a6be6
+            name: Raspberry Pi Zero W
+            icon: mdi:raspberry-pi
+          - entity: device_tracker.b827ebaec321
+            name: Raspberry Pi 3b+ Wireless
+            icon: mdi:raspberry-pi
 
 ####################################################
 #                                                  #
@@ -965,7 +980,28 @@ views:
       - type: iframe
         url: https://embed.windy.com/embed2.html?lat=41.965&lon=-88.190&zoom=11&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=41.943&detailLon=-88.145&metricWind=default&metricTemp=%C2%B0F&radarRange=-1
         aspect_ratio: 70%
-
+      - type: entities
+        title: Adam's & Wabash Bus Times
+        show_header_toggle: false
+        entities:
+          - entity: sensor.151first
+            name: First 151 Bus
+            icon: mdi:bus-clock
+          - entity: sensor.151second
+            name: Second 151 Bus
+            icon: mdi:bus-clock
+          - entity: sensor.126first
+            name: First 126 Bus
+            icon: mdi:bus-clock
+          - entity: sensor.126second
+            name: Second 126 Bus
+            icon: mdi:bus-clock
+          - entity: sensor.7first
+            name: First 7 Bus
+            icon: mdi:bus-clock
+          - entity: sensor.7second
+            name: Second 7 Bus
+            icon: mdi:bus-clock
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #
