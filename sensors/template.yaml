@@ -18,25 +18,6 @@
         unit_of_measurement: 'W'
         value_template:  '{{states("sensor.ups_load")|int*9}}'
 
-      since_last_boot_templated:
-        value_template: >-
-          {%- set slb = states.sensor.since_last_boot.state.split(' ') -%}
-          {%- set count = slb | length -%}
-          {%- set hms = slb[count - 1] -%}
-          {%- set hms_trimmed = hms.split('.')[0] -%}
-          {%- set hms_split = hms_trimmed.split(':') -%}
-          {%- set hours = hms_split[0] | int -%}
-          {%- if count == 3 -%}
-            {{ slb[0] ~ ' ' ~ slb[1] ~ ' ' }}
-          {%- endif -%}
-          {%- if hours > 0 -%}
-            {%- if hours == 1 -%}
-              1 hour
-            {%- else -%}
-              {{ hours }} hours
-            {%- endif -%}
-          {%- endif -%}
-
       setpoint:
         unit_of_measurement: '°F'
         value_template: "{{ state_attr('climate.linear_heating', 'temperature') }}"

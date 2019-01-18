@@ -91,7 +91,7 @@
       - temperature_low
       - temperature_high
     update_interval:
-      minutes: 10
+      minutes: 30
 
   - platform: template
     sensors:
