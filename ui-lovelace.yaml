@@ -466,6 +466,9 @@ views:
           - entity: binary_sensor.ubiquiti_switch
           - entity: binary_sensor.ubiquiti_ap
           - entity: binary_sensor.pfsense_vm
+          - entity: switch.hassio_dev_vm
+            name: Hass.io Dev VM
+            icon: mdi:server
       - type: entities
         title: Wireless Devices
         show_header_toggle: false
@@ -485,10 +488,10 @@ views:
         entities:
           - entity: device_tracker.b827eb9a6be6
             name: Raspberry Pi Zero W
-            icon: mdi:raspberry-pi
+            icon: mdi:raspberrypi
           - entity: device_tracker.b827ebaec321
             name: Raspberry Pi 3b+ Wireless
-            icon: mdi:raspberry-pi
+            icon: mdi:raspberrypi
 
 ####################################################
 #                                                  #
@@ -984,24 +987,18 @@ views:
         title: Adam's & Wabash Bus Times
         show_header_toggle: false
         entities:
-          - entity: sensor.151first
+          - entity: sensor.151
             name: First 151 Bus
-            icon: mdi:bus-clock
-          - entity: sensor.151second
+          - entity: sensor.151_1
             name: Second 151 Bus
-            icon: mdi:bus-clock
-          - entity: sensor.126first
+          - entity: sensor.126
             name: First 126 Bus
-            icon: mdi:bus-clock
-          - entity: sensor.126second
+          - entity: sensor.126_1
             name: Second 126 Bus
-            icon: mdi:bus-clock
-          - entity: sensor.7first
+          - entity: sensor.7
             name: First 7 Bus
-            icon: mdi:bus-clock
-          - entity: sensor.7second
+          - entity: sensor.7_1
             name: Second 7 Bus
-            icon: mdi:bus-clock
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #
