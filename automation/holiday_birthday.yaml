@@ -3,7 +3,6 @@
 #      NOTIFY IF ITS A HOLIDAY OR BIRTHDAY              #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Holiday and Birthday Notification"
     hide_entity: false

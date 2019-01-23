@@ -150,8 +150,8 @@ views:
 
   - title: Device Status
     cards:
-      - type: media-control
-        entity: media_player.fire_tv
+      # - type: media-control
+      #   entity: media_player.fire_tv
       - type: vertical-stack
         cards:
           - type: glance
@@ -182,31 +182,6 @@ views:
             columns: 4
       - type: vertical-stack
         cards:
-          - type: markdown
-            title: Network Status
-            content: " "
-          - type: entities
-            entities:
-              - entity: sensor.myip
-                name: Public IP
-                icon: mdi:web
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.speedtest_download
-                name: Download
-                hours_to_show: 24
-                graph: line
-                detail: 1
-              - type: sensor
-                entity: sensor.speedtest_upload
-                name: Upload
-                hours_to_show: 24
-                graph: line
-                detail: 1
-
-      - type: vertical-stack
-        cards:
           - type: entities
             show_header_toggle: false
             title: UPS Status
@@ -234,6 +209,107 @@ views:
                 hours_to_show: 24
                 graph: line
                 detail: 1
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            title: Network Status
+            entities:
+              - entity: sensor.myip
+                name: Public IP
+                icon: mdi:web
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.speedtest_download
+                name: Download
+                hours_to_show: 24
+                graph: line
+                detail: 1
+              - type: sensor
+                entity: sensor.speedtest_upload
+                name: Upload
+                hours_to_show: 24
+                graph: line
+                detail: 1
+      - type: entities
+        title: Home Automation Devices
+        show_header_toggle: false
+        entities:
+          - device_tracker.34ea34e3da0d
+          - device_tracker.a020a63452ee
+          - device_tracker.6854fd8aee8c
+          - device_tracker.amazonb0c7bdc6f
+          - entity: device_tracker.kuled13199
+            name: Kuled 1
+            icon: mdi:light-switch
+          - entity: device_tracker.kuled23631
+            name: Kuled 2
+            icon: mdi:light-switch
+          - entity: binary_sensor.ikea_tradfri_gateway
+            icon: mdi:server
+            name: Tradfri Gateway
+      - type: entities
+        title: Sonoffs
+        show_header_toggle: false
+        entities:
+          - device_tracker.2c3ae844b860
+          - device_tracker.sonoff_basic_2
+          - device_tracker.pow17279
+          - device_tracker.sonoff_pow_2
+      - type: entities
+        title: Yeelights
+        show_header_toggle: false
+        entities:
+          - device_tracker.286c07ac908d
+          - device_tracker.f0b4299fe446
+          - device_tracker.f0b429a8e3f3
+          - device_tracker.f0b429a900ec
+          - device_tracker.286c07b1776d
+          - device_tracker.286c07b19f98
+      - type: entities
+        title: Wired Devices
+        show_header_toggle: false
+        entities:
+          - entity: switch.desktop_switch
+            name: Desktop
+            icon: mdi:desktop-tower
+          - entity: binary_sensor.modem
+          - entity: binary_sensor.nas_vm
+            name: NAS VM
+            icon: mdi:nas
+          - entity: binary_sensor.ubiquiti_switch
+          - entity: binary_sensor.ubiquiti_ap
+          - entity: binary_sensor.pfsense_vm
+          - entity: switch.hassio_dev_vm
+            name: Hass.io Dev VM
+            icon: mdi:server
+      - type: entities
+        title: Wireless Devices
+        show_header_toggle: false
+        entities:
+          - entity: switch.lenovo_switch
+            name: Lenovo Laptop
+            icon: mdi:windows
+          - entity: device_tracker.linux_laptop_wifi
+          - entity: device_tracker.amazon1197e775e
+          - entity: device_tracker.d81c79eb20c9
+            name: Adam's iPhone
+          - entity: script.findadamsiphone
+            name: Find Adam's iPhone
+            icon: mdi:cellphone-iphone
+          - entity: device_tracker.d81c79a4a851
+            name: Amy's iPhone
+      - type: entities
+        title: Raspberry Pis
+        show_header_toggle: false
+        entities:
+          - entity: device_tracker.b827eb9a6be6
+            name: Raspberry Pi Zero W
+            icon: mdi:raspberrypi
+          - entity: device_tracker.b827ebaec321
+            name: Raspberry Pi 3b+ Wireless
+            icon: mdi:raspberrypi
 
 ####################################################
 #                                                  #
@@ -303,42 +379,26 @@ views:
                 hours_to_show: 24
                 graph: line
                 detail: 1
-          - type: glance
-            title: Server Information
-            entities:
-               - entity: sensor.network_in_ens36
-                 name: Network In
-               - entity: sensor.network_out_ens36
-                 name: Network Out
-            columns: 2
-          - type: glance
-            title: HA File Size
-            show_header_toggle: true
-            entities:
-              - entity: sensor.home_assistant_log
-                name: Log File
-              - entity: sensor.home_assistant_v2_db
-                name: Database
-              - entity: sensor.disk_use_percent_home
-                name: Disk Use
-                icon: mdi:harddisk
-            columns: 3
+          # - type: glance
+          #   title: Server Information
+          #   entities:
+          #      - entity: sensor.network_in_ens36
+          #        name: Network In
+          #      - entity: sensor.network_out_ens36
+          #        name: Network Out
+          #   columns: 2
       - type: glance
-        title: Home Assistant GitHub
+        title: HA File Size
+        show_header_toggle: true
         entities:
-          - entity: sensor.stars
-            name: Stars
-            icon: mdi:star-circle
-          - entity: sensor.subscribers
-            name: Subscribers
-            icon: mdi:github-circle
-          - entity: sensor.issues
-            name: Issues
-            icon: mdi:alert-circle
-          - entity: sensor.forks
-            name: Forks
-            icon: mdi:directions-fork
-        columns: 4
+          - entity: sensor.home_assistant_log
+            name: Log File
+          - entity: sensor.home_assistant_v2_db
+            name: Database
+          - entity: sensor.disk_use_percent_home
+            name: Disk Use
+            icon: mdi:harddisk
+        columns: 3
       - type: entities
         title: Zwave
         show_header_toggle: false
@@ -355,19 +415,6 @@ views:
             name: Dome Door Sensor
           - entity: zwave.linear_gctbz48_battery_powered_zwave_thermostat_3
             name: Thermostat
-      - type: glance
-        title: Home Assistant Info
-        entities:
-          - entity: sensor.installed_version
-            name: Installed
-            icon: mdi:folder-download
-          - entity: sensor.hassio_version
-            name: Latest Release
-            icon: mdi:github-circle
-          - entity: sensor.lets_encrypt_expiration
-            name: Lets Encrypt Expiration
-            icon: mdi:timelapse
-        columns: 3
       - type: entities
         title: Batteries
         show_header_toggle: false
@@ -387,111 +434,6 @@ views:
           - entity: sensor.backdoorstatusbatt
             icon: mdi:battery-50
             name: Back Door Sensor
-      - type: entities
-        title: Home Assistant Stats
-        show_header_toggle: false
-        entities:
-          - entity: sensor.tracker_count
-            icon: mdi:cellphone-link
-            name: Number of Network Devices
-          - entity: sensor.lights_count
-            icon: mdi:lightbulb
-          - entity: sensor.binary_sensor_count
-            icon: mdi:nintendo-switch
-          - entity: sensor.switch_count
-            icon: mdi:toggle-switch
-          - entity: sensor.automation_count
-            icon: mdi:home-assistant
-          - entity: sensor.script_count
-            icon: mdi:script-text-outline
-          - entity: sensor.sensor_count
-            icon: mdi:gauge
-          - entity: sensor.zwave_count
-            icon: mdi:z-wave
-
-####################################################
-#                                                  #
-#               CONNECTED DEVICES                  #
-#                                                  #
-####################################################
-
-  - title: Connected Devices
-    cards:
-      - type: entities
-        title: Home Automation Devices
-        show_header_toggle: false
-        entities:
-          - device_tracker.34ea34e3da0d
-          - device_tracker.a020a63452ee
-          - device_tracker.6854fd8aee8c
-          - device_tracker.amazonb0c7bdc6f
-          - entity: device_tracker.kuled13199
-            name: Kuled 1
-            icon: mdi:light-switch
-          - entity: device_tracker.kuled23631
-            name: Kuled 2
-            icon: mdi:light-switch
-          - entity: binary_sensor.ikea_tradfri_gateway
-            icon: mdi:server
-            name: Tradfri Gateway
-      - type: entities
-        title: Sonoffs
-        show_header_toggle: false
-        entities:
-          - device_tracker.2c3ae844b860
-          - device_tracker.sonoff_basic_2
-          - device_tracker.pow17279
-          - device_tracker.sonoff_pow_2
-      - type: entities
-        title: Yeelights
-        show_header_toggle: false
-        entities:
-          - device_tracker.286c07ac908d
-          - device_tracker.f0b4299fe446
-          - device_tracker.f0b429a8e3f3
-          - device_tracker.f0b429a900ec
-          - device_tracker.286c07b1776d
-          - device_tracker.286c07b19f98
-      - type: entities
-        title: Wired Devices
-        show_header_toggle: false
-        entities:
-          - entity: switch.desktop_switch
-            name: Desktop
-            icon: mdi:desktop-tower
-          - entity: binary_sensor.modem
-          - entity: binary_sensor.nas_vm
-            name: NAS VM
-            icon: mdi:nas
-          - entity: binary_sensor.ubiquiti_switch
-          - entity: binary_sensor.ubiquiti_ap
-          - entity: binary_sensor.pfsense_vm
-          - entity: switch.hassio_dev_vm
-            name: Hass.io Dev VM
-            icon: mdi:server
-      - type: entities
-        title: Wireless Devices
-        show_header_toggle: false
-        entities:
-          - entity: switch.lenovo_switch
-            name: Lenovo Laptop
-            icon: mdi:windows
-          - entity: device_tracker.linux_laptop_wifi
-          - entity: device_tracker.amazon1197e775e
-          - entity: device_tracker.d81c79eb20c9
-            name: Adam's iPhone
-          - entity: device_tracker.d81c79a4a851
-            name: Amy's iPhone
-      - type: entities
-        title: Raspberry Pis
-        show_header_toggle: false
-        entities:
-          - entity: device_tracker.b827eb9a6be6
-            name: Raspberry Pi Zero W
-            icon: mdi:raspberrypi
-          - entity: device_tracker.b827ebaec321
-            name: Raspberry Pi 3b+ Wireless
-            icon: mdi:raspberrypi
 
 ####################################################
 #                                                  #
@@ -502,11 +444,13 @@ views:
   - title: Automations
     cards:
       - type: entities
-        title: Vacation Mode
+        title: Automation Modes
         show_header_toggle: false
         entities:
           - entity: input_boolean.vacation
             icon: mdi:beach
+          - entity: input_boolean.guest
+            icon: mdi:home-account
       - type: entities
         title: Bedtime Notifications
         show_header_toggle: false
@@ -614,12 +558,21 @@ views:
           - entity: automation.home_assistant_stopped
             name: Home Assistant Stopped
             icon: mdi:home-assistant
+          - entity: automation.addon_stopped
+            name: Addon Stopped
+            icon: mdi:home-assistant
           - entity: automation.disk_use_alarm
             name: Hass.io VM Disk Use Alarm
             icon: mdi:harddisk
           - entity: automation.sensor_low_battery
             name: Low Sensor Battery
             icon: mdi:battery-charging-wireless-10
+          - entity: automation.update_template_sensors
+            name: Update Template Sensors
+            icon: mdi:update
+          - entity: automation.update_weather_sensors
+            name: Update Weather Sensors
+            icon: mdi:update
       - type: entities
         title: Other Automations
         show_header_toggle: false
@@ -675,6 +628,9 @@ views:
           - entity: automation.media_center_on_when_leaving
             name: Media Center On When leaving
             icon: mdi:television-classic
+          - entity: automation.leaving_home
+            name: Leaving Home Tun off lights
+            icon: mdi:home-circle
       - type: entities
         title: UPS Automations
         show_header_toggle: false
@@ -760,6 +716,16 @@ views:
           - entity: automation.dupage_nws_notification_weather_alert
             name: DuPage County Weather Alert
             icon: mdi:cloud-alert
+      - type: entities
+        title: Device Tracker Automations
+        show_header_toggle: false
+        entities:
+          - entity: automation.combined_away_tracker
+            name: Set Adam MQTT Away
+            icon: mdi:crosshairs-gps
+          - entity: automation.combined_home_tracker
+            name: Set Adam MQTT Home
+            icon: mdi:crosshairs-gps
 
 ####################################################
 #                                                  #
@@ -950,7 +916,7 @@ views:
         entities:
           - entity: sensor.forecast_0
             icon: mdi:blank
-          - entity: sensor.dark_sky_summary
+          - entity: sensor.dark_sky_summary_0
             name: " "
           - entity: sensor.forecast_1
             icon: mdi:blank
@@ -983,23 +949,94 @@ views:
       - type: iframe
         url: https://embed.windy.com/embed2.html?lat=41.965&lon=-88.190&zoom=11&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=41.943&detailLon=-88.145&metricWind=default&metricTemp=%C2%B0F&radarRange=-1
         aspect_ratio: 70%
-#      - type: entities
-#        title: Adam's & Wabash Bus Times
-#        show_header_toggle: false
-#        entities:
-#          - entity: sensor.151
-#            name: First 151 Bus
-#          - entity: sensor.151_1
-#            name: Second 151 Bus
-#          - entity: sensor.126
-#            name: First 126 Bus
-#          - entity: sensor.126_1
-#            name: Second 126 Bus
-#          - entity: sensor.7
-#            name: First 7 Bus
-#          - entity: sensor.7_1
-#            name: Second 7 Bus
-            
+      - type: entities
+        title: Sun
+        show_header_toggle: false
+        entities:
+          - entity: sun.sun
+            name: Sun
+          - entity: sensor.sunrise
+            name: Next Sunrise
+            icon: mdi:weather-sunset-up
+          - entity: sensor.sunset
+            name: Next Sunset
+            icon: mdi:weather-sunset-down
+
+####################################################
+#                                                  #
+#                 STATS & DATA                     #
+#                                                  #
+####################################################
+
+  - title: Stats & Data
+    cards:
+      - type: entities
+        title: Adam's & Wabash Bus Times
+        show_header_toggle: false
+        entities:
+          - entity: sensor.151
+            name: First 151 Bus
+          - entity: sensor.151_1
+            name: Second 151 Bus
+          - entity: sensor.126
+            name: First 126 Bus
+          - entity: sensor.126_1
+            name: Second 126 Bus
+          - entity: sensor.7
+            name: First 7 Bus
+          - entity: sensor.7_1
+            name: Second 7 Bus
+      - type: entities
+        title: Home Assistant Stats
+        show_header_toggle: false
+        entities:
+          - entity: sensor.tracker_count
+            icon: mdi:cellphone-link
+            name: Number of Network Devices
+          - entity: sensor.lights_count
+            icon: mdi:lightbulb
+          - entity: sensor.binary_sensor_count
+            icon: mdi:nintendo-switch
+          - entity: sensor.switch_count
+            icon: mdi:toggle-switch
+          - entity: sensor.automation_count
+            icon: mdi:home-assistant
+          - entity: sensor.script_count
+            icon: mdi:script-text-outline
+          - entity: sensor.sensor_count
+            icon: mdi:gauge
+          - entity: sensor.zwave_count
+            icon: mdi:z-wave
+      - type: glance
+        title: Home Assistant GitHub
+        entities:
+          - entity: sensor.stars
+            name: Stars
+            icon: mdi:star-circle
+          - entity: sensor.subscribers
+            name: Subscribers
+            icon: mdi:github-circle
+          - entity: sensor.issues
+            name: Issues
+            icon: mdi:alert-circle
+          - entity: sensor.forks
+            name: Forks
+            icon: mdi:directions-fork
+        columns: 4
+      - type: glance
+        title: Home Assistant Info
+        entities:
+          - entity: sensor.installed_version
+            name: Installed
+            icon: mdi:folder-download
+          - entity: sensor.hassio_version
+            name: Latest Release
+            icon: mdi:github-circle
+          - entity: sensor.lets_encrypt_expiration
+            name: Lets Encrypt Expiration
+            icon: mdi:timelapse
+        columns: 3
+
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #

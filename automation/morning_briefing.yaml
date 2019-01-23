@@ -3,8 +3,6 @@
 #                   MORNING BRIEFING                    #
 #                                                       #
 #########################################################
-#            [Validated 01/04/2019 - v 84.5]            #
-
 
   - alias: "Morning Briefing Adam"
     trigger:

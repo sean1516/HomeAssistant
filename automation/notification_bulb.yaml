@@ -3,13 +3,12 @@
 # NOTIFICATION BULB COLOR BASED ON INPUT SELECT - COLOR #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Set Notification Bulb2 Color
     trigger:
       platform: state
       entity_id: input_select.notification_bulb2_color
-    condition: 
+    condition:
       condition: template
       value_template: "{{ states('input_select.notification_bulb2_color') != 'Normal' }}"
     action:
@@ -24,19 +23,18 @@
 # NOTIFICATION BULB COLOR BASED ON INPUT SELECT-NORMAL  #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Set Notification Bulb2 Normal
     trigger:
       platform: state
       entity_id: input_select.notification_bulb2_color
-    condition: 
+    condition:
       condition: state
       entity_id: input_select.notification_bulb2_color
       state: 'Normal'
     action:
       service: script.normallight
-     
+
 #########################################################
 #                                                       #
 #            END OF CONFIGURATION FILE                  #

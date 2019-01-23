@@ -3,7 +3,6 @@
 #                  FEED THE DOG - MORNING               #
 #                                                       #
 #########################################################
-#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "Feed The Dog Morning"
     trigger:
@@ -21,7 +20,6 @@
 #                  FEED THE DOG - EVENING               #
 #                                                       #
 #########################################################
-#            [Validated 12/16/2018 - v 83.3]            #
 
   - alias: "Feed The Dog Evening"
     trigger:

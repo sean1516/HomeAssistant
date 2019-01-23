@@ -14,6 +14,17 @@
 
 ####################################################
 #                                                  #
+#              DEVICE TRACKER - MQTT               #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/device_tracker.mqtt/
+  - platform: mqtt
+    devices:
+      adam: 'location/adam'
+
+####################################################
+#                                                  #
 #              DEVICE TRACKER - UBIQUITI           #
 #                                                  #
 ####################################################

@@ -3,7 +3,6 @@
 #                 TRASH DAY REMINDER                    #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Trash Day Reminder
     trigger:
@@ -24,7 +23,6 @@
 #             FURNACE FILETER REMINDER                  #
 #                                                       #
 #########################################################
-#            [Validated 12/02/2018 - v 83.3]            #
 
   - alias: "Furnace Filter Reminder"
     trigger:
@@ -44,7 +42,6 @@
 #        BELLE FLEA TICK AND HEARTWORM REMINDER         #
 #                                                       #
 #########################################################
-#            [Validated 11/30/2018 - v 82.0]            #
 
   - alias: "Belle Flea Tick and Heartworm Reminder"
     trigger:
@@ -64,7 +61,6 @@
 #              WATER SOFTENER REMINDER                  #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 82.0]            #
 
   - alias: "Water Softener Reminder"
     trigger:

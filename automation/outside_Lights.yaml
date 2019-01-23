@@ -3,7 +3,6 @@
 #          TURN OFF OUTSIDE LIGHTS AT SUNRISE           #
 #                                                       #
 #########################################################
-#            [Validated 12/14/2018 - v 83.3]            #
 
   - alias: 'Turn Off Outside Lights'
     trigger:
@@ -22,7 +21,6 @@
 #           TURN ON OUTSIDE LIGHTS AT SUNSET            #
 #                                                       #
 #########################################################
-#            [Validated 12/14/2018 - v 83.3]            #
 
   - alias: 'Turn On Outside Lights'
     trigger:
@@ -44,7 +42,6 @@
 #          OPEN FRONT DOORS INCREASE BRIGHTNESS         #
 #                                                       #
 #########################################################
-#            [Validated 12/14/2018 - v 83.3]            #
 
   - alias: "Open Front Doors Increase Brightness"
     trigger:
@@ -80,7 +77,6 @@
 #            OPEN BACK DOOR INCREASE BRIGHTNESS         #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Open Back Door Increase Brightness"
     trigger:

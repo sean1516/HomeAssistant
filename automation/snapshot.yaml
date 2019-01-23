@@ -3,7 +3,6 @@
 #             Nightly Hass.io Snapshot                  #
 #                                                       #
 #########################################################
-#            [Validated 12/22/2018 - v 84.5]            #
 
   - alias: Hassio Snapshot
     initial_state: 'on'

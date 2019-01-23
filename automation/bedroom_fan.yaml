@@ -3,7 +3,6 @@
 #              AIR CIRCULATION AUTOMATION               #
 #                                                       #
 #########################################################
-#            [Validated 01/04/2019 - v 84.5]            #
 
   - alias: "Turn on Bedroom Fan With HVAC"
     trigger:

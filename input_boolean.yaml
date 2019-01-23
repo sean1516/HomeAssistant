@@ -10,6 +10,9 @@
   vacation:
     name: Vacation Mode
     initial: off
+  guest:
+    name: Guest Mode
+    initial: off
 
 ####################################################
 #                                                  #

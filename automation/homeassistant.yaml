@@ -3,7 +3,6 @@
 #                   HOME ASSISTANT START                #
 #                                                       #
 #########################################################
-#            [Validated 12/18/2018 - v 83.3]            #
 
   - alias: Home Assistant Started
     trigger:
@@ -20,7 +19,6 @@
 #                   HOME ASSISTANT STOP                 #
 #                                                       #
 #########################################################
-#            [Validated 12/18/2018 - v 83.3]            #
 
   - alias: Home Assistant Stopped
     trigger:
@@ -52,6 +50,7 @@
         - sensor.ssh
         - sensor.tasmoadmin
         - sensor.unificontroller
+      from: started
       to: stopped
     action:
       - service: notify.ios_adams_iphone
@@ -64,7 +63,6 @@
 #                  TEMPLATE SENSOR UPDATE               #
 #                                                       #
 #########################################################
-#            [Validated 12/15/2018 - v 83.3]            #
 
   - alias: Update Template Sensors
     trigger:

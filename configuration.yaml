@@ -142,6 +142,26 @@ group:
     - light.yeelight2
     - light.yeelight3
     - light.yeelight4
+  home_presence:
+    - device_tracker.adam_siphone
+    - device_tracker.adams_iphone
+    - device_tracker.d81c79eb20c9
+    - device_tracker.amy_siphone
+    - device_tracker.d81c79a4a851
+
+####################################################
+#                                                  #
+#                    LOGBOOK                       #
+#                                                  #
+####################################################
+
+logbook:
+  include:
+    entities:
+      - device_tracker.adam_siphone
+      - device_tracker.adams_iphone
+      - device_tracker.d81c79eb20c9
+      - device_tracker.adam
 
 ####################################################
 #                                                  #
@@ -150,13 +170,13 @@ group:
 ####################################################
 
 #https://www.home-assistant.io/components/media_player.firetv/
-media_player:
-  platform: firetv
-  name: Fire TV
-  host: 192.168.1.21
-  adbkey: /config/android/adbkey
-  get_sources: false
-  get_source: false
+# media_player:
+#   platform: firetv
+#   name: Fire TV
+#   host: 192.168.1.21
+#   adbkey: /config/android/adbkey
+#   get_sources: false
+#   get_source: false
 
 ####################################################
 #                                                  #

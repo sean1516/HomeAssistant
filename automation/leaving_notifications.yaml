@@ -3,7 +3,6 @@
 #                 DESKTOP ON WHEN AWAY                  #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Desktop On When leaving"
     trigger:
@@ -39,7 +38,6 @@
 #         DESKTOP ON WHEN AWAY - NOTIFICATION           #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: Desktop on when away notification
     trigger:
@@ -56,8 +54,6 @@
 #            LIVING ROOM LAMPS ON WHEN AWAY             #
 #                                                       #
 #########################################################
-#            [Validated 12/22/2018 - v 84.5]            #
-
 
   - alias: "Living Room Lamps On When leaving"
     trigger:
@@ -110,7 +106,6 @@
 #               MEDIA CENTER ON WHEN AWAY               #
 #                                                       #
 #########################################################
-#            [Validated 01/03/2019 - v 84.5]            #
 
   - alias: "Media Center On When leaving"
     trigger:

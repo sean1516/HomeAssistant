@@ -4,7 +4,6 @@
 #        INTERIOR GARAGE DOOR OPENED AND AWAY           #
 #                                                       #
 #########################################################
-#            [Validated 12/27/2018 - v 84.5]            #
 
   - alias: "Interior Garage Door Opened When Away"
     trigger:
@@ -38,7 +37,6 @@
 #        Exterior GARAGE DOOR OPENED AND AWAY           #
 #                                                       #
 #########################################################
-#            [Validated 12/17/2018 - v 83.3]            #
 
   - alias: "Exterior Garage Door Opened When Away"
     trigger:
@@ -67,7 +65,6 @@
 #              FRONT DOOR OPENED AND AWAY               #
 #                                                       #
 #########################################################
-#            [Validated 12/27/2018 - v 84.5]            #
 
   - alias: "Front Door Opened When Away"
     trigger:
@@ -96,7 +93,6 @@
 #        Exterior GARAGE DOOR OPENED AND AWAY           #
 #                                                       #
 #########################################################
-#            [Validated 12/27/2018 - v 84.5]            #
 
   - alias: "Exterior Garage Door Left Open When Away"
     trigger:
@@ -129,7 +125,6 @@
 #              BACK DOOR OPENED AND AWAY                #
 #                                                       #
 #########################################################
-#            [Validated 12/27/2018 - v 84.5]            #
 
   - alias: "Back Door Opened When Away"
     trigger:

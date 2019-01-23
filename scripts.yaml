@@ -98,6 +98,7 @@
     sequence:
       - service: homeassistant.turn_on
         entity_id: switch.receivervideo2
+      - delay: '00:00:02'
       - service: homeassstant.turn_on
         entity_id: switch.tvpower
       - service: media_player.turn_on

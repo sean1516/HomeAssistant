@@ -19,7 +19,6 @@
 #            NOTIFY IF DOWNLOAD COMPLETES               #
 #                                                       #
 #########################################################
-#            [Validated 11/28/2018 - v 82.0]            #
 
   - alias: "Download Complete"
     trigger:
