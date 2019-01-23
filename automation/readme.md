@@ -12,7 +12,7 @@ Automations to turn on/off the ceiling fan in our bedroom.  Its a vaulted ceilin
 ### Bedtime_Notifications.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/bedtime_notifications.yaml)__
 
-These notifications are triggered after 10:00 PM when I plug my phone in (generally I am in bed when this happens).  These send an iOS app notification with an action option to turn the device off.  These are primarily a power saving items.
+These notifications are triggered after 8:00 PM when I plug my phone in (generally I am in bed when this happens).  These send an iOS app notification with an action option to turn the device off.  These are primarily a power saving items.
 * Notify Me if the garage door is open and I am in bed 
 * Notify Me if the Desktop PC is left on and I am in bed 
 * Notify Me if the Living Room Lamps are left on and I am in bed
@@ -43,7 +43,7 @@ These automations are used to notify me when a door is opened when no one is hom
 * Notify Me if the garage door is left open when I leave
 
 ### Downloader.yaml Automations:
-__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/door_security.yaml)__
+__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/certupdate.yaml)__
 
 * Notify Me if a downloader download fails
 * Notify Me if a downloader download completes
@@ -78,7 +78,7 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 Notify me if its is a holiday or birthday based on the listed located [here.](https://github.com/SilvrrGIT/HomeAssistant/blob/master/json_data/days.json)
 
 ### HomeAssistant.yaml Automations:
-__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml)__
+__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/homeassistant.yaml)__
 
 Some automations for Home Assistant related items.   
 * Notify me when Home Assistant starts
@@ -87,6 +87,11 @@ Some automations for Home Assistant related items.
 * Send me a notification if my Home Assistant VM disk gets full
 * Notify me if a Zwave device is dead
 * Notify me if a battery power sensor battery is getting low
+
+### Leaving Hom.yaml Automations:
+__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_home.yaml)__
+
+An automation to turn off light and switches when no one is home.  No sense in these being on with no one home.  
 
 ### Leaving_Notifications.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_notifications.yaml)__
@@ -149,7 +154,7 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 ### Snapshot.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/snapshot.yaml)__
 
-Make a full hassio snapshot everynight at 3:00 a.m.
+Make a full hassio snapshot everynight at 3:00 a.m. and upload a copy to my HomeAssistant gmail account.  I keep 15 days on the gmail account and 3 days locally.
 
 ### Thermostat.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/thermostat.yaml)__
@@ -172,7 +177,7 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/vacation_mode.yaml)__
 
 This is a single switch to turn on/off a number of automations and devices when we will be away from the house for an extended period of time. 
-* Turn On Vacation Mode with Vacation Mode Switch ]
+* Turn On Vacation Mode with Vacation Mode Switch
 * Turn Off Vacation Mode with Vacation Mode Switch
 
 ### Weather.yaml Automations:
