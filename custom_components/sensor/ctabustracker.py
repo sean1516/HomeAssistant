@@ -16,7 +16,7 @@ from homeassistant.const import CONF_NAME
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -77,7 +77,7 @@ class CtaBusSensor(Entity):
             self.api.update()
             data = self.api.data
             if data:
-                self._state = data[self.departure]['prdctdn']
+                self._state = data[self.departure].get('prdctdn')
             else:
                 self._state = self._state
         except Exception:  # pylint: disable=W0703
@@ -117,7 +117,7 @@ class CtaBusData:
         """Get the latest data from ctabustracker."""
         try:
             self._data = requests.get(
-                self.api).json()['bustime-response']['prd']
+                self.api).json().get('bustime-response', {}).get('prd', {})
             _LOGGER.debug(self._data)
         except Exception as error:  # pylint: disable=W0703
             _LOGGER.error(error)
