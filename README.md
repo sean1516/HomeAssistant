@@ -33,7 +33,7 @@ I think this is an often overlooked part of any internet connected project.  I a
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level. 
 - Using the tools in PFSense I block a large amount of traffic from ever reaching my network using PFblockerNG, Suricata and a combination of published lists, and custom rules.
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
-- My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://github.com/SilvrrGIT/HomeAssistant/wiki/Let's-Encrypt-Setup-(Hassbian,-Python-Virtual-Environment)) to get it setup on Hassbian and now use the __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ add-on in Hass.io to do the same thing.
+- My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://github.com/SilvrrGIT/HomeAssistant/wiki/Let's-Encrypt-Setup-(Hassbian,-Python-Virtual-Environment)) to get it setup on Hassbian and now use the [DuckDNS](www.home-assistant.io/addons/duckdns/)__ add-on in Hass.io to do the same thing.
 - [Test your secuirty and test it often](https://community.home-assistant.io/t/test-your-security-and-test-it-often/76354).
 
 # Editing the Configuration Files:
@@ -42,9 +42,9 @@ What works for me is creating a Samba share that I can then edit on any computer
 After you have the Samba share setup, I like to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
 
 # A Few Stats On my Setup:
-| Components Used | Network Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
+| Components Used | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:----------:|:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-| 88         |42               |8       |6               |28        |73           |7        |136      |7              |         
+| 87         |43               |8       |6               |28        |76           |7        |138      |7              |         
 # Connected Devices:
 
 ## Cloud Controlled Devices:
@@ -94,11 +94,6 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/ha.png">
 </p>
 
-## Connected Devices
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/connecteddevices.png">
-</p>
-
 ## Automations
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/automations.png">
@@ -112,6 +107,11 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 ## Weather
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/weather.png">
+</p>
+
+## Stats & Data
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/statsndata.png">
 </p>
 
 # Questions?
