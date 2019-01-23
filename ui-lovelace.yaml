@@ -6,7 +6,10 @@
 
 resources:
   #https://github.com/thomasloven/lovelace-slider-entity-row
-  - url: /local/slider-entity-row.js
+  - url: /local/slider-entity-row.js?v=d6da75
+    type: js
+  #https://github.com/custom-cards/tracker-card
+  - url: /local/tracker-card.js?v=0.1.5
     type: js
 
 ####################################################
@@ -1036,6 +1039,11 @@ views:
             name: Lets Encrypt Expiration
             icon: mdi:timelapse
         columns: 3
+      - type: custom:tracker-card
+        title:
+        trackers:
+          - sensor.custom_card_tracker
+          - sensor.custom_component_tracker
 
 ####################################################
 #                                                  #

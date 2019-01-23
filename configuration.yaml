@@ -30,6 +30,12 @@ climate:
 #https://home-assistant.io/components/config/
 config:
 
+#https://github.com/custom-components/custom_updater
+custom_updater:
+  track:
+    - cards
+    - components
+
 #https://www.home-assistant.io/components/downloader/
 downloader:
   download_dir: /share
