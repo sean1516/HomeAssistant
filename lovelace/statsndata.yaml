@@ -1,0 +1,85 @@
+####################################################
+#                                                  #
+#                 STATS & DATA                     #
+#                                                  #
+####################################################
+
+title: Stats & Data
+cards:
+  - type: entities
+    title: Adam's & Wabash Bus Times
+    show_header_toggle: false
+    entities:
+      - entity: sensor.151
+        name: First 151 Bus
+      - entity: sensor.151_1
+        name: Second 151 Bus
+      - entity: sensor.126
+        name: First 126 Bus
+      - entity: sensor.126_1
+        name: Second 126 Bus
+      - entity: sensor.7
+        name: First 7 Bus
+      - entity: sensor.7_1
+        name: Second 7 Bus
+  - type: entities
+    title: Home Assistant Stats
+    show_header_toggle: false
+    entities:
+      - entity: sensor.tracker_count
+        icon: mdi:cellphone-link
+        name: Number of Network Devices
+      - entity: sensor.lights_count
+        icon: mdi:lightbulb
+      - entity: sensor.binary_sensor_count
+        icon: mdi:nintendo-switch
+      - entity: sensor.switch_count
+        icon: mdi:toggle-switch
+      - entity: sensor.automation_count
+        icon: mdi:home-assistant
+      - entity: sensor.script_count
+        icon: mdi:script-text-outline
+      - entity: sensor.sensor_count
+        icon: mdi:gauge
+      - entity: sensor.zwave_count
+        icon: mdi:z-wave
+  - type: glance
+    title: Home Assistant GitHub
+    entities:
+      - entity: sensor.stars
+        name: Stars
+        icon: mdi:star-circle
+      - entity: sensor.subscribers
+        name: Subscribers
+        icon: mdi:github-circle
+      - entity: sensor.issues
+        name: Issues
+        icon: mdi:alert-circle
+      - entity: sensor.forks
+        name: Forks
+        icon: mdi:directions-fork
+    columns: 4
+  - type: glance
+    title: Home Assistant Info
+    entities:
+      - entity: sensor.installed_version
+        name: Installed
+        icon: mdi:folder-download
+      - entity: sensor.hassio_version
+        name: Latest Release
+        icon: mdi:github-circle
+      - entity: sensor.lets_encrypt_expiration
+        name: Lets Encrypt Expiration
+        icon: mdi:timelapse
+    columns: 3
+  - type: custom:tracker-card
+    title:
+    trackers:
+      - sensor.custom_card_tracker
+      - sensor.custom_component_tracker
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

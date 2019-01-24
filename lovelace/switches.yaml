@@ -1,0 +1,161 @@
+####################################################
+#                                                  #
+#                   SWITCHES                       #
+#                                                  #
+####################################################
+
+title: Switches
+cards:
+  - type: entities
+    title: Bedroom Lights
+    show_header_toggle: false
+    entities:
+      - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
+        type: custom:slider-entity-row
+        break_slider: true
+        name: Amy's Bedside
+      - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
+        type: custom:slider-entity-row
+        break_slider: true
+        name: Adam's Bedside
+  - type: entities
+    title: Yeelights
+    show_header_toggle: false
+    entities:
+      - entity: light.yeelight1
+        name: Front Porch
+        type: custom:slider-entity-row
+        break_slider: true
+      - entity: light.yeelight3
+        name: Garage Right
+        type: custom:slider-entity-row
+        break_slider: true
+      - entity: light.yeelight4
+        name: Garage Left
+        type: custom:slider-entity-row
+        break_slider: true
+      - entity: light.yeelight2
+        name: Back Porch
+        type: custom:slider-entity-row
+        break_slider: true
+      - entity: light.yeelight5
+        icon: mdi:mdi:lightbulb-outline
+        name: Interior Garage Light
+        type: custom:slider-entity-row
+        break_slider: true
+      - entity: light.yeelightrgb2
+        icon: mdi:mdi:lightbulb-outline
+        name: Notification Light
+        type: custom:slider-entity-row
+        break_slider: true
+      - entity: input_select.notification_bulb2_color
+        name: Notification Light Color
+  - type: entities
+    title: Broadlink IR Switches
+    show_header_toggle: false
+    entities:
+      - entity: switch.receivermute
+        name: Receiver-Mute
+        icon: mdi:volume-mute
+      - entity: switch.receiverpower
+        name: Receiver-Power
+        icon: mdi:speaker
+      - entity: switch.receivervideo1
+        name: Receiver - Video 1
+        icon: mdi:television
+      - entity: switch.receivervideo2
+        name: Receiver - Video 2
+        icon: mdi:speaker
+      - entity: switch.receivervoldwn
+        name: Receiver - Volume Down
+        icon: mdi:volume-minus
+      - entity: switch.receivervolup
+        name: Receiver - Voume Up
+        icon: mdi:volume-plus
+      - entity: switch.tvhdmi
+        name: TV - HDMI
+        icon: mdi:video-input-hdmi
+      - entity: switch.tvpower
+        name: TV - Power
+        icon: mdi:television
+      - entity: switch.tvtv
+        name: TV - Input Select
+        icon: mdi:television
+      - entity: script.music
+        name: Script - Turn On Music
+        icon: mdi:music
+      - entity: script.fire_tv
+        name: Script - Turn On Fire TV
+        icon: mdi:fire
+      - entity: script.volumeup
+        name: Script - Volume Up
+        icon: mdi:volume-plus
+      - entity: script.volumedown
+        name: Script - Volume Down
+        icon: mdi:volume-minus
+  - type: entities
+    title: Sonoff Switches
+    show_header_toggle: false
+    entities:
+      - entity: switch.basic1
+        name: Sonoff Basic 1
+        icon: mdi:toggle-switch
+      - entity: switch.basic2
+        name: Sonoff Basic 2
+        icon: mdi:toggle-switch
+      - entity: switch.pow1
+        name: Sonoff POW 1
+        icon: mdi:toggle-switch
+      - entity: sensor.pow1_energy
+        name: kWh
+        icon: mdi:chart-line
+      - entity: sensor.pow1_power
+        name: Watts
+        icon: mdi:power-plug
+      - entity: sensor.pow1_voltage
+        name: Volts
+        icon: mdi:power-socket-us
+      - entity: sensor.pow1_current
+        name: Amps
+        icon: mdi:flash-circle
+      - entity: switch.pow2
+        name: Sonoff POW 2
+        icon: mdi:television-classic
+      - entity: sensor.pow2_energy
+        name: kWh
+        icon: mdi:chart-line
+      - entity: sensor.pow2_power
+        name: Watts
+        icon: mdi:power-plug
+      - entity: sensor.pow2_voltage
+        name: Volts
+        icon: mdi:power-socket-us
+      - entity: sensor.pow2_current
+        name: Amps
+        icon: mdi:flash-circle
+  - type: entities
+    title: Kuled Switches
+    show_header_toggle: false
+    entities:
+      - entity: switch.kuled1
+        name: Kuled 1
+        icon: mdi:light-switch
+      - entity: switch.kuled2
+        name: Kuled 2
+        icon: mdi:light-switch
+  - type: entities
+    title: Computer Switches
+    show_header_toggle: false
+    entities:
+      - entity: switch.desktop_switch
+        name: Desktop
+        icon: mdi:desktop-tower
+      - entity: switch.lenovo_switch
+        name: Lenovo Laptop
+        icon: mdi:windows
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

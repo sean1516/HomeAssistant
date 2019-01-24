@@ -1,0 +1,174 @@
+####################################################
+#                                                  #
+#                  DEVICE STATUS                   #
+#                                                  #
+####################################################
+
+title: Device Status
+cards:
+  # - type: media-control
+  #   entity: media_player.fire_tv
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Adam's Phone Status
+        entities:
+          - entity: device_tracker.adam_siphone
+            name: GPS
+          - entity: device_tracker.d81c79eb20c9
+            name: WiFi
+          - entity: sensor.adamsiphonebattery
+            name: Battery
+          - entity: sensor.adamsiphonecharging
+            name: Charging?
+            icon: mdi:power-plug
+        columns: 4
+      - type: glance
+        title: Amy's Phone Status
+        entities:
+          - entity: device_tracker.amy_siphone
+            name: GPS
+          - entity: device_tracker.d81c79a4a851
+            name: WiFi
+          - entity: sensor.amysiphonebattery
+            name: Battery
+          - entity: sensor.amysiphonecharging
+            name: Charging?
+            icon: mdi:power-plug
+        columns: 4
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        title: UPS Status
+        entities:
+          - entity: sensor.ups_status
+            name: State
+            icon: mdi:flash-circle
+          - entity: sensor.ups_input_voltage
+          - entity: sensor.ups_battery_voltage
+          - entity: sensor.ups_output_voltage
+          - entity: sensor.ups_battery_charge
+            icon: mdi:battery-charging
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: sensor.approxwattage
+            name: Load
+            icon: mdi:gauge
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            entity: sensor.ups_battery_runtime
+            name: Runtime
+            hours_to_show: 24
+            graph: line
+            detail: 1
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        title: Network Status
+        entities:
+          - entity: sensor.myip
+            name: Public IP
+            icon: mdi:web
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: sensor.speedtest_download
+            name: Download
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            entity: sensor.speedtest_upload
+            name: Upload
+            hours_to_show: 24
+            graph: line
+            detail: 1
+  - type: entities
+    title: Home Automation Devices
+    show_header_toggle: false
+    entities:
+      - device_tracker.34ea34e3da0d
+      - device_tracker.a020a63452ee
+      - device_tracker.6854fd8aee8c
+      - device_tracker.amazonb0c7bdc6f
+      - entity: device_tracker.kuled13199
+        name: Kuled 1
+        icon: mdi:light-switch
+      - entity: device_tracker.kuled23631
+        name: Kuled 2
+        icon: mdi:light-switch
+      - entity: binary_sensor.ikea_tradfri_gateway
+        icon: mdi:server
+        name: Tradfri Gateway
+  - type: entities
+    title: Sonoffs
+    show_header_toggle: false
+    entities:
+      - device_tracker.2c3ae844b860
+      - device_tracker.sonoff_basic_2
+      - device_tracker.pow17279
+      - device_tracker.sonoff_pow_2
+  - type: entities
+    title: Yeelights
+    show_header_toggle: false
+    entities:
+      - device_tracker.286c07ac908d
+      - device_tracker.f0b4299fe446
+      - device_tracker.f0b429a8e3f3
+      - device_tracker.f0b429a900ec
+      - device_tracker.286c07b1776d
+      - device_tracker.286c07b19f98
+  - type: entities
+    title: Wired Devices
+    show_header_toggle: false
+    entities:
+      - entity: switch.desktop_switch
+        name: Desktop
+        icon: mdi:desktop-tower
+      - entity: binary_sensor.modem
+      - entity: binary_sensor.nas_vm
+        name: NAS VM
+        icon: mdi:nas
+      - entity: binary_sensor.ubiquiti_switch
+      - entity: binary_sensor.ubiquiti_ap
+      - entity: binary_sensor.pfsense_vm
+      - entity: switch.hassio_dev_vm
+        name: Hass.io Dev VM
+        icon: mdi:server
+  - type: entities
+    title: Wireless Devices
+    show_header_toggle: false
+    entities:
+      - entity: switch.lenovo_switch
+        name: Lenovo Laptop
+        icon: mdi:windows
+      - entity: device_tracker.linux_laptop_wifi
+      - entity: device_tracker.amazon1197e775e
+      - entity: device_tracker.d81c79eb20c9
+        name: Adam's iPhone
+      - entity: script.findadamsiphone
+        name: Find Adam's iPhone
+        icon: mdi:cellphone-iphone
+      - entity: device_tracker.d81c79a4a851
+        name: Amy's iPhone
+  - type: entities
+    title: Raspberry Pis
+    show_header_toggle: false
+    entities:
+      - entity: device_tracker.b827eb9a6be6
+        name: Raspberry Pi Zero W
+        icon: mdi:raspberrypi
+      - entity: device_tracker.b827ebaec321
+        name: Raspberry Pi 3b+ Wireless
+        icon: mdi:raspberrypi
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

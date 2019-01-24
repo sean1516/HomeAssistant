@@ -1,0 +1,129 @@
+####################################################
+#                                                  #
+#                HOME ASSISTANT                    #
+#                                                  #
+####################################################
+
+title: HA
+icon: mdi:home-assistant
+cards:
+  - type: entities
+    title: Hass.io Addons
+    show_header_toggle: false
+    entities:
+      - entity: switch.dasshio
+        name: Dasshio
+        icon: mdi:server-plus
+      - entity: switch.duckdns
+        name: DuckDNS
+        icon: mdi:server-plus
+      - entity: switch.gdrivebackup
+        name: Google Drive Backup
+        icon: mdi:server-plus
+      - entity: switch.mosquitto
+        name: Mosquitto MQTT
+        icon: mdi:server-plus
+      - entity: switch.nut
+        name: NUT
+        icon: mdi:server-plus
+      - entity: switch.rpcshutdown
+        name: RPC Shutdown
+        icon: mdi:server-plus
+      - entity: switch.samba
+        name: Samba
+        icon: mdi:server-plus
+      - entity: switch.ssh
+        name: SSH
+        icon: mdi:server-plus
+      - entity: switch.tasmoadmin
+        name: TasmoAdmin
+        icon: mdi:server-plus
+      - entity: switch.unificontroller
+        name: Unifi Controller
+        icon: mdi:server-plus
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Server Load
+        entities:
+          - entity: sensor.load_1m
+            icon: mdi:speedometer
+          - entity: sensor.load_5m
+            icon: mdi:speedometer
+          - entity: sensor.load_15m
+            icon: mdi:speedometer
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: sensor.processor_use
+            name: Processor
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            entity: sensor.memory_use_percent
+            name: Memory
+            hours_to_show: 24
+            graph: line
+            detail: 1
+      # - type: glance
+      #   title: Server Information
+      #   entities:
+      #      - entity: sensor.network_in_ens36
+      #        name: Network In
+      #      - entity: sensor.network_out_ens36
+      #        name: Network Out
+      #   columns: 2
+  - type: glance
+    title: HA File Size
+    show_header_toggle: true
+    entities:
+      - entity: sensor.home_assistant_log
+        name: Log File
+      - entity: sensor.home_assistant_v2_db
+        name: Database
+      - entity: sensor.disk_use_percent_home
+        name: Disk Use
+        icon: mdi:harddisk
+    columns: 3
+  - type: entities
+    title: Zwave
+    show_header_toggle: false
+    entities:
+      - entity: zwave.aeotec_zw090_zstick_gen5_us
+        name: Aeotec Zstick
+      - entity: zwave.ge_32563_hinge_pin_smart_door_sensor
+        name: GE Hinge Pin Sensor 1
+      - entity: zwave.ge_32563_hinge_pin_smart_door_sensor_2
+        name: GE Hinge Pin Sensor 2
+      - entity: zwave.vision_zg8101_garage_door_detector
+        name: Vision Garage Door  Sensor
+      - entity: zwave.unknown_id021f_unknown_type0003_id0101
+        name: Dome Door Sensor
+      - entity: zwave.linear_gctbz48_battery_powered_zwave_thermostat_3
+        name: Thermostat
+  - type: entities
+    title: Batteries
+    show_header_toggle: false
+    entities:
+      - entity: sensor.tradfri_remote_control
+        icon: mdi:battery-50
+        name: Tradfri Remote Battery
+      - entity: sensor.gehingepinsensor1batt
+        icon: mdi:battery-50
+        name: GE Hinge Pin Sensor 1
+      - entity: sensor.gehingepinsensor2batt
+        icon: mdi:battery-50
+        name: GE Hinge Pin Sensor 2
+      - entity: sensor.garagedoorstatusbatt
+        icon: mdi:battery-50
+        name: Garage Door Sensor
+      - entity: sensor.backdoorstatusbatt
+        icon: mdi:battery-50
+        name: Back Door Sensor
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################
