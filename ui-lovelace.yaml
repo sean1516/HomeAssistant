@@ -5,9 +5,6 @@
 ####################################################
 
 resources:
-  #https://github.com/thomasloven/lovelace-slider-entity-row
-  - url: /local/slider-entity-row.js?v=ba8f50
-    type: js
   #https://github.com/custom-cards/tracker-card
   - url: /local/tracker-card.js?v=0.1.5
     type: js
