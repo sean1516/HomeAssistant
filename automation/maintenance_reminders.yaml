@@ -77,6 +77,25 @@
 
 #########################################################
 #                                                       #
+#           HUMIDIFIER MAINTENANCE REMINDER             #
+#                                                       #
+#########################################################
+
+  - alias: "Humidifier Maintenance Reminder"
+    trigger:
+      platform: sun
+      event: sunrise
+    condition:
+      condition: template
+      value_template: '{{ now().strftime("%m-%d") == "11-01" }}'
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Humidifier Maintenance"
+        message: "Check and Replace the humidifier element.  The humidifier is a Aprilaire 760."
+
+#########################################################
+#                                                       #
 #            END OF CONFIGURATION FILE                  #
 #                                                       #
 #########################################################
