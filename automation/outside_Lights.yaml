@@ -35,7 +35,7 @@
             - light.yeelight2
             - light.yeelight3
             - light.yeelight4
-          brightness_pct: 10
+          brightness_pct: 5
 
 #########################################################
 #                                                       #
@@ -47,7 +47,7 @@
     trigger:
       - platform: state
         entity_id:
-          - sensor.gehingepinsensor2
+          - sensor.gehingepinsensor1
           - sensor.garagedoorstatus
         from: 'Closed'
         to: 'Open'
@@ -70,7 +70,7 @@
             - light.yeelight1
             - light.yeelight3
             - light.yeelight4
-          brightness_pct: 10
+          brightness_pct: 5
 
 #########################################################
 #                                                       #
@@ -97,7 +97,7 @@
       - service: light.turn_on
         data:
           entity_id: light.yeelight2
-          brightness_pct: 10
+          brightness_pct: 5
 
 #########################################################
 #                                                       #

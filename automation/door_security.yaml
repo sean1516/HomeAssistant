@@ -8,7 +8,7 @@
   - alias: "Interior Garage Door Opened When Away"
     trigger:
       platform: state
-      entity_id: sensor.gehingepinsensor1
+      entity_id: sensor.gehingepinsensor2
       to: 'Open'
     condition:
       condition: and
@@ -69,7 +69,7 @@
   - alias: "Front Door Opened When Away"
     trigger:
       platform: state
-      entity_id: sensor.gehingepinsensor2
+      entity_id: sensor.gehingepinsensor1
       to: 'Open'
     condition:
       condition: and
