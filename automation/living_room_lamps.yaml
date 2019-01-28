@@ -21,7 +21,7 @@
   - alias: "Lamps on when home"
     trigger:
       platform: state
-      entity_id: sensor.gehingepinsensor1
+      entity_id: sensor.gehingepinsensor2
       to: 'Open'
     condition:
       condition: and

@@ -94,7 +94,7 @@
   - alias: "Set Thermostat Temperature - 0500"
     trigger:
       platform: time
-      at: '05:00'
+      at: '06:30'
     action:
       - service: climate.set_temperature
         data:

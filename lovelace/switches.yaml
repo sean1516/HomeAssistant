@@ -11,12 +11,8 @@ cards:
     show_header_toggle: false
     entities:
       - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
-        type: custom:slider-entity-row
-        break_slider: true
         name: Amy's Bedside
       - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
-        type: custom:slider-entity-row
-        break_slider: true
         name: Adam's Bedside
   - type: entities
     title: Yeelights
@@ -24,30 +20,18 @@ cards:
     entities:
       - entity: light.yeelight1
         name: Front Porch
-        type: custom:slider-entity-row
-        break_slider: true
       - entity: light.yeelight3
         name: Garage Right
-        type: custom:slider-entity-row
-        break_slider: true
       - entity: light.yeelight4
         name: Garage Left
-        type: custom:slider-entity-row
-        break_slider: true
       - entity: light.yeelight2
         name: Back Porch
-        type: custom:slider-entity-row
-        break_slider: true
       - entity: light.yeelight5
         icon: mdi:mdi:lightbulb-outline
         name: Interior Garage Light
-        type: custom:slider-entity-row
-        break_slider: true
       - entity: light.yeelightrgb2
         icon: mdi:mdi:lightbulb-outline
         name: Notification Light
-        type: custom:slider-entity-row
-        break_slider: true
       - entity: input_select.notification_bulb2_color
         name: Notification Light Color
   - type: entities

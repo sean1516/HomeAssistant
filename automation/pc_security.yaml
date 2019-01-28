@@ -28,18 +28,18 @@
   - alias: "Send notification upon failed login attempt"
     trigger:
       - platform: state
-        entity_id: persistent_notification.httplogin
+        entity_id: persistent_notification.http_login
     condition:
       - condition: template
         value_template: "{{ trigger.to_state.state != 'None' }}"
     action:
       - service: notify.home_assistant
         data_template:
-          title: "{{ states.persistent_notification.httplogin.attributes.message }}"
-          message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
+          title: "{{ states.persistent_notification.http_login.attributes.message }}"
+          message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.http_login.attributes.message.split ("from ") [1]}}'
       - service: persistent_notification.dismiss
         data:
-          notification_id: 'httplogin'
+          notification_id: 'http_login'
 
 #########################################################
 #                                                       #

@@ -66,7 +66,7 @@
 
   - alias: Update Template Sensors
     trigger:
-        platform: time
+        platform: time_pattern
         minutes: '/10'
     action:
       - service: homeassistant.update_entity

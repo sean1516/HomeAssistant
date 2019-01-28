@@ -230,6 +230,10 @@ cards:
       - entity: automation.water_softener_reminder
         name: Water Softener
         icon: mdi:water-pump
+      - entity: automation.humidifier_maintenance_reminder
+        name: Humidifier Maintenance
+        icon: mdi:water
+
   - type: entities
     title: Downloader Automations
     show_header_toggle: false

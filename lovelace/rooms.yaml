@@ -12,7 +12,7 @@ cards:
       - type: glance
         title: Door Status
         entities:
-          - entity: sensor.gehingepinsensor1
+          - entity: sensor.gehingepinsensor2
             name: Int. Garage
             icon: mdi:door
           - entity: sensor.backdoorstatus
@@ -21,7 +21,7 @@ cards:
           - entity: sensor.garagedoorstatus
             name: Garage
             icon: mdi:garage
-          - entity: sensor.gehingepinsensor2
+          - entity: sensor.gehingepinsensor1
             name: Front
             icon: mdi:door
         columns: 4
