@@ -36,36 +36,6 @@
       Accept: application/geo+json
     scan_interval: 600
 
-  - platform: rest
-    resource: https://api.weather.gov/alerts/active/count
-    name: Cook NWS Alert Count
-    value_template: >
-      {% if value_json.zones.ILZ014 is defined %}
-        {{ value_json.zones.ILZ014 }}
-      {% else %}
-        0
-      {% endif %}
-    headers:
-      User-Agent: Homeassistant
-      Accept: application/ld+json
-    scan_interval: 600
-
-  - platform: rest
-    resource: https://api.weather.gov/alerts/active?zone=ILZ014
-    name: Cook NWS Alert Event
-    value_template: >
-      {% if value_json.features[0] is defined %}
-        {{ value_json['features'][0]['properties'].event }}
-      {% else %}
-        None
-      {% endif %}
-    json_attributes:
-      - features
-    headers:
-      User-Agent: Homeassistant
-      Accept: application/geo+json
-    scan_interval: 600
-
 ####################################################
 #                                                  #
 #                 DARKSKY WEATHER                  #

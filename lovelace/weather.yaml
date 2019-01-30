@@ -19,12 +19,6 @@ cards:
       - entity: sensor.dupage_nws_alert_event
         name: Dupage Weather Alert
         icon: mdi:cloud-alert
-      - entity: sensor.cook_nws_alert_count
-        name: Cook Weather Alert Count
-        icon: mdi:weather-lightning-rainy
-      - entity: sensor.cook_nws_alert_event
-        name: Cook Weather Alert
-        icon: mdi:cloud-alert
   - type: entities
     title: Weather Forecast
     show_header_toggle: false

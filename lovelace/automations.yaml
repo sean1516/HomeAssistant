@@ -233,7 +233,6 @@ cards:
       - entity: automation.humidifier_maintenance_reminder
         name: Humidifier Maintenance
         icon: mdi:water
-
   - type: entities
     title: Downloader Automations
     show_header_toggle: false
@@ -277,9 +276,6 @@ cards:
     title: Weather Automations
     show_header_toggle: false
     entities:
-      - entity: automation.cook_nws_notification_weather_alert
-        name: Cook County Weather Alert
-        icon: mdi:cloud-alert
       - entity: automation.dupage_nws_notification_weather_alert
         name: DuPage County Weather Alert
         icon: mdi:cloud-alert

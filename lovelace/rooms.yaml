@@ -25,9 +25,9 @@ cards:
             name: Front
             icon: mdi:door
         columns: 4
-      - type: entities
-        entities:
-          - cover.garage_door
+      # - type: entities
+      #   entities:
+      #     - cover.garage_door
   - type: weather-forecast
     title: Weather
     entity: weather.dark_sky
