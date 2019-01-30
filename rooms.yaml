@@ -1,0 +1,134 @@
+####################################################
+#                                                  #
+#                    ROOMS VIEW                    #
+#                                                  #
+####################################################
+
+title: Rooms
+icon: mdi:home
+cards:
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Door Status
+        entities:
+          - entity: sensor.gehingepinsensor2
+            name: Int. Garage
+            icon: mdi:door
+          - entity: sensor.backdoorstatus
+            name: Back
+            icon: mdi:door
+          - entity: sensor.garagedoorstatus
+            name: Garage
+            icon: mdi:garage
+          - entity: sensor.gehingepinsensor1
+            name: Front
+            icon: mdi:door
+        columns: 4
+      # - type: entities
+      #   entities:
+      #     - cover.garage_door
+  - type: weather-forecast
+    title: Weather
+    entity: weather.dark_sky
+  - type: glance
+    title: Bedroom Lights
+    entities:
+      - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
+        tap_action:
+          action: toggle
+        name: Amy's Bedside
+      - entity: switch.kuled1
+        tap_action:
+          action: toggle
+        icon: mdi:fan
+        name: Fan
+      - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
+        tap_action:
+          action: toggle
+        name: Adam's Bedside
+    columns: 3
+  - type: glance
+    title: Outside Lights
+    entities:
+      - entity: light.yeelight1
+        tap_action:
+          action: toggle
+        name: Front Porch
+      - entity: light.yeelight3
+        tap_action:
+          action: toggle
+        name: Garage Right
+      - entity: light.yeelight4
+        name: Garage Left
+        tap_action:
+          action: togglee
+      - entity: light.yeelight2
+        name: Back Porch
+        tap_action:
+          action: toggle
+    columns: 4
+  - type: vertical-stack
+    title: Living Room
+    cards:
+      - type: glance
+        title: Living Room Lamps
+        entities:
+          - entity: switch.basic1
+            name: Lamps
+            icon: mdi:lightbulb-outline
+            tap_action:
+              action: toggle
+          - entity: light.yeelightrgb2
+            name: Notification
+            icon: mdi:lightbulb-outline
+            tap_action:
+              action: toggle
+          - entity: input_select.notification_bulb2_color
+            name: Notification Bulb Color
+        columns: 3
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            title: Thermostat
+            entities:
+             - entity: climate.linear_heating
+          - type: glance
+            entities:
+             - entity: sensor.fanmode
+               name: Fan Mode
+               icon: mdi:fan
+             - entity: sensor.fanstate
+               name: Fan State
+               icon: mdi:fan
+             - entity: sensor.operationmode
+               name: HVAC Mode
+               icon: mdi:settings
+             - entity: sensor.operatingstate
+               name: HVAC State
+               icon: mdi:settings
+             - entity: sensor.setpoint
+               name: Setpoint
+               icon: mdi:temperature-fahrenheit
+          - type: sensor
+            entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+            name: Temperature
+            hours_to_show: 24
+            graph: line
+            detail: 1
+      - type: entities
+        title: Days Until Baby M Arrives
+        show_header_toggle: false
+        entities:
+          - entity: sensor.duedate
+            name: Countdown
+            icon: mdi:baby-buggy
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################
