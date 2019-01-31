@@ -22,6 +22,30 @@ cards:
         name: First 7 Bus
       - entity: sensor.7_1
         name: Second 7 Bus
+  - type: glance
+    title: Adam Location
+    entities:
+      - entity: group.adam_home_presence
+        name: Combined Tracker
+        icon: mdi:crosshairs
+      - entity: device_tracker.adams_iphone
+        name: GPS
+        icon: mdi:cellphone-iphone
+      - entity: device_tracker.d81c79eb20c9
+        name: WiFi
+        icon: mdi:wifi
+  - type: glance
+    title: Amy Location
+    entities:
+      - entity: group.amy_home_presence
+        name: Combined Tracker
+        icon: mdi:crosshairs
+      - entity: device_tracker.amys_iphone
+        name: GPS
+        icon: mdi:cellphone-iphone
+      - entity: device_tracker.d81c79a4a851
+        name: WiFi
+        icon: mdi:wifi
   - type: entities
     title: Home Assistant Stats
     show_header_toggle: false
@@ -77,6 +101,7 @@ cards:
     trackers:
       - sensor.custom_card_tracker
       - sensor.custom_component_tracker
+
 
 ####################################################
 #                                                  #

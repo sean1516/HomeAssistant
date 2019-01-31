@@ -148,70 +148,17 @@ group:
     - light.yeelight2
     - light.yeelight3
     - light.yeelight4
-  home_presence:
-    - device_tracker.adam_siphone
+  adam_home_presence:
     - device_tracker.adams_iphone
     - device_tracker.d81c79eb20c9
-    - device_tracker.amy_siphone
+  amy_home_presence:
+    - device_tracker.amys_iphone
     - device_tracker.d81c79a4a851
-
-####################################################
-#                                                  #
-#                    LOGBOOK                       #
-#                                                  #
-####################################################
-
-logbook:
-  include:
-    entities:
-      - device_tracker.adam_siphone
-      - device_tracker.adams_iphone
-      - device_tracker.d81c79eb20c9
-      - device_tracker.adam
-
-####################################################
-#                                                  #
-#                    MEDIA PLAYER                  #
-#                                                  #
-####################################################
-
-#https://www.home-assistant.io/components/media_player.firetv/
-# media_player:
-#   platform: firetv
-#   name: Fire TV
-#   host: 192.168.1.21
-#   adbkey: /config/android/adbkey
-#   get_sources: false
-#   get_source: false
-
-####################################################
-#                                                  #
-#                     MQTT                         #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/docs/mqtt/broker/#run-your-own
-# mqtt:
-#   broker: 192.168.1.24
-#   port: 1883
-#   client_id: home-assistant-1
-#   username: !secret mqttun
-#   password: !secret mqttpw
-
-####################################################
-#                                                  #
-#                   OPEN GARAGE                    #
-#                                                  #
-####################################################
-
-#https://home-assistant.io/components/cover.opengarage/
-# cover:
-#   - platform: opengarage
-#     covers:
-#       garage:
-#         host:  192.168.1.18
-#         device_key: !secret device_key
-#         name:  Garage Door
+  home_presence:
+    - device_tracker.adams_iphone
+    - device_tracker.d81c79eb20c9
+    - device_tracker.amys_iphone
+    - device_tracker.d81c79a4a851
 
 ####################################################
 #                                                  #

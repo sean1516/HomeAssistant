@@ -136,6 +136,9 @@ cards:
       - entity: automation.update_weather_sensors
         name: Update Weather Sensors
         icon: mdi:update
+      - entity: automation.custom_update_available
+        name: Custom Update Available
+        icon: mdi:update
   - type: entities
     title: Other Automations
     show_header_toggle: false
@@ -279,16 +282,6 @@ cards:
       - entity: automation.dupage_nws_notification_weather_alert
         name: DuPage County Weather Alert
         icon: mdi:cloud-alert
-  - type: entities
-    title: Device Tracker Automations
-    show_header_toggle: false
-    entities:
-      - entity: automation.combined_away_tracker
-        name: Set Adam MQTT Away
-        icon: mdi:crosshairs-gps
-      - entity: automation.combined_home_tracker
-        name: Set Adam MQTT Home
-        icon: mdi:crosshairs-gps
 
 ####################################################
 #                                                  #

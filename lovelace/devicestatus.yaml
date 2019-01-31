@@ -6,35 +6,31 @@
 
 title: Device Status
 cards:
-  # - type: media-control
-  #   entity: media_player.fire_tv
   - type: vertical-stack
     cards:
       - type: glance
         title: Adam's Phone Status
         entities:
-          - entity: device_tracker.adam_siphone
+          - entity: device_tracker.adams_iphone
             name: GPS
           - entity: device_tracker.d81c79eb20c9
             name: WiFi
           - entity: sensor.adamsiphonebattery
             name: Battery
-          - entity: sensor.adamsiphonecharging
+          - entity: sensor.adam_s_iphone_battery_state
             name: Charging?
-            icon: mdi:power-plug
         columns: 4
       - type: glance
         title: Amy's Phone Status
         entities:
-          - entity: device_tracker.amy_siphone
+          - entity: device_tracker.amys_iphone
             name: GPS
           - entity: device_tracker.d81c79a4a851
             name: WiFi
           - entity: sensor.amysiphonebattery
             name: Battery
-          - entity: sensor.amysiphonecharging
+          - entity: sensor.amy_s_iphone_battery_state
             name: Charging?
-            icon: mdi:power-plug
         columns: 4
   - type: vertical-stack
     cards:
@@ -151,8 +147,6 @@ cards:
       - entity: device_tracker.amazon1197e775e
       - entity: device_tracker.d81c79eb20c9
         name: Adam's iPhone
-      - entity: script.findadamsiphone
-        name: Find Adam's iPhone
         icon: mdi:cellphone-iphone
       - entity: device_tracker.d81c79a4a851
         name: Amy's iPhone

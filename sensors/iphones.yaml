@@ -13,38 +13,22 @@
       adamsiphonebattery:
         unit_of_measurement: '%'
         value_template: >-
-            {%- if states.device_tracker.adam_siphone.attributes.battery %}
-                {{ states.device_tracker.adam_siphone.attributes.battery|round }}
+            {%- if states.device_tracker.adams_iphone.attributes.battery %}
+                {{ states.device_tracker.adams_iphone.attributes.battery|round }}
             {% else %}
-                {{ states.sensor.adam_siphonebattery.state }}
+                {{ states.sensor.adams_iphonebattery.state }}
             {%- endif %}
         device_class: battery
-
-      adamsiphonecharging:
-        value_template: >-
-            {%- if states.device_tracker.adam_siphone.attributes.battery_status %}
-                {{ states.device_tracker.adam_siphone.attributes.battery_status }}
-            {% else %}
-                {{ states.sensor.adam_siphonecharging.state }}
-            {%- endif %}
 
       amysiphonebattery:
         unit_of_measurement: '%'
         value_template: >-
-            {%- if states.device_tracker.amy_siphone.attributes.battery %}
-                {{ states.device_tracker.amy_siphone.attributes.battery|round }}
+            {%- if states.device_tracker.amys_iphone.attributes.battery %}
+                {{ states.device_tracker.amys_iphone.attributes.battery|round }}
             {% else %}
-                {{ states.sensor.amy_siphonebattery.state }}
+                {{ states.sensor.amys_iphonebattery.state }}
             {%- endif %}
         device_class: battery
-
-      amysiphonecharging:
-        value_template: >-
-            {%- if states.device_tracker.amy_siphone.attributes.battery_status %}
-                {{ states.device_tracker.amy_siphone.attributes.battery_status }}
-            {% else %}
-                {{ states.sensor.amy_siphonecharging.state }}
-            {%- endif %}
 
 ####################################################
 #                                                  #

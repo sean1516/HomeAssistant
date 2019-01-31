@@ -66,14 +66,14 @@ cards:
             hours_to_show: 24
             graph: line
             detail: 1
-      # - type: glance
-      #   title: Server Information
-      #   entities:
-      #      - entity: sensor.network_in_ens36
-      #        name: Network In
-      #      - entity: sensor.network_out_ens36
-      #        name: Network Out
-      #   columns: 2
+      - type: glance
+        title: Network Traffic
+        entities:
+           - entity: sensor.network_in_ens36
+             name: Network In
+           - entity: sensor.network_out_ens36
+             name: Network Out
+        columns: 2
   - type: glance
     title: HA File Size
     show_header_toggle: true

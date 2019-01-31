@@ -14,23 +14,14 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
       - service: notify.ios_adams_iphone
         data:
           title: "Interior Garage Door Opened"
           message: "The Interior Garage Door was opened and Amy and Adam are not home"
-      - service: homeassistant.turn_off
-        entity_id: automation.interior_garage_door_opened_when_away
-      - delay: '00:10:00'
-      - service: homeassistant.turn_on
-        entity_id: automation.interior_garage_door_opened_when_away
 
 #########################################################
 #                                                       #
@@ -47,13 +38,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -75,13 +62,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
       service: notify.ios_adams_iphone
       data:
@@ -108,9 +91,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
+          value_template: "{{ states('device_tracker.amys_iphone') != 'home' }}"
         - condition: state
           entity_id: sensor.garagedoorstatus
           state: 'Open'

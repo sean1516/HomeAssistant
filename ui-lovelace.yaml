@@ -6,7 +6,7 @@
 
 resources:
   #https://github.com/custom-cards/tracker-card
-  - url: /local/tracker-card.js?v=0.1.5
+  - url: /local/tracker-card.js?v=0.2.0
     type: js
 title: Home
 background: center / cover no-repeat url("/local/background2.jpg") fixed

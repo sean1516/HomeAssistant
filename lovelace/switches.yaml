@@ -32,6 +32,9 @@ cards:
       - entity: light.yeelightrgb2
         icon: mdi:mdi:lightbulb-outline
         name: Notification Light
+      - entity: script.normallight
+        name: Script - Normal Light
+        icon: mdi:mdi:lightbulb-outline
       - entity: input_select.notification_bulb2_color
         name: Notification Light Color
   - type: entities
@@ -68,9 +71,6 @@ cards:
       - entity: script.music
         name: Script - Turn On Music
         icon: mdi:music
-      - entity: script.fire_tv
-        name: Script - Turn On Fire TV
-        icon: mdi:fire
       - entity: script.volumeup
         name: Script - Volume Up
         icon: mdi:volume-plus

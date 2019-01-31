@@ -13,9 +13,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
       - service: switch.turn_on
         entity_id: switch.kuled1
@@ -29,9 +29,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
       - service: switch.turn_off
         entity_id: switch.kuled1
