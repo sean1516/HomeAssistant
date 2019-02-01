@@ -7,45 +7,62 @@
 title: Stats & Data
 cards:
   - type: entities
+    title: Days Until Baby M Arrives
+    show_header_toggle: false
+    entities:
+      - entity: sensor.duedate
+        name: Countdown
+        icon: mdi:baby-buggy
+  - type: entities
     title: Adam's & Wabash Bus Times
     show_header_toggle: false
     entities:
+      - type: section
+        label: Route 151
       - entity: sensor.151
-        name: First 151 Bus
+        name: First Bus
       - entity: sensor.151_1
-        name: Second 151 Bus
+        name: Second Bus
+      - type: section
+        label: Route 126
+        name: Second Bus
       - entity: sensor.126
-        name: First 126 Bus
+        name: First Bus
       - entity: sensor.126_1
-        name: Second 126 Bus
+        name: Second Bus
+      - type: section
+        label: Route 7
+        name: Second Bus
       - entity: sensor.7
-        name: First 7 Bus
+        name: First Bus
       - entity: sensor.7_1
-        name: Second 7 Bus
-  - type: glance
-    title: Adam Location
-    entities:
-      - entity: group.adam_home_presence
-        name: Combined Tracker
-        icon: mdi:crosshairs
-      - entity: device_tracker.adams_iphone
-        name: GPS
-        icon: mdi:cellphone-iphone
-      - entity: device_tracker.d81c79eb20c9
-        name: WiFi
-        icon: mdi:wifi
-  - type: glance
-    title: Amy Location
-    entities:
-      - entity: group.amy_home_presence
-        name: Combined Tracker
-        icon: mdi:crosshairs
-      - entity: device_tracker.amys_iphone
-        name: GPS
-        icon: mdi:cellphone-iphone
-      - entity: device_tracker.d81c79a4a851
-        name: WiFi
-        icon: mdi:wifi
+        name: Second Bus
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: glance
+        title: Adam Location
+        entities:
+          - entity: group.adam_home_presence
+            name: Combined Tracker
+            icon: mdi:crosshairs
+          - entity: device_tracker.adams_iphone
+            name: GPS
+            icon: mdi:cellphone-iphone
+          - entity: device_tracker.d81c79eb20c9
+            name: WiFi
+            icon: mdi:wifi
+      - type: glance
+        title: Amy Location
+        entities:
+          - entity: group.amy_home_presence
+            name: Combined Tracker
+            icon: mdi:crosshairs
+          - entity: device_tracker.amys_iphone
+            name: GPS
+            icon: mdi:cellphone-iphone
+          - entity: device_tracker.d81c79a4a851
+            name: WiFi
+            icon: mdi:wifi
   - type: entities
     title: Home Assistant Stats
     show_header_toggle: false
@@ -83,19 +100,6 @@ cards:
         name: Forks
         icon: mdi:directions-fork
     columns: 4
-  - type: glance
-    title: Home Assistant Info
-    entities:
-      - entity: sensor.installed_version
-        name: Installed
-        icon: mdi:folder-download
-      - entity: sensor.hassio_version
-        name: Latest Release
-        icon: mdi:github-circle
-      - entity: sensor.lets_encrypt_expiration
-        name: Lets Encrypt Expiration
-        icon: mdi:timelapse
-    columns: 3
   - type: custom:tracker-card
     title:
     trackers:

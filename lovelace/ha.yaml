@@ -14,44 +14,56 @@ cards:
       - entity: switch.dasshio
         name: Dasshio
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.dasshio.state ]]"
       - entity: switch.duckdns
         name: DuckDNS
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.duckdns.state ]]"
       - entity: switch.gdrivebackup
         name: Google Drive Backup
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.gdrivebackup.state ]]"
       - entity: switch.mosquitto
         name: Mosquitto MQTT
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.mosquitto.state ]]"
       - entity: switch.nut
         name: NUT
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.nut.state ]]"
       - entity: switch.rpcshutdown
         name: RPC Shutdown
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.rpcshutdown.state ]]"
       - entity: switch.samba
         name: Samba
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.samba.state ]]"
       - entity: switch.ssh
         name: SSH
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.ssh.state ]]"
       - entity: switch.tasmoadmin
         name: TasmoAdmin
         icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.tasmoadmin.state ]]"
       - entity: switch.unificontroller
         name: Unifi Controller
         icon: mdi:server-plus
-  - type: vertical-stack
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.unificontroller.state ]]"
+  - type: custom:vertical-stack-in-card
+    title: Hass.io VM Load
     cards:
-      - type: glance
-        title: Server Load
-        entities:
-          - entity: sensor.load_1m
-            icon: mdi:speedometer
-          - entity: sensor.load_5m
-            icon: mdi:speedometer
-          - entity: sensor.load_15m
-            icon: mdi:speedometer
       - type: horizontal-stack
         cards:
           - type: sensor
@@ -67,27 +79,43 @@ cards:
             graph: line
             detail: 1
       - type: glance
-        title: Network Traffic
         entities:
-           - entity: sensor.network_in_ens36
-             name: Network In
-           - entity: sensor.network_out_ens36
-             name: Network Out
-        columns: 2
-  - type: glance
-    title: HA File Size
-    show_header_toggle: true
+          - entity: sensor.load_1m
+            icon: mdi:speedometer
+          - entity: sensor.load_5m
+            icon: mdi:speedometer
+          - entity: sensor.load_15m
+            icon: mdi:speedometer
+  - type: entities
+    title: Hass.io VM Usage
+    show_header_toggle: false
     entities:
-      - entity: sensor.home_assistant_log
-        name: Log File
-      - entity: sensor.home_assistant_v2_db
-        name: Database
-      - entity: sensor.disk_use_percent_home
-        name: Disk Use
-        icon: mdi:harddisk
+       - entity: sensor.network_in_ens36
+         name: Network In
+       - entity: sensor.network_out_ens36
+         name: Network Out
+       - entity: sensor.home_assistant_log
+         name: Log File
+       - entity: sensor.home_assistant_v2_db
+         name: Database
+       - entity: sensor.disk_use_percent_home
+         name: Disk Use
+         icon: mdi:harddisk
+  - type: glance
+    title: Home Assistant Info
+    entities:
+      - entity: sensor.installed_version
+        name: Installed
+        icon: mdi:folder-download
+      - entity: sensor.hassio_version
+        name: Latest Release
+        icon: mdi:github-circle
+      - entity: sensor.lets_encrypt_expiration
+        name: Lets Encrypt Expiration
+        icon: mdi:timelapse
     columns: 3
   - type: entities
-    title: Zwave
+    title: Zwave Status
     show_header_toggle: false
     entities:
       - entity: zwave.aeotec_zw090_zstick_gen5_us
@@ -103,7 +131,7 @@ cards:
       - entity: zwave.linear_gctbz48_battery_powered_zwave_thermostat_3
         name: Thermostat
   - type: entities
-    title: Batteries
+    title: Sensor Battery Status
     show_header_toggle: false
     entities:
       - entity: sensor.tradfri_remote_control

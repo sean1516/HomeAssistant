@@ -6,9 +6,22 @@
 
 title: Weather
 cards:
-  - type: weather-forecast
-    title: Weather
-    entity: weather.dark_sky
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: weather-forecast
+        title: Weather
+        entity: weather.dark_sky
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: sun.sun
+            name: Sun
+          - entity: sensor.sunrise
+            name: Next Sunrise
+            icon: mdi:weather-sunset-up
+          - entity: sensor.sunset
+            name: Next Sunset
+            icon: mdi:weather-sunset-down
   - type: entities
     title: Weather Alerts
     show_header_toggle: false
@@ -58,18 +71,6 @@ cards:
   - type: iframe
     url: https://embed.windy.com/embed2.html?lat=41.965&lon=-88.190&zoom=11&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=41.943&detailLon=-88.145&metricWind=default&metricTemp=%C2%B0F&radarRange=-1
     aspect_ratio: 70%
-  - type: entities
-    title: Sun
-    show_header_toggle: false
-    entities:
-      - entity: sun.sun
-        name: Sun
-      - entity: sensor.sunrise
-        name: Next Sunrise
-        icon: mdi:weather-sunset-up
-      - entity: sensor.sunset
-        name: Next Sunset
-        icon: mdi:weather-sunset-down
 
 ####################################################
 #                                                  #
