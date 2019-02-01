@@ -3,24 +3,6 @@
 
 ####################################################
 #                                                  #
-#                FIND MY IPHONE                    #
-#                                                  #
-####################################################
-
-  findadamsiphone:
-    sequence:
-      service: device_tracker.icloud_lost_iphone
-      data:
-        device_name: adam_siphone
-
-  findamysiphone:
-    sequence:
-      service: device_tracker.icloud_lost_iphone
-      data:
-        device_name: amy_siphone
-
-####################################################
-#                                                  #
 #                 NORMAL LIGHT                     #
 #                                                  #
 ####################################################
@@ -88,21 +70,6 @@
       - service: homeassistant.turn_on
         entity_id: switch.receivervideo1
 
-####################################################
-#                                                  #
-#                Turn On FireTV                     #
-#                                                  #
-####################################################
-
-  fire_tv:
-    sequence:
-      - service: homeassistant.turn_on
-        entity_id: switch.receivervideo2
-      - delay: '00:00:02'
-      - service: homeassstant.turn_on
-        entity_id: switch.tvpower
-      - service: media_player.turn_on
-        entity_id: media_player.fire_tv
 
 ####################################################
 #                                                  #
