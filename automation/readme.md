@@ -87,6 +87,7 @@ Some automations for Home Assistant related items.
 * Send me a notification if my Home Assistant VM disk gets full
 * Notify me if a Zwave device is dead
 * Notify me if a battery power sensor battery is getting low
+* Notify me if there is a custom component/card update available
 
 ### Leaving Hom.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_home.yaml)__
@@ -123,6 +124,7 @@ A series of automations that trigger monthly or weekly to help me remember to pe
 * Furnace Filter Reminder
 * Dog Flea/Tick/Heartworm Reminder
 * Water Softener Reminder
+* Remind me to service our whole home humidifier before winter
 
 ### Morning Briefing.yaml Automation:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/morning_briefing.yaml)__
