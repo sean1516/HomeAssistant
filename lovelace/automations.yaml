@@ -70,19 +70,19 @@ cards:
     entities:
       - entity: automation.front_door_opened_when_away
         name: Front Door Opened When Away
-        icon: mdi:security-home
+        icon: mdi:shield-home
       - entity: automation.back_door_opened_when_away
         name: Back Door Opened When Away
-        icon: mdi:security-home
+        icon: mdi:shield-home
       - entity: automation.interior_garage_door_opened_when_away
         name: Inside Garage Door Opened When Away
-        icon: mdi:security-home
+        icon: mdi:shield-home
       - entity: automation.exterior_garage_door_opened_when_away
         name: Outside Garage Door Opened When Away
-        icon: mdi:security-home
+        icon: mdi:shield-home
       - entity: automation.exterior_garage_door_left_open_when_away
         name: Outside Garage Door Left Open When Away
-        icon: mdi:security-home
+        icon: mdi:shield-home
   - type: entities
     title: Network Security Automations
     show_header_toggle: false

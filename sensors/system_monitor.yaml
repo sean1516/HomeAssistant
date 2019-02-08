@@ -15,9 +15,9 @@
       - type: memory_use_percent
       - type: processor_use
       - type: network_in
-        arg: ens36
+        arg: eth0
       - type: network_out
-        arg: ens36
+        arg: eth0
       - type: load_1m
       - type: load_5m
       - type: load_15m

@@ -55,7 +55,7 @@ cards:
             detail: 1
   - type: custom:vertical-stack-in-card
     title: Network Status
-    cards: 
+    cards:
       - type: horizontal-stack
         title: Network Status
         cards:

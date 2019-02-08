@@ -69,6 +69,9 @@ map:
 #https://home-assistant.io/components/sun/
 sun:
 
+#https://www.home-assistant.io/components/system_health/
+system_health:
+
 ####################################################
 #                                                  #
 #      LINKS TO INDIVUAL CONFIGURATION FILES       #
