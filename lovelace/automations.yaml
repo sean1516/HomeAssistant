@@ -175,6 +175,15 @@ cards:
     title: Feed the dog Automations
     show_header_toggle: false
     entities:
+      - entity: automation.dog_has_been_fed_evening
+        name: Dog has been fed - evening
+        icon: mdi:paw
+      - entity: automation.dog_has_been_fed_morning
+        name: Dog has been fed - morning
+        icon: mdi:paw
+      - entity: automation.reset_feed_the_dog_notifications
+        name: Reset feed the dog automations
+        icon: mdi:paw
       - entity: automation.feed_the_dog_evening
         name: Feed the dog evening
         icon: mdi:paw
