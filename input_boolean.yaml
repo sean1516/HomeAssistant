@@ -13,6 +13,9 @@
   guest:
     name: Guest Mode
     initial: off
+  feeddog:
+    name: feeddog
+    initial: on
 
 ####################################################
 #                                                  #
