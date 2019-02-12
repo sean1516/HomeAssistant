@@ -34,6 +34,72 @@
 
 #########################################################
 #                                                       #
+#              DOG HAS BEEN FED - MORNING               #
+#                                                       #
+#########################################################
+
+  - alias: "Dog Has Been Fed - Morning"
+    trigger:
+      platform: state
+      entity_id: input_boolean.feeddog
+      from: 'off'
+      to: 'on'
+    condition:
+        condition: time
+        before: '12:00:00'
+    action:
+      - service: automation.turn_off
+        entity_id: automation.feed_the_dog_morning
+      - service: light.turn_off
+        entity_id: light.yeelightrgb2
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.feeddog
+
+#########################################################
+#                                                       #
+#              DOG HAS BEEN FED - EVENING               #
+#                                                       #
+#########################################################
+
+  - alias: "Dog Has Been Fed - Evening"
+    trigger:
+      platform: state
+      entity_id: input_boolean.feeddog
+      from: 'off'
+      to: 'on'
+    condition:
+        condition: time
+        after: '12:00:00'
+    action:
+      - service: automation.turn_off
+        entity_id: automation.feed_the_dog_evening
+      - service: light.turn_off
+        entity_id: light.yeelightrgb2
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.feeddog
+
+#########################################################
+#                                                       #
+#                  FEED THE DOG - EVENING               #
+#                                                       #
+#########################################################
+
+  - alias: "Reset Feed The Dog Notifications"
+    trigger:
+      platform: time
+      at: '01:00'
+    action:
+      - service: automation.turn_on
+        entity_id: automation.dog_has_been_fed__evening
+      - service: automation.turn_on
+        entity_id: automation.dog_has_been_fed__morning
+      - service: automation.turn_on
+        entity_id: automation.feed_the_dog_evening
+      - service: automation.turn_on
+        entity_id: automation.feed_the_dog_morning
+
+#########################################################
+#                                                       #
 #            END OF CONFIGURATION FILE                  #
 #                                                       #
 #########################################################
