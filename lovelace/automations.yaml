@@ -139,6 +139,9 @@ cards:
       - entity: automation.custom_update_available
         name: Custom Update Available
         icon: mdi:update
+      - entity: automation.restart_nut_add_on
+        name: Nut Add-on Watchdog
+        icon: mdi:alert-decagram-outline
   - type: entities
     title: Other Automations
     show_header_toggle: false
