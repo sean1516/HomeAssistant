@@ -53,7 +53,6 @@ http:
   login_attempts_threshold: 2
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  trusted_networks: 192.168.1.0/24
 
 #https://home-assistant.io/components/logger/
 logger:
