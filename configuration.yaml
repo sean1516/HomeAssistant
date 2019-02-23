@@ -175,6 +175,19 @@ rest_command:
 
 ####################################################
 #                                                  #
+#                   SPEETEST                       #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/speedtestdotnet/
+speedtestdotnet:
+  server_id: 1776
+  monitored_conditions:
+    - download
+    - upload
+
+####################################################
+#                                                  #
 #                TRADFRI HUB                       #
 #                                                  #
 ####################################################

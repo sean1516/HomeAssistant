@@ -118,13 +118,9 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adam_siphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amy_siphone') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79eb20c9') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('device_tracker.d81c79a4a851') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
       service: notify.ios_adams_iphone
       data:

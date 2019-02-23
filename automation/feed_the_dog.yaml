@@ -38,7 +38,7 @@
 #                                                       #
 #########################################################
 
-  - alias: "Dog Has Been Fed - Morning"
+  - alias: "Dog Has Been Fed Morning"
     trigger:
       platform: state
       entity_id: input_boolean.feeddog
@@ -52,7 +52,7 @@
         entity_id: automation.feed_the_dog_morning
       - service: light.turn_off
         entity_id: light.yeelightrgb2
-      - service: homeassistant.turn_on
+      - service: homeassistant.turn_off
         entity_id: input_boolean.feeddog
 
 #########################################################
@@ -61,7 +61,7 @@
 #                                                       #
 #########################################################
 
-  - alias: "Dog Has Been Fed - Evening"
+  - alias: "Dog Has Been Fed Evening"
     trigger:
       platform: state
       entity_id: input_boolean.feeddog
@@ -75,7 +75,7 @@
         entity_id: automation.feed_the_dog_evening
       - service: light.turn_off
         entity_id: light.yeelightrgb2
-      - service: homeassistant.turn_on
+      - service: homeassistant.turn_off
         entity_id: input_boolean.feeddog
 
 #########################################################
@@ -90,9 +90,9 @@
       at: '01:00'
     action:
       - service: automation.turn_on
-        entity_id: automation.dog_has_been_fed__evening
+        entity_id: automation.dog_has_been_fed_evening
       - service: automation.turn_on
-        entity_id: automation.dog_has_been_fed__morning
+        entity_id: automation.dog_has_been_fed_morning
       - service: automation.turn_on
         entity_id: automation.feed_the_dog_evening
       - service: automation.turn_on

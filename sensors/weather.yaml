@@ -60,7 +60,7 @@
       - precip_probability
       - temperature_low
       - temperature_high
-    update_interval:
+    scan_interval:
       minutes: 30
 
   - platform: template

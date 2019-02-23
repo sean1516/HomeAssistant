@@ -15,7 +15,7 @@
     initial: off
   feeddog:
     name: feeddog
-    initial: on
+    initial: off
 
 ####################################################
 #                                                  #

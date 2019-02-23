@@ -90,10 +90,6 @@ cards:
     title: Hass.io VM Usage
     show_header_toggle: false
     entities:
-       - entity: sensor.network_in_eth0
-         name: Network In
-       - entity: sensor.network_out_eth0
-         name: Network Out
        - entity: sensor.home_assistant_log
          name: Log File
        - entity: sensor.home_assistant_v2_db
