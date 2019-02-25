@@ -42,9 +42,9 @@ What works for me is creating a Samba share that I can then edit on any computer
 After you have the Samba share setup, I like to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
 
 # A Few Stats On my Setup:
-| Components Used | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
-|:----------:|:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-| 86         |42               |8       |7               |27        |78           |4        |133      |7              |         
+| Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
+|:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
+|44               |8       |7               |27        |79           |4        |133      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
