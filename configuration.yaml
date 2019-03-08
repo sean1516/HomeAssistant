@@ -35,6 +35,9 @@ custom_updater:
   track:
     - cards
     - components
+  card_urls:
+    - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
 #https://www.home-assistant.io/components/downloader/
 downloader:

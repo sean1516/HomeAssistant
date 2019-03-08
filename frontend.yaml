@@ -1,19 +1,22 @@
 #https://www.home-assistant.io/components/frontend/
 
-  javascript_version: latest
   themes:
 
 #################################################################
 #                                                               #
-#                  MIDNIGHT WITH NO TRANSPARENCY                #
+#                          MIDNIGHT                             #
 #                                                               #
 #################################################################
-    midnightnotrans:
+    midnight:
+
+# Corner radius
+      ha-card-border-radius: '0px'
+
 # Main colors
       primary-color: '#03a9f4'                                                        # Header
       accent-color: '#03a9f4'                                                         # Accent color
       dark-primary-color: 'var(--accent-color)'                                       # Hyperlinks
-      light-primary-color: 'var(--accent-color)'                                      # Horizontal line in about
+      light-primary-color: '#333333'                                                  # Horizontal line in about & profile button
 
 # Text colors
       primary-text-color: '#FFFFFF'                                                   # Primary text colour, here is referencing dark-primary-color

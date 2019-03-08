@@ -57,7 +57,10 @@
       - sensor.adamsiphonebattery
       - sensor.adamsiphonecharging
       - sensor.amysiphonebattery
-      - sensor.amysiphonecharging   
+      - sensor.amysiphonecharging
+      - sensor.remote_lux
+      - sensor.remote_humidity
+      - sensor.remote_temperature   
     domains:
       - media_player
       - climate

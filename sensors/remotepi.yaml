@@ -1,0 +1,32 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                   MQTT SENSORS                   #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.mqtt/
+
+  - platform: mqtt
+    name: remote_lux
+    state_topic: "remotepi/sensor/bh1750_light_sensor/state"
+    device_class: illuminance
+    unit_of_measurement: 'lx'
+  - platform: mqtt
+    name: remote_humidity
+    state_topic: "remotepi/sensor/dht_sensor_humidity/state"
+    device_class: humidity
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: remote_temperature
+    state_topic: "remotepi/sensor/dht_sensor_temperature/state"
+    device_class: temperature
+    unit_of_measurement: '°F'
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

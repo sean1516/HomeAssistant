@@ -19,6 +19,19 @@
 
 ####################################################
 #                                                  #
+#              DEVICE TRACKER - MQTT               #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/device_tracker.mqtt/
+
+  - platform: mqtt
+    devices:
+      adam_bluetooth: 'remotepi/device_tracker/adam_s_iphone/state'
+      amy_bluetooth: 'remotepi/device_tracker/amy_s_iphone/state'
+
+####################################################
+#                                                  #
 #            END OF CONFIGUATION FILE              #
 #                                                  #
 ####################################################

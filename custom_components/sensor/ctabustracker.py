@@ -29,7 +29,7 @@ CONF_STOP_ID = 'stop_id'
 RESOURCE = "http://ctabustracker.com/bustime/api/v2/"
 ENDPOINT = "getpredictions?key={}&rt={}&stpid={}&format=json"
 
-TIME_BETWEEN_UPDATES = timedelta(seconds=60)
+TIME_BETWEEN_UPDATES = timedelta(seconds=300)
 
 LINES = vol.Schema({
     vol.Required(CONF_STOP_ID): cv.string,
