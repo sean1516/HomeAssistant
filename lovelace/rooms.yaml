@@ -88,12 +88,23 @@ cards:
         show_header_toggle: false
         entities:
           - entity: climate.linear_heating
-      - type: sensor
-        entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+      - type: custom:mini-graph-card
+        show:
+          name: false
+          icon: false
+          state: false
+          points: false
+        entities:
+          - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+            name: Actual
+          - entity: sensor.setpoint
+            name: Setpoint
         hours_to_show: 24
-        name: Indoor Temperature
+        points_per_hour: 2
         graph: line
-        detail: 1
+        line_color:
+          - '#FFFFFF'
+          - '#03a9f4'
       - type: glance
         entities:
          - entity: sensor.fanmode

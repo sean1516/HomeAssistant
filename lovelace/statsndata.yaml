@@ -43,7 +43,7 @@ cards:
         title: Adam Location
         entities:
           - entity: group.adam_home_presence
-            name: Combined Tracker
+            name: Combined
             icon: mdi:crosshairs
           - entity: device_tracker.adams_iphone
             name: GPS
@@ -51,11 +51,14 @@ cards:
           - entity: device_tracker.d81c79eb20c9
             name: WiFi
             icon: mdi:wifi
+          - entity: device_tracker.adam_bluetooth
+            name: Bluetooth
+            icon: mdi:bluetooth
       - type: glance
         title: Amy Location
         entities:
           - entity: group.amy_home_presence
-            name: Combined Tracker
+            name: Combined
             icon: mdi:crosshairs
           - entity: device_tracker.amys_iphone
             name: GPS
@@ -63,6 +66,9 @@ cards:
           - entity: device_tracker.d81c79a4a851
             name: WiFi
             icon: mdi:wifi
+          - entity: device_tracker.amy_bluetooth
+            name: Bluetooth
+            icon: mdi:bluetooth
   - type: entities
     title: Home Assistant Stats
     show_header_toggle: false
@@ -105,6 +111,18 @@ cards:
     trackers:
       - sensor.custom_card_tracker
       - sensor.custom_component_tracker
+  - type: glance
+    title: Remote Sensors
+    entities:
+      - entity: sensor.remote_lux
+        name: Light Sensor
+        icon: 'mdi:spotlight-beam'
+      - entity: sensor.remote_humidity
+        name: Humidity Sensor
+        icon: 'mdi:water-percent'
+      - entity: sensor.remote_temperature
+        name: Temperature Sensor
+        icon: 'mdi:thermometer'
 
 
 ####################################################

@@ -71,6 +71,21 @@ cards:
             hours_to_show: 24
             graph: line
             detail: 1
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.modem
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.100.1"
+          - entity: binary_sensor.pfsense_vm
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "[[ sensor.myip.state ]]"
+          - entity: binary_sensor.ubiquiti_switch
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.1.19"
+          - entity: binary_sensor.ubiquiti_ap
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.1.38"
   - type: entities
     title: Home Automation Devices
     show_header_toggle: false
@@ -149,23 +164,11 @@ cards:
         icon: mdi:desktop-tower
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.6"
-      - entity: binary_sensor.modem
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.100.1"
       - entity: binary_sensor.nas_vm
         name: NAS VM
         icon: mdi:nas
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.14"
-      - entity: binary_sensor.ubiquiti_switch
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.19"
-      - entity: binary_sensor.ubiquiti_ap
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.38"
-      - entity: binary_sensor.pfsense_vm
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "[[ sensor.myip.state ]]"
       - entity: binary_sensor.hassio_dev_vm
         name: Hass.io Dev VM
         icon: mdi:server
@@ -209,6 +212,17 @@ cards:
         icon: mdi:raspberrypi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.30"
+      - entity: device_tracker.b827ebfb9674
+        name: Raspberry Pi 3b+ Wired
+        icon: mdi:raspberrypi
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "192.168.1.31"
+      - entity: device_tracker.b827eb0ec9a4
+        name: Raspberry Pi 2 Wired
+        icon: mdi:raspberrypi
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "192.168.1.33"
+
 
 ####################################################
 #                                                  #
