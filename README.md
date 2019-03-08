@@ -10,8 +10,10 @@ A detailed description of each of my automations and a link to the yaml file is 
 
 This is the most important part of Home Assistant!  Remote control and voice commmands are nice, however, that is not home automation, just remote control.  Automations should make your life easier, look at what you do everyday, the simplest things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
-# Server Running My Home Assistant Setup:
-* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which is a bare metal hypervisor that allows me to run mutiple virtual machines on the same physical hardware. [This](https://blog.markdepalma.com/?p=82) is a great guide for getting HassOS runing in ESXi. The HA virtual machine is given 2 cores, 2GB of RAM and a 16GB disk. I also run a [Router](https://www.pfsense.org/) and NAS from the same box.  
+# Hardware Running My Home Assistant Setup:
+* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which is a bare metal hypervisor that allows me to run mutiple virtual machines on the same physical hardware. [This](https://blog.markdepalma.com/?p=82) is a great guide for getting HassOS runing in ESXi. The HA virtual machine is given 2 cores, 2GB of RAM and a 16GB disk. I also run a [Router](https://www.pfsense.org/) and NAS from the same box.
+
+* __[Raspberry Pi3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)__ I have a few sensors sticking off this Pi and also use if for Bluetooth presence tracking.  The data from this pi is fed back to the main instance via the [MQTT Statestream](https://www.home-assistant.io/components/mqtt_statestream/) component.  Future plans for this incude a watchdog for the main instance and possibly moving my zwave hub to it as its centrally located. 
 
 I am also running the following Hass.io add-ons:
 
@@ -44,7 +46,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|44               |8       |7               |27        |79           |4        |133      |7              | 
+|46               |8       |7               |27        |79           |4        |136      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
