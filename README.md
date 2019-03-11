@@ -17,6 +17,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 I am also running the following Hass.io add-ons:
 
+* __[Android Debug Bridge](https://github.com/hassio-addons/addon-adb)__
 * __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ Store a backup of my config in a google drive account. 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
@@ -28,7 +29,7 @@ I am also running the following Hass.io add-ons:
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.88.1__
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.89.1__
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L45) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L48).
@@ -46,7 +47,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|46               |8       |7               |27        |79           |4        |136      |7              | 
+|46               |8       |7               |27        |79           |4        |137      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
