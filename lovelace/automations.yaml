@@ -233,6 +233,9 @@ cards:
     title: Maintenance Reminder Automations
     show_header_toggle: false
     entities:
+      - entity: automation.water_filter_maintenance_reminder
+        name: Water Filter Maintenance
+        icon: mdi:water
       - entity: automation.trash_day_reminder
         name: Trash Day
         icon: mdi:delete-empty
@@ -247,7 +250,7 @@ cards:
         icon: mdi:water-pump
       - entity: automation.humidifier_maintenance_reminder
         name: Humidifier Maintenance
-        icon: mdi:water
+        icon: mdi:water-percent
   - type: entities
     title: Downloader Automations
     show_header_toggle: false
