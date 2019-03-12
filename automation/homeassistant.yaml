@@ -40,6 +40,7 @@
     trigger:
       platform: state
       entity_id:
+        - sensor.adb
         - sensor.dasshio
         - sensor.duckdns
         - sensor.gdrivebackup
@@ -174,7 +175,7 @@
       platform: state
       entity_id:  sensor.ups_status
       to: 'unknown'
-      for: '010:00:60'
+      for: '00:00:60'
     action:
       - service: switch.turn_off
         entity_id: switch.nut
