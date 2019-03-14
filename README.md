@@ -21,13 +21,13 @@ I am also running the following Hass.io add-ons:
 * __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ Store a backup of my config in a google drive account. 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
-* __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
+* __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ 
 * __[Network UPS Tools](https://github.com/colindunn/hassio-addons)__ A NUT Server
 * __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ Shutdown Windows Computers
-* __[SSH](https://www.home-assistant.io/addons/ssh/)__ SSH for Hass.io
+* __[SSH](https://www.home-assistant.io/addons/ssh/)__ 
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
-* __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ Unifi Device Controller
+* __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ 
 
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.89.1__
 # Network & Home Assistant Instance Security:
