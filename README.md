@@ -47,7 +47,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|46               |8       |7               |28        |80           |4        |137      |7              | 
+|47               |8       |7               |28        |81           |4        |138      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
@@ -63,6 +63,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 * __[Sonoff POW (Flashed with Tasmota)](https://www.amazon.com/Sonoff-Consumption-Monitoring-Appliances-Compatible/dp/B06XSD6PD6?ref=ast_p_ei)__*
 * __[OpenGarage Door Controller ](https://www.amazon.com/OpenGarage-WiFi-enabled-Garage-Door-Opener/dp/B01M4RL0CL)__*
 * __[Kuled WiFi Light Switches (Flashed with Tasmota)](https://www.amazon.com/Required-Wireless-Requires-Schedule-Compatible/dp/B079FDTG7T)__*
+* __[Firefly Electronix Wifi Doorbell](https://www.fireflyelectronix.com/product/wifidoorbell)__*
 
 ## Zwave / Zigbee Devices
 * __[Ikea TRÅDFRI LED Bulbs](http://www.ikea.com/us/en/catalog/products/20318267/)__
