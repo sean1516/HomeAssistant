@@ -129,6 +129,48 @@
 
 #########################################################
 #                                                       #
+#               DOORBELL PESSED NOTIFICATION            #
+#                                                       #
+#########################################################
+
+  - alias: "Doorbell Pressed"
+    trigger:
+      platform: state
+      entity_id: sensor.doorbell
+    condition:
+      condition: template
+      value_template: "{{trigger.from_state.state != trigger.to_state.state}}"
+    action:
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Doorbell Pressed"
+          message: "The doorbell was pressed"
+      - service_template: >-
+          {%- if is_state('light.yeelightrgb2' , 'off') -%}
+            input_boolean.turn_off
+          {%- else -%}
+            input_boolean.turn_on
+          {%- endif -%}
+        entity_id: input_boolean.doorbelllight
+      - service: light.turn_on
+        entity_id: light.yeelightrgb2
+        data:
+          effect: 'Fast Random Loop'
+      - delay: '00:00:02'
+      - service: light.turn_on
+        entity_id: light.yeelightrgb2
+        data:
+          effect: Stop
+      - service_template: >-
+          {%- if is_state('input_boolean.doorbelllight' , 'off') -%}
+            light.turn_off
+          {%- else -%}
+            light.turn_on
+          {%- endif -%}
+        entity_id: light.yeelightrgb2
+
+#########################################################
+#                                                       #
 #            END OF CONFIGURATION FILE                  #
 #                                                       #
 #########################################################

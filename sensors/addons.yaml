@@ -13,8 +13,16 @@
 # https://myhome.duckdns.org:8123/api/hassio/addons/382254_googlebackup/info
 # The 382254_googlebackup is the slug name which can be pulled by going to the addon page.  It is in the end of the URL.
 # !secret llt is "Bearer 12345678910"
-# 12345678910 is the Long Lived Access Token generated in the Home Assistant Frontend. 
+# 12345678910 is the Long Lived Access Token generated in the Home Assistant Frontend.
 
+  - platform: rest
+    resource: !secret adb
+    name: adb
+    value_template: '{{ value_json.data.state }}'
+    scan_interval: 60
+    headers:
+      Authorization: !secret llt
+      Content-Type: application/json
 
   - platform: rest
     resource: !secret gdrivebackup

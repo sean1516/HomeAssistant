@@ -83,6 +83,9 @@ cards:
       - entity: automation.exterior_garage_door_left_open_when_away
         name: Outside Garage Door Left Open When Away
         icon: mdi:shield-home
+      - entity: automation.doorbell_pressed
+        name: Doorbell Pressed
+        icon: mdi:bell
   - type: entities
     title: Network Security Automations
     show_header_toggle: false

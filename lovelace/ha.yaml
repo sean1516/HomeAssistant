@@ -11,6 +11,11 @@ cards:
     title: Hass.io Addons
     show_header_toggle: false
     entities:
+      - entity: switch.adb
+        name: Android Debug Bridge
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.adb.state ]]"
       - entity: switch.dasshio
         name: Dasshio
         icon: mdi:server-plus
@@ -145,6 +150,9 @@ cards:
       - entity: sensor.backdoorstatusbatt
         icon: mdi:battery-50
         name: Back Door Sensor
+      - entity: sensor.doorbell
+        name: Doorbell
+        icon: mdi:battery-50
 
 ####################################################
 #                                                  #

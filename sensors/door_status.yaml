@@ -25,6 +25,19 @@
 
 ####################################################
 #                                                  #
+#                      MQTT                        #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/sensor.mqtt/
+  - platform: mqtt
+    state_topic: "doorbell/notify"
+    name: doorbell
+    value_template: "{{ value_json.batt }}"
+    unit_of_measurement: "V"
+
+####################################################
+#                                                  #
 #            END OF CONFIGURATION FILE             #
 #                                                  #
 ####################################################

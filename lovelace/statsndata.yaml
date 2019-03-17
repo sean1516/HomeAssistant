@@ -123,7 +123,8 @@ cards:
       - entity: sensor.remote_temperature
         name: Temperature Sensor
         icon: 'mdi:thermometer'
-
+  - type: media-control
+    entity: media_player.fire_tv_3
 
 ####################################################
 #                                                  #
