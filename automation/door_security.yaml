@@ -141,6 +141,13 @@
       condition: template
       value_template: "{{trigger.from_state.state != trigger.to_state.state}}"
     action:
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.adam_s_echo_dot
+          data:
+            type: announce
+          message: "Someone is at the front door!"
       - service: notify.ios_adams_iphone
         data:
           title: "Doorbell Pressed"

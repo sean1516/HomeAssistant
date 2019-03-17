@@ -29,6 +29,10 @@
     password: !secret notification_password
     recipient: !secret notification_amy
 
+#https://github.com/keatontaylor/alexa_media_player
+  - platform: alexa_media
+    name: alexa_media
+
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #

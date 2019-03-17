@@ -38,6 +38,7 @@ custom_updater:
   card_urls:
     - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
     - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
 
 #https://www.home-assistant.io/components/downloader/
 downloader:
@@ -102,6 +103,19 @@ zone: !include zones.yaml
 #                                                  #
 ####################################################
 
+#https://github.com/keatontaylor/alexa_media_player
+alexa_media:
+  accounts:
+    - email: !secret notification_recipient
+      password: !secret amazon
+      url: amazon.com
+
+####################################################
+#                                                  #
+#               EMULATED HUE                       #
+#                                                  #
+####################################################
+
 #https://home-assistant.io/components/emulated_hue/
 emulated_hue:
   expose_by_default: false
@@ -156,14 +170,29 @@ group:
   adam_home_presence:
     - device_tracker.adams_iphone
     - device_tracker.d81c79eb20c9
+    - device_tracker.adam_bluetooth
   amy_home_presence:
     - device_tracker.amys_iphone
     - device_tracker.d81c79a4a851
+    - device_tracker.amy_bluetooth
   home_presence:
     - device_tracker.adams_iphone
     - device_tracker.d81c79eb20c9
     - device_tracker.amys_iphone
     - device_tracker.d81c79a4a851
+
+####################################################
+#                                                  #
+#                MEDIA PLAYER                      #
+#                                                  #
+####################################################
+
+#https://github.com/JeffLIrion/homeassistant_native_firetv
+media_player:
+  - platform: firetv
+    name: Fire TV 3
+    host: 192.168.1.21
+    adb_server_ip: 192.168.1.24
 
 ####################################################
 #                                                  #
