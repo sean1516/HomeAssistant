@@ -11,6 +11,8 @@
     condition:
       - condition: template
         value_template: "{{ states('sensor.hassio_version') != 'unavailable' }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'unavailable' }}"
     action:
       service: notify.ios_adams_iphone
       data:
