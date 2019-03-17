@@ -41,6 +41,7 @@ These automations are used to notify me when a door is opened when no one is hom
 * Notify Me if the front door is opened and I am away
 * Notify Me if the back door is opened and I am away
 * Notify Me if the garage door is left open when I leave
+* Notify Me when the doorbell is pressed and flash a light in the house
 
 ### Downloader.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/certupdate.yaml)__
@@ -54,6 +55,9 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 These automations are used to turn a light on to signify the dog needs to be fed.  A amazon dash button is used to signify the dog has been fed by turning off the light. 
 * Turn on Notification Light AM
 * Turn on Notification Light PM
+* Turn off the Notification Light When the button is pressed in the morning
+* Turn off the Notification Light When the button is pressed in the evening
+* Reset everything for the new day
 
 ### Garage Light.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/garage_light.yaml)__
@@ -83,11 +87,13 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 Some automations for Home Assistant related items.   
 * Notify me when Home Assistant starts
 * Notify me when Home Assistant is shutting down
+* Notify me if an add-on stops working
 * Manually update some sensor that will no longer auto update
 * Send me a notification if my Home Assistant VM disk gets full
 * Notify me if a Zwave device is dead
 * Notify me if a battery power sensor battery is getting low
 * Notify me if there is a custom component/card update available
+* Notify me and restart the nut addon if it stops reporting values
 
 ### Leaving Hom.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_home.yaml)__
@@ -125,6 +131,7 @@ A series of automations that trigger monthly or weekly to help me remember to pe
 * Dog Flea/Tick/Heartworm Reminder
 * Water Softener Reminder
 * Remind me to service our whole home humidifier before winter
+* Remind me to service our water filter
 
 ### Morning Briefing.yaml Automation:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/morning_briefing.yaml)__
