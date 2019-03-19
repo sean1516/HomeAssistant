@@ -120,6 +120,10 @@
     payload_not_available: "Offline"
     retain: true
 
+  - platform: mqtt
+    name: watchdog
+    command_topic: "watchdog/hassio"
+    state_topic: "watchdog/hassio"
 
 ####################################################
 #                                                  #
@@ -131,6 +135,17 @@
 
   - platform: template
     switches:
+
+      adb:
+        value_template: "{{ is_state('sensor.adb', 'started') }}"
+        turn_on:
+          service: hassio.addon_start
+          data:
+            addon: a0d7b954_adb
+        turn_off:
+          service: hassio.addon_stop
+          data:
+            addon: a0d7b954_adb
 
       gdrivebackup:
         value_template: "{{ is_state('sensor.gdrivebackup', 'started') }}"
