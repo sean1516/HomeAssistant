@@ -189,6 +189,13 @@ This is a single switch to turn on/off a number of automations and devices when 
 * Turn On Vacation Mode with Vacation Mode Switch
 * Turn Off Vacation Mode with Vacation Mode Switch
 
+### Watchdog.yaml Automations:
+__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/watchdog.yaml)__
+
+I wanted to build a watchdog that would tell me if either of my instances goes down.  I also wanted to be able to see more than if they were connected (ie. not just a ping).  To do this the main instance turns on a MQTT switch and the remote instance turns it off, both are on a one minute cycle.  Both instances monitor the switch and notify me if the state doesn't change after 60 seconds.  
+
+The goal of this is to show that not only are the two instances up and running but they are processing incoming data, running automations and it also shows that my MQTT broker is up and running correctly.  
+
 ### Weather.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/weather.yaml)__
 
