@@ -18,10 +18,10 @@
   - alias: "Watchdog Notification"
     trigger:
       platform: time_pattern
-      minutes: '/2'
+      minutes: '/1'
     condition:
       condition: template
-      value_template: "{{(as_timestamp(now())-as_timestamp(states.switch.watchdog.last_updated)) | int > 60}}"
+      value_template: "{{(as_timestamp(now())-as_timestamp(states.switch.watchdog.last_updated)) | int > 180}}"
     action:
       service: notify.home_assistant
       data:
