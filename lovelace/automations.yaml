@@ -103,15 +103,6 @@ cards:
     title: Home Assistant Automations
     show_header_toggle: false
     entities:
-      - entity: automation.notify_if_ha_device_offline
-        name: Notify if HA device Offline
-        icon: mdi:home-assistant
-      - entity: automation.notify_if_zwave_device_is_dead
-        name: Notify if Zwave device is Dead
-        icon: mdi:home-assistant
-      - entity: automation.notify_if_yeelight_offline
-        name: Notify if Yeelight Offline
-        icon: mdi:lightbulb-outline
       - entity: automation.lets_encrypt_cert_did_not_update
         name: Lets Encrypt Certificate Did Not Update
         icon: mdi:certificate
@@ -124,15 +115,6 @@ cards:
       - entity: automation.home_assistant_stopped
         name: Home Assistant Stopped
         icon: mdi:home-assistant
-      - entity: automation.addon_stopped
-        name: Addon Stopped
-        icon: mdi:home-assistant
-      - entity: automation.disk_use_alarm
-        name: Hass.io VM Disk Use Alarm
-        icon: mdi:harddisk
-      - entity: automation.sensor_low_battery
-        name: Low Sensor Battery
-        icon: mdi:battery-charging-wireless-10
       - entity: automation.update_template_sensors
         name: Update Template Sensors
         icon: mdi:update
@@ -142,9 +124,6 @@ cards:
       - entity: automation.custom_update_available
         name: Custom Update Available
         icon: mdi:update
-      - entity: automation.restart_nut_add_on
-        name: Nut Add-on Watchdog
-        icon: mdi:alert-decagram-outline
   - type: entities
     title: Other Automations
     show_header_toggle: false
@@ -152,6 +131,9 @@ cards:
       - entity: automation.low_battery_adams_phone
         name: Low iPhone Battery
         icon: mdi:battery-charging-30
+      - entity: automation.holiday_and_birthday_notification
+        name: Holiday/Birthday Notification
+        icon: mdi:gift-outline
   - type: entities
     title: Climate Automations
     show_header_toggle: false
@@ -293,6 +275,37 @@ cards:
       - entity: automation.github_issues
         name: Github Issues
         icon: mdi:alert-circle
+  - type: entities
+    show_header_toggle: false
+    title: Watchdogs
+    entities:
+      - entity: automation.restart_nut_add_on
+        name: Nut Add-on Watchdog
+        icon: mdi:alert-decagram-outline
+      - entity: automation.home_assistant_watchdog
+        icon: mdi:timer
+        name: Remote Instance Watchdog
+      - entity: automation.watchdog_notification
+        icon: mdi:email-alert
+        name: Remote Instance Watchdog Notification
+      - entity: automation.notify_if_ha_device_offline
+        name: Notify if HA device Offline
+        icon: mdi:home-assistant
+      - entity: automation.notify_if_zwave_device_is_dead
+        name: Notify if Zwave device is Dead
+        icon: mdi:home-assistant
+      - entity: automation.notify_if_yeelight_offline
+        name: Notify if Yeelight Offline
+        icon: mdi:lightbulb-outline
+      - entity: automation.addon_stopped
+        name: Addon Stopped
+        icon: mdi:home-assistant
+      - entity: automation.disk_use_alarm
+        name: Hass.io VM Disk Use Alarm
+        icon: mdi:harddisk
+      - entity: automation.sensor_low_battery
+        name: Low Sensor Battery
+        icon: mdi:battery-charging-wireless-10
   - type: entities
     title: Weather Automations
     show_header_toggle: false
