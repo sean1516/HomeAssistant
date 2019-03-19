@@ -1,0 +1,35 @@
+
+#########################################################
+#                                                       #
+#                     WATCHDOG                          #
+#                                                       #
+#########################################################
+
+  - alias: "Home Assistant Watchdog"
+    trigger:
+      platform: time_pattern
+      minutes: '/1'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: "watchdog/hassio"
+          payload: "ON"
+
+  - alias: "Watchdog Notification"
+    trigger:
+      platform: time_pattern
+      minutes: '/2'
+    condition:
+      condition: template
+      value_template: "{{(as_timestamp(now())-as_timestamp(states.switch.watchdog.last_updated)) | int > 60}}"
+    action:
+      service: notify.home_assistant
+      data:
+        title: "Remote Instance Watchdog"
+        message: "Check your Remote instance"
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################
