@@ -72,7 +72,6 @@
     action:
       - service: homeassistant.update_entity
         entity_id:
-          - sensor.duedate
           - sensor.tracker_count
           - sensor.lights_count
           - sensor.binary_sensor_count
