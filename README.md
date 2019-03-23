@@ -29,7 +29,7 @@ I am also running the following Hass.io add-ons:
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy management of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.89.1__
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.90.1__
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
