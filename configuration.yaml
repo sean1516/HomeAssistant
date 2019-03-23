@@ -189,7 +189,7 @@ group:
 
 #https://github.com/JeffLIrion/homeassistant_native_firetv
 media_player:
-  - platform: firetv
+  - platform: androidtv
     name: Fire TV 3
     host: 192.168.1.21
     adb_server_ip: 192.168.1.24

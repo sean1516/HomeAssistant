@@ -7,13 +7,6 @@
 title: Stats & Data
 cards:
   - type: entities
-    title: Days Until Baby M Arrives
-    show_header_toggle: false
-    entities:
-      - entity: sensor.duedate
-        name: Countdown
-        icon: mdi:baby-buggy
-  - type: entities
     title: Adam's & Wabash Bus Times
     show_header_toggle: false
     entities:
