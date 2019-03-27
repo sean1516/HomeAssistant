@@ -28,6 +28,7 @@ I am also running the following Hass.io add-ons:
 * __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
 * __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy management of tasmota flashed devices
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ 
+* __[Visual Studio Code](https://github.com/hassio-addons/addon-vscode)__ 
 
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.90.1__
 
@@ -48,7 +49,7 @@ After you have the Samba share setup, I like to use [Atom](https://atom.io/) to 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |8       |7               |29        |83           |4        |138      |7              | 
+|47               |8       |7               |30        |83           |4        |138      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
