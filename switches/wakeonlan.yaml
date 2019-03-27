@@ -1,0 +1,36 @@
+
+#https://home-assistant.io/components/switch/
+
+####################################################
+#                                                  #
+#             WAKE ON LAN SWITCHES                 #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/switch.wake_on_lan/
+
+  - platform: wake_on_lan
+    name: Desktop Switch
+    mac_address: "b8:ca:3a:8e:92:61"
+    host: 192.168.1.6
+    turn_off:
+      service: hassio.addon_stdin
+      data:
+        addon: core_rpc_shutdown
+        input: desktop
+
+  - platform: wake_on_lan
+    name: Lenovo Switch
+    mac_address: "10:08:b1:e2:17:79"
+    host: 192.168.1.8
+    turn_off:
+      service: hassio.addon_stdin
+      data:
+        addon: core_rpc_shutdown
+        input: lenovo
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################

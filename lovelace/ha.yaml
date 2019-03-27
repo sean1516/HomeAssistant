@@ -66,6 +66,11 @@ cards:
         icon: mdi:server-plus
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.unificontroller.state ]]"
+      - entity: switch.vscode
+        name: Visual Studio Code
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.vscode.state ]]"
   - type: custom:vertical-stack-in-card
     title: Hass.io VM Load
     cards:

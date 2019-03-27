@@ -133,7 +133,7 @@ cards:
         icon: mdi:battery-charging-30
       - entity: automation.holiday_and_birthday_notification
         name: Holiday/Birthday Notification
-        icon: mdi:gift-outline
+        icon: mdi:gift
   - type: entities
     title: Climate Automations
     show_header_toggle: false

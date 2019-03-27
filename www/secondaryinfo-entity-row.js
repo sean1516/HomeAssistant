@@ -1,16 +1,16 @@
 customElements.whenDefined('card-tools').then(() => {
 
-    class SecondaryInfoEntityRow extends cardTools.litElement() {
-        version() { return "0.2"; }
+    class SecondaryInfoEntityRow extends cardTools.LitElement {
+        version() { return "0.3.1"; }
 
         render() {
-            return cardTools.litHtml()`
+            return cardTools.LitHtml`
                 ${this._wrappedElement}
             `;
         }
 
         setConfig(config) {
-            cardTools.checkVersion(0.3);
+            cardTools.checkVersion(0.4);
             this._config = config;
             this._wrappedElement = this._createElement(config);
             this.requestUpdate();
@@ -37,7 +37,7 @@ customElements.whenDefined('card-tools').then(() => {
             await this._wrappedElement.shadowRoot.querySelector("hui-generic-entity-row");
             let secondaryInfoDiv = this._wrappedElement.shadowRoot.querySelector("hui-generic-entity-row").shadowRoot.querySelector(".secondary");
             if (secondaryInfoDiv && this._config.secondary_info) {
-                let text = window.cardTools.parseTemplate(this._config.secondary_info, 'Unable to parse secondary_info config');
+                let text = window.cardTools.parseTemplate(this._config.secondary_info, {entity: this._config.entity});
                 secondaryInfoDiv.innerHTML = text;
             }
         }

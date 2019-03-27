@@ -114,6 +114,15 @@
       Authorization: !secret llt
       Content-Type: application/json
 
+  - platform: rest
+    resource: !secret vscode
+    name: vscode
+    value_template: '{{ value_json.data.state }}'
+    scan_interval: 60
+    headers:
+      Authorization: !secret llt
+      Content-Type: application/json
+
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #

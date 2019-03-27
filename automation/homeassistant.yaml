@@ -51,13 +51,14 @@
         - sensor.ssh
         - sensor.tasmoadmin
         - sensor.unificontroller
+        - sensor.vscode
       from: started
       to: stopped
     action:
       - service: notify.ios_adams_iphone
         data_template:
           title: "Hass.io Addon Stopped"
-          message: "{{ trigger.to_state.attributes.friendly_name }} addon is stopped"
+          message: "{{ trigger.to_state.entity_id }} addon is stopped"
 
 #########################################################
 #                                                       #

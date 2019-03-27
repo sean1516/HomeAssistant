@@ -15,8 +15,6 @@
           message: >
                     Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
                     {{ "\n" }}
-                    There are {{states('sensor.duedate')}} days until Baby M arrives!{{ "\n" }}
-                    {{ "\n" }}
                     {% if is_state('sensor.holiday', '') %} {% else %}Today is {{ states.sensor.holiday.state}}.{% endif %}{{ "\n" }}
                     {{ "\n" }}
                     The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
@@ -33,8 +31,6 @@
           title: "Moring Briefing"
           message: >
                     Good Morning my Love! Today is {{ now().strftime( '%B %d, %Y') }}{{ "\n" }}
-                    {{ "\n" }}
-                    There are {{states('sensor.duedate')}} days until Baby M arrives!{{ "\n" }}
                     {{ "\n" }}
                     {% if is_state('sensor.holiday', '') %} {% else %}Today is {{ states.sensor.holiday.state}}.{% endif %}{{ "\n" }}
                     {{ "\n" }}

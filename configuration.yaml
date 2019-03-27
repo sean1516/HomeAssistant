@@ -94,7 +94,7 @@ notify: !include notification.yaml
 recorder: !include recorder.yaml
 script: !include scripts.yaml
 sensor: !include_dir_merge_list sensors/
-switch: !include switches.yaml
+switch: !include_dir_merge_list switches/
 zone: !include zones.yaml
 
 ####################################################
