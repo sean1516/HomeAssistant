@@ -42,9 +42,11 @@ I think this is an often overlooked part of any internet connected project.  I a
 - [Test your security and test it often](https://community.home-assistant.io/t/test-your-security-and-test-it-often/76354).
 
 # Editing the Configuration Files:
-What works for me is creating a Samba share that I can then edit on any computer in my house.  I am doing this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
+The [Visual Studio Code](https://github.com/hassio-addons/addon-vscode) addon makes it super easy to access and edit your files.  It is now my go to.  
 
-After you have the Samba share setup, I like to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
+What worked for me in the past is creating a Samba share that I can then edit on any computer in my house.  I accomplished this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
+
+After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
