@@ -22,6 +22,24 @@
       {% endif %}
       {{ holiday }}
 
+# If you don't want to host the .json file on Github below is how to set this up and read a local file. 
+# Place the .json file in your main config directory.  This works for a hassio install.  Placing the .json
+# file in another directory or other install methods may requrie a tweak to the file path.  
+
+# sensor:
+#   - platform: command_line
+#     name: holiday_birthday
+#     command: 'cat /config/days.json'
+#     value_template: >
+#       {% set today = now().month  ~ '/' ~ now().day  %}
+#       {% set holiday =  value_json.MAJOR_US.static[ today ] %}
+#       {% if holiday | trim == "" %}
+#         {% set today = now().month  ~ '/' ~ now().day ~ '/' ~ now().year %}
+#         {% set holiday =  value_json.MAJOR_US.dynamic[ today ] %}
+#       {% endif %}
+#       {{ holiday }}
+#     scan_interval: 14400
+
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #
