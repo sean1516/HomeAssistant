@@ -25,6 +25,11 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 
 This notification is used to notify me if my Lets Encrypt certificate does not auto renew after the days remaining in the certificate validity goes below 28 days.  It should auto renew at 30 days.  	
 
+### CTA.yaml Automation:
+__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/cta.yaml)__
+
+These automations update my CTA bus tracker sensors when on.  They are by default off.  I only use the CTA data when leaving work on a weekday so no need to be polling it all day and on the weekends.   
+
 ### Device Offline.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/deviceoffline.yaml)__
 
