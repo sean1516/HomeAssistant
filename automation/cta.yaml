@@ -1,0 +1,52 @@
+#########################################################
+#                                                       #
+#                    CTA UPDATES                        #
+#                                                       #
+#########################################################
+
+  - alias: 'Update Route 151'
+    initial_state: false
+    trigger:
+      platform: time_pattern
+      minutes: '/1'
+    action:
+      - service: homeassistant.update_entity
+        entity_id: sensor.151first
+      - service: homeassistant.update_entity
+        entity_id: sensor.151second
+  - alias: 'Update Route 126'
+    initial_state: false
+    trigger:
+      platform: time_pattern
+      minutes: '/1'
+    action:
+      - service: homeassistant.update_entity
+        entity_id: sensor.126first
+      - service: homeassistant.update_entity
+        entity_id: sensor.126second
+  - alias: 'Update Route 28'
+    initial_state: false
+    trigger:
+      platform: time_pattern
+      minutes: '/1'
+    action:
+      - service: homeassistant.update_entity
+        entity_id: sensor.28first
+      - service: homeassistant.update_entity
+        entity_id: sensor.28second
+  - alias: 'Update Route 7'
+    initial_state: false
+    trigger:
+      platform: time_pattern
+      minutes: '/1'
+    action:
+      - service: homeassistant.update_entity
+        entity_id: sensor.7first
+      - service: homeassistant.update_entity
+        entity_id: sensor.7second
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

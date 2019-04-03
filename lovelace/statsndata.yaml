@@ -12,24 +12,48 @@ cards:
     entities:
       - type: section
         label: Route 151
-      - entity: sensor.151
-        name: First Bus
-      - entity: sensor.151_1
-        name: Second Bus
+      - entity: automation.update_route_151
+        name: Update?
+        icon: mdi:update
+      - entity: sensor.151first
+        name: First
+        icon: mdi:bus-clock
+      - entity: sensor.151second
+        name: Second
+        icon: mdi:bus-clock
       - type: section
         label: Route 126
-        name: Second Bus
-      - entity: sensor.126
-        name: First Bus
-      - entity: sensor.126_1
-        name: Second Bus
+      - entity: automation.update_route_126
+        name: Update?
+        icon: mdi:update
+      - entity: sensor.126first
+        name: First
+        icon: mdi:bus-clock
+      - entity: sensor.126second
+        name: Second
+        icon: mdi:bus-clock
+      - type: section
+        label: Route 28
+      - entity: automation.update_route_28
+        name: Update?
+        icon: mdi:update
+      - entity: sensor.28first
+        name: First
+        icon: mdi:bus-clock
+      - entity: sensor.28second
+        name: Second
+        icon: mdi:bus-clock
       - type: section
         label: Route 7
-        name: Second Bus
-      - entity: sensor.7
-        name: First Bus
-      - entity: sensor.7_1
-        name: Second Bus
+      - entity: automation.update_route_7
+        name: Update?
+        icon: mdi:update
+      - entity: sensor.7first
+        name: First
+        icon: mdi:bus-clock
+      - entity: sensor.7second
+        name: Second
+        icon: mdi:bus-clock
   - type: custom:vertical-stack-in-card
     cards:
       - type: glance

@@ -4,24 +4,52 @@
 #                                                  #
 ####################################################
 #CTA API documentation is located at: https://www.transitchicago.com/developers/bustracker/
-#See this post for more details on setting the rest sensors to pull the same data. https://community.home-assistant.io/t/cta-bus-tracker-sensor/92416
+#See this post for more details  https://community.home-assistant.io/t/cta-bus-tracker-sensor/92416
+#There is also a custom component available: https://github.com/custom-components/sensor.ctabustracker/
 
-#https://github.com/custom-components/sensor.ctabustracker
-  - platform: ctabustracker
-    api_key: !secret cta
-    lines:
-      - route: 151
-        stop_id: 77
-        departures: 2
-        name: '151'
-      - route: 126
-        stop_id: 77
-        departures: 2
-        name: '126'
-      - route: 7
-        stop_id: 77
-        departures: 2
-        name: '7'
+
+#https://www.home-assistant.io/components/sensor.rest/
+
+  - platform: rest
+    resource: !secret cta151
+    name: 151First
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][0]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta151
+    name: 151Second
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][1]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta126
+    name: 126First
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][0]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta126
+    name: 126Second
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][1]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta28
+    name: 28First
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][0]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta28
+    name: 28Second
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][1]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta7
+    name: 7First
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][0]['prdctdn'] }}"
+  - platform: rest
+    resource: !secret cta7
+    name: 7Second
+    scan_interval: 43200
+    value_template: "{{ value_json['bustime-response']['prd'][1]['prdctdn'] }}"
 
 ####################################################
 #                                                  #

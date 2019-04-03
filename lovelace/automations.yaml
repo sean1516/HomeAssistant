@@ -313,7 +313,22 @@ cards:
       - entity: automation.dupage_nws_notification_weather_alert
         name: DuPage County Weather Alert
         icon: mdi:cloud-alert
-
+  - type: entities
+    show_header_toggle: false
+    title: CTA Updates
+    entities:
+      - entity: automation.update_route_151
+        name: Update Route 151
+        icon: mdi:update
+      - entity: automation.update_route_126
+        name: Update Route 126
+        icon: mdi:update
+      - entity: automation.update_route_28
+        name: Update Route 128
+        icon: mdi:update
+      - entity: automation.update_route_7
+        name: Update Route 7
+        icon: mdi:update
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #
