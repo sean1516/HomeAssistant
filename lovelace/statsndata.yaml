@@ -82,7 +82,7 @@ cards:
         name: Departs
         icon: 'mdi:calendar-clock'
       - entity: sensor.next_u_to_b_arrival
-        name: Departs
+        name: Arrives
         icon: 'mdi:calendar-clock'
   - type: custom:vertical-stack-in-card
     cards:
