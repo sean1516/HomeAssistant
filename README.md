@@ -51,7 +51,7 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |8       |7               |30        |87           |4        |140      |7              | 
+|47               |8       |7               |30        |87           |4        |146      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
