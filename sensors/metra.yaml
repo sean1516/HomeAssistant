@@ -20,13 +20,13 @@
   - platform: template
     sensors:
       next_b_to_u_depart:
-       value_template: "{{ as_timestamp(strptime(state_attr('sensor.bartlett_to_union', 'Origin Stop Departure Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%H:%M %p') }}"
+       value_template: "{{ as_timestamp(strptime(state_attr('sensor.bartlett_to_union', 'Origin Stop Departure Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%I:%M %p') }}"
       next_b_to_u_arrival:
-       value_template: "{{ as_timestamp(strptime(state_attr('sensor.bartlett_to_union', 'Destination Stop Arrival Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%H:%M %p') }}"
+       value_template: "{{ as_timestamp(strptime(state_attr('sensor.bartlett_to_union', 'Destination Stop Arrival Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%I:%M %p') }}"
       next_u_to_b_depart:
-       value_template: "{{ as_timestamp(strptime(state_attr('sensor.union_to_bartlett', 'Origin Stop Departure Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%H:%M %p') }}"
+       value_template: "{{ as_timestamp(strptime(state_attr('sensor.union_to_bartlett', 'Origin Stop Departure Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%I:%M %p') }}"
       next_u_to_b_arrival:
-       value_template: "{{ as_timestamp(strptime(state_attr('sensor.union_to_bartlett', 'Destination Stop Arrival Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%H:%M %p') }}"
+       value_template: "{{ as_timestamp(strptime(state_attr('sensor.union_to_bartlett', 'Destination Stop Arrival Time'), '%Y-%m-%d %H:%M:%S')) | timestamp_custom('%I:%M %p') }}"
 
 ####################################################
 #                                                  #
