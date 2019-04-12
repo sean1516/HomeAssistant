@@ -329,6 +329,7 @@ cards:
       - entity: automation.update_route_7
         name: Update Route 7
         icon: mdi:update
+
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #

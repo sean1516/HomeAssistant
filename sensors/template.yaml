@@ -38,6 +38,16 @@
         value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
         unit_of_measurement: 'AM'
 
+      daylight:
+        value_template: >
+          {% set nr = as_timestamp(state_attr('sun.sun','next_rising')) %}
+          {% set ns = as_timestamp(state_attr('sun.sun','next_setting')) %}
+          {% if nr > ns %}
+            {% set nr = nr - 60*60*24 %}
+          {% endif %}
+          {{ (ns - nr)|timestamp_custom('%H:%M',false) }}
+ 
+
 #Thanks to @ccostan for the code here.  Some Intresting HA stats
       sensor_count:
         entity_id: []

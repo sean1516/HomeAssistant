@@ -22,6 +22,9 @@ cards:
           - entity: sensor.sunset
             name: Next Sunset
             icon: mdi:weather-sunset-down
+          - entity: sensor.daylight
+            name: Hours of Daylight
+            icon: mdi:timelapse
   - type: entities
     title: Weather Alerts
     show_header_toggle: false
