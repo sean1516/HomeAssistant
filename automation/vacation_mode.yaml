@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: Turn on Vacation Mode
+    initial_state: true
     trigger:
       platform: state
       entity_id: input_boolean.vacation
@@ -40,6 +41,7 @@
 
 
   - alias: Turn off Vacation Mode
+    initial_state: true
     trigger:
       platform: state
       entity_id: input_boolean.vacation

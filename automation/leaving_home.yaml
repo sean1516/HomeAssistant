@@ -5,6 +5,7 @@
 #########################################################
 
 - alias: Leaving Home
+  initial_state: true
   trigger:
     platform: state
     entity_id: group.home_presence

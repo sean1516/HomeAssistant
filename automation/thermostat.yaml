@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Set Thermostat Away Mode When Leaving"
+    initial_state: true
     trigger:
       - platform: template
         value_template: "{{ states('group.home_presence') != 'home' }}"
@@ -36,6 +37,7 @@
 #########################################################
 
   - alias: "Set Thermostat Away Mode at 1600"
+    initial_state: true
     trigger:
       platform: time
       at: '16:00'
@@ -60,6 +62,7 @@
 #########################################################
 
   - alias: "Turn Off Away When Home"
+    initial_state: true
     trigger:
       - platform: state
         entity_id: group.adam_home_presence
@@ -80,6 +83,7 @@
 #########################################################
 
   - alias: "Set Thermostat Temperature - 2200"
+    initial_state: true
     trigger:
       platform: time
       at: '22:00'
@@ -90,6 +94,7 @@
           temperature: 67
 
   - alias: "Set Thermostat Temperature - 0500"
+    initial_state: true
     trigger:
       platform: time
       at: '06:30'

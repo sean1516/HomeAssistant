@@ -37,6 +37,7 @@
 #########################################################
 
   - alias: Addon Stopped
+    initial_state: true  
     trigger:
       platform: state
       entity_id:
@@ -67,6 +68,7 @@
 #########################################################
 
   - alias: Update Template Sensors
+    initial_state: true  
     trigger:
         platform: time_pattern
         minutes: '/10'
@@ -89,6 +91,7 @@
 #########################################################
 
   - alias: "Disk Use Alarm"
+    initial_state: true  
     trigger:
       - platform: numeric_state
         entity_id: sensor.disk_use_percent_home
@@ -106,6 +109,7 @@
 #########################################################
 
   - alias: "Notify if Zwave Device is Dead"
+    initial_state: true
     trigger:
       - platform: state
         entity_id:
@@ -129,6 +133,7 @@
 #########################################################
 
   - alias: "Sensor Low Battery"
+    initial_state: true
     trigger:
       - platform: numeric_state
         entity_id:
@@ -152,6 +157,7 @@
 #########################################################
 
   - alias: "Custom Update Available"
+    initial_state: true
     trigger:
       - platform: numeric_state
         entity_id:
@@ -171,6 +177,7 @@
 #########################################################
 
   - alias: "Restart NUT Add On"
+    initial_state: true
     trigger:
       platform: state
       entity_id:  sensor.ups_status

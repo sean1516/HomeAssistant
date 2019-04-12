@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "New Home Assitant Version"
+    initial_state: true  
     trigger:
       - platform: state
         entity_id: sensor.hassio_version
@@ -26,6 +27,7 @@
 #########################################################
 
   - alias: "New Github Star"
+    initial_state: true
     trigger:
       - platform: state
         entity_id: sensor.stars
@@ -47,6 +49,7 @@
 #########################################################
 
   - alias: "New Github Fork"
+    initial_state: true
     trigger:
       - platform: state
         entity_id: sensor.forks
@@ -68,6 +71,7 @@
 #########################################################
 
   - alias: "New Github Subscriber"
+    initial_state: true
     trigger:
       - platform: state
         entity_id: sensor.subscribers
@@ -89,6 +93,7 @@
 #########################################################
 #
   - alias: "Github Issues"
+    initial_state: true  
     trigger:
       - platform: state
         entity_id: sensor.issues

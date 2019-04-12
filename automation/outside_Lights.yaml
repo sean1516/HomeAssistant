@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: 'Turn Off Outside Lights'
+    initial_state: true
     trigger:
       platform: sun
       event: sunrise
@@ -23,6 +24,7 @@
 #########################################################
 
   - alias: 'Turn On Outside Lights'
+    initial_state: true
     trigger:
       platform: sun
       event: sunset
@@ -44,6 +46,7 @@
 #########################################################
 
   - alias: "Open Front Doors Increase Brightness"
+    initial_state: true
     trigger:
       - platform: state
         entity_id:
@@ -79,6 +82,7 @@
 #########################################################
 
   - alias: "Open Back Door Increase Brightness"
+    initial_state: true
     trigger:
       - platform: state
         entity_id: sensor.backdoorstatus

@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Desktop On When leaving"
+    initial_state: true
     trigger:
       - platform: zone
         entity_id: device_tracker.adams_iphone
@@ -40,6 +41,7 @@
 #########################################################
 
   - alias: Desktop on when away notification
+    initial_state: true
     trigger:
       platform: event
       event_type: ios.notification_action_fired
@@ -56,6 +58,7 @@
 #########################################################
 
   - alias: "Living Room Lamps On When leaving"
+    initial_state: true
     trigger:
       - platform: zone
         entity_id: device_tracker.adams_iphone
@@ -108,6 +111,7 @@
 #########################################################
 
   - alias: "Media Center On When leaving"
+    initial_state: true
     trigger:
       - platform: zone
         entity_id: device_tracker.adams_iphone
@@ -136,6 +140,7 @@
               category: 'mediacenter'
 
   - alias: TV on when away notification
+    initial_state: true
     trigger:
       platform: event
       event_type: ios.notification_action_fired
@@ -146,6 +151,7 @@
         entity_id: switch.tvpower
 
   - alias: Receiver on when away notification
+    initial_state: true
     trigger:
       platform: event
       event_type: ios.notification_action_fired

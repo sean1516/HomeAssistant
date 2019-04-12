@@ -5,6 +5,7 @@
 ####################################################
 
   - alias: Garage Door Open at Bedtime
+    initial_state: true
     trigger:
       platform: state
       entity_id: sensor.adams_iphone_battery_state
@@ -30,6 +31,7 @@
 ####################################################
 
   - alias: Desktop on at Bedtime
+    initial_state: true  
     trigger:
       platform: state
       entity_id: sensor.adams_iphone_battery_state
@@ -68,6 +70,7 @@
 ####################################################
 
   - alias: Living Room Lamps on at Bedtime
+    initial_state: true  
     trigger:
       platform: state
       entity_id: sensor.adams_iphone_battery_state
@@ -90,6 +93,7 @@
               category: 'lamps'
 
   - alias: Lamps on bedtime notification
+    initial_state: true
     trigger:
       platform: event
       event_type: ios.notification_action_fired

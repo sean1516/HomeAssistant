@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: 'Turn On Living Room Lamps'
+    initial_state: true
     trigger:
       platform: sun
       event: sunset
@@ -19,6 +20,7 @@
 #########################################################
 
   - alias: "Lamps on when home"
+    initial_state: true
     trigger:
       platform: state
       entity_id: sensor.gehingepinsensor2
@@ -42,6 +44,7 @@
 #########################################################
 
   - alias: 'Turn Off Living Room Lamps at Midnight'
+    initial_state: true 
     trigger:
       platform: time
       at: '00:01:00'

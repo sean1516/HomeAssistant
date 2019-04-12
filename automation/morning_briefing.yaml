@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Morning Briefing Adam"
+    initial_state: true
     trigger:
       platform: time
       at: '06:00'
@@ -22,6 +23,7 @@
                     There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
 
   - alias: "Morning Briefing Amy"
+    initial_state: true
     trigger:
       platform: time
       at: '06:00'

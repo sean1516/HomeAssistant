@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Notify if HA Device Offline"
+    initial_state: true
     trigger:
       - platform: state
         entity_id:
@@ -43,6 +44,7 @@
 #########################################################
 
   - alias: "Notify if Yeelight Offline"
+    initial_state: true
     trigger:
       - platform: state
         entity_id:

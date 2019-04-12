@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: Set Notification Bulb2 Color
+    initial_state: true
     trigger:
       platform: state
       entity_id: input_select.notification_bulb2_color
@@ -25,6 +26,7 @@
 #########################################################
 
   - alias: Set Notification Bulb2 Normal
+    initial_state: true
     trigger:
       platform: state
       entity_id: input_select.notification_bulb2_color

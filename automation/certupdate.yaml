@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Lets Encrypt Cert Did Not Update"
+    initial_state: true
     trigger:
       - platform: numeric_state
         entity_id: sensor.lets_encrypt_expiration

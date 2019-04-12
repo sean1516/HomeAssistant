@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Feed The Dog Morning"
+    initial_state: true  
     trigger:
       platform: time
       at: '07:00'
@@ -22,6 +23,7 @@
 #########################################################
 
   - alias: "Feed The Dog Evening"
+    initial_state: true
     trigger:
       platform: time
       at: '17:00'
@@ -39,6 +41,7 @@
 #########################################################
 
   - alias: "Dog Has Been Fed Morning"
+    initial_state: true
     trigger:
       platform: state
       entity_id: input_boolean.feeddog
@@ -62,6 +65,7 @@
 #########################################################
 
   - alias: "Dog Has Been Fed Evening"
+    initial_state: true
     trigger:
       platform: state
       entity_id: input_boolean.feeddog
@@ -85,6 +89,7 @@
 #########################################################
 
   - alias: "Reset Feed The Dog Notifications"
+    initial_state: true
     trigger:
       platform: time
       at: '01:00'

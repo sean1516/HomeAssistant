@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Interior Garage Door Open Light On"
+    initial_state: true  
     trigger:
       platform: state
       entity_id: sensor.gehingepinsensor2
@@ -23,6 +24,7 @@
 #########################################################
 
   - alias: 'Turn Off Interior Garage Light After 5'
+    initial_state: true
     trigger:
       platform: state
       entity_id: light.yeelight5

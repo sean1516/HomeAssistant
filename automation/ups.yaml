@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Power Outage"
+    initial_state: true
     trigger:
       - platform: numeric_state
         entity_id: sensor.ups_input_voltage

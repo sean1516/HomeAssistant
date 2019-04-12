@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: Hassio Snapshot
+    initial_state: true
     initial_state: 'on'
     trigger:
     - platform: time

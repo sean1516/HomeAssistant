@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Low Battery Adams Phone"
+    initial_state: true
     trigger:
       - platform: numeric_state
         entity_id: sensor.adamsiphonebattery

@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "Download Failed"
+    initial_state: true  
     trigger:
       platform: event
       event_type: downloader_download_failed
@@ -21,6 +22,7 @@
 #########################################################
 
   - alias: "Download Complete"
+    initial_state: true 
     trigger:
       platform: event
       event_type: downloader_download_completed

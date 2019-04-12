@@ -6,6 +6,7 @@
 #########################################################
 
   - alias: "Home Assistant Watchdog"
+    initial_state: true
     trigger:
       platform: time_pattern
       minutes: '/1'
@@ -16,6 +17,7 @@
           payload: "ON"
 
   - alias: "Watchdog Notification"
+    initial_state: true
     trigger:
       platform: time_pattern
       minutes: '/1'

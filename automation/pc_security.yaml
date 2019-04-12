@@ -5,6 +5,7 @@
 #########################################################
 
   - alias: "DESKTOP PC ON WHEN AWAY"
+    initial_state: true
     trigger:
       platform: state
       entity_id: switch.desktop_switch
@@ -26,6 +27,7 @@
 #########################################################
 
   - alias: "Send notification upon failed login attempt"
+    initial_state: true
     trigger:
       - platform: state
         entity_id: persistent_notification.http_login
@@ -48,6 +50,7 @@
 #########################################################
 
   - alias: Notify If New Devices
+    initial_state: true
     trigger:
       - platform: event
         event_type: device_tracker_new_device

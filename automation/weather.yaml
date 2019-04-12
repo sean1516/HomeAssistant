@@ -5,6 +5,7 @@
 #########################################################
 
 - alias: Dupage NWS Notification Weather Alert
+  initial_state: true
   trigger:
     platform: state
     entity_id: sensor.dupage_nws_alert_count
@@ -24,6 +25,7 @@
 #########################################################
 
 - alias: Update Weather Sensors
+  initial_state: true
   trigger:
       platform: time
       at: '00:00:01'
