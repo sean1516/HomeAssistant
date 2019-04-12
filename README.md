@@ -51,7 +51,7 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |8       |7               |30        |87           |4        |146      |7              | 
+|47               |10      |7               |30        |87           |4        |147      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
@@ -92,6 +92,11 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/home.png">
 </p>
 
+## Switches
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/switches.png">
+</p>
+
 ## Device Status
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/devicestatus.png">
@@ -102,16 +107,6 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/ha.png">
 </p>
 
-## Automations
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/automations.png">
-</p>
-
-## Switches
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/switches.png">
-</p>
-
 ## Weather
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/weather.png">
@@ -120,6 +115,11 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 ## Stats & Data
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/statsndata.png">
+</p>
+
+## Automations
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/automations.png">
 </p>
 
 # Questions?
