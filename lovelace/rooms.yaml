@@ -29,59 +29,33 @@ cards:
 
   - type: vertical-stack
     cards:
-      - type: glance
-        title: Bedroom Lights
-        entities:
-          - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
-            tap_action:
-              action: toggle
+      - type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.tradfri_bulb_e26_ws_opal_980lm_3
             name: Amy's Bedside
-          - entity: switch.kuled1
-            tap_action:
-              action: toggle
-            icon: mdi:fan
-            name: Fan
-          - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
-            tap_action:
-              action: toggle
+          - type: light
+            entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
             name: Adam's Bedside
-        columns: 3
-      - type: glance
-        title: Outside Lights
-        entities:
-          - entity: light.yeelight1
-            tap_action:
-              action: toggle
-            name: Front Porch
-          - entity: light.yeelight3
-            tap_action:
-              action: toggle
-            name: Garage Right
-          - entity: light.yeelight4
-            name: Garage Left
-            tap_action:
-              action: togglee
-          - entity: light.yeelight2
-            name: Back Porch
-            tap_action:
-              action: toggle
-        columns: 4
-      - type: glance
-        title: Living Room Lamps
-        entities:
-          - entity: switch.basic1
-            name: Lamps
-            icon: mdi:lightbulb-outline
-            tap_action:
-              action: toggle
-          - entity: light.yeelightrgb2
-            name: Notification
-            icon: mdi:lightbulb-outline
-            tap_action:
-              action: toggle
-          - entity: input_select.notification_bulb2_color
-            name: Notification Bulb Color
-        columns: 3
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: switch.basic1
+            name: Livingroom Lamps
+            icon: mdi:lightbulb
+            tap_action: toggle
+          - type: entity-button
+            entity: light.yeelightrgb2
+            name: Notification Bulb
+            tap_action: script.normallight
+      - type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.front_lights
+            name: Outside Front Lights
+          - type: light
+            entity: light.yeelight2
+            name: Back Porch  
   - type: custom:vertical-stack-in-card
     cards:
       - type: entities
@@ -122,7 +96,38 @@ cards:
          - entity: sensor.setpoint
            name: Setpoint
            icon: mdi:temperature-fahrenheit
-
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: glance
+        title: Adam Location
+        entities:
+          - entity: group.adam_home_presence
+            name: Combined
+            icon: mdi:crosshairs
+          - entity: device_tracker.adams_iphone
+            name: GPS
+            icon: mdi:cellphone-iphone
+          - entity: device_tracker.d81c79eb20c9
+            name: WiFi
+            icon: mdi:wifi
+          - entity: device_tracker.adam_bluetooth
+            name: Bluetooth
+            icon: mdi:bluetooth
+      - type: glance
+        title: Amy Location
+        entities:
+          - entity: group.amy_home_presence
+            name: Combined
+            icon: mdi:crosshairs
+          - entity: device_tracker.amys_iphone
+            name: GPS
+            icon: mdi:cellphone-iphone
+          - entity: device_tracker.d81c79a4a851
+            name: WiFi
+            icon: mdi:wifi
+          - entity: device_tracker.amy_bluetooth
+            name: Bluetooth
+            icon: mdi:bluetooth
 
 ####################################################
 #                                                  #

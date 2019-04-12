@@ -24,12 +24,12 @@ resources:
 title: Home
 views:
   - !include lovelace/rooms.yaml
+  - !include lovelace/switches.yaml
   - !include lovelace/devicestatus.yaml
   - !include lovelace/ha.yaml
-  - !include lovelace/automations.yaml
-  - !include lovelace/switches.yaml
   - !include lovelace/weather.yaml
   - !include lovelace/statsndata.yaml
+  - !include lovelace/automations.yaml
 
 ####################################################
 #                                                  #

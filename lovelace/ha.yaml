@@ -72,8 +72,16 @@ cards:
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.vscode.state ]]"
   - type: custom:vertical-stack-in-card
-    title: Hass.io VM Load
+    title: Hass.io VM
     cards:
+      - type: glance
+        columns: 3
+        entities:
+          - entity: sensor.load_1m
+            icon: mdi:speedometer
+          - entity: sensor.load_5m
+            icon: mdi:speedometer
+          - entity: sensor.load_15m
       - type: horizontal-stack
         cards:
           - type: sensor
@@ -89,24 +97,15 @@ cards:
             graph: line
             detail: 1
       - type: glance
+        columns: 3
         entities:
-          - entity: sensor.load_1m
-            icon: mdi:speedometer
-          - entity: sensor.load_5m
-            icon: mdi:speedometer
-          - entity: sensor.load_15m
-            icon: mdi:speedometer
-  - type: entities
-    title: Hass.io VM Usage
-    show_header_toggle: false
-    entities:
-       - entity: sensor.home_assistant_log
-         name: Log File
-       - entity: sensor.home_assistant_v2_db
-         name: Database
-       - entity: sensor.disk_use_percent_home
-         name: Disk Use
-         icon: mdi:harddisk
+          - entity: sensor.home_assistant_log
+            name: Log File
+          - entity: sensor.home_assistant_v2_db
+            name: Database
+          - entity: sensor.disk_use_percent_home
+            name: Disk Use
+            icon: mdi:harddisk
   - type: glance
     title: Home Assistant Info
     entities:
@@ -158,6 +157,48 @@ cards:
       - entity: sensor.doorbell
         name: Doorbell
         icon: mdi:battery-50
+  - type: entities
+    title: Home Assistant Stats
+    show_header_toggle: false
+    entities:
+      - entity: sensor.tracker_count
+        icon: mdi:cellphone-link
+        name: Number of Network Devices
+      - entity: sensor.lights_count
+        icon: mdi:lightbulb
+      - entity: sensor.binary_sensor_count
+        icon: mdi:nintendo-switch
+      - entity: sensor.switch_count
+        icon: mdi:toggle-switch
+      - entity: sensor.automation_count
+        icon: mdi:home-assistant
+      - entity: sensor.script_count
+        icon: mdi:script-text-outline
+      - entity: sensor.sensor_count
+        icon: mdi:gauge
+      - entity: sensor.zwave_count
+        icon: mdi:z-wave
+  - type: glance
+    title: Home Assistant GitHub
+    entities:
+      - entity: sensor.stars
+        name: Stars
+        icon: mdi:star-circle
+      - entity: sensor.subscribers
+        name: Subscribers
+        icon: mdi:github-circle
+      - entity: sensor.issues
+        name: Issues
+        icon: mdi:alert-circle
+      - entity: sensor.forks
+        name: Forks
+        icon: mdi:directions-fork
+    columns: 4
+  - type: custom:tracker-card
+    title:
+    trackers:
+      - sensor.custom_card_tracker
+      - sensor.custom_component_tracker
 
 ####################################################
 #                                                  #

@@ -27,29 +27,11 @@ binary_sensor.ubiquiti_ap:
 #                                                  #
 ####################################################
 
-light.tradfri_bulb_e26_ws_opal_980lm:
-  icon: mdi:lightbulb-outline
-
-light.tradfri_bulb_e26_ws_opal_980lm_2:
-  icon: mdi:lightbulb-outline
-
-light.yeelight1:
-  icon: mdi:mdi:lightbulb-outline
-
-light.yeelight2:
-  icon: mdi:mdi:lightbulb-outline
-
-light.yeelight3:
-  icon: mdi:mdi:lightbulb-outline
-
-light.yeelight4:
-  icon: mdi:mdi:lightbulb-outline
-
 light.yeelight5:
-  icon: mdi:mdi:lightbulb-outline
+  icon: mdi:mdi:lightbulb
 
 light.yeelightrgb2:
-  icon: mdi:mdi:lightbulb-outline
+  icon: mdi:mdi:lightbulb
 
 ####################################################
 #                                                  #

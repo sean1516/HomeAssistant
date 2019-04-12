@@ -10,6 +10,8 @@ cards:
     title: Bedroom Lights
     show_header_toggle: false
     entities:
+      - entity: light.bedroom_lights
+        name: Bedroom Lights
       - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
         name: Amy's Bedside
       - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
@@ -27,14 +29,12 @@ cards:
       - entity: light.yeelight2
         name: Back Porch
       - entity: light.yeelight5
-        icon: mdi:mdi:lightbulb-outline
         name: Interior Garage Light
       - entity: light.yeelightrgb2
-        icon: mdi:mdi:lightbulb-outline
         name: Notification Light
       - entity: script.normallight
         name: Script - Normal Light
-        icon: mdi:mdi:lightbulb-outline
+        icon: mdi:mdi:lightbulb
       - entity: input_select.notification_bulb2_color
         name: Notification Light Color
   - type: entities

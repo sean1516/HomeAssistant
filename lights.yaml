@@ -9,8 +9,8 @@
 
 #https://home-assistant.io/components/light.yeelight/
 
-  platform: yeelight
-  devices:
+  - platform: yeelight
+    devices:
       192.168.1.10:
         name: Yeelight1
       192.168.1.11:
@@ -23,6 +23,27 @@
         name: Yeelight5
       192.168.1.25:
         name: YeelightRGB2
+
+####################################################
+#                                                  #
+#                      GROUPS                      #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/light.group/
+
+  - platform: group
+    name: Front Lights
+    entities:
+      - light.yeelight1
+      - light.yeelight3
+      - light.yeelight4
+
+  - platform: group
+    name: Bedroom Lights
+    entities:
+      - light.tradfri_bulb_e26_ws_opal_980lm_2_2
+      - light.tradfri_bulb_e26_ws_opal_980lm_3
 
 #########################################################
 #                                                       #
