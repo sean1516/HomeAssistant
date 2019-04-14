@@ -87,6 +87,22 @@ cards:
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.1.38"
   - type: entities
+    entities:
+      - entity: sensor.basic1_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.basic2_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.pow1_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.pow2_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.kuled1_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.kuled2_signal
+        icon: 'mdi:wifi'
+    title: Wifi Strength
+    show_header_toggle: false
+  - type: entities
     title: Home Automation Devices
     show_header_toggle: false
     entities:
