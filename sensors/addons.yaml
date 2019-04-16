@@ -16,15 +16,6 @@
 # 12345678910 is the Long Lived Access Token generated in the Home Assistant Frontend.
 
   - platform: rest
-    resource: !secret adb
-    name: adb
-    value_template: '{{ value_json.data.state }}'
-    scan_interval: 60
-    headers:
-      Authorization: !secret llt
-      Content-Type: application/json
-
-  - platform: rest
     resource: !secret gdrivebackup
     name: gdrivebackup
     value_template: '{{ value_json.data.state }}'

@@ -220,22 +220,22 @@ cards:
     entities:
       - entity: device_tracker.b827eb9a6be6
         name: Raspberry Pi Zero W
-        icon: mdi:raspberrypi
+        icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.29"
       - entity: device_tracker.b827ebaec321
         name: Raspberry Pi 3b+ Wireless
-        icon: mdi:raspberrypi
+        icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.30"
       - entity: device_tracker.b827ebfb9674
         name: Raspberry Pi 3b+ Wired
-        icon: mdi:raspberrypi
+        icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.31"
       - entity: device_tracker.b827eb0ec9a4
         name: Raspberry Pi 2 Wired
-        icon: mdi:raspberrypi
+        icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.33"
 
