@@ -17,7 +17,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 I am also running the following Hass.io add-ons:
 
-* __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ account. 
+* __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ 
