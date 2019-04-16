@@ -68,9 +68,6 @@ cards:
       - entity: switch.tvtv
         name: TV - Input Select
         icon: mdi:television
-      - entity: script.music
-        name: Script - Turn On Music
-        icon: mdi:music
       - entity: script.volumeup
         name: Script - Volume Up
         icon: mdi:volume-plus

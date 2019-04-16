@@ -10,7 +10,7 @@
 #https://www.home-assistant.io/components/sensor.rest/
 
   - platform: rest
-    resource: https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/json_data/days.json
+    resource: https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/days.json
     name: Holiday
     scan_interval: 14400
     value_template: >

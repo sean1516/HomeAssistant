@@ -41,35 +41,35 @@ cards:
     entities:
       - entity: sensor.forecast_0
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_0
+      - entity: sensor.dark_sky_summary_0d
         name: " "
       - entity: sensor.forecast_1
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_1
+      - entity: sensor.dark_sky_summary_1d
         name: " "
       - entity: sensor.forecast_2
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_2
+      - entity: sensor.dark_sky_summary_2d
         name: " "
       - entity: sensor.forecast_3
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_3
+      - entity: sensor.dark_sky_summary_3d
         name: " "
       - entity: sensor.forecast_4
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_4
+      - entity: sensor.dark_sky_summary_4d
         name: " "
       - entity: sensor.forecast_5
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_5
+      - entity: sensor.dark_sky_summary_5d
         name: " "
       - entity: sensor.forecast_6
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_6
+      - entity: sensor.dark_sky_summary_6d
         name: " "
       - entity: sensor.forecast_7
         icon: mdi:blank
-      - entity: sensor.dark_sky_summary_7
+      - entity: sensor.dark_sky_summary_7d
         name: " "
   - type: iframe
     url: https://embed.windy.com/embed2.html?lat=41.965&lon=-88.190&zoom=11&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=41.943&detailLon=-88.145&metricWind=default&metricTemp=%C2%B0F&radarRange=-1

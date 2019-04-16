@@ -123,7 +123,7 @@ emulated_hue:
     light.yeelightrgb2:
       hidden: false
       name: Notification
-    switch.basic1:
+    group.living_room_lamps:
       name: Lamps
       hidden: false
     switch.receiverpower:
@@ -132,9 +132,6 @@ emulated_hue:
     switch.tvpower:
       hidden: false
       name: TV
-    script.music:
-      hidden: false
-      name: Music
     script.normallight:
       hidden: false
       name: normal light
@@ -144,15 +141,6 @@ emulated_hue:
     script.volumeup:
       hidden: false
       name: Volume Up
-    script.fire_tv:
-      hidden: false
-      name: Fire TV
-    script.findadamsiphone:
-      hidden: false
-      name: findadamsiphone
-    script.findamysiphone:
-      hidden: false
-      name: findamysiphone
 
 ####################################################
 #                                                  #
@@ -165,6 +153,10 @@ group:
   outside_lights:
     - light.yeelight1
     - light.yeelight2
+    - light.yeelight3
+    - light.yeelight4
+  front_lights:
+    - light.yeelight1
     - light.yeelight3
     - light.yeelight4
   adam_home_presence:
@@ -180,19 +172,11 @@ group:
     - device_tracker.d81c79eb20c9
     - device_tracker.amys_iphone
     - device_tracker.d81c79a4a851
-
-####################################################
-#                                                  #
-#                MEDIA PLAYER                      #
-#                                                  #
-####################################################
-
-#https://github.com/JeffLIrion/homeassistant_native_firetv
-media_player:
-  - platform: androidtv
-    name: Fire TV 3
-    host: 192.168.1.21
-    adb_server_ip: 192.168.1.24
+    - device_tracker.adam_bluetooth
+    - device_tracker.amy_bluetooth
+  living_room_lamps:
+    - switch.basic1
+    - switch.yeelightrgb2
 
 ####################################################
 #                                                  #
@@ -239,6 +223,30 @@ tradfri:
 weather:
   - platform: darksky
     api_key: !secret darksky
+    mode: daily
+
+####################################################
+#                                                  #
+#                     YEELIGHTS                    #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/light.yeelight/
+
+yeelight:
+  devices:
+    192.168.1.10:
+      name: Yeelight1
+    192.168.1.11:
+      name: Yeelight2
+    192.168.1.12:
+      name: Yeelight3
+    192.168.1.26:
+      name: Yeelight4
+    192.168.1.28:
+      name: Yeelight5
+    192.168.1.25:
+      name: YeelightRGB2
 
 ####################################################
 #                                                  #

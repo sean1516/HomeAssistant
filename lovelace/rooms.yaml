@@ -43,11 +43,14 @@ cards:
             entity: switch.basic1
             name: Livingroom Lamps
             icon: mdi:lightbulb
-            tap_action: toggle
           - type: entity-button
             entity: light.yeelightrgb2
             name: Notification Bulb
-            tap_action: script.normallight
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: call-service
+              service: script.normallight
       - type: horizontal-stack
         cards:
           - type: light

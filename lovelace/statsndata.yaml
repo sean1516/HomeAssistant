@@ -65,7 +65,7 @@ cards:
       - type: section
         label: Bartlett to Union Station
       - entity: sensor.bartlett_to_union
-        name: Next Train Leaves in
+        name: Next Train Leaves
         icon: 'mdi:train'
       - entity: sensor.next_b_to_u_depart
         name: Departs
@@ -76,7 +76,7 @@ cards:
       - type: section
         label: Union Station to Bartlett
       - entity: sensor.union_to_bartlett
-        name: Next Train Leaves in
+        name: Next Train Leaves
         icon: 'mdi:train'
       - entity: sensor.next_u_to_b_depart
         name: Departs
@@ -96,8 +96,6 @@ cards:
       - entity: sensor.remote_temperature
         name: Temperature Sensor
         icon: 'mdi:thermometer'
-  - type: media-control
-    entity: media_player.fire_tv_3
 
 ####################################################
 #                                                  #
