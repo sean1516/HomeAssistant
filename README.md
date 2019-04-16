@@ -17,20 +17,19 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 I am also running the following Hass.io add-ons:
 
-* __[Android Debug Bridge](https://github.com/hassio-addons/addon-adb)__
-* __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ Store a backup of my config in a google drive account. 
-* __[Dasshio](https://github.com/theastropath/dasshio)__ Simple add-on to use Amazon Dash buttons to make service calls. 
-* __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
+* __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ account. 
+* __[Dasshio](https://github.com/theastropath/dasshio)__ 
+* __[DuckDNS](www.home-assistant.io/addons/duckdns/)__
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ 
-* __[Network UPS Tools](https://github.com/colindunn/hassio-addons)__ A NUT Server
-* __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ Shutdown Windows Computers
+* __[Network UPS Tools](https://github.com/colindunn/hassio-addons)__ 
+* __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ 
 * __[SSH](https://www.home-assistant.io/addons/ssh/)__ 
-* __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
-* __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy management of tasmota flashed devices
+* __[Samba](https://www.home-assistant.io/addons/samba/)__ 
+* __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ 
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ 
 * __[Visual Studio Code](https://github.com/hassio-addons/addon-vscode)__ 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.90.1__
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.91.4__
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -51,12 +50,11 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |10      |7               |30        |87           |4        |147      |7              | 
+|47               |10      |7               |30        |87           |3        |153      |7              | 
 # Connected Devices:
 
 ## Cloud Controlled Devices:
 * __[Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO)__ Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/)
-* __[Amazon Fire TV Stick 4K](https://www.amazon.com/Introducing-Fire-TV-Stick-4K-with-All-New-Alexa-Voice-Remote/dp/B079QHML21)__ 
 * __[iPhone XR](https://www.apple.com/iphone-xr/)__ Used for presence detection
 
 ## Wifi Connected Devices
