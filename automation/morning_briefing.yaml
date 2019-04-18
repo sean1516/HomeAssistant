@@ -18,9 +18,9 @@
                     {{ "\n" }}
                     {% if is_state('sensor.holiday', '') %} {% else %}Today is {{ states.sensor.holiday.state}}.{% endif %}{{ "\n" }}
                     {{ "\n" }}
-                    The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
+                    The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0d')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0d')}} degrees Fahrenheit.{{ "\n" }}
                     {{ "\n" }}
-                    There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
+                    There is a {{states('sensor.dark_sky_precip_probability_0d')}} % chance of precipitation today.{{ "\n" }}
 
   - alias: "Morning Briefing Amy"
     initial_state: true
@@ -36,9 +36,9 @@
                     {{ "\n" }}
                     {% if is_state('sensor.holiday', '') %} {% else %}Today is {{ states.sensor.holiday.state}}.{% endif %}{{ "\n" }}
                     {{ "\n" }}
-                    The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0')}} degrees Fahrenheit.{{ "\n" }}
+                    The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Fahrenheit with a forecast of {{states('sensor.dark_sky_summary_0d')}} The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0d')}} degrees Fahrenheit.{{ "\n" }}
                     {{ "\n" }}
-                    There is a {{states('sensor.dark_sky_precip_probability_0')}} % chance of precipitation today.{{ "\n" }}
+                    There is a {{states('sensor.dark_sky_precip_probability_0d')}} % chance of precipitation today.{{ "\n" }}
 
 ####################################################
 #                                                  #
