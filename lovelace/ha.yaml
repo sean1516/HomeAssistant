@@ -7,6 +7,50 @@
 title: HA
 icon: mdi:home-assistant
 cards:
+  - type: picture-elements
+    title: Home Assistant Info
+    image: /local/hacard.png
+    elements:
+      - type: state-label
+        entity: sensor.installed_version
+        prefix: 'Installed Version - '
+        style: {color: '#03a9f4', left: 70%, top: 1%, font-size: 150%}
+      - type: state-label
+        entity: sensor.hassio_version
+        prefix: 'Latest Release - '
+        style: {color: '#03a9f4', left: 71.75%, top: 11%, font-size: 150%}
+      - type: state-label
+        entity: sensor.automation_count
+        prefix: 'Automations - '
+        style: {color: white, left: 80%, top: 25%, font-size: 110%}
+      - type: state-label
+        entity: sensor.binary_sensor_count
+        prefix: 'Binary Sensors - '
+        style: {color: white, left: 79%, top: 34%, font-size: 110%}
+      - type: state-label
+        entity: sensor.lights_count
+        prefix: 'Lights - '
+        style: {color: white, left: 84.5%, top: 43%, font-size: 110%}
+      - type: state-label
+        entity: sensor.tracker_count
+        prefix: 'Network Devices - '
+        style: {color: white, left: 77%, top: 52%, font-size: 110%}
+      - type: state-label
+        entity: sensor.script_count
+        prefix: 'Scripts - '
+        style: {color: white, left: 84.5%, top: 61%, font-size: 110%}
+      - type: state-label
+        entity: sensor.sensor_count
+        prefix: 'Sensors - '
+        style: {color: white, left: 82.25%, top: 70%, font-size: 110%}
+      - type: state-label
+        entity: sensor.switch_count
+        prefix: 'Switches - '
+        style: {color: white, left: 82.25%, top: 79%, font-size: 110%}
+      - type: state-label
+        entity: sensor.zwave_count
+        prefix: 'Zwave - '
+        style: {color: white, left: 84.75%, top: 87%, font-size: 110%}
   - type: entities
     title: Hass.io Addons
     show_header_toggle: false
@@ -67,16 +111,23 @@ cards:
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.vscode.state ]]"
   - type: custom:vertical-stack-in-card
-    title: Hass.io VM
     cards:
-      - type: glance
-        columns: 3
-        entities:
-          - entity: sensor.load_1m
-            icon: mdi:speedometer
-          - entity: sensor.load_5m
-            icon: mdi:speedometer
-          - entity: sensor.load_15m
+      - type: picture-elements
+        title: HassOS Virtual Machine Load
+        image: /local/blank-short.png
+        elements:
+          - type: state-label
+            entity: sensor.load_1m
+            prefix: 'Processor Load (1m) - '
+            style: {color: 'white', left: 50%, top: 5%, font-size: 110%}
+          - type: state-label
+            entity: sensor.load_5m
+            prefix: 'Processor Load (5m) - '
+            style: {color: 'white', left: 50%, top: 40%, font-size: 110%}
+          - type: state-label
+            entity: sensor.load_15m
+            prefix: 'Processor Load (15m) - '
+            style: {color: 'white', left: 50%, top: 75%, font-size: 110%}
       - type: horizontal-stack
         cards:
           - type: sensor
@@ -101,19 +152,6 @@ cards:
           - entity: sensor.disk_use_percent_home
             name: Disk Use
             icon: mdi:harddisk
-  - type: glance
-    title: Home Assistant Info
-    entities:
-      - entity: sensor.installed_version
-        name: Installed
-        icon: mdi:folder-download
-      - entity: sensor.hassio_version
-        name: Latest Release
-        icon: mdi:github-circle
-      - entity: sensor.lets_encrypt_expiration
-        name: Lets Encrypt Expiration
-        icon: mdi:timelapse
-    columns: 3
   - type: entities
     title: Zwave Status
     show_header_toggle: false
@@ -152,43 +190,26 @@ cards:
       - entity: sensor.doorbell
         name: Doorbell
         icon: mdi:battery-50
-  - type: entities
-    title: Home Assistant Stats
-    show_header_toggle: false
-    entities:
-      - entity: sensor.tracker_count
-        icon: mdi:cellphone-link
-        name: Number of Network Devices
-      - entity: sensor.lights_count
-        icon: mdi:lightbulb
-      - entity: sensor.binary_sensor_count
-        icon: mdi:nintendo-switch
-      - entity: sensor.switch_count
-        icon: mdi:toggle-switch
-      - entity: sensor.automation_count
-        icon: mdi:home-assistant
-      - entity: sensor.script_count
-        icon: mdi:script-text-outline
-      - entity: sensor.sensor_count
-        icon: mdi:gauge
-      - entity: sensor.zwave_count
-        icon: mdi:z-wave
-  - type: glance
-    title: Home Assistant GitHub
-    entities:
-      - entity: sensor.stars
-        name: Stars
-        icon: mdi:star-circle
-      - entity: sensor.subscribers
-        name: Subscribers
-        icon: mdi:github-circle
-      - entity: sensor.issues
-        name: Issues
-        icon: mdi:alert-circle
-      - entity: sensor.forks
-        name: Forks
-        icon: mdi:directions-fork
-    columns: 4
+  - type: picture-elements
+    image: /local/github.png
+    title: Github Repository Stats
+    elements:
+      - type: state-label
+        entity: sensor.stars
+        prefix: 'Stars - '
+        style: {color: white, left: 80%, top: 20%, font-size: 130%}
+      - type: state-label
+        entity: sensor.subscribers
+        prefix: 'Subscribers - '
+        style: {color: white, left: 76.5%, top: 40%, font-size: 130%}
+      - type: state-label
+        entity: sensor.issues
+        prefix: 'Issues - '
+        style: {color: white, left: 81%, top: 60%, font-size: 130%}
+      - type: state-label
+        entity: sensor.forks
+        prefix: 'Forks - '
+        style: {color: white, left: 81%, top: 80%, font-size: 130%}
   - type: custom:tracker-card
     title:
     trackers:
