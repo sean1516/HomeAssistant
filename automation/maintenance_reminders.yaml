@@ -51,8 +51,16 @@
       platform: sun
       event: sunrise
     condition:
-      condition: template
-      value_template: '{{ now().day == 15}}'
+      condition: or
+      conditions:
+        - condition: template
+          value_template: '{{ now().strftime("%m-%d") == "04-24" }}'
+        - condition: template
+          value_template: '{{ now().strftime("%m-%d") == "07-24" }}'
+        - condition: template
+          value_template: '{{ now().strftime("%m-%d") == "10-24" }}'
+        - condition: template
+          value_template: '{{ now().strftime("%m-%d") == "01-24" }}'          
     action:
       service: notify.home_assistant
       data:
