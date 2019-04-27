@@ -8,7 +8,7 @@
     initial_state: true
     trigger:
       platform: state
-      entity_id: sensor.adams_iphone_battery_state
+      entity_id: sensor.adam_s_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and
@@ -18,6 +18,9 @@
           state: 'open'
         - condition: time
           after: '20:00:00'
+        - condition: state
+          entity_id: group.adam_home_presence
+          state: 'home'
     action:
       - service: notify.ios_adams_iphone
         data:
@@ -34,7 +37,7 @@
     initial_state: true  
     trigger:
       platform: state
-      entity_id: sensor.adams_iphone_battery_state
+      entity_id: ssensor.adam_s_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and
@@ -44,6 +47,9 @@
           state: 'on'
         - condition: time
           after: '20:00:00'
+        - condition: state
+          entity_id: group.adam_home_presence
+          state: 'home'
     action:
       - service: notify.ios_adams_iphone
         data:
@@ -73,7 +79,7 @@
     initial_state: true  
     trigger:
       platform: state
-      entity_id: sensor.adams_iphone_battery_state
+      entity_id: sensor.adam_s_iphone_battery_state
       to: 'Charging'
     condition:
       condition: and
@@ -83,6 +89,9 @@
           state: 'on'
         - condition: time
           after: '20:00:00'
+        - condition: state
+          entity_id: group.adam_home_presence
+          state: 'home'
     action:
       - service: notify.ios_adams_iphone
         data:

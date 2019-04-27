@@ -7,20 +7,22 @@
   - alias: "Set Thermostat Away Mode When Leaving"
     initial_state: true
     trigger:
-      - platform: template
-        value_template: "{{ states('group.home_presence') != 'home' }}"
+      - platform: state
+        entity_id: group.adam_home_presence
+      - platform: state
+        entity_id: group.amy_home_presence
     condition:
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amys_iphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
         - condition: time
           before: '12:00:00'
           weekday:
             - mon
-            - tue
+            - tue 
             - wed
             - thu
             - fri
@@ -83,7 +85,7 @@
 #########################################################
 
   - alias: "Set Thermostat Temperature - 2200"
-    initial_state: true
+    initial_state: false
     trigger:
       platform: time
       at: '22:00'
@@ -94,7 +96,7 @@
           temperature: 67
 
   - alias: "Set Thermostat Temperature - 0500"
-    initial_state: true
+    initial_state: false
     trigger:
       platform: time
       at: '06:30'

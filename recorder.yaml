@@ -25,8 +25,8 @@
     entities:
       - switch.desktop_switch
       - switch.basic1
-      - switch.basic2
-      - switch.pow1
+      # - switch.basic2
+      # - switch.pow1
       - switch.pow2
       - switch.kuled1
       - switch.kuled2
@@ -54,13 +54,10 @@
       - sensor.memory_use_percent
       - sensor.disk_use_percent_home
       - sensor.setpoint
-      - sensor.adamsiphonebattery
-      - sensor.adamsiphonecharging
-      - sensor.amysiphonebattery
-      - sensor.amysiphonecharging
-      - sensor.remote_lux
-      - sensor.remote_humidity
-      - sensor.remote_temperature
+      - sensor.adam_s_iphone_battery_state
+      - sensor.adam_s_iphone_battery_level
+      - sensor.amy_s_iphone_battery_level
+      - sensor.amy_s_iphone_battery_state
       - sensor.doorbell
     domains:
       - media_player

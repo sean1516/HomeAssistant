@@ -282,12 +282,6 @@ cards:
       - entity: automation.restart_nut_add_on
         name: Nut Add-on Watchdog
         icon: mdi:alert-decagram-outline
-      - entity: automation.home_assistant_watchdog
-        icon: mdi:timer
-        name: Remote Instance Watchdog
-      - entity: automation.watchdog_notification
-        icon: mdi:email-alert
-        name: Remote Instance Watchdog Notification
       - entity: automation.notify_if_ha_device_offline
         name: Notify if HA device Offline
         icon: mdi:home-assistant

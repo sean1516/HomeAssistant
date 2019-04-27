@@ -83,21 +83,17 @@
   - alias: "Exterior Garage Door Left Open When Away"
     initial_state: true
     trigger:
-      - platform: zone
-        entity_id: device_tracker.adam_siphone
-        zone: zone.home
-        event: 'leave'
-      - platform: zone
-        entity_id: device_tracker.amy_siphone
-        zone: zone.home
-        event: 'leave'
+      - platform: state
+        entity_id: group.adam_home_presence
+      - platform: state
+        entity_id: group.amy_home_presence
     condition:
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amys_iphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
         - condition: state
           entity_id: sensor.garagedoorstatus
           state: 'Open'
@@ -159,6 +155,10 @@
             type: announce
           message: "Someone is at the front door!"
       - service: notify.ios_adams_iphone
+        data:
+          title: "Doorbell Pressed"
+          message: "The doorbell was pressed"
+      - service: notify.ios_amys_iphone
         data:
           title: "Doorbell Pressed"
           message: "The doorbell was pressed"

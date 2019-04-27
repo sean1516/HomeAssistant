@@ -7,21 +7,17 @@
   - alias: "Desktop On When leaving"
     initial_state: true
     trigger:
-      - platform: zone
-        entity_id: device_tracker.adams_iphone
-        zone: zone.home
-        event: 'leave'
-      - platform: zone
-        entity_id: device_tracker.amys_iphone
-        zone: zone.home
-        event: 'leave'
+      - platform: state
+        entity_id: group.adam_home_presence
+      - platform: state
+        entity_id: group.amy_home_presence
     condition:
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amys_iphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
         - condition: state
           entity_id: switch.desktop_switch
           state: 'on'
@@ -60,21 +56,17 @@
   - alias: "Living Room Lamps On When leaving"
     initial_state: true
     trigger:
-      - platform: zone
-        entity_id: device_tracker.adams_iphone
-        zone: zone.home
-        event: 'leave'
-      - platform: zone
-        entity_id: device_tracker.amys_iphone
-        zone: zone.home
-        event: 'leave'
+      - platform: state
+        entity_id: group.adam_home_presence
+      - platform: state
+        entity_id: group.amy_home_presence
     condition:
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amys_iphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
         - condition: or
           conditions:
             - condition: state
@@ -113,27 +105,23 @@
   - alias: "Media Center On When leaving"
     initial_state: true
     trigger:
-      - platform: zone
-        entity_id: device_tracker.adams_iphone
-        zone: zone.home
-        event: 'leave'
-      - platform: zone
-        entity_id: device_tracker.amys_iphone
-        zone: zone.home
-        event: 'leave'
+      - platform: state
+        entity_id: group.adam_home_presence
+      - platform: state
+        entity_id: group.amy_home_presence
     condition:
       condition: and
       conditions:
         - condition: template
-          value_template: "{{ states('device_tracker.adams_iphone') != 'home' }}"
+          value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
-          value_template: "{{ states('device_tracker.amys_iphone') != 'home' }}"
+          value_template: "{{ states('group.amy_home_presence') != 'home' }}"
         - condition: template
           value_template: "{{ states('sensor.pow2_power') | float > 10 }}"
     action:
       - service: notify.ios_adams_iphone
         data_template:
-          message: 'The Media Center is pulling {{ states("sensor.pow2_power") }} watts and you are gone'
+          message: 'The media center is pulling {{ states("sensor.pow2_power") }} watts and no one is home'
           data:
             push:
               badge: 0

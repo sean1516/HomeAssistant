@@ -7,22 +7,71 @@
 title: Rooms
 icon: mdi:home
 cards:
-  - type: glance
-    title: Door Status
-    entities:
-      - entity: sensor.gehingepinsensor2
-        name: Int. Garage
-        icon: mdi:door
-      - entity: sensor.backdoorstatus
-        name: Back
-        icon: mdi:door
-      - entity: sensor.garagedoorstatus
-        name: Garage
-        icon: mdi:garage
-      - entity: sensor.gehingepinsensor1
-        name: Front
-        icon: mdi:door
-    columns: 4
+  - type: custom:vertical-stack-in-card
+    cards: 
+      - type: glance
+        title: Door Status
+        entities:
+          - entity: sensor.gehingepinsensor2
+            name: Int. Garage
+            icon: mdi:door
+          - entity: sensor.backdoorstatus
+            name: Back
+            icon: mdi:door
+          - entity: sensor.garagedoorstatus
+            name: Garage
+            icon: mdi:garage
+          - entity: sensor.gehingepinsensor1
+            name: Front
+            icon: mdi:door
+        columns: 4
+      - type: entities
+        entities: 
+          - entity: cover.garage_door
+  - type: vertical-stack
+    cards: 
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: switch.tvpower
+            name: TV - Power
+            icon: mdi:television
+          - type: entity-button
+            entity: switch.tvtv
+            name: TV - Input Select
+            icon: mdi:television
+          - type: entity-button
+            entity: switch.tvhdmi
+            name: TV - HDMI
+            icon: mdi:video-input-hdmi
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: switch.receiverpower
+            icon: mdi:speaker
+            name: Receiver - Power
+          - type: entity-button
+            entity: switch.receivervideo1
+            name: Receiver - Video1
+            icon: mdi:television
+          - type: entity-button
+            entity: switch.receivervideo2
+            name: Receiver - Video2
+            icon: mdi:speaker
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: script.volumeup
+            name: Volume Up
+            icon: mdi:volume-plus
+          - type: entity-button
+            entity: switch.receivermute
+            name: Mute
+            icon: mdi:volume-mute
+          - type: entity-button
+            entity: script.volumedown
+            name: Volume Down
+            icon: mdi:volume-minus
   - type: weather-forecast
     title: Weather
     entity: weather.dark_sky
@@ -99,38 +148,6 @@ cards:
          - entity: sensor.setpoint
            name: Setpoint
            icon: mdi:temperature-fahrenheit
-  - type: custom:vertical-stack-in-card
-    cards:
-      - type: glance
-        title: Adam Location
-        entities:
-          - entity: group.adam_home_presence
-            name: Combined
-            icon: mdi:crosshairs
-          - entity: device_tracker.adams_iphone
-            name: GPS
-            icon: mdi:cellphone-iphone
-          - entity: device_tracker.d81c79eb20c9
-            name: WiFi
-            icon: mdi:wifi
-          - entity: device_tracker.adam_bluetooth
-            name: Bluetooth
-            icon: mdi:bluetooth
-      - type: glance
-        title: Amy Location
-        entities:
-          - entity: group.amy_home_presence
-            name: Combined
-            icon: mdi:crosshairs
-          - entity: device_tracker.amys_iphone
-            name: GPS
-            icon: mdi:cellphone-iphone
-          - entity: device_tracker.d81c79a4a851
-            name: WiFi
-            icon: mdi:wifi
-          - entity: device_tracker.amy_bluetooth
-            name: Bluetooth
-            icon: mdi:bluetooth
 
 ####################################################
 #                                                  #

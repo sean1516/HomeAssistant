@@ -12,7 +12,6 @@ homeassistant:
   elevation: 244
   unit_system: imperial
   time_zone: !secret time_zone
-  customize: !include customize.yaml
   whitelist_external_dirs:
     - /config
     - /share
@@ -30,6 +29,15 @@ climate:
 #https://home-assistant.io/components/config/
 config:
 
+#https://www.home-assistant.io/components/opengarage/
+cover:
+  platform: opengarage
+  covers:
+      garage:
+        host:  192.168.1.18
+        device_key: !secret device_key
+        name: Garage Door
+
 #https://github.com/custom-components/custom_updater
 custom_updater:
   track:
@@ -37,7 +45,6 @@ custom_updater:
     - components
   card_urls:
     - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
-    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
     - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
 
 #https://www.home-assistant.io/components/downloader/
@@ -162,21 +169,17 @@ group:
   adam_home_presence:
     - device_tracker.adams_iphone
     - device_tracker.d81c79eb20c9
-    - device_tracker.adam_bluetooth
   amy_home_presence:
     - device_tracker.amys_iphone
     - device_tracker.d81c79a4a851
-    - device_tracker.amy_bluetooth
   home_presence:
     - device_tracker.adams_iphone
     - device_tracker.d81c79eb20c9
     - device_tracker.amys_iphone
     - device_tracker.d81c79a4a851
-    - device_tracker.adam_bluetooth
-    - device_tracker.amy_bluetooth
   living_room_lamps:
     - switch.basic1
-    - switch.yeelightrgb2
+    - light.yeelightrgb2
 
 ####################################################
 #                                                  #

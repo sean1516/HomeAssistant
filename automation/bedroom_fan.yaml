@@ -5,7 +5,7 @@
 #########################################################
 
   - alias: "Turn on Bedroom Fan With HVAC"
-    initial_state: true
+    initial_state: false
     trigger:
       platform: state
       entity_id: sensor.operatingstate
@@ -22,7 +22,7 @@
         entity_id: switch.kuled1
 
   - alias: "Turn off Bedroom Fan With HVAC"
-    initial_state: true
+    initial_state: false
     trigger:
       platform: state
       entity_id: sensor.operatingstate
