@@ -6,25 +6,23 @@
 
 title: Weather
 cards:
-  - type: custom:vertical-stack-in-card
-    cards:
-      - type: weather-forecast
-        title: Weather
-        entity: weather.dark_sky
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - entity: sun.sun
-            name: Sun
-          - entity: sensor.sunrise
-            name: Next Sunrise
-            icon: mdi:weather-sunset-up
-          - entity: sensor.sunset
-            name: Next Sunset
-            icon: mdi:weather-sunset-down
-          - entity: sensor.daylight
-            name: Hours of Daylight
-            icon: mdi:timelapse
+  - type: weather-forecast
+    title: Weather
+    entity: weather.dark_sky
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - entity: sun.sun
+        name: Sun
+      - entity: sensor.sunrise
+        name: Next Sunrise
+        icon: mdi:weather-sunset-up
+      - entity: sensor.sunset
+        name: Next Sunset
+        icon: mdi:weather-sunset-down
+      - entity: sensor.daylight
+        name: Hours of Daylight
+        icon: mdi:timelapse
   - type: entities
     title: Weather Alerts
     show_header_toggle: false

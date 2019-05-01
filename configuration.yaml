@@ -46,6 +46,9 @@ custom_updater:
   card_urls:
     - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
     - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+  component_urls:
+    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
 
 #https://www.home-assistant.io/components/downloader/
 downloader:

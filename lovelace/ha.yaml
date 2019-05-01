@@ -70,6 +70,7 @@ cards:
     title: Hass.io VM
     cards:
       - type: glance
+        theme: midnightclear
         columns: 3
         entities:
           - entity: sensor.load_1m
@@ -77,21 +78,24 @@ cards:
           - entity: sensor.load_5m
             icon: mdi:speedometer
           - entity: sensor.load_15m
-      - type: horizontal-stack
+            icon: mdi:speedometer
         cards:
           - type: sensor
+            theme: midnightclear
             entity: sensor.processor_use
             name: Processor
             hours_to_show: 24
             graph: line
             detail: 1
           - type: sensor
+            theme: midnightclear
             entity: sensor.memory_use_percent
             name: Memory
             hours_to_show: 24
             graph: line
             detail: 1
       - type: glance
+        theme: midnightclear
         columns: 3
         entities:
           - entity: sensor.home_assistant_log

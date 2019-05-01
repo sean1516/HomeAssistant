@@ -16,6 +16,9 @@
   feeddog:
     name: feeddog
     initial: off
+  doorbelllight:
+    name: doorbelllight
+    initial: off
 
 ####################################################
 #                                                  #

@@ -27,6 +27,7 @@ cards:
       - type: entities
         show_header_toggle: false
         title: UPS Status
+        theme: midnightclear
         entities:
           - entity: sensor.ups_status
             name: State
@@ -41,6 +42,7 @@ cards:
       - type: horizontal-stack
         cards:
           - type: sensor
+            theme: midnightclear
             entity: sensor.approxwattage
             name: Load
             icon: mdi:gauge
@@ -48,6 +50,7 @@ cards:
             graph: line
             detail: 1
           - type: sensor
+            theme: midnightclear
             entity: sensor.ups_battery_runtime
             name: Runtime
             hours_to_show: 24
@@ -60,18 +63,21 @@ cards:
         title: Network Status
         cards:
           - type: sensor
+            theme: midnightclear
             entity: sensor.speedtest_download
             name: Download
             hours_to_show: 24
             graph: line
             detail: 1
           - type: sensor
+            theme: midnightclear
             entity: sensor.speedtest_upload
             name: Upload
             hours_to_show: 24
             graph: line
             detail: 1
       - type: entities
+        theme: midnightclear
         show_header_toggle: false
         entities:
           - entity: binary_sensor.modem

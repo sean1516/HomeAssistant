@@ -49,8 +49,10 @@
       platform: time
       at: '00:01:00'
     action:
-      service: switch.turn_off
-      entity_id: switch.basic1
+      - service: switch.turn_off
+        entity_id: switch.basic1
+      - service: light.turn_off
+        entity_id: light.yeelightrgb2
 
 ########################################################
 #                                                       #

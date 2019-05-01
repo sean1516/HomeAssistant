@@ -153,6 +153,19 @@
             {%- endfor -%}
           {%- endfor -%}
 
+      garage_car_present:
+        value_template: '{% if states.cover.garage_door %}
+            {% if states.cover.garage_door.state == "open" %}
+              n/a
+            {% elif ((states.cover.garage_door.attributes["distance_sensor"] > 100) and (states.cover.garage_door.attributes["distance_sensor"] < 150)) %}
+              Yes
+            {% else %}
+              No
+            {% endif %}
+            {% else %}
+            n/a
+            {% endif %}'
+
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #

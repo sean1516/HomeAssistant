@@ -36,6 +36,8 @@
         value_template: "{{ states('sensor.stars') != 'None' }} "
       - condition: template
         value_template: "{{ trigger.from_state.state != 'None' }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'unavailable' }}"
     action:
       service: notify.ios_adams_iphone
       data:

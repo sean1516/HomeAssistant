@@ -88,6 +88,7 @@ cards:
     cards:
       - type: glance
         title: Adam Location
+        theme: midnightclear
         entities:
           - entity: group.adam_home_presence
             name: Combined
@@ -98,11 +99,9 @@ cards:
           - entity: device_tracker.d81c79eb20c9
             name: WiFi
             icon: mdi:wifi
-          - entity: device_tracker.adam_bluetooth
-            name: Bluetooth
-            icon: mdi:bluetooth
       - type: glance
         title: Amy Location
+        theme: midnightclear
         entities:
           - entity: group.amy_home_presence
             name: Combined
@@ -113,9 +112,6 @@ cards:
           - entity: device_tracker.d81c79a4a851
             name: WiFi
             icon: mdi:wifi
-          - entity: device_tracker.amy_bluetooth
-            name: Bluetooth
-            icon: mdi:bluetooth
 
 ####################################################
 #                                                  #

@@ -22,6 +22,7 @@ resources:
     type: module
 
 title: Home
+background: var(--lovelace-background)
 views:
   - !include lovelace/rooms.yaml
   - !include lovelace/switches.yaml
