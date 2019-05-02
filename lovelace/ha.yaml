@@ -79,6 +79,7 @@ cards:
             icon: mdi:speedometer
           - entity: sensor.load_15m
             icon: mdi:speedometer
+      - type: horizontal-stack
         cards:
           - type: sensor
             theme: midnightclear
