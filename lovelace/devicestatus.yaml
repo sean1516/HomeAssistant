@@ -6,22 +6,6 @@
 
 title: Device Status
 cards:
-  - type: entities
-    show_header_toggle: false
-    title: Phone Status
-    entities:
-      - type: section
-        label: Adam's Phone Status
-      - entity: sensor.adam_s_iphone_battery_level
-        name: Battery
-      - entity: sensor.adam_s_iphone_battery_state
-        name: Charging?
-      - type: section
-        label: Amy's Phone Status
-      - entity: sensor.amy_s_iphone_battery_level
-        name: Battery
-      - entity: sensor.amy_s_iphone_battery_state
-        name: Charging?
   - type: custom:vertical-stack-in-card
     cards:
       - type: entities
