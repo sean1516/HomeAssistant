@@ -15,7 +15,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 I am also running the following Hass.io add-ons:
 
-* __[Backup to Google Drive](https://github.com/samccauley/addon-hassiogooglebackup)__ 
+* __[Backup to Google Drive](https://github.com/sabeechen/hassio-google-drive-backup)__ 
 * __[Dasshio](https://github.com/theastropath/dasshio)__ 
 * __[DuckDNS](www.home-assistant.io/addons/duckdns/)__
 * __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ 
@@ -48,7 +48,7 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |10      |7               |26        |85           |3        |143      |7              | 
+|45               |10      |8               |26        |85           |3        |146      |7              | 
 
 # Connected Devices:
 
