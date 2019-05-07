@@ -84,34 +84,6 @@ cards:
       - entity: sensor.next_u_to_b_arrival
         name: Arrives
         icon: 'mdi:calendar-clock'
-  - type: custom:vertical-stack-in-card
-    cards:
-      - type: glance
-        title: Adam Location
-        theme: midnightclear
-        entities:
-          - entity: group.adam_home_presence
-            name: Combined
-            icon: mdi:crosshairs
-          - entity: device_tracker.adams_iphone
-            name: GPS
-            icon: mdi:cellphone-iphone
-          - entity: device_tracker.d81c79eb20c9
-            name: WiFi
-            icon: mdi:wifi
-      - type: glance
-        title: Amy Location
-        theme: midnightclear
-        entities:
-          - entity: group.amy_home_presence
-            name: Combined
-            icon: mdi:crosshairs
-          - entity: device_tracker.amys_iphone
-            name: GPS
-            icon: mdi:cellphone-iphone
-          - entity: device_tracker.d81c79a4a851
-            name: WiFi
-            icon: mdi:wifi
 
 ####################################################
 #                                                  #

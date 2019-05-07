@@ -17,11 +17,11 @@
         turn_on:
           service: hassio.addon_start
           data:
-            addon: 3833edd4_googlebackup
+            addon: cebe7a76_hassio_google_drive_backup
         turn_off:
           service: hassio.addon_stop
           data:
-            addon: 3833edd4_googlebackup
+            addon: cebe7a76_hassio_google_drive_backup
 
       dasshio:
         value_template: "{{ is_state('sensor.dasshio', 'started') }}"

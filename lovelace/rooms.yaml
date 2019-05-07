@@ -105,7 +105,36 @@ cards:
             theme: midnightyellow
             entity: switch.desktop_switch
             name: Desktop
-            icon: mdi:desktop-tower        
+            icon: mdi:desktop-tower
+  - type: custom:vertical-stack-in-card
+    cards:        
+      - type: entities
+        title: Phone Location & Battery Data
+        show_header_toggle: false
+        theme: midnightclear
+        entities:
+          - type: section
+            label: Adam's iPhone
+          - entity:  group.adam_home_presence
+            name: Location
+            icon: mdi:crosshairs-gps
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "GPS location is [[ device_tracker.adams_iphone.state ]]"
+          - entity: sensor.adam_s_iphone_battery_level
+            name: Battery
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "[[ {entity}.attributes.Battery State ]]"
+          - type: section
+            label: Amy's iPhone
+          - entity:  group.amy_home_presence
+            name: Location
+            icon: mdi:crosshairs-gps
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "GPS location is [[ device_tracker.amys_iphone.state ]]"
+          - entity: sensor.amy_s_iphone_battery_level
+            name: Battery
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "[[ {entity}.attributes.Battery State ]]"        
   - type: custom:vertical-stack-in-card
     cards:
       - type: entities
