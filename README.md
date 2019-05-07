@@ -86,7 +86,7 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 
 ## Home
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/home.png">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/rooms.png">
 </p>
 
 ## Switches
