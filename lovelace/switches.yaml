@@ -12,26 +12,44 @@ cards:
     entities:
       - entity: light.bedroom_lights
         name: Bedroom Lights
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.bedroom_lights.state != "on", "0", light.bedroom_lights.attributes.brightness) ]]%'
       - entity: light.tradfri_bulb_e26_ws_opal_980lm_3
         name: Amy's Bedside
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.tradfri_bulb_e26_ws_opal_980lm_3.state != "on", "0", light.tradfri_bulb_e26_ws_opal_980lm_3.attributes.brightness) ]]%'
       - entity: light.tradfri_bulb_e26_ws_opal_980lm_2_2
         name: Adam's Bedside
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.tradfri_bulb_e26_ws_opal_980lm_2_2.state != "on", "0", light.tradfri_bulb_e26_ws_opal_980lm_2_2.attributes.brightness) ]]%'
   - type: entities
     title: Yeelights
     show_header_toggle: false
     entities:
       - entity: light.yeelight1
         name: Front Porch
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.yeelight1.state != "on", "0", light.yeelight1.attributes.brightness) ]]%'
       - entity: light.yeelight3
         name: Garage Right
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.yeelight3.state != "on", "0", light.yeelight3.attributes.brightness) ]]%'
       - entity: light.yeelight4
         name: Garage Left
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.yeelight4.state != "on", "0", light.yeelight4.attributes.brightness) ]]%'
       - entity: light.yeelight2
         name: Back Porch
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.yeelight2.state != "on", "0", light.yeelight2.attributes.brightness) ]]%'
       - entity: light.yeelight5
         name: Interior Garage Light
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.yeelight5.state != "on", "0", light.yeelight5.attributes.brightness) ]]%'
       - entity: light.yeelightrgb2
         name: Notification Light
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: 'Brightness: [[ if(light.yeelightrgb2.state != "on", "0", light.yeelightrgb2.attributes.brightness) ]]%'
       - entity: script.normallight
         name: Script - Normal Light
         icon: mdi:mdi:lightbulb
