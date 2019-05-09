@@ -9,8 +9,10 @@
 #################################################################
 
     midnight:
-      lovelace-background: 'center / cover no-repeat url("/local/background2.jpg") fixed'
-      ha-card-border-radius: 5px                                                      # Radius on card borders
+      lovelace-background: 'center / cover no-repeat url("/local/backgroundbw.jpg") fixed'
+      ha-card-border-radius: '5px'                                                     # Radius on card borders
+      ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.3)"     
+
 # Main colors
       primary-color: '#03a9f4'                                                        # Header
       accent-color: '#03a9f4'                                                         # Accent color
@@ -20,12 +22,12 @@
 # Text colors
       primary-text-color: '#FFFFFF'                                                   # Primary text colour, here is referencing dark-primary-color
       text-primary-color: '#FFFFFF'                                                   # Primary text colour
-      secondary-text-color: '#8c8d90'                                                 # For secondary titles in more info boxes etc.
+      secondary-text-color: '#b3b3b3'                                                 # For secondary titles in more info boxes etc.
       disabled-text-color: '#7F848E'                                                  # Disabled text colour
       label-badge-border-color: 'green'                                               # Label badge border, just a reference value
 
 # Background colors
-      primary-background-color: '#000000' #'#282828'                                             # Settings background
+      primary-background-color: '#000000'                                             # Settings background
       secondary-background-color: '#5e5e5e'                                           # Main card UI background
       divider-color: 'rgba(0, 0, 0, .12)'                                             # Divider
 
@@ -35,9 +37,9 @@
 
 # Nav Menu
       paper-listbox-color: 'var(--primary-color)'                                     # Navigation menu selection hoover
-      paper-listbox-background-color: '#000000' #'#282828'                                       # Navigation menu background
+      paper-listbox-background-color: '#000000'                                       # Navigation menu background
       paper-grey-50: 'var(--primary-text-color)'
-      paper-grey-200: '#414A59'                                                      # Navigation menu selection
+      paper-grey-200: '#414A59'                                                       # Navigation menu selection
       sidebar-icon-color: 'var(--primary-color)'
 
 # Paper card
@@ -86,6 +88,8 @@
     midnightclear:
       lovelace-background: 'center / cover no-repeat url("/local/background2.jpg") fixed'
       ha-card-border-radius: 5px                                                      # Radius on card borders
+      ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.3)" 
+
 # Main colors
       primary-color: '#03a9f4'                                                        # Header
       accent-color: '#03a9f4'                                                         # Accent color
@@ -95,7 +99,7 @@
 # Text colors
       primary-text-color: '#FFFFFF'                                                   # Primary text colour, here is referencing dark-primary-color
       text-primary-color: '#FFFFFF'                                                   # Primary text colour
-      secondary-text-color: '#8c8d90'                                                 # For secondary titles in more info boxes etc.
+      secondary-text-color: '#b3b3b3'                                                 # For secondary titles in more info boxes etc.
       disabled-text-color: '#7F848E'                                                  # Disabled text colour
       label-badge-border-color: 'green'                                               # Label badge border, just a reference value
 
@@ -161,6 +165,7 @@
     midnightyellow:
       lovelace-background: 'center / cover no-repeat url("/local/background2.jpg") fixed'
       ha-card-border-radius: 5px                                                      # Radius on card borders
+      ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.3)"  
 
 # Main colors
       primary-color: '#03a9f4'                                                        # Header
@@ -171,7 +176,7 @@
 # Text colors
       primary-text-color: '#FFFFFF'                                                   # Primary text colour, here is referencing dark-primary-color
       text-primary-color: '#FFFFFF'                                                   # Primary text colour
-      secondary-text-color: '#8c8d90'                                                 # For secondary titles in more info boxes etc.
+      secondary-text-color: '#b3b3b3'                                                 # For secondary titles in more info boxes etc.
       disabled-text-color: '#7F848E'                                                  # Disabled text colour
       label-badge-border-color: 'green'                                               # Label badge border, just a reference value
 
@@ -196,7 +201,7 @@
       paper-card-background-color: "rgba(40, 40, 40, 0.4)"                            # Card background colour
       paper-dialog-background-color: var(--primary-background-color)                  # Card dialog background colour
       paper-item-icon-color: 'var(--accent-color)'                                    # Icon color
-      paper-item-icon-active-color: '#ffff00'                                         # Icon color active
+      paper-item-icon-active-color: '#f2f22b'                                         # Icon color active
       paper-item-icon_-_color: 'green'
       paper-item-selected_-_background-color: '#282c34'                               # Popup item select
       paper-tabs-selection-bar-color: 'green'
