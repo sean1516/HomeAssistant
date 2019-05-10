@@ -116,12 +116,16 @@
           value_template: "{{ states('group.adam_home_presence') != 'home' }}"
         - condition: template
           value_template: "{{ states('group.amy_home_presence') != 'home' }}"
-        - condition: template
-          value_template: "{{ states('sensor.pow2_power') | float > 10 }}"
+        - condition: or
+          conditions:
+            - condition: template
+              value_template: "{{ states('sensor.pow1_power') | float > 10 }}"
+            - condition: template
+              value_template: "{{ states('sensor.pow2_power') | float > 10 }}"
     action:
       - service: notify.ios_adams_iphone
         data_template:
-          message: 'The media center is pulling {{ states("sensor.pow2_power") }} watts and no one is home'
+          message: 'The TV is pulling {{ states("sensor.pow2_power") }} watts, the Receiver is pulling {{ states("sensor.pow1_power") }} watts and no one is home'
           data:
             push:
               badge: 0
