@@ -80,10 +80,8 @@ cards:
     entities:
       - entity: sensor.basic1_signal
         icon: 'mdi:wifi'
-      # - entity: sensor.basic2_signal
-      #   icon: 'mdi:wifi'
-      # - entity: sensor.pow1_signal
-      #   icon: 'mdi:wifi'
+      - entity: sensor.pow1_signal
+        icon: 'mdi:wifi'
       - entity: sensor.pow2_signal
         icon: 'mdi:wifi'
       - entity: sensor.kuled1_signal
@@ -130,12 +128,9 @@ cards:
       - entity: device_tracker.2c3ae844b860
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.36"
-      # - entity: device_tracker.sonoff_basic_2
-      #   type: "custom:secondaryinfo-entity-row"
-      #   secondary_info: "192.168.1.35"
-      # - entity: device_tracker.pow17279
-      #   type: "custom:secondaryinfo-entity-row"
-      #   secondary_info: "192.168.1.37"
+      - entity: device_tracker.pow17279
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "192.168.1.37"
       - entity: device_tracker.sonoff_pow_2
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.34"
@@ -228,7 +223,6 @@ cards:
         icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.33"
-
 
 ####################################################
 #                                                  #

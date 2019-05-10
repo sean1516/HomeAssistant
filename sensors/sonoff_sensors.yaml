@@ -9,29 +9,29 @@
 
 #https://home-assistant.io/components/sensor.mqtt/
 
-  # - platform: mqtt
-  #   name: "POW1 Current"
-  #   state_topic: "tele/sonoff/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Current"] }}'
-  #   unit_of_measurement: "A"
+  - platform: mqtt
+    name: "POW1 Current"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Current"] }}'
+    unit_of_measurement: "A"
 
-  # - platform: mqtt
-  #   name: "POW1 Energy"
-  #   state_topic: "tele/sonoff/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Today"] }}'
-  #   unit_of_measurement: "kWh"
+  - platform: mqtt
+    name: "POW1 Energy"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Today"] }}'
+    unit_of_measurement: "kWh"
 
-  # - platform: mqtt
-  #   name: "POW1 Power"
-  #   state_topic: "tele/sonoff/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Power"] }}'
-  #   unit_of_measurement: "W"
+  - platform: mqtt
+    name: "POW1 Power"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Power"] }}'
+    unit_of_measurement: "W"
 
-  # - platform: mqtt
-  #   name: "POW1 Voltage"
-  #   state_topic: "tele/sonoff/SENSOR"
-  #   value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
-  #   unit_of_measurement: "V"
+  - platform: mqtt
+    name: "POW1 Voltage"
+    state_topic: "tele/pow1/SENSOR"
+    value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
+    unit_of_measurement: "V"
 
   - platform: mqtt
     name: "POW2 Current"
@@ -57,11 +57,11 @@
     value_template: '{{ value_json["ENERGY"]["Voltage"] }}'
     unit_of_measurement: "V"
 
-  # - platform: mqtt
-  #   name: "POW1 Signal"
-  #   state_topic: "tele/sonoff/STATE"
-  #   value_template: "{{ value_json.Wifi.RSSI }}"
-  #   unit_of_measurement: "%"
+  - platform: mqtt
+    name: "POW1 Signal"
+    state_topic: "tele/pow1/STATE"
+    value_template: "{{ value_json.Wifi.RSSI }}"
+    unit_of_measurement: "%"
 
   - platform: mqtt
     name: "POW2 Signal"
@@ -74,12 +74,6 @@
     state_topic: "tele/basic1/STATE"
     value_template: "{{ value_json.Wifi.RSSI }}"
     unit_of_measurement: "%" 
-
-  # - platform: mqtt
-  #   name: "Basic2 Signal"
-  #   state_topic: "tele/basic2/STATE"
-  #   value_template: "{{ value_json.Wifi.RSSI }}"
-  #   unit_of_measurement: "%" 
 
   - platform: mqtt
     name: "Kuled1 Signal"
