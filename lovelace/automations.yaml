@@ -6,6 +6,7 @@
 
 title: Automations
 cards:
+  - type: custom:compact-custom-header
   - type: entities
     title: Automation Modes
     show_header_toggle: false
@@ -106,9 +107,6 @@ cards:
       - entity: automation.lets_encrypt_cert_did_not_update
         name: Lets Encrypt Certificate Did Not Update
         icon: mdi:certificate
-      - entity: automation.hassio_snapshot
-        name: Nightly Hass.io Snapshot
-        icon: mdi:file-restore
       - entity: automation.home_assistant_started
         name: Home Assistant Started
         icon: mdi:home-assistant

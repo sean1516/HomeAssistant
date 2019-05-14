@@ -7,6 +7,7 @@
 title: HA
 icon: mdi:home-assistant
 cards:
+  - type: custom:compact-custom-header
   - type: entities
     title: Hass.io Addons
     show_header_toggle: false

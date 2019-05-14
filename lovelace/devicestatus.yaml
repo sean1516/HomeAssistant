@@ -6,6 +6,7 @@
 
 title: Device Status
 cards:
+  - type: custom:compact-custom-header
   - type: custom:vertical-stack-in-card
     cards:
       - type: entities

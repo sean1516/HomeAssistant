@@ -7,6 +7,9 @@
 title: Rooms
 icon: mdi:home
 cards:
+  - type: custom:compact-custom-header
+    main_config: true
+    voice: hide
   - type: custom:vertical-stack-in-card
     cards: 
       - type: glance
@@ -64,7 +67,6 @@ cards:
             name: Volume Down
             icon: mdi:volume-minus
   - type: weather-forecast
-    title: Weather
     entity: weather.dark_sky
   - type: vertical-stack
     cards: 
@@ -77,9 +79,9 @@ cards:
             icon: mdi:lightbulb-outline
           - type: entity-button
             theme: midnightyellow
-            entity:  light.bedroom_lights
-            name: Bedroom
-            icon: mdi:lightbulb-outline
+            entity: switch.desktop_switch
+            name: Desktop
+            icon: mdi:desktop-tower
           - type: entity-button
             entity: light.yeelightrgb2
             name: Notification Bulb
@@ -98,14 +100,15 @@ cards:
             icon: mdi:fan
           - type: entity-button
             theme: midnightyellow
+            entity:  light.bedroom_lights
+            name: Bedroom
+            icon: mdi:lightbulb-outline
+          - type: entity-button
+            theme: midnightyellow
             entity: switch.kuled2
             name: Nursery Fan
             icon: mdi:fan
-          - type: entity-button
-            theme: midnightyellow
-            entity: switch.desktop_switch
-            name: Desktop
-            icon: mdi:desktop-tower
+
   - type: custom:vertical-stack-in-card
     cards:        
       - type: entities
@@ -179,7 +182,6 @@ cards:
         show:
           state: false
           points: false
-
 
 ####################################################
 #                                                  #

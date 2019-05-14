@@ -6,6 +6,7 @@
 
 title: Stats & Data
 cards:
+  - type: custom:compact-custom-header
   - type: entities
     title: Adam's & Wabash Bus Times
     show_header_toggle: false
