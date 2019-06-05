@@ -29,8 +29,8 @@
     action:
       - service: climate.set_temperature
         data:
-          entity_id: climate.linear_heating
-          temperature: 62
+          entity_id: climate.linear_cooling
+          temperature: 80
 
 #########################################################
 #                                                       #
@@ -54,8 +54,8 @@
     action:
       - service: climate.set_temperature
         data:
-          entity_id: climate.linear_heating
-          temperature: 69
+          entity_id: climate.linear_cooling
+          temperature: 74
 
 #########################################################
 #                                                       #
@@ -75,8 +75,8 @@
     action:
       - service: climate.set_temperature
         data:
-          entity_id: climate.linear_heating
-          temperature: 69
+          entity_id: climate.linear_cooling
+          temperature: 74
 
 #########################################################
 #                                                       #

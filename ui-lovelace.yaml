@@ -20,6 +20,9 @@ resources:
   #https://github.com/kalkih/mini-graph-card
   - url: /local/mini-graph-card-bundle.js?v=0.3.0
     type: module
+  #https://github.com/maykar/compact-custom-header
+  - url: /local/compact-custom-header.js?v=1.0.3b1
+    type: module
 
 title: Home
 background: var(--lovelace-background)

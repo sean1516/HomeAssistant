@@ -8,10 +8,10 @@
     initial_state: true
     trigger:
       - platform: numeric_state
-        entity_id: sensor.adamsiphonebattery
+        entity_id: sensor.adam_s_iphone_battery_level
         below: 50
       - platform: numeric_state
-        entity_id: sensor.adamsiphonebattery
+        entity_id: sensor.adam_s_iphone_battery_level
         below: 30
     condition:
       condition: zone

@@ -53,12 +53,9 @@
     action:
       - service: automation.turn_off
         entity_id: automation.feed_the_dog_morning
-      - service: script.normallight
-      - delay: '00:00:01'
-      - service: light.turn_off
-        entity_id: light.yeelightrgb2
       - service: homeassistant.turn_off
         entity_id: input_boolean.feeddog
+      - service_template: "{%- if is_state('switch.basic1', 'on') -%} script.normallight {%- else -%} script.returntonormal {%- endif %}"
 
 #########################################################
 #                                                       #
@@ -79,12 +76,9 @@
     action:
       - service: automation.turn_off
         entity_id: automation.feed_the_dog_evening
-      - service: script.normallight
-      - delay: '00:00:01'
-      - service: light.turn_off
-        entity_id: light.yeelightrgb2
       - service: homeassistant.turn_off
         entity_id: input_boolean.feeddog
+      - service_template: "{%- if is_state('switch.basic1', 'on') -%} script.normallight {%- else -%} script.returntonormal {%- endif %}"
 
 #########################################################
 #                                                       #

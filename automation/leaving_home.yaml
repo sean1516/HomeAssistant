@@ -30,7 +30,6 @@
       entity_id:
         - light.tradfri_bulb_e26_ws_opal_980lm_3
         - light.tradfri_bulb_e26_ws_opal_980lm_2_2
-        - light.yeelightrgb2
 
 ########################################################
 #                                                      #

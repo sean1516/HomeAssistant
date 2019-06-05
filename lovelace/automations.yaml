@@ -183,9 +183,6 @@ cards:
       - entity: automation.desktop_on_when_leaving
         name: Desktop On When Leaving
         icon: mdi:windows
-      - entity: automation.living_room_lamps_on_when_leaving
-        name: Living Room Lamps on When Leaving
-        icon: mdi:lightbulb-outline
       - entity: automation.media_center_on_when_leaving
         name: Media Center On When leaving
         icon: mdi:television-classic

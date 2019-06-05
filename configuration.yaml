@@ -76,9 +76,6 @@ logger:
 lovelace:
   mode: yaml
 
-#https://www.home-assistant.io/components/map/
-map:
-
 #https://home-assistant.io/components/sun/
 sun:
 
@@ -151,6 +148,9 @@ emulated_hue:
     script.volumeup:
       hidden: false
       name: Volume Up
+    input_boolean.feeddog:
+      hidden: false
+      name: feeddog
 
 ####################################################
 #                                                  #

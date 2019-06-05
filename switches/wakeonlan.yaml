@@ -11,7 +11,8 @@
 
   - platform: wake_on_lan
     name: Desktop Switch
-    mac_address: "b8:ca:3a:8e:92:61"
+    mac_address: "78:2b:cb:9f:60:cd" #Optiplex 790
+    #mac_address: "b8:ca:3a:8e:92:61" #Optiplex 9010
     host: 192.168.1.6
     turn_off:
       service: hassio.addon_stdin

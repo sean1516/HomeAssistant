@@ -23,10 +23,11 @@
       - input_boolean.vacation
   include:
     entities:
+      - group.adam_home_presence
+      - group.amy_home_presence
       - switch.desktop_switch
       - switch.basic1
-      # - switch.basic2
-      # - switch.pow1
+      - switch.pow1
       - switch.pow2
       - switch.kuled1
       - switch.kuled2

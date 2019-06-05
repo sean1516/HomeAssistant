@@ -82,9 +82,13 @@ cards:
       - entity: switch.basic1
         name: Sonoff Basic 1
         icon: mdi:toggle-switch
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "Living Room Lamps"
       - entity: switch.pow1
         name: Sonoff POW 1
         icon: mdi:speaker-wireless
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "Receiver"
       - entity: sensor.pow1_energy
         name: kWh
         icon: mdi:chart-line
@@ -100,6 +104,8 @@ cards:
       - entity: switch.pow2
         name: Sonoff POW 2
         icon: mdi:television-classic
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "Television"
       - entity: sensor.pow2_energy
         name: kWh
         icon: mdi:chart-line
@@ -119,9 +125,13 @@ cards:
       - entity: switch.kuled1
         name: Kuled 1
         icon: mdi:light-switch
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "Bedroom Fan"
       - entity: switch.kuled2
         name: Kuled 2
         icon: mdi:light-switch
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "Nursery Fan"
   - type: entities
     title: Computer Switches
     show_header_toggle: false

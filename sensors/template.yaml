@@ -16,19 +16,19 @@
 
       setpoint:
         unit_of_measurement: '°F'
-        value_template: "{{ state_attr('climate.linear_heating', 'temperature') }}"
+        value_template: "{{ state_attr('climate.linear_cooling', 'temperature') }}"
 
       fanstate:
-        value_template: "{{ state_attr('climate.linear_heating', 'fan_state') }}"
+        value_template: "{{ state_attr('climate.linear_cooling', 'fan_state') }}"
 
       fanmode:
-        value_template: "{{ state_attr('climate.linear_heating', 'fan_mode') }}"
+        value_template: "{{ state_attr('climate.linear_cooling', 'fan_mode') }}"
 
       operatingstate:
-        value_template: "{{ state_attr('climate.linear_heating', 'operating_state') }}"
+        value_template: "{{ state_attr('climate.linear_cooling', 'operating_state') }}"
 
       operationmode:
-        value_template: "{{ state_attr('climate.linear_heating', 'operation_mode') }}"
+        value_template: "{{ state_attr('climate.linear_cooling', 'operation_mode') }}"
 
       sunset:
         value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'

@@ -46,18 +46,21 @@ cards:
             icon: mdi:television
           - type: entity-button
             entity: switch.tvtv
-            name: TV - Input Select
+            name: TV - Input 
             icon: mdi:television
           - type: entity-button
             entity: switch.receiverpower
             icon: mdi:speaker
-            name: Receiver - Power
+            name: Amp - Power
       - type: horizontal-stack
         cards:
           - type: entity-button
             entity: script.volumeup
             name: Volume Up
             icon: mdi:volume-plus
+            tap_action:
+              action: call-service
+              service: script.volumeup
           - type: entity-button
             entity: switch.receivermute
             name: Mute
@@ -66,6 +69,9 @@ cards:
             entity: script.volumedown
             name: Volume Down
             icon: mdi:volume-minus
+            tap_action:
+              action: call-service
+              service: script.volumedown
   - type: weather-forecast
     entity: weather.dark_sky
   - type: vertical-stack
@@ -84,7 +90,7 @@ cards:
             icon: mdi:desktop-tower
           - type: entity-button
             entity: light.yeelightrgb2
-            name: Notification Bulb
+            name: Notification
             icon: mdi:lightbulb-outline
             tap_action: 
               action: toggle
@@ -146,7 +152,8 @@ cards:
             show_header_toggle: false
             theme: midnightclear
             entities:
-              - entity: climate.linear_heating
+              - entity: climate.linear_cooling
+                name: Thermostat
           - type: glance
             theme: midnightclear
             entities:
