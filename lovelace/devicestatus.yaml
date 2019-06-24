@@ -85,6 +85,8 @@ cards:
         icon: 'mdi:wifi'
       - entity: sensor.pow2_signal
         icon: 'mdi:wifi'
+      - entity: sensor.th161_signal
+        icon: 'mdi:wifi'
       - entity: sensor.kuled1_signal
         icon: 'mdi:wifi'
       - entity: sensor.kuled2_signal
@@ -135,6 +137,10 @@ cards:
       - entity: device_tracker.sonoff_pow_2
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.34"
+      - entity: device_tracker.sonoff_th16_1
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "192.168.1.40"
+        icon: mdi:toggle-switch
   - type: entities
     title: Yeelights
     show_header_toggle: false

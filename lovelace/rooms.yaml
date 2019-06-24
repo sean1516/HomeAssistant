@@ -114,7 +114,6 @@ cards:
             entity: switch.kuled2
             name: Nursery Fan
             icon: mdi:fan
-
   - type: custom:vertical-stack-in-card
     cards:        
       - type: entities
@@ -144,51 +143,6 @@ cards:
             name: Battery
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "[[ {entity}.attributes.Battery State ]]"
-  - type: vertical-stack
-    cards:
-      - type: custom:vertical-stack-in-card
-        cards:
-          - type: entities
-            show_header_toggle: false
-            theme: midnightclear
-            entities:
-              - entity: climate.linear_cooling
-                name: Thermostat
-          - type: glance
-            theme: midnightclear
-            entities:
-            - entity: sensor.fanmode
-              name: Fan Mode
-              icon: mdi:fan
-            - entity: sensor.fanstate
-              name: Fan State
-              icon: mdi:fan
-            - entity: sensor.operationmode
-              name: HVAC Mode
-              icon: mdi:settings
-            - entity: sensor.operatingstate
-              name: HVAC State
-              icon: mdi:settings
-      - type: custom:mini-graph-card
-        entities:
-          - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
-            name: Actual
-          - entity: sensor.setpoint
-            name: Setpoint
-        name: Indoor Temperature
-        icon: mdi:thermometer-lines
-        font_size_header: 20
-        hours_to_show: 24
-        points_per_hour: 6
-        graph: line
-        line_color:
-          - '#FFFFFF'
-          - '#03a9f4'
-        lower_bound: '60'
-        upper_bound: '80'
-        show:
-          state: false
-          points: false
 
 ####################################################
 #                                                  #

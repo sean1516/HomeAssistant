@@ -29,6 +29,7 @@
       - switch.basic1
       - switch.pow1
       - switch.pow2
+      - switch.th161
       - switch.kuled1
       - switch.kuled2
       - sensor.backdoorstatus
@@ -50,6 +51,8 @@
       - sensor.speedtest_upload
       - sensor.pow1_power
       - sensor.pow2_power
+      - sensor.th161_humidity
+      - sensor.th161_temperature
       - sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
       - sensor.processor_use
       - sensor.memory_use_percent

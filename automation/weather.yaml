@@ -43,6 +43,26 @@
 
 #########################################################
 #                                                       #
+#                      OPEN UV                          #
+#                                                       #
+#########################################################
+
+- alias: Open UV update
+  trigger:
+    platform: time_pattern
+    minutes: '/60'
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunrise
+      - condition: sun
+        before: sunset
+  action:
+    service: openuv.update_data
+
+#########################################################
+#                                                       #
 #            END OF CONFIGURATION FILE                  #
 #                                                       #
 #########################################################

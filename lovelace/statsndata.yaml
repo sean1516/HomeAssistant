@@ -85,7 +85,16 @@ cards:
       - entity: sensor.next_u_to_b_arrival
         name: Arrives
         icon: 'mdi:calendar-clock'
-
+  - type: entities
+    show_header_toggle: false
+    title: Work Hours
+    entities:
+      - entity: sensor.hours_at_work_today
+        icon: mdi:progress-clock
+      - entity: sensor.hours_at_work_yesterday
+        icon: mdi:progress-clock
+      - entity: sensor.hours_at_work_two_days_ago
+        icon: mdi:progress-clock
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #

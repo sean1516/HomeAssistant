@@ -84,6 +84,10 @@ cards:
         icon: mdi:toggle-switch
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "Living Room Lamps"
+      - entity: switch.th161
+        name: Sonoff TH16
+        icon: mdi:toggle-switch
+        type: "custom:secondaryinfo-entity-row"
       - entity: switch.pow1
         name: Sonoff POW 1
         icon: mdi:speaker-wireless

@@ -1,0 +1,126 @@
+####################################################
+#                                                  #
+#                    HVAC VIEW                     #
+#                                                  #
+####################################################
+
+title: HVAC
+theme: midnightnotrans
+cards:
+  - type: custom:compact-custom-header
+  - type: vertical-stack
+    cards:
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: thermostat
+            entity: climate.linear_cooling
+            name: Thermostat
+          - type: glance
+            entities:
+            - entity: sensor.fanmode
+              name: Fan Mode
+              icon: mdi:fan
+            - entity: sensor.fanstate
+              name: Fan State
+              icon: mdi:fan
+            - entity: sensor.operationmode
+              name: HVAC Mode
+              icon: mdi:settings
+            - entity: sensor.operatingstate
+              name: HVAC State
+              icon: mdi:settings
+  - type: entities
+    show_header_toggle: false
+    title: Temperature & Humidity
+    entities:
+      - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+        name: Downstairs Temperature
+        icon: mdi:thermometer-lines
+      - entity: sensor.th161_temperature
+        name: Upstairs Temperature
+        icon: mdi:thermometer-lines
+      - entity:  sensor.th161_humidity
+        name: Upstairs Humidity
+        icon: mdi:water-percent
+      - entity: sensor.currenttemp
+        name: Outside Temperature
+        icon: mdi:thermometer-lines
+      - entity: sensor.currenthumid
+        name: Outside Humidity
+        icon: mdi:water-percent
+  - type: entities
+    show_header_toggle: false
+    title: HVAC Runtime
+    entities:
+      - entity: sensor.cooling_hours_today
+        icon: mdi:progress-clock
+      - entity: sensor.cooling_hours_yesterday
+        icon: mdi:progress-clock
+      - entity: sensor.cooling_hours_two_days_ago
+        icon: mdi:progress-clock
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+        name: Downstairs Actual
+      - entity: sensor.setpoint
+        name: Thermostat Setpoint
+    name: Downstairs Temperature
+    icon: mdi:thermometer-lines
+    font_size_header: 20
+    hours_to_show: 24
+    points_per_hour: 6
+    graph: line
+    line_color:
+      - '#FFFFFF'
+      - '#03a9f4'
+    lower_bound: '60'
+    upper_bound: '80'
+    show:
+      state: false
+      points: false
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.th161_temperature
+        name: Upstairs Actual
+      - entity: sensor.setpoint
+        name: Thermostat Setpoint
+    name: Upstairs Temperature
+    icon: mdi:thermometer-lines
+    font_size_header: 20
+    hours_to_show: 24
+    points_per_hour: 6
+    graph: line
+    line_color:
+      - '#FFFFFF'
+      - '#03a9f4'
+    lower_bound: '60'
+    upper_bound: '80'
+    show:
+      state: false
+      points: false
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+        name: Downstairs Actual
+      - entity: sensor.th161_temperature
+        name: Upstairs Actual
+    name: Temperature Delta
+    icon: mdi:thermometer-lines
+    font_size_header: 20
+    hours_to_show: 24
+    points_per_hour: 6
+    graph: line
+    line_color:
+      - '#FFFFFF'
+      - '#03a9f4'
+    lower_bound: '60'
+    upper_bound: '80'
+    show:
+      state: false
+      points: false
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

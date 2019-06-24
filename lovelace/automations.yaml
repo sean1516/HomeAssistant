@@ -132,6 +132,9 @@ cards:
       - entity: automation.holiday_and_birthday_notification
         name: Holiday/Birthday Notification
         icon: mdi:gift
+      - entity: automation.open_uv_update
+        name: Update Open UV Sensors
+        icon: mdi:weather-sunset
   - type: entities
     title: Climate Automations
     show_header_toggle: false

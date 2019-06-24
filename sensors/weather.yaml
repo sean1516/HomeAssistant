@@ -122,6 +122,26 @@
 
 ####################################################
 #                                                  #
+#                   OTHER WEATHER                  #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/template/
+      currenttemp:
+        entity_id: weather.dark_sky
+        value_template: "{{ state_attr('weather.dark_sky', 'temperature') }}"
+        unit_of_measurement: "°F"
+
+      currenthumid:
+        entity_id: weather.dark_sky
+        value_template: "{{ state_attr('weather.dark_sky', 'humidity') }}"
+        unit_of_measurement: "%"
+
+#https://www.home-assistant.io/components/moon/
+  - platform: moon
+
+####################################################
+#                                                  #
 #            END OF CONFIGURATION FILE             #
 #                                                  #
 ####################################################

@@ -1,0 +1,68 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                  HISTORY STATS                   #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/history_stats/
+
+  - platform: history_stats
+    name: Cooling Hours Today
+    entity_id: sensor.operatingstate
+    state: 'Cooling'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Cooling Hours Yesterday
+    entity_id: sensor.operatingstate
+    state: 'Cooling'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+
+  - platform: history_stats
+    name: Cooling Hours Two Days Ago
+    entity_id: sensor.operatingstate
+    state: 'Cooling'
+    type: time
+    end: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - 86400 }}'
+    duration:
+      hours: 24
+
+  - platform: history_stats
+    name: Hours At Work Today
+    entity_id: device_tracker.adams_iphone
+    state: 'Adam Work'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Hours At Work Yesterday
+    entity_id: device_tracker.adams_iphone
+    state: 'Adam Work'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+
+  - platform: history_stats
+    name: Hours At Work Two Days Ago
+    entity_id: device_tracker.adams_iphone
+    state: 'Adam Work'
+    type: time
+    end: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - 86400 }}'
+    duration:
+      hours: 24
+
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

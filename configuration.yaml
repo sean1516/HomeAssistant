@@ -106,7 +106,7 @@ zone: !include zones.yaml
 
 ####################################################
 #                                                  #
-#               EMULATED HUE                       #
+#               Alexa Media                        #
 #                                                  #
 ####################################################
 
@@ -186,14 +186,23 @@ group:
 
 ####################################################
 #                                                  #
-#                REST COMMAND                      #
+#                   OPENUV                         #
 #                                                  #
 ####################################################
 
-rest_command:
-  google_backup:
-    url: 'http://192.168.1.24:8055/gb/doBackup'
-    timeout: '300'
+#https://www.home-assistant.io/components/openuv/
+openuv:
+  api_key: !secret openuv
+  binary_sensors:
+    monitored_conditions:
+      - uv_protection_window
+  sensors:
+    monitored_conditions:
+      - current_ozone_level
+      - current_uv_index
+      - current_uv_level
+      - max_uv_index
+      - safe_exposure_time_type_3
 
 ####################################################
 #                                                  #

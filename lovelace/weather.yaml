@@ -10,6 +10,7 @@ cards:
   - type: weather-forecast
     entity: weather.dark_sky
   - type: entities
+    title: Sun & Moon
     show_header_toggle: false
     entities:
       - entity: sun.sun
@@ -23,6 +24,22 @@ cards:
       - entity: sensor.daylight
         name: Hours of Daylight
         icon: mdi:timelapse
+      - entity: sensor.moon
+  - type: entities
+    title: UV Exposure
+    show_header_toggle: false
+    entities:
+      - entity: sensor.current_ozone_level
+        name: Ozone Level
+      - entity: sensor.current_uv_index
+        name: Current UV Index
+      - entity: sensor.max_uv_index
+        name: Max UV Index
+      - entity: sensor.current_uv_level
+        name: UV Level
+      - entity: sensor.skin_type_3_safe_exposure_time
+        name: Safe Exposure Time 
+        
   - type: entities
     title: Weather Alerts
     show_header_toggle: false

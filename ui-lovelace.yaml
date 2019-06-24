@@ -9,7 +9,7 @@ resources:
   - url: /local/tracker-card.js?v=1.2.5
     type: js
   #https://github.com/thomasloven/lovelace-card-tools
-  - url: /local/card-tools.js?v=deb8e3
+  - url: /local/card-tools.js?v=0.4.1
     type: js
   #https://github.com/MizterB/lovelace-secondaryinfo-entity-row
   - url: /local/secondaryinfo-entity-row.js?v=0.1
@@ -18,10 +18,10 @@ resources:
   - url: /local/vertical-stack-in-card.js?v=v0.1.1
     type: js
   #https://github.com/kalkih/mini-graph-card
-  - url: /local/mini-graph-card-bundle.js?v=0.3.0
+  - url: /local/mini-graph-card-bundle.js?v=0.4.3
     type: module
   #https://github.com/maykar/compact-custom-header
-  - url: /local/compact-custom-header.js?v=1.0.3b1
+  - url: /local/compact-custom-header.js?v=1.0.4b9
     type: module
 
 title: Home
@@ -29,6 +29,7 @@ background: var(--lovelace-background)
 views:
   - !include lovelace/rooms.yaml
   - !include lovelace/switches.yaml
+  - !include lovelace/hvac.yaml
   - !include lovelace/devicestatus.yaml
   - !include lovelace/ha.yaml
   - !include lovelace/weather.yaml

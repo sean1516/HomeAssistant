@@ -45,6 +45,18 @@
     retain: false
 
   - platform: mqtt
+    name: "TH161"
+    state_topic: "stat/th161/POWER"
+    command_topic: "cmnd/th161/POWER"
+    availability_topic: "tele/th161/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
     name: "Kuled1"
     state_topic: "stat/kuled1/POWER"
     command_topic: "cmnd/kuled1/POWER"
