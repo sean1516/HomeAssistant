@@ -95,6 +95,11 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/switches.png">
 </p>
 
+## HVAC
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/hvac.png">
+</p>
+
 ## Device Status
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/devicestatus.png">
