@@ -27,7 +27,7 @@ I am also running the following Hass.io add-ons:
 * __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ 
 * __[Visual Studio Code](https://github.com/hassio-addons/addon-vscode)__ 
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.93.1__
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.94.3__
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -48,7 +48,7 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|45               |10      |8               |26        |85           |3        |146      |7              | 
+|47               |10      |9               |28        |83           |4        |168      |7              | 
 
 # Connected Devices:
 
@@ -62,6 +62,7 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 * __[Broadlink RM Mini 3](https://www.amazon.com/BroadLink-Control-Universal-Remote-RMMINI3-EN/dp/B01FK2SDOC/ref=sr_1_2?ie=UTF8&qid=1499475366&sr=8-2&keywords=broadlink+mini3)__*
 * __[Sonoff Basic (Flashed with Tasmota)](https://www.amazon.com/Sonoff-Wireless-Modified-Low-cost-Compatible/dp/B06WWNBD3Y?ref=ast_p_ei)__*
 * __[Sonoff POW (Flashed with Tasmota)](https://www.amazon.com/Sonoff-Consumption-Monitoring-Appliances-Compatible/dp/B06XSD6PD6?ref=ast_p_ei)__*
+* __[Sonoff TH16 (Flashed with Tasmota)](https://www.amazon.com/Sonoff-TH16-Temperature-Monitoring-Compatible/dp/B06XTNSJ46)__*
 * __[OpenGarage Door Controller ](https://www.amazon.com/OpenGarage-WiFi-enabled-Garage-Door-Opener/dp/B01M4RL0CL)__*
 * __[Kuled WiFi Light Switches (Flashed with Tasmota)](https://www.amazon.com/Required-Wireless-Requires-Schedule-Compatible/dp/B079FDTG7T)__*
 * __[Firefly Electronix Wifi Doorbell](https://www.fireflyelectronix.com/product/wifidoorbell)__*
