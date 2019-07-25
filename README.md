@@ -12,7 +12,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 # Hardware Running My Home Assistant Setup:
 
-* __[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant.  It also runs the following add-ons. 
+__[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant.  It also runs the following add-ons. 
 
 * [Backup to Google Drive](https://github.com/sabeechen/hassio-google-drive-backup)
 * [Dasshio](https://github.com/theastropath/dasshio)
@@ -22,7 +22,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 * [SSH](https://www.home-assistant.io/addons/ssh/)
 * [Samba](https://www.home-assistant.io/addons/samba/)
 
-* __[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance. It also runs the following add-ons. 
+__[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance. It also runs the following add-ons. 
 
 * [Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)
 * [SSH](https://www.home-assistant.io/addons/ssh/)
