@@ -6,7 +6,6 @@
 
 title: Switches
 cards:
-  - type: custom:compact-custom-header
   - type: entities
     title: Bedroom Lights
     show_header_toggle: false

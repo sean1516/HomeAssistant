@@ -1,0 +1,52 @@
+
+#https://home-assistant.io/components/sensor/
+
+####################################################
+#                                                  #
+#                      MQTT                        #
+#                                                  #
+####################################################
+
+#https://home-assistant.io/components/sensor.mqtt/
+
+  - platform: mqtt
+    name: "RPI2 Processor"
+    state_topic: "rpi2/sensor/processor_use/state"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "RPI2 Memory"
+    state_topic: "rpi2/sensor/memory_use_percent/state"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "RPI2 Disk"
+    state_topic: "rpi2/sensor/disk_use_percent_home/state"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "RPI2 Load1m"
+    state_topic: "rpi2/sensor/load_1m/state"
+
+  - platform: mqtt
+    name: "RPI2 Load5m"
+    state_topic: "rpi2/sensor/load_5m/state"
+
+  - platform: mqtt
+    name: "RPI2 Load15m"
+    state_topic: "rpi2/sensor/load_15m/state"
+
+  - platform: mqtt
+    name: "RPI2 Log"
+    state_topic: "rpi2/sensor/home_assistant_log/state"
+    unit_of_measurement: MB
+
+  - platform: mqtt
+    name: "RPI2 Database"
+    state_topic: "rpi2/sensor/home_assistant_v2_db/state"
+    unit_of_measurement: MB
+####################################################
+#                                                  #
+#            END OF CONFIGURATION FILE             #
+#                                                  #
+####################################################

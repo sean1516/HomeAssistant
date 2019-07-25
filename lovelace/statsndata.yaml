@@ -6,7 +6,40 @@
 
 title: Stats & Data
 cards:
-  - type: custom:compact-custom-header
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: entities
+        show_header_toggle: false
+        title: UPS Status
+        theme: midnightclear
+        entities:
+          - entity: sensor.ups_status
+            name: State
+            icon: mdi:flash-circle
+          - entity: sensor.ups_input_voltage
+          - entity: sensor.ups_battery_voltage
+          - entity: sensor.ups_output_voltage
+          - entity: sensor.ups_battery_charge
+            icon: mdi:battery-charging
+          - entity: sensor.ups_load
+            icon: mdi:percent
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            theme: midnightclear
+            entity: sensor.approxwattage
+            name: Load
+            icon: mdi:gauge
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            theme: midnightclear
+            entity: sensor.ups_battery_runtime
+            name: Runtime
+            hours_to_show: 24
+            graph: line
+            detail: 1
   - type: entities
     title: Adam's & Wabash Bus Times
     show_header_toggle: false
@@ -95,6 +128,7 @@ cards:
         icon: mdi:progress-clock
       - entity: sensor.hours_at_work_two_days_ago
         icon: mdi:progress-clock
+
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #

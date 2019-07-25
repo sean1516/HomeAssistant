@@ -1,0 +1,98 @@
+####################################################
+#                                                  #
+#             RASPBERRY PI 2 SERVER                #
+#                                                  #
+####################################################
+
+title: HA
+icon: mdi:raspberry-pi
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Raspberry Pi 2 Load
+    cards:
+      - type: glance
+        theme: midnightclear
+        columns: 3
+        entities:
+          - entity: sensor.rpi2_load1m
+            icon: mdi:speedometer
+            name: Load 1m
+          - entity: sensor.rpi2_load5m
+            icon: mdi:speedometer
+            name: Load 5m
+          - entity: sensor.rpi2_load15m
+            icon: mdi:speedometer
+            name: Load 15m
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            theme: midnightclear
+            icon: mdi:memory
+            entity: sensor.rpi2_processor
+            name: Processor
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            theme: midnightclear
+            icon: mdi:memory
+            entity: sensor.rpi2_memory
+            name: Memory
+            hours_to_show: 24
+            graph: line
+            detail: 1
+      - type: glance
+        theme: midnightclear
+        columns: 3
+        entities:
+          - entity: sensor.rpi2_log
+            name: Log File
+          - entity: sensor.rpi2_database
+            name: Database
+          - entity: sensor.rpi2_disk
+            name: Disk Use
+            icon: mdi:harddisk
+  - type: entities
+    title: Raspberry Pi 2 Hass.io Addons
+    show_header_toggle: false
+    entities:
+      - entity: switch.mosquitto
+        name: Mosquitto MQTT
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.mosquitto.state ]]"
+      - entity: switch.sambarpi2
+        name: Samba
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.samba.state ]]"
+      - entity: switch.ssh_rpi2
+        name: SSH
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.ssh.state ]]"
+      - entity: switch.tasmoadmin
+        name: TasmoAdmin
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.tasmoadmin.state ]]"
+      - entity: switch.unificontroller
+        name: Unifi Controller
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.unificontroller.state ]]"
+  - type: entities
+    title: Network Connection
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.raspberry_pi_2
+        name: Raspberry Pi 2 Wired
+        icon: mdi:raspberry-pi
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "192.168.1.33"
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

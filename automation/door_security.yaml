@@ -23,6 +23,10 @@
         data:
           title: "Interior Garage Door Opened"
           message: "The Interior Garage Door was opened and Amy and Adam are not home"
+      - service: notify.ios_amys_iphone
+        data:
+          title: "Interior Garage Door Opened"
+          message: "The Interior Garage Door was opened and Amy and Adam are not home"
 
 #########################################################
 #                                                       #
@@ -44,10 +48,14 @@
         - condition: template
           value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
-      service: notify.ios_adams_iphone
-      data:
-        title: "Exterior Garage Door Opened"
-        message: "The Exterior Garage Door was opened and Amy and Adam are not home"
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Exterior Garage Door Opened"
+          message: "The Exterior Garage Door was opened and Amy and Adam are not home"
+      - service: notify.ios_amys_iphone
+        data:
+          title: "Exterior Garage Door Opened"
+          message: "The Exterior Garage Door was opened and Amy and Adam are not home"
 
 #########################################################
 #                                                       #
@@ -69,10 +77,14 @@
         - condition: template
           value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
-      service: notify.ios_adams_iphone
-      data:
-        title: "Front Door Opened"
-        message: "The Front door was opened and Amy and Adam are not home"
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Front Door Opened"
+          message: "The Front Door was opened and Amy and Adam are not home"
+      - service: notify.ios_amys_iphone
+        data:
+          title: "Front Door Opened"
+          message: "The Front Door was opened and Amy and Adam are not home"
 
 #########################################################
 #                                                       #
@@ -98,10 +110,14 @@
           entity_id: sensor.garagedoorstatus
           state: 'Open'
     action:
-      service: notify.ios_adams_iphone
-      data:
-        title: "Exterior Garage Door Left Open"
-        message: "The Exterior Garage Door was left open and Amy and Adam are not home"
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Exterior Garage Door Left Open"
+          message: "The Exterior Garage Door was left open and Amy and Adam are not home"
+      - service: notify.ios_amys_iphone
+        data:
+          title: "Exterior Garage Door Left Open"
+          message: "The Exterior Garage Door was left open and Amy and Adam are not home"
 
 #########################################################
 #                                                       #
@@ -123,10 +139,14 @@
         - condition: template
           value_template: "{{ states('group.amy_home_presence') != 'home' }}"
     action:
-      service: notify.ios_adams_iphone
-      data:
-        title: "Back Door Opened"
-        message: "The Back Door was opened and Amy and Adam are not home"
+      - service: notify.ios_adams_iphone
+        data:
+          title: "Back Door Opened"
+          message: "The Back Door was opened and Amy and Adam are not home"
+      - service: notify.ios_amys_iphone
+        data:
+          title: "Back Door Opened"
+          message: "The Back Door was opened and Amy and Adam are not home"
 
 #########################################################
 #                                                       #

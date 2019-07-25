@@ -18,17 +18,8 @@
         unit_of_measurement: '°F'
         value_template: "{{ state_attr('climate.linear_cooling', 'temperature') }}"
 
-      fanstate:
-        value_template: "{{ state_attr('climate.linear_cooling', 'fan_state') }}"
-
-      fanmode:
-        value_template: "{{ state_attr('climate.linear_cooling', 'fan_mode') }}"
-
       operatingstate:
-        value_template: "{{ state_attr('climate.linear_cooling', 'operating_state') }}"
-
-      operationmode:
-        value_template: "{{ state_attr('climate.linear_cooling', 'operation_mode') }}"
+        value_template: "{{ state_attr('climate.linear_cooling', 'hvac_action') }}"
 
       sunset:
         value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'

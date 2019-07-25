@@ -63,6 +63,12 @@
       - sensor.amy_s_iphone_battery_level
       - sensor.amy_s_iphone_battery_state
       - sensor.doorbell
+      - sensor.rpi2_disk
+      - sensor.rpi2_load15m
+      - sensor.rpi2_load1m
+      - sensor.rpi2_load5m
+      - sensor.rpi2_memory
+      - sensor.rpi2_processor
     domains:
       - media_player
       - climate

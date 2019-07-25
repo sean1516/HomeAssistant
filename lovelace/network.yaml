@@ -1,0 +1,66 @@
+####################################################
+#                                                  #
+#                  DEVICE STATUS                   #
+#                                                  #
+####################################################
+
+title: Network Status
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Network Status
+    cards:
+      - type: horizontal-stack
+        title: Network Status
+        cards:
+          - type: sensor
+            theme: midnightclear
+            entity: sensor.speedtest_download
+            name: Download
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            theme: midnightclear
+            entity: sensor.speedtest_upload
+            name: Upload
+            hours_to_show: 24
+            graph: line
+            detail: 1
+      - type: entities
+        theme: midnightclear
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.modem
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.100.1"
+          - entity: binary_sensor.pfsense_vm
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "[[ sensor.myip.state ]]"
+          - entity: binary_sensor.ubiquiti_switch
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.1.19"
+          - entity: binary_sensor.ubiquiti_ap
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.1.38"
+  - type: entities
+    entities:
+      - entity: sensor.basic1_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.pow1_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.pow2_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.th161_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.kuled1_signal
+        icon: 'mdi:wifi'
+      - entity: sensor.kuled2_signal
+        icon: 'mdi:wifi'
+    title: Wifi Strength
+    show_header_toggle: false
+
+####################################################
+#                                                  #
+#          END OF CONFIGURATION FILE               #
+#                                                  #
+####################################################

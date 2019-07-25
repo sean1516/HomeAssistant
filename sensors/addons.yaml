@@ -48,7 +48,7 @@
     value_template: '{{ value_json.data.state }}'
     scan_interval: 60
     headers:
-      Authorization: !secret llt
+      Authorization: !secret lltrpi2
       Content-Type: application/json
 
   - platform: rest
@@ -79,6 +79,24 @@
       Content-Type: application/json
 
   - platform: rest
+    resource: !secret sambarpi2
+    name: samba rpi2
+    value_template: '{{ value_json.data.state }}'
+    scan_interval: 5
+    headers:
+      Authorization: !secret lltrpi2
+      Content-Type: application/json
+
+  - platform: rest
+    resource: !secret sshrpi2
+    name: ssh rpi2
+    value_template: '{{ value_json.data.state }}'
+    scan_interval: 60
+    headers:
+      Authorization: !secret lltrpi2
+      Content-Type: application/json
+
+  - platform: rest
     resource: !secret ssh
     name: ssh
     value_template: '{{ value_json.data.state }}'
@@ -93,7 +111,7 @@
     value_template: '{{ value_json.data.state }}'
     scan_interval: 60
     headers:
-      Authorization: !secret llt
+      Authorization: !secret lltrpi2
       Content-Type: application/json
 
   - platform: rest
@@ -102,7 +120,7 @@
     value_template: '{{ value_json.data.state }}'
     scan_interval: 60
     headers:
-      Authorization: !secret llt
+      Authorization: !secret lltrpi2
       Content-Type: application/json
 
   - platform: rest

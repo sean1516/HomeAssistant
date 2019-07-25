@@ -12,7 +12,7 @@
   - platform: history_stats
     name: Cooling Hours Today
     entity_id: sensor.operatingstate
-    state: 'Cooling'
+    state: 'cooling'
     type: time
     start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
     end: '{{ now() }}'
@@ -20,7 +20,7 @@
   - platform: history_stats
     name: Cooling Hours Yesterday
     entity_id: sensor.operatingstate
-    state: 'Cooling'
+    state: 'cooling'
     type: time
     end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
     duration:
@@ -29,7 +29,7 @@
   - platform: history_stats
     name: Cooling Hours Two Days Ago
     entity_id: sensor.operatingstate
-    state: 'Cooling'
+    state: 'cooling'
     type: time
     end: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - 86400 }}'
     duration:

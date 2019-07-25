@@ -31,7 +31,9 @@ views:
   - !include lovelace/switches.yaml
   - !include lovelace/hvac.yaml
   - !include lovelace/devicestatus.yaml
+  - !include lovelace/network.yaml
   - !include lovelace/ha.yaml
+  - !include lovelace/rpi2.yaml
   - !include lovelace/weather.yaml
   - !include lovelace/statsndata.yaml
   - !include lovelace/automations.yaml

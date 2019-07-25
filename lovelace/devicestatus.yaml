@@ -6,93 +6,44 @@
 
 title: Device Status
 cards:
-  - type: custom:compact-custom-header
   - type: custom:vertical-stack-in-card
-    cards:
+    cards:        
       - type: entities
+        title: Phone Location & Battery Data
         show_header_toggle: false
-        title: UPS Status
         theme: midnightclear
         entities:
-          - entity: sensor.ups_status
-            name: State
-            icon: mdi:flash-circle
-          - entity: sensor.ups_input_voltage
-          - entity: sensor.ups_battery_voltage
-          - entity: sensor.ups_output_voltage
-          - entity: sensor.ups_battery_charge
-            icon: mdi:battery-charging
-          - entity: sensor.ups_load
-            icon: mdi:percent
-      - type: horizontal-stack
-        cards:
-          - type: sensor
-            theme: midnightclear
-            entity: sensor.approxwattage
-            name: Load
-            icon: mdi:gauge
-            hours_to_show: 24
-            graph: line
-            detail: 1
-          - type: sensor
-            theme: midnightclear
-            entity: sensor.ups_battery_runtime
-            name: Runtime
-            hours_to_show: 24
-            graph: line
-            detail: 1
-  - type: custom:vertical-stack-in-card
-    title: Network Status
-    cards:
-      - type: horizontal-stack
-        title: Network Status
-        cards:
-          - type: sensor
-            theme: midnightclear
-            entity: sensor.speedtest_download
-            name: Download
-            hours_to_show: 24
-            graph: line
-            detail: 1
-          - type: sensor
-            theme: midnightclear
-            entity: sensor.speedtest_upload
-            name: Upload
-            hours_to_show: 24
-            graph: line
-            detail: 1
-      - type: entities
-        theme: midnightclear
-        show_header_toggle: false
-        entities:
-          - entity: binary_sensor.modem
+          - type: section
+            label: Adam's iPhone
+          - entity:  group.adam_home_presence
+            name: Location
+            icon: mdi:crosshairs-gps
             type: "custom:secondaryinfo-entity-row"
-            secondary_info: "192.168.100.1"
-          - entity: binary_sensor.pfsense_vm
+            secondary_info: "GPS location is [[ device_tracker.adams_iphone.state ]]"
+          - entity: sensor.adam_s_iphone_battery_level
+            name: Battery
             type: "custom:secondaryinfo-entity-row"
-            secondary_info: "[[ sensor.myip.state ]]"
-          - entity: binary_sensor.ubiquiti_switch
+            secondary_info: "[[ {entity}.attributes.Battery State ]]"
+          - entity: device_tracker.d81c79eb20c9
+            name: Wifi Connection
+            icon: mdi:cellphone-iphone
             type: "custom:secondaryinfo-entity-row"
-            secondary_info: "192.168.1.19"
-          - entity: binary_sensor.ubiquiti_ap
+            secondary_info: "192.168.1.7"
+          - type: section
+            label: Amy's iPhone
+          - entity:  group.amy_home_presence
+            name: Location
+            icon: mdi:crosshairs-gps
             type: "custom:secondaryinfo-entity-row"
-            secondary_info: "192.168.1.38"
-  - type: entities
-    entities:
-      - entity: sensor.basic1_signal
-        icon: 'mdi:wifi'
-      - entity: sensor.pow1_signal
-        icon: 'mdi:wifi'
-      - entity: sensor.pow2_signal
-        icon: 'mdi:wifi'
-      - entity: sensor.th161_signal
-        icon: 'mdi:wifi'
-      - entity: sensor.kuled1_signal
-        icon: 'mdi:wifi'
-      - entity: sensor.kuled2_signal
-        icon: 'mdi:wifi'
-    title: Wifi Strength
-    show_header_toggle: false
+            secondary_info: "GPS location is [[ device_tracker.amys_iphone.state ]]"
+          - entity: sensor.amy_s_iphone_battery_level
+            name: Battery
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "[[ {entity}.attributes.Battery State ]]"
+          - entity: device_tracker.d81c79a4a851
+            name: Wifi Connection
+            type: "custom:secondaryinfo-entity-row"
+            secondary_info: "192.168.1.2"
   - type: entities
     title: Home Automation Devices
     show_header_toggle: false
@@ -172,11 +123,6 @@ cards:
         icon: mdi:desktop-tower
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.6"
-      - entity: binary_sensor.nas_vm
-        name: NAS VM
-        icon: mdi:nas
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.14"
       - entity: binary_sensor.hassio_dev_vm
         name: Hass.io Dev VM
         icon: mdi:server
@@ -225,7 +171,7 @@ cards:
         icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.31"
-      - entity: device_tracker.b827eb0ec9a4
+      - entity: binary_sensor.raspberry_pi_2
         name: Raspberry Pi 2 Wired
         icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"

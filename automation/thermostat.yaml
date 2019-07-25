@@ -59,6 +59,36 @@
 
 #########################################################
 #                                                       #
+#            SET Thermostat AWAY MODE - OFF  1500       #
+#                                                       #
+#########################################################
+
+  - alias: "Set Thermostat Away Mode at 1500"
+    initial_state: true
+    trigger:
+      platform: time
+      at: '15:00'
+    condition:
+      condition: and
+      conditions:
+        - condition: template
+          value_template: "{% if states('sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3') | float >= 77 %} True {% else %} False {% endif %}"
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.linear_cooling
+          temperature: 74
+
+
+#########################################################
+#                                                       #
 #        SET Thermostat AWAY MODE - OFF WHEN HOME       #
 #                                                       #
 #########################################################

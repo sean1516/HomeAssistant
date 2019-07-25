@@ -7,7 +7,6 @@
 title: HA
 icon: mdi:home-assistant
 cards:
-  - type: custom:compact-custom-header
   - type: entities
     title: Hass.io Addons
     show_header_toggle: false
@@ -27,11 +26,6 @@ cards:
         icon: mdi:server-plus
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.gdrivebackup.state ]]"
-      - entity: switch.mosquitto
-        name: Mosquitto MQTT
-        icon: mdi:server-plus
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "[[ sensor.mosquitto.state ]]"
       - entity: switch.nut
         name: NUT
         icon: mdi:server-plus
@@ -52,23 +46,13 @@ cards:
         icon: mdi:server-plus
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.ssh.state ]]"
-      - entity: switch.tasmoadmin
-        name: TasmoAdmin
-        icon: mdi:server-plus
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "[[ sensor.tasmoadmin.state ]]"
-      - entity: switch.unificontroller
-        name: Unifi Controller
-        icon: mdi:server-plus
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "[[ sensor.unificontroller.state ]]"
       - entity: switch.vscode
         name: Visual Studio Code
         icon: mdi:server-plus
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.vscode.state ]]"
   - type: custom:vertical-stack-in-card
-    title: Hass.io VM
+    title: Raspberry Pi 3B+ Load
     cards:
       - type: glance
         theme: midnightclear

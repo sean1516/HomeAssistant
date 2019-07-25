@@ -6,7 +6,6 @@
 
 title: Weather
 cards:
-  - type: custom:compact-custom-header
   - type: weather-forecast
     entity: weather.dark_sky
   - type: entities

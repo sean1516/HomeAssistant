@@ -53,6 +53,8 @@
         - sensor.tasmoadmin
         - sensor.unificontroller
         - sensor.vscode
+        - sensor.samba_rpi2
+        - sensor.ssh_rpi2
       from: started
       to: stopped
     action:
@@ -96,11 +98,14 @@
       - platform: numeric_state
         entity_id: sensor.disk_use_percent_home
         above: 85
+      - platform: numeric_state
+        entity_id: sensor.rpi2_disk
+        above: 50
     action:
       service: notify.home_assistant
       data_template:
-        title: "Hass.io VM Disk Use Alarm"
-        message: "Hass.io VM is running low on disk space, usage is currently at {{ states.sensor.disk_use_percent_home.state }} %!"
+        title: "Disk Use Alarm"
+        message: "{{ trigger.to_state.attributes.friendly_name }} is running low on disk space, usage is currently at {{ trigger.to_state.state }} %!"
 
 #########################################################
 #                                                       #

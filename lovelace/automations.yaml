@@ -6,7 +6,6 @@
 
 title: Automations
 cards:
-  - type: custom:compact-custom-header
   - type: entities
     title: Automation Modes
     show_header_toggle: false
@@ -141,6 +140,9 @@ cards:
     entities:
       - entity: automation.set_thermostat_away_mode_when_leaving
         name: Set thermostat Away Mode When Leaving
+        icon: mdi:home-outline
+      - entity: automation.set_thermostat_away_mode_at_1500
+        name: Turn Off thermostat Away Mode at 1500
         icon: mdi:home-outline
       - entity: automation.set_thermostat_away_mode_at_1600
         name: Turn Off thermostat Away Mode at 1600

@@ -9,7 +9,7 @@
 #https://www.home-assistant.io/components/device_tracker.unifi/
 
   - platform: unifi
-    host: 192.168.1.24
+    host: 192.168.1.33
     username: !secret ubiquiti_username
     password: !secret ubiquiti_password
     verify_ssl: false
