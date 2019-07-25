@@ -11,23 +11,26 @@ A detailed description of each of my automations and a link to the yaml file is 
 This is the most important part of Home Assistant!  Remote control and voice commands are nice, however, that is not home automation, just remote control.  Automations should make your life easier, look at what you do every day, the simplest things, and automate them.  To me Home Automation is collecting data about your home and automatically acting based on that data.
 
 # Hardware Running My Home Assistant Setup:
-* __[Dell Optiplex 9010 Small Form Factor (SFF) ](http://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell_OptiPlex_9010_spec_sheet.pdf)__ This desktop has a i5 3470T (low power CPU) swapped in.  The machine is running  [VMWare ESXi](https://www.vmware.com/products/esxi-and-esx.html) which is a bare metal hypervisor that allows me to run multiple virtual machines on the same physical hardware. [This](https://blog.markdepalma.com/?p=82) is a great guide for getting HassOS running in ESXi. The HA virtual machine is given 2 cores, 2GB of RAM and a 16GB disk. I also run a [Router](https://www.pfsense.org/) and NAS from the same box.
 
-I am also running the following Hass.io add-ons:
+* __[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant.  It also runs the following add-ons. 
 
-* __[Backup to Google Drive](https://github.com/sabeechen/hassio-google-drive-backup)__ 
-* __[Dasshio](https://github.com/theastropath/dasshio)__ 
-* __[DuckDNS](www.home-assistant.io/addons/duckdns/)__
-* __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ 
-* __[Network UPS Tools](https://github.com/colindunn/hassio-addons)__ 
-* __[RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)__ 
-* __[SSH](https://www.home-assistant.io/addons/ssh/)__ 
-* __[Samba](https://www.home-assistant.io/addons/samba/)__ 
-* __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ 
-* __[Unifi Controller](https://github.com/hassio-addons/addon-unifi)__ 
-* __[Visual Studio Code](https://github.com/hassio-addons/addon-vscode)__ 
+* [Backup to Google Drive](https://github.com/sabeechen/hassio-google-drive-backup)
+* [Dasshio](https://github.com/theastropath/dasshio)
+* [DuckDNS](www.home-assistant.io/addons/duckdns/)
+* [Network UPS Tools](https://github.com/colindunn/hassio-addons)
+* [RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)
+* [SSH](https://www.home-assistant.io/addons/ssh/)
+* [Samba](https://www.home-assistant.io/addons/samba/)
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.94.3__
+* __[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance. It also runs the following add-ons. 
+
+* [Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)
+* [SSH](https://www.home-assistant.io/addons/ssh/)
+* [Samba](https://www.home-assistant.io/addons/samba/)
+* [TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)
+* [Unifi Controller](https://github.com/hassio-addons/addon-unifi)
+
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.96.3__
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
@@ -39,16 +42,14 @@ I think this is an often overlooked part of any internet connected project.  I a
 - [Test your security and test it often](https://community.home-assistant.io/t/test-your-security-and-test-it-often/76354).
 
 # Editing the Configuration Files:
-The [Visual Studio Code](https://github.com/hassio-addons/addon-vscode) addon makes it super easy to access and edit your files.  It is now my go to.  
-
-What worked for me in the past is creating a Samba share that I can then edit on any computer in my house.  I accomplished this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
+I create a Samba share that I can then edit on any computer in my house.  I accomplished this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
 
 After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |10      |9               |28        |83           |4        |168      |7              | 
+|47               |10      |9               |30        |84           |4        |175      |7              | 
 
 # Connected Devices:
 
@@ -105,9 +106,19 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/devicestatus.png">
 </p>
 
+## Network Status
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/networkstatus.png">
+</p>
+
 ## Home Assistant Status
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/ha.png">
+</p>
+
+## Raspberry Pi2B Status
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/pi2bstatus.png">
 </p>
 
 ## Weather
