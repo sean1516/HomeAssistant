@@ -36,7 +36,6 @@ I'm currently running [Home Assistant](https://home-assistant.io) version __0.96
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L45) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L48).
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level. 
-- Using the tools in PFSense I block a large amount of traffic from ever reaching my network using PFblockerNG, Suricata and a combination of published lists, and custom rules.
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://github.com/SilvrrGIT/HomeAssistant/wiki/Let's-Encrypt-Setup-(Hassbian,-Python-Virtual-Environment)) to get it setup on Hassbian and now use the [DuckDNS](www.home-assistant.io/addons/duckdns/) add-on in Hass.io to do the same thing.
 - [Test your security and test it often](https://community.home-assistant.io/t/test-your-security-and-test-it-often/76354).
@@ -44,12 +43,12 @@ I think this is an often overlooked part of any internet connected project.  I a
 # Editing the Configuration Files:
 I create a Samba share that I can then edit on any computer in my house.  I accomplished this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
 
-After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to edit my files.  It works on both Windows and Linux, has a great interface and some nice features. [NotePad++](https://notepad-plus-plus.org/) is also easy to use and is a bit more lightweight than Atom (no Linux support though)
+After you have the Samba share setup, I liked to use [Visual Studio Code](https://code.visualstudio.com/) to edit my files with the [Home Assistant Config Helper]([Visual Studio Code](https://code.visualstudio.com/)).  It works on both Windows and Linux, has a great interface and some nice features. 
 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |10      |9               |30        |84           |4        |175      |7              | 
+|47               |10      |8               |30        |84           |4        |190      |7              | 
 
 # Connected Devices:
 
@@ -79,7 +78,8 @@ After you have the Samba share setup, I liked to use [Atom](https://atom.io/) to
 
 ## Hardwired Devices
 * __[Cyberpower CP1500PFCLCD UPS ](https://www.amazon.com/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W)__ used to detect power outages and keep network and HA running in a power outage.
-* __[Ubiquiti Unifi Ap-AC Long Range - Wireless Access Point](https://www.amazon.com/Ubiquiti-Unifi-Ap-AC-Long-Range/dp/B015PRCBBI)__ used for presence detection
+* __[Ubiquiti Unifi AP-AC Long Range - Wireless Access Point](https://www.ui.com/unifi/unifi-ap-ac-lr/)__ used for presence detection
+* __[Ubiquiti Unifi Security Gateway](https://www.ui.com/unifi-routing/usg/)__ used for network stats
 * __[Ikea TRÅDFRI Gateway](http://www.ikea.com/us/en/catalog/products/00337813/)__*
 
 *Block these from external network access and they will still work on your local network with Home Assistant.
