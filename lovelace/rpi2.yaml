@@ -47,11 +47,22 @@ cards:
         entities:
           - entity: sensor.rpi2_log
             name: Log File
+            icon: mdi:file
           - entity: sensor.rpi2_database
             name: Database
+            icon: mdi:file
           - entity: sensor.rpi2_disk
             name: Disk Use
             icon: mdi:harddisk
+      - type: sensor
+        theme: midnightclear
+        name: CPU Temperature
+        icon: mdi:memory
+        entity: sensor.rpi2_temperature
+        name: Processor
+        hours_to_show: 24
+        graph: line
+        detail: 1
   - type: entities
     title: Raspberry Pi 2 Hass.io Addons
     show_header_toggle: false

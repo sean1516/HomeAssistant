@@ -15,6 +15,11 @@
     unit_of_measurement: "%"
 
   - platform: mqtt
+    name: "RPI2 Temperature"
+    state_topic: "rpi2/sensor/cpu_temperature/state"
+    unit_of_measurement: "°F"
+
+  - platform: mqtt
     name: "RPI2 Memory"
     state_topic: "rpi2/sensor/memory_use_percent/state"
     unit_of_measurement: "%"

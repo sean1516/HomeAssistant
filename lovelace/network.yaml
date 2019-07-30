@@ -9,6 +9,19 @@ cards:
   - type: custom:vertical-stack-in-card
     title: Network Status
     cards:
+      - type: entities
+        theme: midnightclear
+        show_header_toggle: false
+        entities:
+          - entity: sensor.wireless_clients
+            name: Wireless Clients Connected
+            icon: mdi:access-point-network
+          - entity: sensor.wired_clients
+            name: Wired Clients Connected
+            icon: mdi:server-network
+          - entity: sensor.guest_clients
+            name: Guest Clients Connected
+            icon: mdi:account-network
       - type: horizontal-stack
         title: Network Status
         cards:
@@ -34,6 +47,7 @@ cards:
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.100.1"
           - entity: binary_sensor.pfsense_vm
+            name: Ubiquiti Security Gateway
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "[[ sensor.myip.state ]]"
           - entity: binary_sensor.ubiquiti_switch
@@ -42,6 +56,37 @@ cards:
           - entity: binary_sensor.ubiquiti_ap
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.1.38"
+  - type: custom:vertical-stack-in-card
+    title: Unifi Security Gateway Status
+    cards:
+      - type: horizontal-stack
+        title: NUbiquiti Security Gateway Status
+        cards:
+          - type: sensor
+            theme: midnightclear
+            icon: mdi:cloud-upload-outline
+            entity: sensor.internet_out_mbps
+            name: WAN Upload
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            theme: midnightclear
+            icon: mdi:cloud-download-outline
+            entity: sensor.internet_in_mbps
+            name: WAN Download
+            hours_to_show: 24
+            graph: line
+            detail: 1
+      - type: entities
+        theme: midnightclear
+        show_header_toggle: false
+        entities:
+          - entity: sensor.unifi_gateway_alerts
+          - entity: sensor.unifi_gateway_www
+          - entity: sensor.unifi_gateway_wlan
+          - entity: sensor.unifi_gateway_lan
+          - entity: sensor.unifi_gateway_firmware_upgradable
   - type: entities
     entities:
       - entity: sensor.basic1_signal

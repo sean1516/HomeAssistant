@@ -69,6 +69,10 @@
       - sensor.rpi2_load5m
       - sensor.rpi2_memory
       - sensor.rpi2_processor
+      - sensor.internet_out_mbps
+      - sensor.internet_in_mbps
+      - sensor.cpu_temperature
+      - sensor.rpi2_temperature
     domains:
       - media_player
       - climate

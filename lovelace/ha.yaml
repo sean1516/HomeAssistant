@@ -46,11 +46,6 @@ cards:
         icon: mdi:server-plus
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.ssh.state ]]"
-      - entity: switch.vscode
-        name: Visual Studio Code
-        icon: mdi:server-plus
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "[[ sensor.vscode.state ]]"
   - type: custom:vertical-stack-in-card
     title: Raspberry Pi 3B+ Load
     cards:
@@ -91,6 +86,15 @@ cards:
           - entity: sensor.disk_use_percent_home
             name: Disk Use
             icon: mdi:harddisk
+      - type: sensor
+        theme: midnightclear
+        name: CPU Temperature
+        icon: mdi:memory
+        entity: sensor.cpu_temperature
+        name: Processor
+        hours_to_show: 24
+        graph: line
+        detail: 1
   - type: glance
     title: Home Assistant Info
     entities:

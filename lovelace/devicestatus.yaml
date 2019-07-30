@@ -123,11 +123,6 @@ cards:
         icon: mdi:desktop-tower
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.6"
-      - entity: binary_sensor.hassio_dev_vm
-        name: Hass.io Dev VM
-        icon: mdi:server
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.27"
   - type: entities
     title: Wireless Devices
     show_header_toggle: false

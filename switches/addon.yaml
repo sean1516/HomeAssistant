@@ -144,17 +144,6 @@
           data:
             addon: a0d7b954_unifi
 
-      vscode:
-        value_template: "{{ is_state('sensor.vscode', 'started') }}"
-        turn_on:
-          service: hassio.addon_start
-          data:
-            addon: a0d7b954_vscode
-        turn_off:
-          service: hassio.addon_stop
-          data:
-            addon: a0d7b954_vscode
-
 ####################################################
 #                                                  #
 #           END OF CONFIGURATION FILE              #

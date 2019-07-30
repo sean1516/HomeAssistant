@@ -25,9 +25,6 @@
     host: 192.168.1.1
     name: PFSense VM
   - platform: ping
-    host: 192.168.1.27
-    name: Hassio DEV VM
-  - platform: ping
     host: 192.168.1.33
     name: Raspberry Pi 2
 
