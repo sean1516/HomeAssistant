@@ -118,7 +118,7 @@ After you have the Samba share setup, I liked to use [Visual Studio Code](https:
 
 ## Raspberry Pi2B Status
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/pi2bstatus.png">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/pi2status.png">
 </p>
 
 ## Weather
