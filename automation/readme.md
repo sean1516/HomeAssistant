@@ -100,7 +100,7 @@ Some automations for Home Assistant related items.
 * Notify me if there is a custom component/card update available
 * Notify me and restart the nut addon if it stops reporting values
 
-### Leaving Hom.yaml Automations:
+### Leaving Home.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/leaving_home.yaml)__
 
 An automation to turn off light and switches when no one is home.  No sense in these being on with no one home.  
@@ -165,11 +165,6 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 * Notify me if there is a failed login attempt to the HA front end
 * Notify me of a new device added to my Wifi network
 
-### Snapshot.yaml Automations:
-__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/snapshot.yaml)__
-
-Make a full hassio snapshot everynight at 3:00 a.m. and upload a copy to my HomeAssistant gmail account.  I keep 15 days on the gmail account and 3 days locally.
-
 ### Thermostat.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/thermostat.yaml)__
 
@@ -193,13 +188,6 @@ __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/
 This is a single switch to turn on/off a number of automations and devices when we will be away from the house for an extended period of time. 
 * Turn On Vacation Mode with Vacation Mode Switch
 * Turn Off Vacation Mode with Vacation Mode Switch
-
-### Watchdog.yaml Automations:
-__[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/watchdog.yaml)__
-
-I wanted to build a watchdog that would tell me if either of my instances goes down.  I also wanted to be able to see more than if they were connected (ie. not just a ping).  To do this the main instance turns on a MQTT switch and the remote instance turns it off, both are on a one minute cycle.  Both instances monitor the switch and notify me if the state doesn't change after 60 seconds.  
-
-The goal of this is to show that not only are the two instances up and running but they are processing incoming data, running automations and it also shows that my MQTT broker is up and running correctly.  
 
 ### Weather.yaml Automations:
 __[File Link](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/weather.yaml)__
