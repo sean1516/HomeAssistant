@@ -74,7 +74,7 @@ After you have the Samba share setup, I liked to use [Visual Studio Code](https:
 * [GE Z-Wave Plus Hinge Pin Door Sensors ](https://www.amazon.com/GE-Wireless-Attaches-Existing-32563/dp/B01KQDIUAW/)
 * [Aeotec Z-wave Range Extender ](https://www.amazon.com/Aeotec-Range-Extender-Z-Wave-repeater/dp/B01M6CKJXC)
 * [Dome Miniature, Z-Wave Plus Door/Window Sensor](https://www.amazon.com/Dome-Home-Automation-Miniature-DMWD1/dp/B01JGMZNNG)
-* [Go Control Thermostat](https://www.irisbylowes.com/products/gocontrol-programmable-thermostat/)
+* [Go Control Thermostat](https://www.gocontrol.com/detail.php?productId=3)
 
 ### Hardwired Devices
 * [Cyberpower CP1500PFCLCD UPS ](https://www.amazon.com/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W) used to detect power outages and keep network and HA running in a power outage.
