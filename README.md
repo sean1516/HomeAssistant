@@ -48,7 +48,7 @@ After you have the Samba share setup, I liked to use [Visual Studio Code](https:
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|47               |10      |8               |30        |84           |4        |190      |7              | 
+|48               |10      |12              |29        |84           |4        |200      |7              | 
 
 # Connected Devices:
 
