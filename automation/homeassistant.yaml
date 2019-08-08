@@ -118,12 +118,13 @@
     trigger:
       - platform: state
         entity_id:
-          - zwave.aeotec_zw090_zstick_gen5_us
+          - zwave.aeotec_zw090_z_stick_gen5_us
           - zwave.ge_32563_hinge_pin_smart_door_sensor
           - zwave.ge_32563_hinge_pin_smart_door_sensor_2
           - zwave.vision_zg8101_garage_door_detector
-          - zwave.unknown_id021f_unknown_type0003_id0101
-          - zwave.linear_gctbz48_battery_powered_zwave_thermostat_3
+          - zwave.unknown_id_021f_unknown_type_0003_id_0101
+          - zwave.linear_gc_tbz48_battery_powered_z_wave_thermostat
+          - zwave.aeotec_zw117_range_extender_6
         to: 'dead'
     action:
       service: notify.home_assistant

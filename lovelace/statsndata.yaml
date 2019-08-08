@@ -98,9 +98,6 @@ cards:
         icon: 'mdi:map-clock-outline'
       - type: section
         label: Bartlett to Union Station
-      - entity: sensor.bartlett_to_union
-        name: Next Train Leaves
-        icon: 'mdi:train'
       - entity: sensor.next_b_to_u_depart
         name: Departs
         icon: 'mdi:calendar-clock'
@@ -109,9 +106,6 @@ cards:
         icon: 'mdi:calendar-clock'
       - type: section
         label: Union Station to Bartlett
-      - entity: sensor.union_to_bartlett
-        name: Next Train Leaves
-        icon: 'mdi:train'
       - entity: sensor.next_u_to_b_depart
         name: Departs
         icon: 'mdi:calendar-clock'

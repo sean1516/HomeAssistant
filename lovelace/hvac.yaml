@@ -18,7 +18,7 @@ cards:
     show_header_toggle: false
     title: Temperature & Humidity
     entities:
-      - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+      - entity: sensor.linear_gc_tbz48_battery_powered_z_wave_thermostat_temperature
         name: Downstairs Temperature
         icon: mdi:thermometer-lines
       - entity: sensor.th161_temperature
@@ -48,7 +48,7 @@ cards:
         icon: mdi:settings
   - type: custom:mini-graph-card
     entities:
-      - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+      - entity: sensor.linear_gc_tbz48_battery_powered_z_wave_thermostat_temperature
         name: Downstairs Actual
       - entity: sensor.setpoint
         name: Thermostat Setpoint
@@ -88,7 +88,7 @@ cards:
       points: false
   - type: custom:mini-graph-card
     entities:
-      - entity: sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+      - entity: sensor.linear_gc_tbz48_battery_powered_z_wave_thermostat_temperature
         name: Downstairs Actual
       - entity: sensor.th161_temperature
         name: Upstairs Actual

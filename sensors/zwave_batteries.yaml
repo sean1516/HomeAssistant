@@ -12,7 +12,7 @@
     sensors:
 
       backdoorstatusbatt:
-        value_template: '{% if states.zwave.unknown_id021f_unknown_type0003_id0101 %} {{ states.zwave.unknown_id021f_unknown_type0003_id0101.attributes.battery_level |int }} {% else %} Unknown {% endif %}'
+        value_template: '{% if states.zwave.unknown_id_021f_unknown_type_0003_id_0101 %} {{ states.zwave.unknown_id_021f_unknown_type_0003_id_0101.attributes.battery_level |int }} {% else %} Unknown {% endif %}'
         unit_of_measurement: '%'
 
       garagedoorstatusbatt:

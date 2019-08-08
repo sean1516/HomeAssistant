@@ -59,7 +59,6 @@ cards:
         name: CPU Temperature
         icon: mdi:memory
         entity: sensor.rpi2_temperature
-        name: Processor
         hours_to_show: 24
         graph: line
         detail: 1

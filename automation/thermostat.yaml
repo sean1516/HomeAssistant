@@ -72,7 +72,7 @@
       condition: and
       conditions:
         - condition: template
-          value_template: "{% if states('sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3') | float >= 77 %} True {% else %} False {% endif %}"
+          value_template: "{% if states('sensor.linear_gc_tbz48_battery_powered_z_wave_thermostat_temperature') | float >= 77 %} True {% else %} False {% endif %}"
         - condition: time
           weekday:
             - mon
