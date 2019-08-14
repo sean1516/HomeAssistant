@@ -22,7 +22,7 @@ __[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b
 * [SSH](https://www.home-assistant.io/addons/ssh/)
 * [Samba](https://www.home-assistant.io/addons/samba/)
 
-__[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance. It also runs the following add-ons. 
+__[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance. It also runs the following add-ons.
 
 * [Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)
 * [SSH](https://www.home-assistant.io/addons/ssh/)
@@ -30,11 +30,14 @@ __[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/
 * [TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)
 * [Unifi Controller](https://github.com/hassio-addons/addon-unifi)
 
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.96.3__
+There is a seperate repository for this instance located [Here](https://github.com/SilvrrGIT/Raspberry-Pi2B-Server) 
+
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.97.2__
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L45) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L48).
+- Setup [Multi Factor Authentication](https://www.home-assistant.io/docs/authentication/multi-factor-auth/) wherever possible
 - Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level. 
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://github.com/SilvrrGIT/HomeAssistant/wiki/Let's-Encrypt-Setup-(Hassbian,-Python-Virtual-Environment)) to get it setup on Hassbian and now use the [DuckDNS](www.home-assistant.io/addons/duckdns/) add-on in Hass.io to do the same thing.
