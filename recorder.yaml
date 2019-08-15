@@ -53,7 +53,7 @@
       - sensor.pow2_power
       - sensor.th161_humidity
       - sensor.th161_temperature
-      - sensor.linear_gctbz48_battery_powered_zwave_thermostat_temperature_3
+      - sensor.linear_gc_tbz48_battery_powered_z_wave_thermostat_temperature
       - sensor.processor_use
       - sensor.memory_use_percent
       - sensor.disk_use_percent_home

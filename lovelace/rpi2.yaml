@@ -95,7 +95,7 @@ cards:
     title: Network Connection
     show_header_toggle: false
     entities:
-      - entity: binary_sensor.raspberry_pi_2
+      - entity: device_tracker.raspberry_pi_2_wired
         name: Raspberry Pi 2 Wired
         icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"

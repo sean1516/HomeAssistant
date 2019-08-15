@@ -46,16 +46,20 @@ cards:
           - entity: binary_sensor.modem
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.100.1"
-          - entity: binary_sensor.pfsense_vm
+            icon: mdi:wan
+          - entity: device_tracker.unifi_security_gateway
             name: Ubiquiti Security Gateway
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "[[ sensor.myip.state ]]"
-          - entity: binary_sensor.ubiquiti_switch
+            icon: mdi:folder-key-network-outline
+          - entity: device_tracker.unifi_switch_8_poe_60w
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.1.19"
-          - entity: binary_sensor.ubiquiti_ap
+            icon: mdi:server-network
+          - entity: device_tracker.unifi_ap_ac_lr
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.1.38"
+            icon: mdi:access-point-network
   - type: custom:vertical-stack-in-card
     title: Unifi Security Gateway Status
     cards:
@@ -87,6 +91,7 @@ cards:
           - entity: sensor.unifi_gateway_wlan
           - entity: sensor.unifi_gateway_lan
           - entity: sensor.unifi_gateway_firmware_upgradable
+            name: Devices with Firmware Upgrade Available
   - type: entities
     entities:
       - entity: sensor.basic1_signal

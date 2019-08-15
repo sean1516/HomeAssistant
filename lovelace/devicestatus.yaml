@@ -24,7 +24,7 @@ cards:
             name: Battery
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "[[ {entity}.attributes.Battery State ]]"
-          - entity: device_tracker.d81c79eb20c9
+          - entity: device_tracker.adam_s_iphone
             name: Wifi Connection
             icon: mdi:cellphone-iphone
             type: "custom:secondaryinfo-entity-row"
@@ -40,7 +40,7 @@ cards:
             name: Battery
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "[[ {entity}.attributes.Battery State ]]"
-          - entity: device_tracker.d81c79a4a851
+          - entity: device_tracker.amy_s_iphone
             name: Wifi Connection
             type: "custom:secondaryinfo-entity-row"
             secondary_info: "192.168.1.2"
@@ -48,29 +48,35 @@ cards:
     title: Home Automation Devices
     show_header_toggle: false
     entities:
-      - entity: device_tracker.34ea34e3da0d
+      - entity:  device_tracker.broadlink_rm_mini_3
         type: "custom:secondaryinfo-entity-row"
+        icon: mdi:remote
         secondary_info: "192.168.1.32"
-      - entity: device_tracker.a020a63452ee
+      - entity:  device_tracker.open_garage
         type: "custom:secondaryinfo-entity-row"
+        icon: mdi:garage
         secondary_info: "192.168.1.18"
-      - entity: device_tracker.6854fd8aee8c
+      - entity: device_tracker.echo_dot
+        name: Amazon Echo Dot
+        icon: mdi:amazon
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.17"
-      - entity: device_tracker.amazonb0c7bdc6f
+      - entity: device_tracker.amazon_fire_tv
+        name: Amazon Fire TV
+        icon: mdi:fire
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.21"
-      - entity: device_tracker.kuled13199
+      - entity: device_tracker.kuled_1
         name: Kuled Switch 1
         icon: mdi:light-switch
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.5"
-      - entity: device_tracker.kuled23631
+      - entity: device_tracker.kuled_2
         name: Kuled Switch 2
         icon: mdi:light-switch
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.22"
-      - entity: binary_sensor.ikea_tradfri_gateway
+      - entity: device_tracker.ikea_tradfri_gateway
         icon: mdi:server
         name: Tradfri Gateway
         type: "custom:secondaryinfo-entity-row"
@@ -79,16 +85,19 @@ cards:
     title: Sonoffs
     show_header_toggle: false
     entities:
-      - entity: device_tracker.2c3ae844b860
+      - entity: device_tracker.sonoff_basic_1
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.36"
-      - entity: device_tracker.pow17279
+        icon: mdi:toggle-switch
+      - entity: device_tracker.sonoff_pow_1
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.37"
-      - entity: device_tracker.sonoff_pow_2
+        icon: mdi:toggle-switch
+      - entity: device_tracker.sonoff_pow_2_2
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.34"
-      - entity: device_tracker.sonoff_th16_1
+        icon: mdi:toggle-switch
+      - entity: device_tracker.sonoff_th16_1_2
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.40"
         icon: mdi:toggle-switch
@@ -96,24 +105,30 @@ cards:
     title: Yeelights
     show_header_toggle: false
     entities:
-      - entity: device_tracker.286c07ac908d
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.25"
-      - entity: device_tracker.f0b4299fe446
+      - entity: device_tracker.yeelight_1
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.10"
-      - entity: device_tracker.f0b429a8e3f3
+        icon: mdi:lightbulb-outline
+      - entity: device_tracker.yeelight_2
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.11"
-      - entity: device_tracker.f0b429a900ec
+        icon: mdi:lightbulb-outline
+      - entity: device_tracker.yeelight_3
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.12"
-      - entity: device_tracker.286c07b1776d
+        icon: mdi:lightbulb-outline
+      - entity: device_tracker.yeelight_4
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.26"
-      - entity: device_tracker.286c07b19f98
+        icon: mdi:lightbulb-outline
+      - entity: device_tracker.yeelight_5
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.28"
+        icon: mdi:lightbulb-outline
+      - entity: device_tracker.yeelight_rgb_2
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "192.168.1.25"
+        icon: mdi:lightbulb-outline
   - type: entities
     title: Wired Devices
     show_header_toggle: false
@@ -128,46 +143,29 @@ cards:
     show_header_toggle: false
     entities:
       - entity: switch.lenovo_switch
-        name: Lenovo Laptop
+        name: Lenovo Laptop (WiFi)
         icon: mdi:windows
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.8"
-      - entity: device_tracker.linux_laptop_wifi
+      - entity: device_tracker.linux_laptop_wifi_2
+        icon: mdi:linux
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.23"
-      - entity: device_tracker.amazon1197e775e
+      - entity: device_tracker.mikey_s_kindle_fire
         type: "custom:secondaryinfo-entity-row"
+        icon: mdi:amazon
         secondary_info: "192.168.1.4"
-      - entity: device_tracker.d81c79eb20c9
-        name: Adam's iPhone
-        icon: mdi:cellphone-iphone
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.7"
-      - entity: device_tracker.d81c79a4a851
-        name: Amy's iPhone
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.2"
   - type: entities
     title: Raspberry Pis
     show_header_toggle: false
     entities:
-      - entity: device_tracker.b827eb9a6be6
-        name: Raspberry Pi Zero W
-        icon: mdi:raspberry-pi
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.29"
-      - entity: device_tracker.b827ebaec321
-        name: Raspberry Pi 3b+ Wireless
-        icon: mdi:raspberry-pi
-        type: "custom:secondaryinfo-entity-row"
-        secondary_info: "192.168.1.30"
-      - entity: device_tracker.b827ebfb9674
-        name: Raspberry Pi 3b+ Wired
+      - entity: device_tracker.raspberry_pi_3_wired
+        name: Raspberry Pi 3b+ (Wired)
         icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.31"
-      - entity: binary_sensor.raspberry_pi_2
-        name: Raspberry Pi 2 Wired
+      - entity: device_tracker.raspberry_pi_2_wired
+        name: Raspberry Pi 2 (Wired)
         icon: mdi:raspberry-pi
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "192.168.1.33"

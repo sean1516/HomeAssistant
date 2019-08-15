@@ -18,6 +18,7 @@
       - wlan
       - alerts
       - firmware
+
 #https://www.home-assistant.io/components/snmp/
   - platform: snmp
     name: 'USG WAN in'
@@ -33,6 +34,7 @@
     community: 'public'
     version: '2c'
     scan_interval: 10
+
 #https://www.home-assistant.io/components/statistics/
   - platform: statistics
     name: 'USG WAN in Stats'                      
@@ -46,6 +48,7 @@
     sampling_size: 4
     max_age:
       hours: 24
+
 #https://www.home-assistant.io/components/template/
   - platform: template
     sensors:

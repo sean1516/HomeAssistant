@@ -50,6 +50,7 @@
     name: "RPI2 Database"
     state_topic: "rpi2/sensor/home_assistant_v2_db/state"
     unit_of_measurement: MB
+
 ####################################################
 #                                                  #
 #            END OF CONFIGURATION FILE             #

@@ -10,25 +10,33 @@
       - platform: state
         entity_id:
           - binary_sensor.modem
-          - binary_sensor.NAS
-          - binary_sensor.ubiquiti_switch
-          - binary_sensor.ikea_tradfri_gateway
-          - binary_sensor.ubiquiti_ap
-          - binary_sensor.raspberry_pi_2
+          - device_tracker.unifi_ap_ac_lr
+          - device_tracker.unifi_security_gateway
+          - device_tracker.unifi_switch_8_poe_60w
+          - device_tracker.raspberry_pi_2_wired
+          - device_tracker.raspberry_pi_3_wired
         from: 'on'
         to: 'off'
         for:
-          seconds: 60
+          seconds: 30
       - platform: state
         entity_id:
-          - device_tracker.34ea34e3da0d
-          - device_tracker.a020a63452ee
-          - device_tracker.6854fd8aee8c
-          - device_tracker.2c3ae844b860
-          - device_tracker.pow17279
-          - device_tracker.sonoff_pow_2
-          - device_tracker.kuled13199
-          - device_tracker.kuled23631
+          - device_tracker.sonoff_basic_1
+          - device_tracker.sonoff_pow_1
+          - device_tracker.sonoff_pow_2_2
+          - device_tracker.sonoff_th16_1_2
+          - device_tracker.kuled_1
+          - device_tracker.kuled_2
+          - device_tracker.broadlink_rm_mini_3
+          - device_tracker.ikea_tradfri_gateway
+          - device_tracker.open_garage
+          - device_tracker.echo_dot
+          - device_tracker.yeelight_1
+          - device_tracker.yeelight_2
+          - device_tracker.yeelight_3
+          - device_tracker.yeelight_4
+          - device_tracker.yeelight_5
+          - device_tracker.yeelight_rgb_2
         from: 'home'
         to: 'not_home'
     action:
@@ -49,6 +57,7 @@
       - platform: state
         entity_id:
           - light.yeelight1
+          - light.yeelight2
           - light.yeelight3
           - light.yeelight4
           - light.yeelight5
