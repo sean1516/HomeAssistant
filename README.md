@@ -14,6 +14,7 @@ This is the most important part of Home Assistant!  Remote control and voice com
 
 __[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant.  It also runs the following add-ons. 
 
+* [Configurator](https://www.home-assistant.io/addons/configurator/)
 * [Backup to Google Drive](https://github.com/sabeechen/hassio-google-drive-backup)
 * [Dasshio](https://github.com/SilvrrGIT/hassio-addons)
 * [DuckDNS](www.home-assistant.io/addons/duckdns/)
@@ -22,23 +23,19 @@ __[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b
 * [SSH](https://www.home-assistant.io/addons/ssh/)
 * [Samba](https://www.home-assistant.io/addons/samba/)
 
-__[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance. It also runs the following add-ons.
 
-* [Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)
-* [SSH](https://www.home-assistant.io/addons/ssh/)
-* [Samba](https://www.home-assistant.io/addons/samba/)
-* [TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)
-* [Unifi Controller](https://github.com/hassio-addons/addon-unifi)
+I'm currently running [Home Assistant](https://home-assistant.io) version __0.98.1__
+
+__[Raspberry Pi 2B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)__ This Raspberry Pi is running [HassOS ](https://github.com/home-assistant/hassos) and HomeAssistant mainly for the ease of adding add-ons and sending load data to the main instance
 
 There is a seperate repository for this instance located [Here](https://github.com/SilvrrGIT/Raspberry-Pi2B-Server) 
-
-I'm currently running [Home Assistant](https://home-assistant.io) version __0.97.2__
 
 # Network & Home Assistant Instance Security:
 I think this is an often overlooked part of any internet connected project.  I am far from a security expert, however, these are the steps I have taken to add some level of security to my Home Assistant instance.
 - Simple protections like enabling a [password](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L45) and limiting the number of incorrect [login attempts](https://github.com/SilvrrGIT/HomeAssistant/blob/master/configuration.yaml#L48).
 - Setup [Multi Factor Authentication](https://www.home-assistant.io/docs/authentication/multi-factor-auth/) wherever possible
-- Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level. 
+- Anything that doesn't need an internet connection is blocked from any inbound or outbound traffic at the router level.
+- Open ports are limited to access only from the IPs I designate.  The Ubiquiti USG has a 'limited' option when opening ports. As a result, port scanners and other tools see these ports as closed/filtered.
 - Failed login attempts to the Home Assistant Front end generate a [notification](https://github.com/SilvrrGIT/HomeAssistant/blob/master/automation/pc_security.yaml#L23) to me with the source IP.
 - My Home Assistant Traffic is encrypted with [Let's Encrypt](https://letsencrypt.org/).  I used [this guide](https://github.com/SilvrrGIT/HomeAssistant/wiki/Let's-Encrypt-Setup-(Hassbian,-Python-Virtual-Environment)) to get it setup on Hassbian and now use the [DuckDNS](www.home-assistant.io/addons/duckdns/) add-on in Hass.io to do the same thing.
 - [Test your security and test it often](https://community.home-assistant.io/t/test-your-security-and-test-it-often/76354).
@@ -51,7 +48,7 @@ After you have the Samba share setup, I liked to use [Visual Studio Code](https:
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
 |:---------------:|:------:|:--------------:|:--------:|:-----------:|:-------:|:-------:|:-------------:|
-|48               |10      |12              |29        |84           |4        |200      |7              | 
+|41               |10      |7               |42        |86           |4        |210      |7              | 
 
 # Connected Devices:
 
@@ -129,15 +126,16 @@ After you have the Samba share setup, I liked to use [Visual Studio Code](https:
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/weather.png">
 </p>
 
-## Stats & Data
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/statsndata.png">
-</p>
-
 ## Automations
 <p align="center">
   <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/automations.png">
 </p>
+
+## Trains
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilvrrGIT/HomeAssistant/master/www/statsndata.png">
+</p>
+
 
 # Questions?
 
