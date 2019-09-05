@@ -11,6 +11,11 @@ cards:
     title: Hass.io Addons
     show_header_toggle: false
     entities:
+      - entity: switch.configurator
+        name: Configurator
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.configurator.state ]]"
       - entity: switch.dasshio
         name: Dasshio
         icon: mdi:server-plus
@@ -31,6 +36,11 @@ cards:
         icon: mdi:server-plus
         type: "custom:secondaryinfo-entity-row"
         secondary_info: "[[ sensor.nut.state ]]"
+      - entity: switch.pihole
+        name: PiHole
+        icon: mdi:server-plus
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "[[ sensor.pihole.state ]]"
       - entity: switch.rpcshutdown
         name: RPC Shutdown
         icon: mdi:server-plus

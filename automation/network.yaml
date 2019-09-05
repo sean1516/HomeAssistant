@@ -1,0 +1,55 @@
+#########################################################
+#                                                       #
+#             NOTIFY IF NETWORK DEVICE ISSUE            #
+#                                                       #
+#########################################################
+
+  - alias: "Notify if Network Device Issue"
+    initial_state: true
+    trigger:
+      - platform: template
+        value_template: "{{ states('sensor.unifi_gateway_lan') != 'OK' }}"
+      - platform: template
+        value_template: "{{ states('sensor.unifi_gateway_wlan') != 'OK' }}"
+      - platform: template
+        value_template: "{{ states('sensor.unifi_gateway_www') != 'OK' }}"
+    condition:
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'None' }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'unavailable' }}"
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "There is a Network Device Issue"
+        message: "{{ trigger.to_state.attributes.friendly_name }} status is {{ trigger.to_state.state }}"
+
+#########################################################
+#                                                       #
+#             NOTIFY UNIFI GATEWAY ALERT                #
+#                                                       #
+#########################################################
+
+  - alias: "Notify if Unifi Gateway Alert"
+    initial_state: true
+    trigger:
+      - platform: template
+        value_template: "{{ states('sensor.unifi_gateway_alerts') > '0' }}"
+    condition:
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'None' }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.state != 'unavailable' }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.state < trigger.to_state.state }}"
+    action:
+      service: notify.home_assistant
+      data_template:
+        title: "Unifi Gateway Alert"
+        message: "There are currently {{ trigger.to_state.state }} Unifi Gateway Alerts "
+
+#########################################################
+#                                                       #
+#            END OF CONFIGURATION FILE                  #
+#                                                       #
+#########################################################

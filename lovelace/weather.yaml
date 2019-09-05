@@ -5,6 +5,7 @@
 ####################################################
 
 title: Weather
+icon: mdi:weather-lightning-rainy
 cards:
   - type: weather-forecast
     entity: weather.dark_sky

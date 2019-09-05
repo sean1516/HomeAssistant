@@ -21,6 +21,8 @@
       - service: automation.turn_off
         entity_id: automation.thermostat_fan
       - service: automation.turn_off
+        entity_id: automation.set_thermostat_away_mode_at_1500
+      - service: automation.turn_off
         entity_id: automation.set_thermostat_away_mode_at_1600
       - service: automation.turn_off
         entity_id: automation.set_thermostat_away_mode_when_leaving
@@ -58,6 +60,8 @@
         entity_id: automation.thermostat_fan
       - service: automation.turn_on
         entity_id: automation.set_thermostat_away_mode_at_1600
+      - service: automation.turn_on
+        entity_id: automation.set_thermostat_away_mode_at_1500
       - service: automation.turn_on
         entity_id: automation.set_thermostat_away_mode_when_leaving
       - service: automation.turn_on

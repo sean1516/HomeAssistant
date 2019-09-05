@@ -1,10 +1,11 @@
 ####################################################
 #                                                  #
-#                  DEVICE STATUS                   #
+#                  NETWORK STATUS                  #
 #                                                  #
 ####################################################
 
 title: Network Status
+icon: mdi:lan
 cards:
   - type: custom:vertical-stack-in-card
     title: Network Status
@@ -93,6 +94,21 @@ cards:
           - entity: sensor.unifi_gateway_firmware_upgradable
             name: Devices with Firmware Upgrade Available
   - type: entities
+    title: PiHole Stats
+    show_header_toggle: false
+    entities:
+      - entity: switch.pihole_switch
+        name: Ad Blocking
+        icon: mdi:pi-hole
+        type: "custom:secondaryinfo-entity-row"
+        secondary_info: "Turn off to stop blocking for 1 hour"
+      - entity: sensor.pi_hole_dns_queries_today
+      - entity: sensor.pi_hole_ads_blocked_today
+      - entity: sensor.pi_hole_ads_percentage_blocked_today
+      - type: divider
+      - entity: sensor.pi_hole_dns_unique_clients
+      - entity: sensor.pi_hole_domains_blocked
+  - type: entities
     entities:
       - entity: sensor.basic1_signal
         icon: 'mdi:wifi'
@@ -108,6 +124,40 @@ cards:
         icon: 'mdi:wifi'
     title: Wifi Strength
     show_header_toggle: false
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: entities
+        show_header_toggle: false
+        title: UPS Status
+        theme: midnightclear
+        entities:
+          - entity: sensor.ups_status
+            name: State
+            icon: mdi:flash-circle
+          - entity: sensor.ups_input_voltage
+          - entity: sensor.ups_battery_voltage
+          - entity: sensor.ups_output_voltage
+          - entity: sensor.ups_battery_charge
+            icon: mdi:battery-charging
+          - entity: sensor.ups_load
+            icon: mdi:percent
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            theme: midnightclear
+            entity: sensor.approxwattage
+            name: Load
+            icon: mdi:gauge
+            hours_to_show: 24
+            graph: line
+            detail: 1
+          - type: sensor
+            theme: midnightclear
+            entity: sensor.ups_battery_runtime
+            name: Runtime
+            hours_to_show: 24
+            graph: line
+            detail: 1
 
 ####################################################
 #                                                  #

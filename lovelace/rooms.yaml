@@ -118,7 +118,17 @@ cards:
             entity: switch.kuled2
             name: Nursery Fan
             icon: mdi:fan
-
+  - type: entities
+    show_header_toggle: false
+    title: Work Hours
+    entities:
+      - entity: sensor.hours_at_work_today
+        icon: mdi:progress-clock
+      - entity: sensor.hours_at_work_yesterday
+        icon: mdi:progress-clock
+      - entity: sensor.hours_at_work_two_days_ago
+        icon: mdi:progress-clock
+        
 ####################################################
 #                                                  #
 #          END OF CONFIGURATION FILE               #

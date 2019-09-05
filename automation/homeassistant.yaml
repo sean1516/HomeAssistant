@@ -41,12 +41,13 @@
     trigger:
       platform: state
       entity_id:
-        - sensor.adb
+        - sensor.configurator
         - sensor.dasshio
         - sensor.duckdns
         - sensor.gdrivebackup
         - sensor.mosquitto
         - sensor.nut
+        - sensor.pihole
         - sensor.rpcshutdown
         - sensor.samba
         - sensor.ssh
@@ -163,7 +164,7 @@
 #########################################################
 
   - alias: "Custom Update Available"
-    initial_state: true
+    initial_state: false
     trigger:
       - platform: numeric_state
         entity_id:

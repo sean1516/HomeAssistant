@@ -5,6 +5,7 @@
 ####################################################
 
 title: Device Status
+icon: mdi:monitor-cellphone-star
 cards:
   - type: custom:vertical-stack-in-card
     cards:        

@@ -16,14 +16,14 @@
 # 12345678910 is the Long Lived Access Token generated in the Home Assistant Frontend.
 
   - platform: rest
-    resource: !secret gdrivebackup
-    name: gdrivebackup
+    resource: !secret configurator
+    name: configurator
     value_template: '{{ value_json.data.state }}'
     scan_interval: 60
     headers:
       Authorization: !secret llt
       Content-Type: application/json
-
+      
   - platform: rest
     resource: !secret dasshio
     name: dasshio
@@ -36,6 +36,15 @@
   - platform: rest
     resource: !secret duckdns
     name: duckdns
+    value_template: '{{ value_json.data.state }}'
+    scan_interval: 60
+    headers:
+      Authorization: !secret llt
+      Content-Type: application/json
+      
+  - platform: rest
+    resource: !secret gdrivebackup
+    name: gdrivebackup
     value_template: '{{ value_json.data.state }}'
     scan_interval: 60
     headers:
@@ -54,6 +63,15 @@
   - platform: rest
     resource: !secret nut
     name: nut
+    value_template: '{{ value_json.data.state }}'
+    scan_interval: 60
+    headers:
+      Authorization: !secret llt
+      Content-Type: application/json
+      
+  - platform: rest
+    resource: !secret pihole
+    name: pihole
     value_template: '{{ value_json.data.state }}'
     scan_interval: 60
     headers:

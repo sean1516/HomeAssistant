@@ -5,6 +5,7 @@
 ####################################################
 
 title: Switches
+icon: mdi:light-switch
 cards:
   - type: entities
     title: Bedroom Lights

@@ -5,6 +5,7 @@
 ####################################################
 
 title: Automations
+icon: mdi:home-automation
 cards:
   - type: entities
     title: Automation Modes
@@ -300,6 +301,12 @@ cards:
       - entity: automation.sensor_low_battery
         name: Low Sensor Battery
         icon: mdi:battery-charging-wireless-10
+      - entity: automation.notify_if_unifi_gateway_alert
+        name: Notify if Unifi Gateway Alert
+        icon: mdi:alert
+      - entity: automation.notify_if_network_device_issue
+        name: Network Device Issue Notification
+        icon: mdi:help-network
   - type: entities
     title: Weather Automations
     show_header_toggle: false

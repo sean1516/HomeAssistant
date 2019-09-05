@@ -5,6 +5,7 @@
 ####################################################
 
 title: HVAC
+icon: mdi:air-conditioner
 theme: midnightnotrans
 cards:
   - type: vertical-stack

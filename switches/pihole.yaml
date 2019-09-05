@@ -1,0 +1,24 @@
+
+#https://home-assistant.io/components/switch/
+
+####################################################
+#                                                  #
+#               PiHOLE SWITCH                      #
+#                                                  #
+####################################################
+
+#https://www.home-assistant.io/components/switch.command_line/
+
+  - platform: command_line
+    switches:
+      pihole_switch:
+        command_on: !secret piholeon
+        command_off: !secret piholeoff
+        command_state: "curl -X GET 'http://192.168.1.24:4865/admin/api.php?status'"
+        value_template: "{{ value_json.status == 'enabled' }}"
+
+####################################################
+#                                                  #
+#           END OF CONFIGURATION FILE              #
+#                                                  #
+####################################################
