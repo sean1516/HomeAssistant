@@ -19,10 +19,10 @@ __[Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b
 * [Dasshio](https://github.com/SilvrrGIT/hassio-addons)
 * [DuckDNS](www.home-assistant.io/addons/duckdns/)
 * [Network UPS Tools](https://github.com/SilvrrGIT/hassio-addons)
+* [PiHole](https://github.com/hassio-addons/addon-pi-hole)
 * [RPC Shutdown](https://www.home-assistant.io/addons/rpc_shutdown/)
 * [SSH](https://www.home-assistant.io/addons/ssh/)
 * [Samba](https://www.home-assistant.io/addons/samba/)
-
 
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.98.1__
 
