@@ -43,7 +43,7 @@ I think this is an often overlooked part of any internet connected project.  I a
 # Editing the Configuration Files:
 I create a Samba share that I can then edit on any computer in my house.  I accomplished this with the Samba add-on for Hass.io.  For other install methods [this](https://github.com/SilvrrGIT/HomeAssistant/wiki/Hassbian-Quick-Reference-Sheet#setting-up-a-samba-share) is a good tutorial. 
 
-After you have the Samba share setup, I liked to use [Visual Studio Code](https://code.visualstudio.com/) to edit my files with the [Home Assistant Config Helper]([Visual Studio Code](https://code.visualstudio.com/)).  It works on both Windows and Linux, has a great interface and some nice features. 
+After you have the Samba share setup, I liked to use [Visual Studio Code](https://code.visualstudio.com/) to edit my files with the [Home Assistant Config Helper][Visual Studio Code](https://code.visualstudio.com/).  It works on both Windows and Linux, has a great interface and some nice features. 
 
 # A Few Stats On my Setup:
 | Tracked Devices | Lights | Binary Sensors | Switches | Automations | Scripts | Sensors | Zwave Devices |
